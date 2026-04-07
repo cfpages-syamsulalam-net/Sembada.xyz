@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
   variant?: 'default' | 'alt' | 'glass'

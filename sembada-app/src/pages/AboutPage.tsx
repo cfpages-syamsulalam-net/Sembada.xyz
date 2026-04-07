@@ -1,6 +1,3 @@
-import { Heading } from '@/components/ui/Heading'
-import { Section } from '@/components/layout/Section'
-
 export function AboutPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
