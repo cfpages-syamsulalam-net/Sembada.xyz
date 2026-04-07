@@ -1,9 +1,48 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
+const productItems = [
+  { 
+    label: 'Portable Toilet', 
+    path: '/produk/portable-toilet',
+    description: 'Unit sanitasi movable yang fleksibel' 
+  },
+  { 
+    label: 'Cubicle Toilet', 
+    path: '/produk/cubicle-toilet',
+    description: 'Partisi toilet modern dan kuat' 
+  },
+  { 
+    label: 'Office Cubicle', 
+    path: '/produk/office-cubicle',
+    description: 'Sekat ruang kerja premium' 
+  },
+  { 
+    label: 'Movable Door', 
+    path: '/produk/movable-door',
+    description: 'Partisi ruangan dengan peredam suara' 
+  },
+  { 
+    label: 'CNC Ornament', 
+    path: '/produk/cnc-ornament',
+    description: 'Ornamen presisi komputerisasi' 
+  },
+  { 
+    label: 'Cellustone', 
+    path: '/produk/cellustone-ornament',
+    description: 'Eco-friendly wall panel' 
+  },
+  { 
+    label: 'Laboratorium Cabinet', 
+    path: '/produk/laboratorium-cabinet',
+    description: 'Furnitur lab tahan kimia' 
+  },
+]
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [produkOpen, setProdukOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -15,37 +54,45 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close megamenu when route changes
+  useEffect(() => {
+    setProdukOpen(false)
+    setMenuOpen(false)
+  }, [location.pathname])
+
   const isActive = (path: string) => location.pathname === path
 
   const navItems = [
     { label: 'Beranda', path: '/' },
     { label: 'Tentang Kami', path: '/tentang-kami' },
-    { label: 'Produk', path: '/produk' },
     { label: 'Portofolio', path: '/portofolio' },
     { label: 'Kontak', path: '/hubungi-kami' },
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'py-4' : 'py-5'
-    }`} style={{
-      background: 'rgba(11, 12, 16, 0.7)',
-      backdropFilter: 'blur(24px)',
-      WebkitBackdropFilter: 'blur(24px)',
-      borderBottom: '1px solid rgba(212, 175, 55, 0.4)',
-      boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.8)',
-    }}>
-      <div className="container mx-auto px-10">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'py-3' : 'py-4'
+      }`}
+      style={{
+        background: 'rgba(11, 12, 16, 0.7)',
+        backdropFilter: 'blur(24px)',
+        WebkitBackdropFilter: 'blur(24px)',
+        borderBottom: '1px solid rgba(212, 175, 55, 0.4)',
+        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.8)',
+      }}
+    >
+      <div className="container mx-auto px-6 md:px-8 lg:px-10">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 max-w-[200px]">
-            <span className="text-gold-gradient font-black text-sm md:text-xl tracking-tight uppercase leading-tight">
+          <Link to="/" className="flex items-center gap-2 max-w-[180px] md:max-w-[220px]">
+            <span className="text-gold-gradient font-black text-sm md:text-lg lg:text-xl tracking-tight uppercase leading-tight">
               Sembada Batu Beling
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-6 xl:gap-10">
+          <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <li key={item.path}>
                 <Link
@@ -60,6 +107,63 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
+
+            {/* Produk Megamenu */}
+            <li
+              className="relative"
+              onMouseEnter={() => setProdukOpen(true)}
+              onMouseLeave={() => setProdukOpen(false)}
+            >
+              <button
+                className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap ${
+                  location.pathname.startsWith('/produk')
+                    ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50 pb-1'
+                    : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
+                }`}
+              >
+                Produk
+              </button>
+
+              {/* Megamenu Dropdown */}
+              {produkOpen && (
+                <div
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 p-6 md:p-8 min-w-[600px]"
+                  style={{
+                    background: 'rgba(11, 12, 16, 0.95)',
+                    backdropFilter: 'blur(32px)',
+                    WebkitBackdropFilter: 'blur(32px)',
+                    border: '1px solid rgba(212, 175, 55, 0.4)',
+                    boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.8)',
+                  }}
+                >
+                  <div className="grid grid-cols-2 gap-4 md:gap-6">
+                    {productItems.map((product) => (
+                      <Link
+                        key={product.path}
+                        to={product.path}
+                        className="group block p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
+                      >
+                        <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover:text-white transition-colors">
+                          {product.label}
+                        </h4>
+                        <p className="text-[9px] md:text-[10px] text-[#94A3B8] leading-relaxed">
+                          {product.description}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                  {/* View All Link */}
+                  <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-[#f2ca50]/20 text-center">
+                    <Link
+                      to="/produk"
+                      className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] hover:text-white transition-colors"
+                    >
+                      Lihat Semua Produk →
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </li>
           </ul>
 
           {/* CTA Button */}
@@ -77,7 +181,7 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5"
+            className="lg:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,13 +199,16 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-4 p-6" style={{
-            background: 'rgba(11, 12, 16, 0.7)',
-            backdropFilter: 'blur(24px)',
-            WebkitBackdropFilter: 'blur(24px)',
-            border: '1px solid rgba(212, 175, 55, 0.4)',
-          }}>
-            <ul className="flex flex-col gap-6">
+          <div
+            className="lg:hidden mt-4 p-6"
+            style={{
+              background: 'rgba(11, 12, 16, 0.95)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)',
+              border: '1px solid rgba(212, 175, 55, 0.4)',
+            }}
+          >
+            <ul className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <li key={item.path}>
                   <Link
@@ -115,6 +222,27 @@ export function Navbar() {
                   </Link>
                 </li>
               ))}
+              {/* Mobile Produk Submenu */}
+              <li>
+                <div className="text-sm font-black uppercase tracking-[0.25em] text-[#f2ca50] mb-2">
+                  Produk
+                </div>
+                <div className="pl-4 space-y-2">
+                  {productItems.map((product) => (
+                    <Link
+                      key={product.path}
+                      to={product.path}
+                      className="block text-xs text-[#e3e2e8]/60 hover:text-[#f2ca50] transition-colors"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {product.label}
+                      <span className="block text-[10px] text-[#94A3B8] font-normal">
+                        {product.description}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </li>
             </ul>
           </div>
         )}
