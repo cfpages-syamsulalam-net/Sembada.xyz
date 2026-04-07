@@ -53,28 +53,22 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 md:px-10 text-center">
-        <div className="max-w-4xl mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-2">
+          {/* Eyebrow */}
+          <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
+            Solusi Arsitektur Premium
+          </span>
+          
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] uppercase mb-6 md:mb-8 text-gold-gradient break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] uppercase mb-4 md:mb-6 text-gold-gradient break-words">
             Solusi Konstruksi<br />Premium
           </h1>
 
           {/* Tagline */}
-          <div
-            className="inline-block px-6 md:px-8 py-3 md:py-4 mb-8 md:mb-12 max-w-full"
-            style={{
-              background: 'rgba(11, 12, 16, 0.7)',
-              backdropFilter: 'blur(24px)',
-              WebkitBackdropFilter: 'blur(24px)',
-              border: '1px solid rgba(212, 175, 55, 0.4)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
-            }}
-          >
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight italic text-[#e3e2e8] leading-tight">
-              Integritas untuk Sukses dan Barokah
-            </p>
-          </div>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight italic text-[#e3e2e8] leading-tight mb-8 md:mb-12 max-w-3xl mx-auto">
+            Integritas untuk Sukses dan Barokah
+          </p>
 
           {/* CTA Button */}
           <Link

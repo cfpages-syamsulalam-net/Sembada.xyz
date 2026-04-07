@@ -186,6 +186,30 @@ sembada.xyz/
    - Desktop: 1024px - 1366px
    - Large: 1366px+
 
+**UNIFIED PAGE HEADER PATTERN (MANDATORY):**
+Every page MUST use this exact structure:
+```tsx
+<section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
+  <div className="container mx-auto text-center">
+    <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
+      Eyebrow Label
+    </span>
+    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-4 md:mb-6 leading-tight mx-auto max-w-4xl">
+      Page Title
+    </h1>
+    <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light">
+      Description paragraph.
+    </p>
+  </div>
+</section>
+```
+**NEVER forget:**
+- `px-4 md:px-6` for container padding (prevents overflow)
+- `text-center` on container div
+- `text-gold-gradient` for H1
+- `max-w-3xl mx-auto` for paragraph
+- `mb-4 md:mb-6` spacing between elements
+
 **Example:**
 ```tsx
 // ❌ WRONG - Fixed size, will overflow

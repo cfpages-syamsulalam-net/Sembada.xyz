@@ -5,11 +5,11 @@ export function AboutPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-6 md:px-10 text-center bg-[#0B0C10]">
-        <span className="text-[#f2ca50] uppercase tracking-[0.3em] md:tracking-[0.5em] text-xs font-black mb-4 md:mb-6 block">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
+        <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
           Tentang Kami
         </span>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-6 md:mb-8">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-4 md:mb-6 leading-tight">
           Identitas Kami
         </h1>
         <p className="text-lg md:text-xl font-light italic text-[#e3e2e8]/80 max-w-2xl mx-auto leading-relaxed">

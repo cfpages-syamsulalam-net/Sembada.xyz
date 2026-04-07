@@ -38,12 +38,15 @@ export function PortfolioPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-4 md:mb-6 leading-tight">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 bg-[#0B0C10]">
+        <div className="container mx-auto text-center">
+          <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
+            Dokumentasi Proyek
+          </span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-4 md:mb-6 leading-tight mx-auto max-w-4xl">
             Portofolio & Proyek
           </h1>
-          <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light">
             Dokumentasi proyek-proyek yang telah kami kerjakan di seluruh Indonesia. Setiap proyek mencerminkan komitmen kami terhadap kualitas dan kepuasan klien.
           </p>
         </div>

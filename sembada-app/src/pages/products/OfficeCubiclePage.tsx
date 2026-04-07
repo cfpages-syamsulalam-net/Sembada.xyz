@@ -13,7 +13,7 @@ export function OfficeCubiclePage() {
           <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/60 to-[#0B0C10]" />
         </div>
-        <div className="relative z-10 container mx-auto px-6 md:px-10 text-center">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
           <span className="text-[#f2ca50] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">Architectural Solution</span>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-4 md:mb-6">Office Cubicle</h1>
           <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light mb-6 md:mb-8">Sekat antar ruang kerja/meja berbahan Phenolic Resin Premium. Tahan benturan, tidak lapuk, aman untuk suhu dingin/lembab.</p>

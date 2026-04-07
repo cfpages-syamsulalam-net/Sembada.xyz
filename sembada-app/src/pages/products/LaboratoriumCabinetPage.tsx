@@ -19,7 +19,7 @@ export function LaboratoriumCabinetPage() {
           <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1600&h=600&fit=crop" alt="" className="w-full aspect-[21/9] object-cover grayscale opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/80 to-[#0B0C10]" />
         </div>
-        <div className="relative z-10 container mx-auto px-6 md:px-10 text-center py-24">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center py-24">
           <span className="text-[#f2ca50] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">Premium Laboratory Solutions</span>
           <h1 className="text-[3.75rem] md:text-[5.5rem] font-black tracking-tighter leading-[0.85] text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] uppercase mb-4 md:mb-6">Laboratorium Cabinet</h1>
           <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light italic border-l-2 border-[#f2ca50]/40 pl-6 text-left">

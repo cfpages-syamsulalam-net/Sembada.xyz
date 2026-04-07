@@ -82,11 +82,11 @@ export function Navbar() {
         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.8)',
       }}
     >
-      <div className="container mx-auto px-6 md:px-8 lg:px-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 max-w-[180px] md:max-w-[220px]">
-            <span className="text-gold-gradient font-black text-sm md:text-lg lg:text-xl tracking-tight uppercase leading-tight">
+          <Link to="/" className="flex items-center gap-2 max-w-[250px]">
+            <span className="text-gold-gradient font-black text-sm md:text-base lg:text-lg xl:text-xl tracking-tight uppercase leading-tight">
               Sembada Batu Beling
             </span>
           </Link>

@@ -124,6 +124,44 @@ background: linear-gradient(
 - **Italic light weights** for elegant subtitles
 - **ALL fonts are sans-serif** - no serif fonts anywhere
 
+### 3.4 Unified Page Header Pattern (MANDATORY)
+
+**Every page MUST follow this exact structure:**
+
+```tsx
+<section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
+  <div className="container mx-auto text-center">
+    {/* Eyebrow Span */}
+    <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
+      Eyebrow Label Here
+    </span>
+    
+    {/* H1 Headline */}
+    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gold-gradient uppercase mb-4 md:mb-6 leading-tight mx-auto max-w-4xl">
+      Page Title Here
+    </h1>
+    
+    {/* Description Paragraph */}
+    <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light">
+      Brief description of the page content.
+    </p>
+  </div>
+</section>
+```
+
+**Rules:**
+1. **Container padding:** `px-4 md:px-6` (NOT larger values to prevent overflow)
+2. **Eyebrow:** `text-[#94A3B8]` or `text-[#f2ca50]`, uppercase, tracking wide, small text, `block mb-4 md:mb-6`
+3. **H1:** Gold gradient, uppercase, responsive sizing, `mb-4 md:mb-6`, `leading-tight`
+4. **Paragraph:** `max-w-3xl mx-auto`, `font-light`, `leading-relaxed`
+5. **Text alignment:** ALWAYS `text-center` on container div
+6. **Responsive:** ALWAYS use breakpoint ranges (e.g., `mb-4 md:mb-6`)
+
+**Exceptions:**
+- Product detail pages may use full-height hero sections with background images instead of flat sections
+- Contact page eyebrow can use `text-[#f2ca50]` for emphasis
+- All other pages MUST follow this exact pattern
+
 ---
 
 ## 4. Geometry & Spatial System

@@ -63,7 +63,7 @@ export function ProductKnowledgePage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       {/* Hero Header */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-6 md:px-10 text-center bg-[#0B0C10]">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
         <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
           Solusi Arsitektur Premium
         </span>

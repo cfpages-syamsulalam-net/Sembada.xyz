@@ -19,7 +19,7 @@ export function CellustonePage() {
           ))}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/60 to-[#0B0C10]" />
         </div>
-        <div className="relative z-10 container mx-auto px-6 md:px-10 text-center">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
           <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">Arsitektur Masa Depan</span>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-[0.85] text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] uppercase mb-4 md:mb-6">Cellustone</h1>
           <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light mb-8">Material komposit dari bahan alam, diperkuat adhesive berkualitas, featured cement, dan cellulosa fibre.</p>

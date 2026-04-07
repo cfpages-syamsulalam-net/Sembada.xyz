@@ -10,7 +10,7 @@ export function CNCOrnamentPage() {
       {/* Hero */}
       <section className="h-[600px] md:h-[819px] flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/50 to-[#0B0C10]" />
-        <div className="relative z-10 container mx-auto px-6 md:px-10 text-center">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
           <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">Inovasi Arsitektur Premium</span>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[100px] font-black tracking-tighter leading-[0.85] text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#f2ca50] to-[#AA771C] uppercase mb-4 md:mb-6">CNC Ornament</h1>
           <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light mb-8">Pekerjaan ornamen berbasis komputerisasi yang menghasilkan presisi sempurna dan proporsi pas.</p>
