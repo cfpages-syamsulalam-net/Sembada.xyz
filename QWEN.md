@@ -80,20 +80,26 @@ sembada.xyz/
 ## 🎨 Design System Rules
 
 ### CSS Architecture
-- **Global style.css** is the source of truth for all design tokens
-- Use CSS custom properties (variables) exclusively, no hardcoded values
-- 0px border radius for all structural elements (sharp, architectural)
-- Gold color `#D4AF37` is primary accent, used sparingly
-- Dark mode ONLY (`#0B0C10` base background)
-- Hexagonal geometry as signature brand element
-- Glassmorphism for floating/overlay elements
+- **Primary Approach:** shadcn/ui + TailwindCSS
+- **NO global style.css** (deprecated approach)
+- TailwindCSS for all styling (utility classes)
+- shadcn/ui for pre-built components (buttons, cards, forms, etc.)
+- Custom CSS ONLY for: starry sky animation, gold gradient text, hexagonal clip-paths
+
+### Typography
+- **ALL fonts must be sans-serif**
+- Primary font: Inter
+- Alternative: Manroge, Plus Jakarta Sans
+- **NO serif fonts anywhere** (no Cinzel, no Playfair Display)
+- Use font weights for hierarchy (light, regular, bold, black)
 
 ### Component Development
+- Use shadcn/ui components as starting point
+- Customize to match Midnight Obsidian design
+- All styling via TailwindCSS classes
 - Follow atomic design: Atoms → Molecules → Organisms → Layouts
-- Use design tokens from style.css exclusively
 - Test responsive behavior (mobile-first)
 - Ensure accessibility (WCAG AA minimum)
-- No rounded corners on cards, buttons, or containers
 
 ### Typography
 - Headings: Cinzel / Playfair Display
@@ -192,16 +198,16 @@ Follow conventional commits:
 
 ## 🚫 Things to Avoid
 
-- ❌ Don't use TailwindCSS (conflicts with custom design system)
-- ❌ Don't use Bootstrap (too generic, can't achieve our aesthetic)
-- ❌ Don't use CSS-in-JS runtime libraries (adds bundle size)
-- ❌ Don't add rounded corners anywhere
+- ❌ Don't use global CSS for components (use TailwindCSS)
+- ❌ Don't use Bootstrap (conflicts with our design)
+- ❌ Don't use MUI, Chakra, or other UI frameworks (we use shadcn/ui)
+- ❌ Don't use serif fonts (Cinzel, Playfair Display, etc.)
+- ❌ Don't add rounded corners unless specifically needed
 - ❌ Don't use standard web colors (blue links, green buttons)
 - ❌ Don't overcrowd layouts (embrace whitespace)
-- ❌ Don't use heavy animation libraries unless necessary
+- ❌ Don't add features without documenting them
 - ❌ Don't replace entire files without checking with user
 - ❌ Don't lose existing implementations
-- ❌ Don't add features without documenting them
 
 ---
 
@@ -211,13 +217,16 @@ Follow conventional commits:
 - ✅ Make minimal changes
 - ✅ Preserve existing working code
 - ✅ Document everything in CHANGELOG.md
-- ✅ Use design tokens exclusively
+- ✅ Use TailwindCSS exclusively
+- ✅ Use shadcn/ui for base components
 - ✅ Test responsive behavior
 - ✅ Check accessibility
 - ✅ Optimize for performance
 - ✅ Keep CSS effects pure (no JS when CSS works)
 - ✅ Maintain dark mode as default/only theme
 - ✅ Update documentation when things change
+- ✅ Use sans-serif fonts only (Inter, Manroge)
+- ✅ Follow conventional commits
 
 ---
 
@@ -242,12 +251,13 @@ Follow conventional commits:
 ## 📚 Reference Documents
 
 Always consult these files for context:
-- `/DESIGN.md` - Design system specifications
+- `/DESIGN.md` - Design system specifications (updated for shadcn/ui + TailwindCSS)
 - `/COMPONENTS.md` - Component architecture
 - `/PAGES.md` - Page structure & routing
-- `/DEVELOPMENT.md` - Development workflow
+- `/DEVELOPMENT.md` - Development workflow (to be updated)
 - `/CHANGELOG.md` - Project progress
-- `/style.css` - Global CSS implementation
+- `/BEGINNER_GUIDE.md` - React/Vite guide for beginners
+- `/CLOUDFLARE_DEPLOY.md` - Step-by-step deployment guide
 
 ---
 

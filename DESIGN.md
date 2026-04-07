@@ -93,8 +93,10 @@ background: linear-gradient(
 
 | Role | Font | Purpose |
 |------|------|---------|
-| **Headlines** | Cinzel / Playfair Display | Architectural, monumental, elegant |
-| **Body & UI** | Inter / Montserrat | Clean, modern, highly legible |
+| **Headlines** | Inter / Manroge | Clean, modern, highly legible |
+| **Body & UI** | Inter / Plus Jakarta Sans | Sans-serif, professional, accessible |
+
+**IMPORTANT:** Use SANS-SERIF fonts ONLY. No serif fonts anywhere in the design.
 
 ### 3.2 Type Scale
 
@@ -115,11 +117,12 @@ background: linear-gradient(
 
 ### 3.3 Typography Rules
 
-- **Never mix font families** within the same context
+- **Never mix font families** - stick to Inter or chosen sans-serif
 - **Use weight contrast** to create hierarchy, not different fonts
 - **Extreme letter-spacing** for labels/navigation creates editorial luxury
 - **Large headlines in uppercase** for monumental effect
 - **Italic light weights** for elegant subtitles
+- **ALL fonts are sans-serif** - no serif fonts anywhere
 
 ---
 
@@ -565,34 +568,45 @@ All interactive elements must have visible focus:
 
 ### 13.1 CSS Architecture
 
-**Hybrid Approach: Custom CSS + Selective Library Usage**
+**Approach: shadcn/ui + TailwindCSS**
 
 For the React implementation:
-- **Primary:** Custom `style.css` with CSS custom properties for all design tokens
-- **CSS Libraries:** Can be added selectively if they provide unique value not easily replicated
-- **Component-scoped styles:** CSS Modules or Styled Components for component isolation
-- **Global `style.css`:** Base resets, design tokens, utilities, and signature effects
+- **Primary:** shadcn/ui components (copy-paste, you own the code)
+- **Styling:** TailwindCSS for utility classes
+- **Customization:** Override shadcn/ui theme to match Midnight Obsidian design
+- **Global styles:** Minimal custom CSS only for unique effects (starry sky, gold gradients)
 
-**CSS Library Integration Strategy:**
+**Why shadcn/ui?**
+- Not a library - you copy components into your project
+- Fully customizable TypeScript + React
+- Built on TailwindCSS (industry standard)
+- Accessible by default (WAI-ARIA compliant)
+- Perfect for beginners - readable, documented code
+- You can modify every aspect
 
-✅ **GOOD - Add Value:**
-- Animation utility libraries (e.g., Animate.css for specific transitions)
-- Advanced layout helpers (if they simplify responsive design)
-- Specialized effects libraries (if they outperform custom CSS)
+**TailwindCSS Configuration:**
+- Extend Tailwind theme with our design tokens
+- Custom colors (obsidian, gold palette)
+- Custom spacing (8px grid)
+- Custom fonts (Inter, sans-serif only)
+- Keep dark mode as default
 
-❌ **AVOID - Conflicts with Design System:**
-- TailwindCSS (impossible to maintain our unique aesthetic)
-- Bootstrap (too generic, rounded corners conflict with 0px radius rule)
-- CSS-in-JS runtime libraries (unnecessary bundle size increase)
-- Framework UI libraries (MUI, Chakra, etc. - too opinionated)
+**What We Keep in Custom CSS:**
+- Animated starry sky effect (pure CSS, ~15KB)
+- Gold gradient text effect (not in Tailwind by default)
+- Hexagonal clip-paths
+- Any unique animations not in Tailwind
 
-**Current Implementation:**
-- Global `style.css` contains ALL design tokens
-- Animated starry sky effects are 100% pure CSS (no JS needed)
-- All components use CSS custom properties exclusively
-- Glassmorphism, hexagonal geometry, gold gradients fully implemented
+### 13.2 shadcn/ui Setup Strategy
 
-### 13.2 Animated Starry Sky Effect
+1. Install TailwindCSS + shadcn/ui
+2. Configure tailwind.config.js with our design tokens
+3. Run `npx shadcn@latest init`
+4. Add components as needed: `npx shadcn@latest add button`
+5. Customize each component to match Midnight Obsidian style
+6. Build custom components (HexIcon, StarryBackground, etc.)
+
+### 13.3 Animated Starry Sky Effect
 
 **100% CSS Implementation - No JavaScript Required!**
 
