@@ -1,0 +1,98 @@
+# Sitemap & Struktur Konten: Sembada Batu Beling
+
+> **Note:** This is the legacy sitemap document. For the complete, implementation-ready page structure with React routing specifications, see `/PAGES.md` in the project root.
+
+---
+
+Situs ini berfungsi sebagai *Company Profile* sekaligus katalog *Product Knowledge* untuk Sembada Batu Beling, anak perusahaan PT. Batu Beling.
+
+## 1. Halaman Utama (Home)
+- **Hero Banner:**
+  - Gambar latar *starry night* dengan logo 3D Sembada Batu Beling.
+  - *Tagline:* "Integritas untuk Sukses dan Barokah".
+  - *Call-to-Action (CTA):* Tombol "Eksplorasi Produk Kami".
+- **Sekilas Tentang Kami:** Pengantar singkat Sembada Batu Beling.
+- **Highlight Produk Utama:** Grid bentuk *hexagon* menampilkan kategori produk (Toilet, Cubicle, Ornamen CNC, dll).
+- **Mengapa Memilih Kami:** Presisi, Tepat Waktu, Elegan, dan Ramah Lingkungan.
+
+## 2. Tentang Kami (Company Profile)
+- **Sejarah & Latar Belakang:**
+  Sembada Batu Beling merupakan divisi/anak usaha pemasaran resmi dari **PT. Batu Beling**. PT. Batu Beling sendiri dikenal sebagai perusahaan aplikator, kontraktor, dan pabrikasi papan *phenolic* profesional yang telah berpengalaman menangani berbagai proyek skala nasional di seluruh Indonesia (sekolah, kantor, bandara, hotel, rumah sakit).
+  Sembada hadir secara khusus untuk merangkul pasar secara lebih luas, menyajikan solusi produk arsitektur dan sanitas (seperti toilet portabel, partisi ruangan, hingga ornamen CNC) dengan pelayanan yang ramah, efisien, dan berkualitas premium.
+- **Visi & Misi:**
+  Menghadirkan nilai estetika dan ketahanan pada setiap properti pelanggan, berlandaskan prinsip "Integritas untuk Sukses dan Barokah".
+- **Legalitas & Kepercayaan:** Pengalaman PT. Batu Beling bekerja sama dengan BUMN, instansi pemerintah, dan swasta.
+
+## 3. Pengetahuan Produk (Product Knowledge)
+*Halaman ini bisa dipecah menjadi sub-halaman (dropdown) agar informasi tidak menumpuk.*
+
+### 3.1. Portable Toilet
+Unit sanitasi *movable* (bisa dipindah) yang fleksibel. Dibuat dengan material terbaik, interior dan eksterior modern elegan. Cocok untuk instansi, proyek konstruksi, tempat wisata, hingga tanggap darurat.
+- **Varian:** Portable Toilet Low Price, Portable Toilet Standard/Deluxe, Portable Toilet Emergency.
+
+### 3.2. Cubicle Toilet
+Partisi toilet modern berbahan tipis, ringan, namun sangat kuat (menghemat tempat). Proses pemasangan cepat dan tampilan elegan. Umum dipakai di mall, kantor, dan stasiun.
+- **Varian:** Premium, Standard, Two Tone, PVC Board, Full Height.
+
+### 3.3. Office Cubicle
+Sekat antar ruang kerja/meja berbahan *Phenolic Resin Premium*. Tahan benturan, tidak lapuk, aman untuk suhu dingin/lembab. Dilengkapi fitur *wire hole*, stop kontak, dan aksesoris aluminium.
+- **Varian:** Advance Staff Workstations, Leader Staff Workstations, Supervisor Workstations.
+
+### 3.4. Movable Door
+Partisi ruangan yang dapat digeser/dipindahkan untuk membagi ruang utama menjadi beberapa fungsi. Memberikan privasi dengan spesifikasi *full peredam* suara. Bisa *custom design*.
+- **Varian:** Rubi, Kalimaya, Batu Beling, Emerald.
+
+### 3.5. CNC Ornament
+Pekerjaan ornamen berbasis komputerisasi yang menghasilkan presisi dan proporsi pas. Memberikan estetika tak lekang oleh waktu.
+- **Portofolio Aplikasi:** Ornamen Politeknik Surabaya, Lab Ketahanan Papua, Mushola Kereta Makan KAI, Masjid Baitul Fadli, Gedung DPRD Surabaya.
+
+### 3.6. Cellustone Ornament
+Material komposit dari bahan alam, diperkuat adhesive berkualitas, *featured cement*, dan *cellulosa fibre*. Ramah lingkungan, minim muai-susut, tahan untuk area *Indoor* maupun *Outdoor*.
+- **Aplikasi Utama:** Cellustone Fasad (Tampak luar bangunan), Cellustone Wall Panel (Interior).
+
+### 3.7. Laboratorium Cabinet
+Furnitur berbahan dasar *Phenolic Resin* yang solid, halus, dan dilapisi motif/tekstur HPL. Tahan terhadap air dan berbagai bahan kimia (area basah).
+- **Varian:** Cabinet Pulau (Island), Cabinet Lemari Asam, Cabinet Dinding.
+
+## 4. Portofolio & Klien
+- Galeri foto proyek yang sudah dikerjakan. Menampilkan foto-foto di lapangan dari pekerja proyek dan hasil akhir pemasangan produk Sembada Batubeling.
+
+## 5. Hubungi Kami (Contact Us)
+- **Alamat Kantor Sembada:** Jl. Bogorami No. 05 (dan No. 01 untuk Lab Furniture), Surabaya.
+- **Hotline / WhatsApp:** 0852 5746 0869
+- **Integrasi Peta:** Google Maps *embed* titik lokasi Sembada / PT Batu Beling.
+- **Formulir Kontak:** Form berbasis *glassmorphism* untuk calon klien meminta *quotation* (penawaran harga).
+
+---
+
+## 6. Dokumentasi Lengkap
+
+Untuk dokumentasi lengkap termasuk:
+- Complete page structure dengan React routing
+- Component architecture
+- SEO strategy
+- Content specifications
+
+Lihat file berikut di root project:
+- `/PAGES.md` - Complete page structure and routing (React)
+- `/COMPONENTS.md` - Component hierarchy and API documentation
+- `/DESIGN.md` - Complete design system
+- `/DEVELOPMENT.md` - Development workflow and setup guide
+- `/style.css` - Global CSS implementation
+
+## 7. URL Structure (Final)
+
+```
+/                              → Home
+/tentang-kami                  → About Us
+/produk                        → Product Index
+/produk/portable-toilet        → Product Detail
+/produk/cubicle-toilet         → Product Detail
+/produk/office-cubicle         → Product Detail
+/produk/movable-door           → Product Detail
+/produk/cnc-ornament           → Product Detail
+/produk/cellustone-ornament    → Product Detail
+/produk/laboratorium-cabinet   → Product Detail
+/portofolio                    → Portfolio
+/hubungi-kami                  → Contact
+```
