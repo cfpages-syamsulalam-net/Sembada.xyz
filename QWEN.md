@@ -77,29 +77,107 @@ sembada.xyz/
 
 ---
 
+## 🔧 Development Workflow
+
+### CRITICAL: Always Read Context Files First
+
+**BEFORE starting any work, ALWAYS read these files:**
+1. `/QWEN.md` - This file (rules and guidelines)
+2. `/CHANGELOG.md` - Current project status and progress
+3. `/DESIGN.md` - Design system specifications
+4. `/HOMEPAGE_SPEC.md` - Homepage detailed specifications
+5. `/ALL_PAGES_SPEC.md` - All other pages specifications
+6. `/BEGINNER_GUIDE.md` - React/Vite context (if needed)
+7. `/CLOUDFLARE_DEPLOY.md` - Deployment guide (if needed)
+
+**Why this is critical:**
+- Provides complete context of what's been done
+- Shows current project state
+- Prevents repeating work or making outdated changes
+- Ensures consistency with design decisions already made
+- Prevents mistakes like using wrong TailwindCSS version
+
+### Version Awareness
+- **Always check versions** in package.json before installing packages
+- **Never upgrade major versions** without checking compatibility first
+- **TailwindCSS:** v3.x is stable and correct (NOT v4)
+- **React:** v18+ is correct
+- **Vite:** Latest is fine
+- **React Router:** v6+ is correct
+
+---
+
 ## 🎨 Design System Rules
 
 ### CSS Architecture
-- **Primary Approach:** shadcn/ui + TailwindCSS
-- **NO global style.css** (deprecated approach)
-- TailwindCSS for all styling (utility classes)
-- shadcn/ui for pre-built components (buttons, cards, forms, etc.)
-- Custom CSS ONLY for: starry sky animation, gold gradient text, hexagonal clip-paths
+- **Primary Approach:** shadcn/ui + TailwindCSS v3 (NOT v4)
+- **NO global style.css** for components (use TailwindCSS utility classes)
+- Custom CSS ONLY for: starry sky animation, gold gradient text, hexagonal clip-paths, glassmorphism
+- **CRITICAL:** Use TailwindCSS v3.x, NOT v4 (v4 has breaking changes and different PostCSS setup)
+
+### TailwindCSS Configuration Rules
+- **Version:** Always use `tailwindcss@^3.4.0` (stable, well-documented)
+- **PostCSS Config:** Must use `tailwindcss: {}` plugin (not `@tailwindcss/postcss`)
+- **CSS Directives:** Use `@tailwind base; @tailwind components; @tailwind utilities;` (NOT `@import "tailwindcss"`)
+- **Content paths:** Must include `"./index.html"` and `"./src/**/*.{js,ts,jsx,tsx}"`
 
 ### Typography
 - **ALL fonts must be sans-serif**
-- Primary font: Inter
-- Alternative: Manroge, Plus Jakarta Sans
-- **NO serif fonts anywhere** (no Cinzel, no Playfair Display)
-- Use font weights for hierarchy (light, regular, bold, black)
+- Primary font: Inter (ONLY font, no Cinzel, no Playfair Display, no serif fonts anywhere)
+- Use font weights for hierarchy (light, regular, semibold, bold, black)
+- Headlines: `font-black`, `uppercase`, `tracking-tight` to `tracking-tighter`
+- Labels: `text-[10px]` to `text-[11px]`, `font-black`, `uppercase`, `tracking-[0.25em]` to `tracking-[0.6em]`
 
 ### Component Development
-- Use shadcn/ui components as starting point
-- Customize to match Midnight Obsidian design
-- All styling via TailwindCSS classes
-- Follow atomic design: Atoms → Molecules → Organisms → Layouts
-- Test responsive behavior (mobile-first)
-- Ensure accessibility (WCAG AA minimum)
+- Study ALL HTML files in `/stitch` folder before building components
+- Read `/HOMEPAGE_SPEC.md` and `/ALL_PAGES_SPEC.md` for complete specifications
+- Use TailwindCSS utility classes exclusively (no custom CSS in components)
+- Follow exact styling patterns from stitch designs:
+  - Glass-premium: `bg-[#0B0C10]/70 backdrop-blur-xl border border-[#f2ca50]/40`
+  - Gold gradient text: Custom CSS class (not Tailwind utility)
+  - Hexagonal shapes: `clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)`
+  - Image treatment: `grayscale hover:grayscale-0 transition-all duration-700`
+  - Staggered grids: `translate-y-8` or `translate-y-12` offsets
+
+### Critical Styling Patterns (from /stitch)
+```css
+/* Gold Metallic Text */
+.gold-metallic-text {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Glass Premium */
+.glass-premium {
+  background: rgba(11, 12, 16, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+/* Hexagon Clip Path */
+.hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* Star Animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+```
+
+### Component Development Process
+1. **READ** all `/stitch` HTML files first
+2. **STUDY** `/HOMEPAGE_SPEC.md` and `/ALL_PAGES_SPEC.md`
+3. **DOCUMENT** component requirements before building
+4. **BUILD** components with TailwindCSS classes
+5. **TEST** against stitch designs for accuracy
+6. **ITERATE** until pixel-perfect
 
 ### Typography
 - Headings: Cinzel / Playfair Display
@@ -250,14 +328,24 @@ Follow conventional commits:
 
 ## 📚 Reference Documents
 
-Always consult these files for context:
-- `/DESIGN.md` - Design system specifications (updated for shadcn/ui + TailwindCSS)
-- `/COMPONENTS.md` - Component architecture
-- `/PAGES.md` - Page structure & routing
-- `/DEVELOPMENT.md` - Development workflow (to be updated)
-- `/CHANGELOG.md` - Project progress
-- `/BEGINNER_GUIDE.md` - React/Vite guide for beginners
-- `/CLOUDFLARE_DEPLOY.md` - Step-by-step deployment guide
+**ALWAYS read these files before starting work:**
+1. `/QWEN.md` - This file (AI rules and guidelines) ⭐ READ FIRST
+2. `/CHANGELOG.md` - Project progress tracking
+3. `/DESIGN.md` - Design system (shadcn/ui + TailwindCSS v3)
+4. `/HOMEPAGE_SPEC.md` - ⭐ NEW - Detailed homepage specification from /stitch
+5. `/ALL_PAGES_SPEC.md` - ⭐ NEW - All pages specification from /stitch
+6. `/BEGINNER_GUIDE.md` - React/Vite guide for beginners
+7. `/CLOUDFLARE_DEPLOY.md` - Deployment guide
+
+**/stitch folder:**
+- Contains 14 HTML files (complete design references)
+- 2 Home page versions
+- 2 About page versions
+- 1 Portfolio page
+- 1 Product Knowledge page
+- 1 Contact page
+- 7 Product detail pages
+- ALL follow consistent design system
 
 ---
 
