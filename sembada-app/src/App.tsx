@@ -28,35 +28,6 @@ function HomePage() {
   )
 }
 
-function AboutPage() {
-  return (
-    <div className="pt-24">
-      <Section padding="lg">
-        <div className="container mx-auto px-6 lg:px-8">
-          <Heading level={1} variant="gold" className="mb-8">
-            Tentang Kami
-          </Heading>
-          <div className="max-w-3xl space-y-6">
-            <p className="text-lg text-text-primary leading-relaxed">
-              Sembada Batu Beling merupakan divisi/anak usaha pemasaran resmi dari PT. Batu Beling.
-            </p>
-            <p className="text-text-secondary leading-relaxed">
-              PT. Batu Beling sendiri dikenal sebagai perusahaan aplikator, kontraktor, dan pabrikasi 
-              papan phenolic profesional yang telah berpengalaman menangani berbagai proyek skala nasional 
-              di seluruh Indonesia (sekolah, kantor, bandara, hotel, rumah sakit).
-            </p>
-            <p className="text-text-secondary leading-relaxed">
-              Sembada hadir secara khusus untuk merangkul pasar secara lebih luas, menyajikan solusi produk 
-              arsitektur dan sanitas (seperti toilet portabel, partisi ruangan, hingga ornamen CNC) dengan 
-              pelayanan yang ramah, efisien, dan berkualitas premium.
-            </p>
-          </div>
-        </div>
-      </Section>
-    </div>
-  )
-}
-
 function App() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0B0C10] text-[#e3e2e8]">
