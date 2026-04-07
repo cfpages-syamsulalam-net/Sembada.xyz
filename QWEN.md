@@ -171,6 +171,63 @@ sembada.xyz/
 }
 ```
 
+### Responsive Design Rules (CRITICAL)
+
+**Target Screen:** 1366px × 768px (common laptop) + all other screens
+
+**Rules:**
+1. **ALWAYS use responsive breakpoints** for ALL text sizes, padding, margins
+2. **Text sizes:** Use range notation `text-sm md:text-base lg:text-lg`
+3. **Spacing:** Use range notation `px-4 md:px-6 lg:px-8`
+4. **NEVER use fixed large sizes** without responsive variants
+5. **Test breakpoints:** 
+   - Mobile: 320px - 640px
+   - Tablet: 640px - 1024px
+   - Desktop: 1024px - 1366px
+   - Large: 1366px+
+
+**Example:**
+```tsx
+// ❌ WRONG - Fixed size, will overflow
+<h1 className="text-6xl">Title</h1>
+
+// ✅ CORRECT - Responsive sizing
+<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Title</h1>
+```
+
+**Container Width:**
+- Use `container mx-auto` with responsive padding
+- Add `overflow-hidden` to sections if needed
+- Use `max-w-full` on images and containers
+
+**Common Issues to Avoid:**
+- ❌ Large tracking values on small screens: `tracking-[0.5em]` → use `tracking-[0.2em] md:tracking-[0.4em]`
+- ❌ Fixed padding on small screens: `px-10` → use `px-4 md:px-8 lg:px-10`
+- ❌ Large font sizes without breakpoints: `text-8xl` → use `text-5xl md:text-7xl lg:text-8xl`
+- ❌ Long text without break-words: add `break-words` or `leading-tight`
+
+### Placeholder Images
+
+**Use Unsplash for placeholders (FREE, no API key needed):**
+```
+Format: https://images.unsplash.com/[photo-id]?w=[width]&h=[height]&fit=crop
+Example: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=600&fit=crop
+```
+
+**Why Unsplash:**
+- ✅ Free for commercial use
+- ✅ No attribution required (but appreciated)
+- ✅ Direct URL access (no signup)
+- ✅ Resize parameters in URL
+- ✅ High quality photos
+
+**Common Image Sizes:**
+- Square (products, avatars): `?w=600&h=600&fit=crop`
+- Landscape (hero, banners): `?w=1200&h=600&fit=crop`
+- Portrait (team, about): `?w=600&h=800&fit=crop`
+
+**Always add placeholder images** during development so we can see the design properly. Replace with real images later.
+
 ### Component Development Process
 1. **READ** all `/stitch` HTML files first
 2. **STUDY** `/HOMEPAGE_SPEC.md` and `/ALL_PAGES_SPEC.md`
