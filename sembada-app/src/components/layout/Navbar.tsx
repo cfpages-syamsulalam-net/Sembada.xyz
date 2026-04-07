@@ -110,24 +110,29 @@ export function Navbar() {
 
             {/* Produk Megamenu */}
             <li
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setProdukOpen(true)}
               onMouseLeave={() => setProdukOpen(false)}
             >
-              <button
-                className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap ${
-                  location.pathname.startsWith('/produk')
-                    ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50 pb-1'
-                    : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
-                }`}
-              >
-                Produk
-              </button>
+              {/* Trigger area with invisible bridge */}
+              <div className="relative">
+                <button
+                  className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap pb-2 ${
+                    location.pathname.startsWith('/produk')
+                      ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50'
+                      : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
+                  }`}
+                >
+                  Produk
+                </button>
+                {/* Invisible bridge to prevent hover gap */}
+                <div className="absolute top-full left-0 right-0 h-3" />
+              </div>
 
               {/* Megamenu Dropdown */}
               {produkOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 p-6 md:p-8 min-w-[600px]"
+                  className="absolute top-full left-1/2 -translate-x-1/2 p-6 md:p-8 min-w-[600px]"
                   style={{
                     background: 'rgba(11, 12, 16, 0.95)',
                     backdropFilter: 'blur(32px)',
@@ -141,9 +146,9 @@ export function Navbar() {
                       <Link
                         key={product.path}
                         to={product.path}
-                        className="group block p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
+                        className="group/item block p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
                       >
-                        <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover:text-white transition-colors">
+                        <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover/item:text-white transition-colors">
                           {product.label}
                         </h4>
                         <p className="text-[9px] md:text-[10px] text-[#94A3B8] leading-relaxed">
