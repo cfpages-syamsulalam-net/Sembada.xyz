@@ -5,6 +5,7 @@ import { Hero } from '@/components/sections/Hero'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ProductGrid } from '@/components/sections/ProductGrid'
 import { ValueProposition } from '@/components/sections/ValueProposition'
+import { AboutPage } from '@/pages/AboutPage'
 import { Heading } from '@/components/ui/Heading'
 import { Section } from '@/components/layout/Section'
 
