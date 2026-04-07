@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { productData } from '@/data/products'
+import { ProductIcons } from '@/data/productIcons'
 
 const productItems = productData.map(p => ({
   label: p.label,
@@ -118,9 +119,9 @@ export function Navbar() {
                         to={product.path}
                         className="group/item flex items-start gap-3 p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
                       >
-                        {/* FontAwesome Icon */}
+                        {/* Inline SVG Icon */}
                         <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-[#f2ca50]/30 text-[#f2ca50] group-hover/item:border-[#f2ca50] transition-colors">
-                          <i className={`${product.icon} text-sm`} />
+                          {ProductIcons[product.icon as keyof typeof ProductIcons]}
                         </div>
                         <div>
                           <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover/item:text-white transition-colors">
@@ -217,7 +218,7 @@ export function Navbar() {
                       onClick={() => setMenuOpen(false)}
                     >
                       <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-[#f2ca50]/30 text-[#f2ca50] mt-0.5">
-                        <i className={`${product.icon} text-xs`} />
+                        {ProductIcons[product.icon as keyof typeof ProductIcons]}
                       </div>
                       <div>
                         <span className="block text-xs text-[#e3e2e8] font-bold">

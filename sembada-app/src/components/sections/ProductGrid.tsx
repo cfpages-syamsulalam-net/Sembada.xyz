@@ -64,14 +64,17 @@ export function ProductGrid() {
           {products.map((product, index) => (
             <div key={index} className={`group ${product.offset}`}>
               {/* Hexagon Container */}
-              <div className="relative w-full aspect-square mb-8 overflow-hidden transition-all duration-500 group-hover:scale-[1.02]" style={{
-                clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                background: 'rgba(11, 12, 16, 0.7)',
-                backdropFilter: 'blur(24px)',
-                WebkitBackdropFilter: 'blur(24px)',
-                border: '1px solid rgba(212, 175, 55, 0.4)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
-              }}>
+              <div 
+                className="relative w-full aspect-square mb-8 overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+                style={{
+                  clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+                  background: 'rgba(11, 12, 16, 0.7)',
+                  backdropFilter: 'blur(24px)',
+                  WebkitBackdropFilter: 'blur(24px)',
+                  border: '2px solid rgba(212, 175, 55, 0.6)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8), 0 0 8px rgba(212, 175, 55, 0.3)',
+                }}
+              >
                 {/* Image */}
                 <img
                   src={product.image}

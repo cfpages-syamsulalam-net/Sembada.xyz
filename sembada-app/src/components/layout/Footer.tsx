@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { productData } from '@/data/products'
+import { ProductIcons } from '@/data/productIcons'
 
 const mainPages = [
   { label: 'Beranda', path: '/' },
@@ -33,10 +34,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 pb-12 md:pb-16">
           {/* Column 1 - Brand */}
           <div>
-            <h4 className="text-gold-gradient font-black text-lg md:text-xl uppercase tracking-tight mb-4">
+            <h4 className="text-gold-gradient font-black text-lg md:text-xl uppercase tracking-tight mb-2">
               Sembada Batu Beling
             </h4>
-            <p className="text-sm text-[#e3e2e8]/60 mb-4 italic">
+            <p className="font-cursive text-base text-white italic mb-4 leading-relaxed">
               Integritas untuk Sukses dan Barokah
             </p>
             <p className="text-xs text-[#64748B] mb-6">
@@ -91,7 +92,9 @@ export function Footer() {
                     className="group flex items-start gap-2"
                   >
                     <div className="flex-shrink-0 w-7 h-7 flex items-center justify-center border border-[#f2ca50]/20 text-[#f2ca50] group-hover:border-[#f2ca50]/40 transition-colors mt-0.5">
-                      <i className={`${product.icon} text-[10px]`} />
+                      <div className="w-3 h-3">
+                        {ProductIcons[product.icon as keyof typeof ProductIcons]}
+                      </div>
                     </div>
                     <div>
                       <span className="text-sm text-[#64748B] group-hover:text-[#f2ca50] transition-colors">

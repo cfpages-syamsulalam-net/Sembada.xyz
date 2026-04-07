@@ -43,6 +43,12 @@ export function Hero() {
           />
         ))}
       </div>
+      
+      {/* Sparkling Stars Overlay */}
+      <div className="sparkling-stars" />
+      
+      {/* Falling Stars Layer */}
+      <div className="falling-stars" />
 
       {/* Gradient Overlay */}
       <div
@@ -66,7 +72,7 @@ export function Hero() {
           </h1>
 
           {/* Tagline */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight italic text-[#e3e2e8] leading-tight mb-8 md:mb-12 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-cursive text-white italic leading-tight mb-8 md:mb-12 max-w-3xl mx-auto">
             Integritas untuk Sukses dan Barokah
           </p>
 

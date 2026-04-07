@@ -32,8 +32,12 @@ function HomePage() {
 function App() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0B0C10] text-[#e3e2e8]">
+      {/* Gold Gradient Bars at Top & Bottom */}
+      <div className="gold-gradient-top" />
+      <div className="gold-gradient-bottom" />
+      
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang-kami" element={<AboutPage />} />

@@ -186,6 +186,13 @@ sembada.xyz/
    - Desktop: 1024px - 1366px
    - Large: 1366px+
 
+**ICONS: ALWAYS USE INLINE SVGs, NOT CDN/EXTERNAL LIBRARIES**
+- FontAwesome CDN can be blocked by ad blockers, CORS, or network issues
+- Use inline SVG components that are bundled with the code
+- Store SVGs in `/src/data/productIcons.tsx` as React components
+- Never add external icon CDN links to index.html unless absolutely necessary
+- If icons are needed, create inline SVG files or use React icon libraries
+
 **UNIFIED PAGE HEADER PATTERN (MANDATORY):**
 Every page MUST use this exact structure:
 ```tsx
