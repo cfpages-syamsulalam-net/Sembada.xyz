@@ -140,25 +140,6 @@ export function PortfolioPage() {
           </div>
         </div>
       </section>
-
-      {/* FAB (Floating Action Button) */}
-      <a
-        href="https://wa.me/6285257460869"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-50 block transition-transform duration-300 hover:scale-110"
-        style={{
-          clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-          background: '#f2ca50',
-          boxShadow: '0 0 20px rgba(242, 202, 80, 0.5)',
-        }}
-      >
-        <div className="w-16 h-16 flex items-center justify-center">
-          <span className="material-symbols-outlined text-3xl text-[#0B0C10]">
-            chat_bubble
-          </span>
-        </div>
-      </a>
     </div>
   )
 }

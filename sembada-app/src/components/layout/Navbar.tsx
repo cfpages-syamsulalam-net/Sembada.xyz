@@ -1,43 +1,13 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { productData } from '@/data/products'
 
-const productItems = [
-  { 
-    label: 'Portable Toilet', 
-    path: '/produk/portable-toilet',
-    description: 'Unit sanitasi movable yang fleksibel' 
-  },
-  { 
-    label: 'Cubicle Toilet', 
-    path: '/produk/cubicle-toilet',
-    description: 'Partisi toilet modern dan kuat' 
-  },
-  { 
-    label: 'Office Cubicle', 
-    path: '/produk/office-cubicle',
-    description: 'Sekat ruang kerja premium' 
-  },
-  { 
-    label: 'Movable Door', 
-    path: '/produk/movable-door',
-    description: 'Partisi ruangan dengan peredam suara' 
-  },
-  { 
-    label: 'CNC Ornament', 
-    path: '/produk/cnc-ornament',
-    description: 'Ornamen presisi komputerisasi' 
-  },
-  { 
-    label: 'Cellustone', 
-    path: '/produk/cellustone-ornament',
-    description: 'Eco-friendly wall panel' 
-  },
-  { 
-    label: 'Laboratorium Cabinet', 
-    path: '/produk/laboratorium-cabinet',
-    description: 'Furnitur lab tahan kimia' 
-  },
-]
+const productItems = productData.map(p => ({
+  label: p.label,
+  path: p.path,
+  description: p.description,
+  icon: p.icon,
+}))
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -115,11 +85,11 @@ export function Navbar() {
               onMouseLeave={() => setProdukOpen(false)}
             >
               {/* Trigger area with invisible bridge */}
-              <div className="relative">
+              <div className="relative flex items-center h-full">
                 <button
-                  className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap pb-2 ${
+                  className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap ${
                     location.pathname.startsWith('/produk')
-                      ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50'
+                      ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50 pb-1'
                       : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
                   }`}
                 >
@@ -146,14 +116,20 @@ export function Navbar() {
                       <Link
                         key={product.path}
                         to={product.path}
-                        className="group/item block p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
+                        className="group/item flex items-start gap-3 p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
                       >
-                        <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover/item:text-white transition-colors">
-                          {product.label}
-                        </h4>
-                        <p className="text-[9px] md:text-[10px] text-[#94A3B8] leading-relaxed">
-                          {product.description}
-                        </p>
+                        {/* FontAwesome Icon */}
+                        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-[#f2ca50]/30 text-[#f2ca50] group-hover/item:border-[#f2ca50] transition-colors">
+                          <i className={`${product.icon} text-sm`} />
+                        </div>
+                        <div>
+                          <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover/item:text-white transition-colors">
+                            {product.label}
+                          </h4>
+                          <p className="text-[9px] md:text-[10px] text-[#94A3B8] leading-relaxed">
+                            {product.description}
+                          </p>
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -232,18 +208,25 @@ export function Navbar() {
                 <div className="text-sm font-black uppercase tracking-[0.25em] text-[#f2ca50] mb-2">
                   Produk
                 </div>
-                <div className="pl-4 space-y-2">
+                <div className="pl-4 space-y-3">
                   {productItems.map((product) => (
                     <Link
                       key={product.path}
                       to={product.path}
-                      className="block text-xs text-[#e3e2e8]/60 hover:text-[#f2ca50] transition-colors"
+                      className="flex items-start gap-3 py-1"
                       onClick={() => setMenuOpen(false)}
                     >
-                      {product.label}
-                      <span className="block text-[10px] text-[#94A3B8] font-normal">
-                        {product.description}
-                      </span>
+                      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-[#f2ca50]/30 text-[#f2ca50] mt-0.5">
+                        <i className={`${product.icon} text-xs`} />
+                      </div>
+                      <div>
+                        <span className="block text-xs text-[#e3e2e8] font-bold">
+                          {product.label}
+                        </span>
+                        <span className="block text-[10px] text-[#94A3B8]">
+                          {product.description}
+                        </span>
+                      </div>
                     </Link>
                   ))}
                 </div>

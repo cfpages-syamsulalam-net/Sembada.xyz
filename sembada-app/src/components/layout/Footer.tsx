@@ -1,20 +1,11 @@
 import { Link } from 'react-router-dom'
+import { productData } from '@/data/products'
 
 const mainPages = [
   { label: 'Beranda', path: '/' },
   { label: 'Tentang Kami', path: '/tentang-kami' },
   { label: 'Portofolio', path: '/portofolio' },
   { label: 'Hubungi Kami', path: '/hubungi-kami' },
-]
-
-const productPages = [
-  { label: 'Portable Toilet', path: '/produk/portable-toilet', desc: 'Unit sanitasi movable' },
-  { label: 'Cubicle Toilet', path: '/produk/cubicle-toilet', desc: 'Partisi toilet modern' },
-  { label: 'Office Cubicle', path: '/produk/office-cubicle', desc: 'Sekat ruang kerja premium' },
-  { label: 'Movable Door', path: '/produk/movable-door', desc: 'Partisi dengan peredam suara' },
-  { label: 'CNC Ornament', path: '/produk/cnc-ornament', desc: 'Ornamen presisi komputerisasi' },
-  { label: 'Cellustone', path: '/produk/cellustone-ornament', desc: 'Eco-friendly wall panel' },
-  { label: 'Laboratorium Cabinet', path: '/produk/laboratorium-cabinet', desc: 'Furnitur lab tahan kimia' },
 ]
 
 const socialLinks = [
@@ -92,19 +83,24 @@ export function Footer() {
             <h4 className="text-xs font-black uppercase tracking-[0.25em] text-[#94A3B8] mb-4">
               Produk
             </h4>
-            <ul className="space-y-2">
-              {productPages.map((product) => (
+            <ul className="space-y-3">
+              {productData.map((product) => (
                 <li key={product.path}>
                   <Link
                     to={product.path}
-                    className="group block"
+                    className="group flex items-start gap-2"
                   >
-                    <span className="text-sm text-[#64748B] group-hover:text-[#f2ca50] transition-colors">
-                      {product.label}
-                    </span>
-                    <span className="block text-[10px] text-[#94A3B8]/60 group-hover:text-[#94A3B8] transition-colors">
-                      {product.desc}
-                    </span>
+                    <div className="flex-shrink-0 w-7 h-7 flex items-center justify-center border border-[#f2ca50]/20 text-[#f2ca50] group-hover:border-[#f2ca50]/40 transition-colors mt-0.5">
+                      <i className={`${product.icon} text-[10px]`} />
+                    </div>
+                    <div>
+                      <span className="text-sm text-[#64748B] group-hover:text-[#f2ca50] transition-colors">
+                        {product.label}
+                      </span>
+                      <span className="block text-[10px] text-[#94A3B8]/60 group-hover:text-[#94A3B8] transition-colors">
+                        {product.description}
+                      </span>
+                    </div>
                   </Link>
                 </li>
               ))}

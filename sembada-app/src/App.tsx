@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp'
 import { Hero } from '@/components/sections/Hero'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ProductGrid } from '@/components/sections/ProductGrid'
@@ -48,6 +49,7 @@ function App() {
           <Route path="/hubungi-kami" element={<ContactPage />} />
         </Routes>
       </main>
+      <FloatingWhatsApp />
       <Footer />
     </div>
   )
