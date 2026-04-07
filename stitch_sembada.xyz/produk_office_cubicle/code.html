@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sembada Batu Beling - Office Cubicle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#d4af37",
+                    "on-tertiary-container": "#504500",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "inverse-surface": "#e3e2e8",
+                    "surface-dim": "#0B0C10",
+                    "surface-container-low": "#111216",
+                    "primary": "#f2ca50",
+                    "on-tertiary": "#393000",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-bright": "#1a1b20",
+                    "tertiary-container": "#cdb212",
+                    "surface": "#0B0C10",
+                    "primary-fixed": "#ffe088",
+                    "outline": "#99907c",
+                    "secondary": "#f7bd48",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-background": "#e3e2e8",
+                    "outline-variant": "#4d4635",
+                    "background": "#0B0C10",
+                    "primary-fixed-dim": "#e9c349",
+                    "surface-container": "#15161a",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#1f1f24",
+                    "surface-container-highest": "#1f1f24",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "secondary-fixed": "#ffdea6",
+                    "on-secondary-container": "#392700",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#211b00",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#2f3035",
+                    "on-primary": "#3c2f00",
+                    "secondary-container": "#ba880f",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#271900",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffe24c",
+                    "tertiary-fixed-dim": "#e2c62d",
+                    "on-error": "#690005",
+                    "on-surface": "#e3e2e8",
+                    "surface-container-high": "#1a1b20",
+                    "tertiary": "#eace35"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0B0C10;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(242, 202, 80, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glass-premium {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(242, 202, 80, 0.4);
+        }
+        .hex-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, #BF953F, #f2ca50, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .star-bg {
+            background-image: radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+                              radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                              radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#0B0C10]/70 backdrop-blur-xl border-b border-[#f2ca50]/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Beranda</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Tentang Kami</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Produk</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Portofolio</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Kontak</a>
+</div>
+<button class="bg-[#f2ca50]/10 border border-[#f2ca50]/40 px-6 py-2 font-['Inter'] font-black uppercase tracking-[0.2em] text-[10px] text-[#f2ca50] hover:bg-[#f2ca50] hover:text-[#0B0C10] transition-all duration-300 scale-95 hover:scale-100">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen star-bg">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover grayscale" data-alt="ultra-modern minimalist dark office interior with dramatic architectural lighting and metallic accents highlighting geometric structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT6x__ZhcMD4frUxCaRnKzSKIgIEJmM1ObBk2nvNGH96UfadRNLm2pH6ajNkzs4efrsx58lriNW9gtFh4Xfk7YNClRjTn-YFoCHDG1rmfYEUMFShmhu5AE8uPhJ5h_8a2vxAp3yhMYue9Elw6ZL9G-mon84SkuUEfCb3oXvXW1t4hieDWbZB1qgu7DhH2BKP-bMCOi4h2GUOCjZgNOwKjdNkkMQrjNjiPCy0INwM0rCQ7K0zif3GNPX2-uKqSh59zCMz5in4EeCKAl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl space-y-6">
+<span class="font-black uppercase tracking-[0.5em] text-primary text-xs md:text-sm">Architectural Solution</span>
+<h1 class="text-6xl md:text-8xl font-black gold-gradient-text leading-[0.85] tracking-[-0.05em] uppercase">
+                    OFFICE CUBICLE
+                </h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
+                    Sekat ruang kerja Phenolic Resin Premium, tahan benturan dan elegan. Dirancang untuk efisiensi ruang dengan estetika monolitik yang mewah.
+                </p>
+<div class="pt-8">
+<button class="border border-primary/40 px-10 py-4 text-xs font-black uppercase tracking-[0.3em] text-primary glass-premium hover:bg-primary hover:text-surface transition-all duration-500">
+                        Lihat Katalog Teknis
+                    </button>
+</div>
+</div>
+</section>
+<!-- Variants Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="space-y-2">
+<h2 class="text-xs font-black uppercase tracking-[0.4em] text-primary">Sistem Modular</h2>
+<h3 class="text-4xl font-black uppercase tracking-tighter">Variant Spesifikasi</h3>
+</div>
+<div class="h-[1px] flex-grow mx-8 bg-primary/20 hidden md:block"></div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant max-w-[200px]">Dipilih sesuai hierarki dan kebutuhan ruang kerja profesional.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Variant 1 -->
+<div class="glass-premium p-10 flex flex-col gap-8 group hover:-translate-y-4 transition-transform duration-500">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="minimalist modern staff workstation with light gray partitions and ergonomic setup in a dark ambient office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz2frE8YsmljU23E23dFnYtxrhJS0JzhrDrblpOIa2YjlhapLn60g0UQbq2Ziao-R7dhOelR0PtPnTzRR5emHh2ABUZOfoAqnn_6cmzP9Lo8-pRztOqgOmpzQyqmPJsttN5bLJudw38vHpbws4OP6tXqh_BGWCn6zFMRy7340liqAN6pjbjs4rKEMiI21c9_6sJoTZp_S25wWxlUvJXm29tqfx1AsDSibmXIux3zIyUc23R5mmU9OnopoqOKVjLfkTcxBYoXZZWc0X"/>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-black uppercase tracking-tighter text-primary">Advance Staff</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Optimalisasi ruang maksimal dengan struktur compact namun tetap memberikan privasi penuh.</p>
+<ul class="text-[10px] font-black uppercase tracking-widest space-y-2 pt-4 opacity-60">
+<li>• 1200mm x 600mm</li>
+<li>• Phenolic 12mm</li>
+<li>• Integrated Cable Management</li>
+</ul>
+</div>
+</div>
+<!-- Variant 2 -->
+<div class="glass-premium p-10 flex flex-col gap-8 group hover:-translate-y-4 transition-transform duration-500 md:mt-12">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="premium leader workstation with wood accents and dark glass panels in a high-end corporate office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAuUlY9g96SWeeZANNSI1-gkNNkt4a6z0vVddn8FZFgncav_Wi9_UbYqM2hO5kP5awRvIYxirCJTZQwWDE9zKd1rJjf4a7DHcylYOzujDNGMi-sFi6TZsL8Hv1yny9vtIGFqqnY9wal_9EqBm53VPPP6J6cLFqPOQm4LES_1FGSjtb3rJmDJLGYULF7nUeoYuCY1EEaUEioDv9r8bLmlNuZnGMSZEUTYGdIXYzgzZARKUvPBe5iPBFHo4jIbovltFPjbnh6L2H5d7b"/>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-black uppercase tracking-tighter text-primary">Leader Staff</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Keseimbangan antara kolaborasi dan otoritas. Area kerja yang lebih luas dengan aksen material premium.</p>
+<ul class="text-[10px] font-black uppercase tracking-widest space-y-2 pt-4 opacity-60">
+<li>• 1500mm x 750mm</li>
+<li>• Dual-tone Phenolic</li>
+<li>• Acoustic Panel Inserts</li>
+</ul>
+</div>
+</div>
+<!-- Variant 3 -->
+<div class="glass-premium p-10 flex flex-col gap-8 group hover:-translate-y-4 transition-transform duration-500 md:-mt-8">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="spacious supervisor office workstation with high privacy panels and premium finishes in a contemporary architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt2wxxpLeD3V1s6VUDOHTmNZI7JbbWimxYxjlFKmUIzrDupM19QFEeoGDp5iReI_sg61z7vJZb6OwCA25aWJvTfAbUubYpGEGIPBUHQAVnIOPEODlHCG2G1g0MMqlHsS1ZJ_wWhSlrZldb3RevqCmGexxE9xsyD7TuV-7uoSewhTJ85k8Q1Cq_vjIHmk2WfDoniEcXpIYh7YL-e8sxSPWjkgZopoVtCMn4S0PCe0YpXIqiH1EssccHgE5qBunxCoO-Udtu9S3DYcHD"/>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-black uppercase tracking-tighter text-primary">Supervisor</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Workstation eksklusif dengan privasi tinggi dan ruang penyimpanan terintegrasi.</p>
+<ul class="text-[10px] font-black uppercase tracking-widest space-y-2 pt-4 opacity-60">
+<li>• 1800mm x 900mm</li>
+<li>• Floor-to-Ceiling Option</li>
+<li>• Luxury Hardware Finishes</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Hexagon Layout -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
+<div class="grid grid-cols-2 gap-4 relative">
+<div class="space-y-4">
+<div class="hex-mask w-full aspect-square bg-surface border border-primary/20 flex items-center justify-center p-4">
+<img class="w-full h-full object-cover hex-mask opacity-60" data-alt="close-up of premium dark textured phenolic resin board surface showing industrial durability" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArSQyV8K1mcKbY9R7KUOOE_A0QhazKG6dOQu8Rj8_O8wvNK1cmvUZ-C0Y1MbfEltqehjQCgbYi16xf2NdkylOefkQDl6rLgynxNW75LPMllQ8-_MGr360FPF_4qsamNycMlHJ9LJDliI9TF5o83DMWcXhQYFWabN106gdF8vZiUymQjrsabtu2GXKnngwKF90YH-SVR7NvXGu6M4_Gf2AfjW4fy_agsQSV_EfaMarybGvHzbIbM88DRLdD2Up8sbDDNRYJvvar75PA"/>
+</div>
+<div class="hex-mask w-full aspect-square bg-surface border border-primary/20 flex items-center justify-center p-4">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">shield</span>
+<p class="text-[10px] font-black uppercase tracking-widest mt-2">Durable</p>
+</div>
+</div>
+</div>
+<div class="space-y-4 pt-20">
+<div class="hex-mask w-full aspect-square bg-surface border border-primary/20 flex items-center justify-center p-4">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">design_services</span>
+<p class="text-[10px] font-black uppercase tracking-widest mt-2">Bespoke</p>
+</div>
+</div>
+<div class="hex-mask w-full aspect-square bg-surface border border-primary/20 flex items-center justify-center p-4 overflow-hidden">
+<img class="w-full h-full object-cover hex-mask opacity-60" data-alt="architectural rendering of modular workspace layout with clean lines and sharp angles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcR0U9xV0T07H2stEATyrUeyMoZSYnF4A5BarCv_pG0CSquoVHJZwBgTikwNYause5-pK_viYnbI1Y68XrrCvJHK9ak95ewZbWTQpD6m6a5mtGLP-kTw7gWQDhkbslwfI3u6b_i4NA-V-CsM5S8uR9UOjHA-aFkeopKPXQWGOuwyg921HoDm9rNiLKDbPQpiyvsyCpl8NyLtcrtwIWuwlwsFrxUNabax_aUIHucyv84XHboQMoNEpwIdzxSkON2Qr5Q16ZAeBDdwcp"/>
+</div>
+</div>
+</div>
+<div class="space-y-10">
+<div class="space-y-2">
+<h2 class="text-xs font-black uppercase tracking-[0.4em] text-primary">Superiority</h2>
+<h3 class="text-5xl font-black uppercase tracking-tighter leading-none">Keunggulan Material Phenolic Resin</h3>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<span class="text-primary font-black text-2xl tracking-tighter italic">01</span>
+<div>
+<h5 class="text-sm font-black uppercase tracking-widest mb-2">Anti Benturan &amp; Gores</h5>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Kepadatan tinggi material Phenolic Resin memastikan struktur tetap kokoh menghadapi aktivitas intensitas tinggi di kantor.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary font-black text-2xl tracking-tighter italic">02</span>
+<div>
+<h5 class="text-sm font-black uppercase tracking-widest mb-2">Ketahanan Kimia &amp; Air</h5>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Tidak terpengaruh oleh kelembapan atau cairan pembersih, menjaga kebersihan dan higienitas area kerja Anda.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary font-black text-2xl tracking-tighter italic">03</span>
+<div>
+<h5 class="text-sm font-black uppercase tracking-widest mb-2">Instalasi Modular Presisi</h5>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Sistem perakitan yang efisien memungkinkan perubahan layout ruangan tanpa merusak struktur dasar material.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 text-center relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto space-y-12">
+<h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight italic">
+                    Transformasi Ruang Kerja Anda Menuju <span class="gold-gradient-text">Level Berikutnya</span>
+</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-primary px-12 py-5 text-[10px] font-black uppercase tracking-[0.4em] text-surface hover:bg-white transition-all duration-300">
+                        Konsultasi Desain
+                    </button>
+<button class="border border-primary/40 px-12 py-5 text-[10px] font-black uppercase tracking-[0.4em] text-primary glass-premium hover:bg-primary/10 transition-all duration-300">
+                        Unduh Brosur
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B0C10] w-full rounded-none">
+<div class="bg-[#111216] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-black text-[#f2ca50]">Sembada Batu Beling</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Lokasi Proyek</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Karir</a>
+</div>
+<div class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 opacity-80">
+                © 2024 Sembada Batu Beling. Hak Cipta Dilindungi.
+            </div>
+</div>
+</footer>
+</body></html>

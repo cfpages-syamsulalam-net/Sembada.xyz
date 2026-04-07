@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cubicle Toilet - Sembada Batu Beling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#d4af37",
+                    "on-tertiary-container": "#504500",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "inverse-surface": "#e3e2e8",
+                    "surface-dim": "#0B0C10",
+                    "surface-container-low": "#111216",
+                    "primary": "#f2ca50",
+                    "on-tertiary": "#393000",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-bright": "#1a1b20",
+                    "tertiary-container": "#cdb212",
+                    "surface": "#0B0C10",
+                    "primary-fixed": "#ffe088",
+                    "outline": "#99907c",
+                    "secondary": "#f7bd48",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-background": "#e3e2e8",
+                    "outline-variant": "#4d4635",
+                    "background": "#0B0C10",
+                    "primary-fixed-dim": "#e9c349",
+                    "surface-container": "#15161a",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#1f1f24",
+                    "surface-container-highest": "#1f1f24",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "secondary-fixed": "#ffdea6",
+                    "on-secondary-container": "#392700",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#211b00",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#2f3035",
+                    "on-primary": "#3c2f00",
+                    "secondary-container": "#ba880f",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#271900",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffe24c",
+                    "tertiary-fixed-dim": "#e2c62d",
+                    "on-error": "#690005",
+                    "on-surface": "#e3e2e8",
+                    "surface-container-high": "#1a1b20",
+                    "tertiary": "#eace35"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-premium {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(242, 202, 80, 0.4);
+        }
+        .hex-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .starry-bg {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+        .gold-text-gradient {
+            background: linear-gradient(to bottom, #BF953F, #f2ca50, #AA771C, #f2ca50, #BF953F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-active {
+            color: #f2ca50;
+            border-bottom: 2px solid #f2ca50;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body starry-bg min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#0B0C10]/70 backdrop-blur-xl border-b border-[#f2ca50]/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px]">
+<a class="text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Beranda</a>
+<a class="text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Tentang Kami</a>
+<a class="text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Produk</a>
+<a class="text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Portofolio</a>
+<a class="text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Kontak</a>
+</div>
+<button class="border border-primary/40 px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-[#f2ca50]/10 transition-all duration-300 active:scale-95">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative py-24 px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20" data-alt="high-end minimalist architectural interior with clean dark lines and dramatic gold lighting accents"></div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-black uppercase tracking-[0.5em] text-primary text-xs mb-4">ARCHITECTURAL EXCELLENCE</p>
+<h1 class="text-6xl md:text-8xl font-black leading-[0.85] tracking-tighter gold-text-gradient uppercase mb-8">
+                    CUBICLE TOILET
+                </h1>
+<p class="text-xl md:text-2xl font-light text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                    Partisi toilet modern, ringan, kuat, dan hemat tempat. Dirancang untuk estetika ruang komersial yang prestisius.
+                </p>
+</div>
+</section>
+<!-- Variants Section: Glassmorphism Cards -->
+<section class="px-6 py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-start mb-16">
+<h2 class="text-4xl font-black uppercase tracking-tight text-white mb-2">Pilihan Varian</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Variant 1 -->
+<div class="glass-premium p-8 group hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center">
+<div class="w-full h-48 bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Premium Cubicle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="luxury bathroom cubicle with matte black finish and gold trim highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5vE3nBgMFIV1a0dbXPOaXx0feoIrRQ6i9M8ABp9pP--mEANseFSWHGOC8PmtGWSh_JtSIvm9lgD5g2VpQhYWhE9U5JnEdy5G0kaQrFf_YJorTP81jMsL9IWYlQ8UaObHGRUtISQDeXmbaXrbM7wfjMrvHWkdoSpKliGiU9ed8dK-MdHRiiALIXy2QO7wFaoBTpC-O0swRW9ckQWQDc6PWkd3ELl8i42DCF8SHNjGZYs25JUA5crxI3H9NwVUfQABNRlC1HtRfYDnB"/>
+</div>
+<h3 class="font-black uppercase tracking-widest text-primary text-sm mb-4">Premium</h3>
+<p class="text-xs text-on-surface-variant font-light leading-relaxed">Ketahanan maksimal dengan material Phenolic Resin terbaik untuk area high-traffic.</p>
+</div>
+<!-- Variant 2 -->
+<div class="glass-premium p-8 group hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center md:translate-y-8">
+<div class="w-full h-48 bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Standard Cubicle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="clean modern bathroom cubicle design with light grey wood texture panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEG10tZ_KXjPgW2X1O0hK3riQBhlxHihRWcv63UafekuS2XGdh9MyjWV6O7ETtHLL2kUbW9yBT7dtBxzKGkJL49CFOorAjU3LfYUrskxTqf76tuuEq2zNovzqa2ZnfZc1rKaxXZVhjmi8uRmG7GSTWVxQcMbRa9RIafv0r1jBZzHGoHSfZpUNnqxMBKQORy2Xwksmos5v0KX-g1ozPDnBMOdH4mhKxJc9X6zgWbZ0g8WyI_YIq-Pfp2ch_rwBxO_1NIRzteB6v7N9J"/>
+</div>
+<h3 class="font-black uppercase tracking-widest text-primary text-sm mb-4">Standard</h3>
+<p class="text-xs text-on-surface-variant font-light leading-relaxed">Solusi fungsional dan estetis untuk gedung perkantoran dan fasilitas umum.</p>
+</div>
+<!-- Variant 3 -->
+<div class="glass-premium p-8 group hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center">
+<div class="w-full h-48 bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Two Tone Cubicle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="bicolor cubicle design with contrasting dark and light panels for architectural depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQlUzPOC_NFBH4yrrxctQjry8IBCWD239leRx5P03Nahw65tgwoqhK4P20p-rv97lQiXle_wpioBv6Beb7ymRzP1w5B-AjxnCeazwULM8lgda6yYW-_noQXXMXiFeQLBqS7ONt4l3D60NxkBV76bXoljCf4OJvR2Hma9sLtYVx_s_zSXD7LdQDK0diYnK1vp_wBA3ZMs3cxHB12vy_VyrKKo6PU5kXnXJNLkNFPfklPQLYEQNntPqTXGu52hiTak7ZLpKaiS2UUsYS"/>
+</div>
+<h3 class="font-black uppercase tracking-widest text-primary text-sm mb-4">Two Tone</h3>
+<p class="text-xs text-on-surface-variant font-light leading-relaxed">Kombinasi warna kontras yang memberikan aksen modern pada desain interior toilet.</p>
+</div>
+<!-- Variant 4 -->
+<div class="glass-premium p-8 group hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center md:translate-y-8">
+<div class="w-full h-48 bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="PVC Board Cubicle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="modern waterproof pvc bathroom divider with minimalist texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAZ71tWiNqAv9Q66eJC5tESA_Q1WViKjlVsgirZ4LoIci8LVPBKL916mnOl6QZpdWMqqht1HARXCHEMlVSOU8W3aINzKwRekVEmaWlJFdroDJxz1emvmqGH8gBG9ElULC4EMfUxRFd618JaaagmwdSfNCvwMq18tWoEZQn1I0yFFNRAPk3OBsR4VQsRzTP7RyFIo7UcOw6L8COA2EU5fRzlhc8NW_IFfJ3QvV0BI1dbRqjB_OhjivqYVUrFwmI4WysubLe4VZnUAor"/>
+</div>
+<h3 class="font-black uppercase tracking-widest text-primary text-sm mb-4">PVC Board</h3>
+<p class="text-xs text-on-surface-variant font-light leading-relaxed">Material tahan air dan ekonomis, sangat cocok untuk lingkungan yang lembab.</p>
+</div>
+<!-- Variant 5 -->
+<div class="glass-premium p-8 group hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center">
+<div class="w-full h-48 bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Full Height Cubicle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="floor to ceiling full height privacy cubicle in obsidian black finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX5zzAJ_5a6ayXoCxGMNmFzThVVs9LWK5zBqUP4rRCozggkkJbgCzyK8k35yz_bwz2jHcnFr73GJun6-GOyHjNGIGdrKE1wSkKCJVvq2SsHzm_U9j_Px6ggura160ZVa1xvLRnlLxtUDOmv8vg-xNAQy5fAyBLhw29vSwp8G7mIuPkqjDnMWIVhW1oiDMXJlXSAVjjp0X4g2iVfRI3LMUrGh_Y5uMP_YBUqdRJEgkUciwxwpJ5Y6kjILAmbPqXkv5DMMfMKHF7tRS8"/>
+</div>
+<h3 class="font-black uppercase tracking-widest text-primary text-sm mb-4">Full Height</h3>
+<p class="text-xs text-on-surface-variant font-light leading-relaxed">Privasi total dengan desain full-height dari lantai hingga plafon.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section: Hexagon Layout -->
+<section class="py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 relative">
+<!-- Geometric Composition -->
+<div class="grid grid-cols-2 gap-4">
+<div class="hex-mask w-full aspect-square bg-surface-container-highest">
+<img alt="Feature 1" class="w-full h-full object-cover opacity-60" data-alt="extreme close-up of architectural metal joints and hardware in gold finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJuPSR0vYZ7fr1C_WTKcfI_JtFhBRAZX_hs57xFmUjbZZPkKUk4hMNV5TqxRpH2wzXWKaEAELvfitIEUKibOerbWC1To3BDHRciVdVssFeZdkXJPAUOCf9K516Y1bBl13kCP9zYYgw8zWhtYKT6W5hvhmsxSX1zQQrPhS6yPqeaqLa8d9TWzhrEIyGLReVwjv7QugSySOcDgaG3jQqAJ1YkHqTgDwNRhXhtHIVPIpx8u-wxHQywfB7BTSj4xVtZS8FDk2F5ikJiyOL"/>
+</div>
+<div class="hex-mask w-full aspect-square bg-surface-container-highest translate-y-12">
+<img alt="Feature 2" class="w-full h-full object-cover opacity-60" data-alt="modern obsidian black slab texture with subtle stone grain and metallic edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6p-tSyOXsUKR830tfG9Jo9s54DldBBmeHE2WJAWlfnCni9rodmUriJlg5rgW-E7ansP6QaipH-mBesixYml1w_qnJ71MYc_o6jNaz62fiadNOEzixb-Vfk10TQ77MTR1sdUZLPCxwMIdh3g-UOlLy-hP1ynJLR-rL-u5QM-yuZ5bfGSyNlXaplDB_9BG28g-w34GyKY9GPRpVlGaqOjhOkJ7m--ETbSsI9BHolOfxfoYOFDOLQgFSmTHAisuWutU8fnNlynlRlhUe"/>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="glass-premium p-6 rotate-45 border-primary/20">
+<div class="-rotate-45">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<p class="font-black uppercase tracking-[0.3em] text-primary text-xs mb-4">TECHNICAL SPECIFICATIONS</p>
+<h2 class="text-5xl font-black uppercase tracking-tighter text-white mb-8">KEUNGGULAN STRUKTUR</h2>
+<div class="space-y-12">
+<div class="flex gap-6 items-start">
+<div class="hex-mask w-16 h-16 bg-primary/10 flex items-center justify-center shrink-0 border border-primary/40">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest text-sm text-white mb-2">Ketahanan Tinggi</h4>
+<p class="text-on-surface-variant text-sm font-light">Material tahan api, tahan gores, dan tidak mudah berjamur meski di area lembab.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="hex-mask w-16 h-16 bg-primary/10 flex items-center justify-center shrink-0 border border-primary/40">
+<span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest text-sm text-white mb-2">Instalasi Cepat</h4>
+<p class="text-on-surface-variant text-sm font-light">Sistem modular yang memungkinkan pemasangan efisien tanpa pengerjaan sipil yang rumit.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="hex-mask w-16 h-16 bg-primary/10 flex items-center justify-center shrink-0 border border-primary/40">
+<span class="material-symbols-outlined text-primary" data-icon="fit_screen">fit_screen</span>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest text-sm text-white mb-2">Efisiensi Ruang</h4>
+<p class="text-on-surface-variant text-sm font-light">Desain panel tipis namun kokoh yang mengoptimalkan penggunaan luas lantai bangunan.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface-container-highest border-y border-primary/10">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-black uppercase tracking-tight text-white mb-6">Siap Mewujudkan Proyek Anda?</h2>
+<p class="text-on-surface-variant mb-12 font-light">Konsultasikan kebutuhan partisi cubicle toilet untuk gedung atau ruang komersial Anda dengan tim ahli kami.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-12 py-4 font-black uppercase tracking-widest text-xs hover:bg-primary-container transition-all active:scale-95">
+                        Dapatkan Penawaran
+                    </button>
+<button class="border border-primary/40 text-primary px-12 py-4 font-black uppercase tracking-widest text-xs hover:bg-primary/10 transition-all active:scale-95">
+                        Download Katalog
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B0C10] w-full rounded-none">
+<div class="bg-[#111216] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-lg font-black text-[#f2ca50] mb-2 uppercase tracking-tighter">Sembada Batu Beling</div>
+<div class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500">© 2024 Sembada Batu Beling. Hak Cipta Dilindungi.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-xs tracking-widest uppercase">
+<a class="text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Lokasi Proyek</a>
+<a class="text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Karir</a>
+</div>
+<div class="flex gap-4">
+<div class="hex-mask w-10 h-10 bg-surface-container flex items-center justify-center border border-primary/20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-sm">public</span>
+</div>
+<div class="hex-mask w-10 h-10 bg-surface-container flex items-center justify-center border border-primary/20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

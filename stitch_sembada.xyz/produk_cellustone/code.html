@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#d4af37",
+                    "on-tertiary-container": "#504500",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "inverse-surface": "#e3e2e8",
+                    "surface-dim": "#0B0C10",
+                    "surface-container-low": "#111216",
+                    "primary": "#f2ca50",
+                    "on-tertiary": "#393000",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-bright": "#1a1b20",
+                    "tertiary-container": "#cdb212",
+                    "surface": "#0B0C10",
+                    "primary-fixed": "#ffe088",
+                    "outline": "#99907c",
+                    "secondary": "#f7bd48",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-background": "#e3e2e8",
+                    "outline-variant": "#4d4635",
+                    "background": "#0B0C10",
+                    "primary-fixed-dim": "#e9c349",
+                    "surface-container": "#15161a",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#1f1f24",
+                    "surface-container-highest": "#1f1f24",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "secondary-fixed": "#ffdea6",
+                    "on-secondary-container": "#392700",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#211b00",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#2f3035",
+                    "on-primary": "#3c2f00",
+                    "secondary-container": "#ba880f",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#271900",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffe24c",
+                    "tertiary-fixed-dim": "#e2c62d",
+                    "on-error": "#690005",
+                    "on-surface": "#e3e2e8",
+                    "surface-container-high": "#1a1b20",
+                    "tertiary": "#eace35"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0B0C10;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(242, 202, 80, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(242, 202, 80, 0.03) 0%, transparent 50%);
+        }
+        .star-background {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 160px 120px, #f2ca50, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+        .hexagon-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, #BF953F 0%, #f2ca50 25%, #f2ca50 50%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#0B0C10]/70 backdrop-blur-xl border-b border-[#f2ca50]/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Beranda</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Tentang Kami</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Produk</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Portofolio</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Kontak</a>
+</div>
+<button class="bg-[#f2ca50]/10 border border-[#f2ca50]/40 text-[#f2ca50] font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] px-6 py-3 hover:bg-[#f2ca50] hover:text-[#0B0C10] transition-all duration-300">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex flex-col items-center justify-center text-center px-6 star-background">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/50 to-[#0B0C10]"></div>
+<div class="relative z-10 space-y-4">
+<span class="font-black uppercase tracking-[0.5em] text-[12px] text-primary block">Arsitektur Masa Depan</span>
+<h1 class="text-6xl md:text-9xl font-black tracking-[-0.05em] leading-[0.85] gold-gradient-text">
+                    CELLUSTONE
+                </h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant font-light tracking-wide pt-8">
+                    Material komposit ramah lingkungan untuk Indoor dan Outdoor yang mendefinisikan kembali kemewahan struktural.
+                </p>
+<div class="pt-12 flex justify-center gap-6">
+<div class="w-px h-24 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid / Hex Layout -->
+<section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Text Content -->
+<div class="md:col-span-5 space-y-8">
+<div class="space-y-4">
+<h2 class="text-4xl font-black uppercase leading-tight">
+                            Keunggulan <br/> <span class="text-primary">Struktural</span>
+</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            Cellustone dirancang dengan presisi matematis untuk memberikan kekuatan maksimal dengan jejak karbon minimal. Solusi cerdas bagi arsitek yang mengutamakan estetika dan keberlanjutan.
+                        </p>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="hexagon-mask w-12 h-12 bg-surface-container flex items-center justify-center flex-shrink-0 border border-primary/20 shadow-[0_0_10px_rgba(242,202,80,0.1)]">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h4 class="font-black uppercase text-xs tracking-widest text-primary">Eco-Engineered</h4>
+<p class="text-sm text-on-surface-variant">Terbuat dari serat selulosa berkualitas tinggi dan polimer ramah lingkungan.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="hexagon-mask w-12 h-12 bg-surface-container flex items-center justify-center flex-shrink-0 border border-primary/20 shadow-[0_0_10px_rgba(242,202,80,0.1)]">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div>
+<h4 class="font-black uppercase text-xs tracking-widest text-primary">Durabilitas Tinggi</h4>
+<p class="text-sm text-on-surface-variant">Tahan cuaca ekstrem, anti rayap, dan tidak merambatkan api.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Hexagonal Image Grid -->
+<div class="md:col-span-7 relative grid grid-cols-2 gap-4">
+<div class="hexagon-mask bg-surface-container aspect-square relative overflow-hidden group">
+<img alt="Luxury modern architecture with textured facade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of a modern architectural facade with dark textured stone panels and dramatic shadows under bright sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHspeEmEVypEajpWiGa3UTR_FDerXnnA2Yu9Liw_szBf7No_ayNyhkpiAIOA0iNu2rr-b4J1dqwsq2_m8i_czH0QooG9wcvT4BIqurgbDdqJR-YacM0fuYB6gP5upZZycBxYldYtwf4Bski2UuJZmYVuSZtc2QD6GMUm3w3_U4GCpZO7sNIZqZhT_Rd2IRSijtqdQk_yNo2O2_nDFDMXCDIUAy6AmdiWS-w7k8VfWMjyXqxR7miUU2EUjpog0qko4dXrjoUplSTTbZ"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="hexagon-mask bg-surface-container aspect-square relative overflow-hidden group translate-y-12">
+<img alt="Modern interior with wall panels" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxurious minimalist interior design featuring large dark grey wall panels and warm accent lighting on a marble floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATpXWPK81e6ItHUpehGV6fqQmfj32plHHyOux9nW5ECIPCji2dBFpJQ1DOFDIq4KKQOjcjxsgRH7vI2REJKvn6q-WIIiIDWe2hHznLZQfaS9Bhhd3syYoxI9og65_WKp3tYRZZxm0s4SuFfVWwuWoF2Ccb4rie9KDDIxHYwXhd8qgX-N9fE0Z1xbjxxKjz4SXDwlOG3pQuy8MWh-4EdD4kpwhutqxH4u3NUYX0zjT-p_Ox7q3O1SioT85IYUZxQGkymmGZbNqVbStZ"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="hexagon-mask bg-surface-container aspect-square relative overflow-hidden group -translate-y-6">
+<img alt="Outdoor composite cladding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="stunning architectural building exterior using composite cladding materials in a geometric pattern against a clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnkwE2YMy7ahl0WX5aqaG7ExDM01Y-SQPC2SgadEYbv0Uid7nDex8TXvK8aPgtceN8rE1mXw4VNVBPnBUz4fnzISbvan9SDg8cxhgs4fZ-DZn1yq-08MqL7wJxdipC19W4AweGvfGBA26DiDtijmO8fZntCGqyCB3vZkqyhe9NkEtORbRcPQtR3iHIVcALQCQmuRywavRULE-Yx21iHTYA1s0BESvQv2G591PNci4R6MBjWRAFALhItmUihUSgZ2NYOWUVnfcNimhG"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="hexagon-mask bg-surface-container aspect-square relative overflow-hidden group translate-y-6">
+<img alt="Material texture detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="macro photograph showing the intricate texture and grain of a high-end composite architectural material in charcoal grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIZkAkZJVBr3bnVlhbBp0zGNmv_6M9rSO379jgI0NEHLSZIdeZiys90E5m72t9N-hYAQqJFnedV1caIP0xJQRmRG72__gfgV2z-IxZlOaumPckBWtO9BevY1pxtgNGIZVGLvXlgila6zxexa01Rp8NR1hdV57Jg-ccVyxj5QJCbcNbJiTsMhh8ht2NlTfAvgKQIcYfugi8iOLleVzlddLZr8KohwOmLF1OgyrsoLr8VPV_3Z2Yf-X_woa8fW0TFFpk2UNSnhU_c2nW"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Applications Section -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-24">
+<h3 class="font-black uppercase tracking-widest text-xs text-primary mb-4">Aplikasi Produk</h3>
+<h2 class="text-5xl font-black uppercase">Variasi Sempurna</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Fasad -->
+<div class="group relative">
+<div class="aspect-[4/5] bg-surface relative overflow-hidden">
+<img alt="Cellustone Fasad" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" data-alt="architectural exterior of a corporate skyscraper with sleek dark panels and reflective glass windows at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHiZUNmanPpbicnZoRTsj7DfRDDF3Y0eP6irr_7SCLHQdTH4ukifcKe8LCcXKM_yX6VM39Kx0ENJMz4vrgM-h6DWjPmsKRDI1o6RboGP7qvFOnFSNeud9wv7BHqHjHe8rbPV-sVpebBzNwTO4tZV6FrUzwkWjemwASPSpQh-KoqUYHowHWvtxmlDKggkmKeqCwcDPH3YakLxRnD6Wu1IK6WMaWHpynvvMQfkmq1xxXTA9Vjc0FMlJlfZs0byPjBRjUe6BLf9xQUKrP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-12 left-12 right-12">
+<h4 class="text-4xl font-black uppercase gold-gradient-text mb-4">Cellustone Fasad</h4>
+<p class="text-on-surface-variant mb-6 text-sm max-w-sm">Solusi kulit bangunan eksterior yang tahan cuaca ekstrem dan memberikan tampilan monolitik yang elegan.</p>
+<button class="border border-primary/40 px-8 py-3 text-[10px] font-black uppercase tracking-[0.25em] hover:bg-primary hover:text-surface transition-colors">Lihat Spesifikasi</button>
+</div>
+</div>
+<!-- Wall Panel -->
+<div class="group relative md:mt-24">
+<div class="aspect-[4/5] bg-surface relative overflow-hidden">
+<img alt="Cellustone Wall Panel" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" data-alt="contemporary living room interior featuring elegant textured wall panels in obsidian black with minimalist furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYLp40dFbJ60zNXfsZiSiSIWTHnisStCsraKQJiCiiylHd5Px_V-PfGAnI4mRK5i1_lIRR6xCG_dPw0nb9mKUGg1eRWfZuJLH54Spt7dj8OswxjD9eTbe2tc42pP_K_zQRGjIQGm_v5Clx0xVtpi5R-HcB7GifkZSzs7xfKXBP6yj9atKfZ9iddpuFqlZi2ZTnVDifGZVuLpZYwx4XKvcJ4D26mZ-5soMlUT-_LYavxqcIl1qKL_xKUTmYbEITRSAwBg9xdGLukDwE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-12 left-12 right-12">
+<h4 class="text-4xl font-black uppercase gold-gradient-text mb-4">Cellustone Wall Panel</h4>
+<p class="text-on-surface-variant mb-6 text-sm max-w-sm">Panel dinding interior yang memberikan tekstur mendalam dan suasana mewah pada ruang eksklusif Anda.</p>
+<button class="border border-primary/40 px-8 py-3 text-[10px] font-black uppercase tracking-[0.25em] hover:bg-primary hover:text-surface transition-colors">Lihat Spesifikasi</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6 star-background">
+<div class="max-w-4xl mx-auto text-center space-y-12 bg-surface/50 backdrop-blur-md p-16 border border-primary/10 relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 hexagon-mask w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-surface">design_services</span>
+</div>
+<h2 class="text-4xl md:text-6xl font-black uppercase tracking-tight">Wujudkan Visi Arsitektur Anda</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Konsultasikan kebutuhan material proyek Anda dengan tim ahli kami untuk hasil yang tak tertandingi.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6 pt-4">
+<button class="bg-primary text-surface px-12 py-5 font-black uppercase tracking-[0.25em] text-xs hover:shadow-[0_0_30px_rgba(242,202,80,0.3)] transition-all">Hubungi Sales</button>
+<button class="border border-primary/40 text-primary px-12 py-5 font-black uppercase tracking-[0.25em] text-xs hover:bg-primary/10 transition-all">Unduh Katalog</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#0B0C10] w-full rounded-none">
+<div class="bg-[#111216] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-black text-[#f2ca50]">Sembada Batu Beling</div>
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500">© 2024 Sembada Batu Beling. Hak Cipta Dilindungi.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Lokasi Proyek</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Karir</a>
+</div>
+<div class="flex gap-4">
+<div class="hexagon-mask w-10 h-10 bg-surface flex items-center justify-center border border-primary/20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-sm">public</span>
+</div>
+<div class="hexagon-mask w-10 h-10 bg-surface flex items-center justify-center border border-primary/20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-sm">share</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

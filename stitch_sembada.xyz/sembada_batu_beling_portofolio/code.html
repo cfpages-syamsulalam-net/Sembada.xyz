@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-container": "#d4af37",
+                "on-tertiary-fixed-variant": "#524600",
+                "on-surface": "#e3e2e8",
+                "on-primary-fixed": "#241a00",
+                "tertiary-container": "#cdb212",
+                "background": "#0B0C10",
+                "on-error-container": "#ffdad6",
+                "on-secondary-fixed-variant": "#5d4200",
+                "inverse-on-surface": "#2f3035",
+                "outline-variant": "#4d4635",
+                "surface-dim": "#0B0C10",
+                "tertiary": "#eace35",
+                "secondary-fixed-dim": "#f7bd48",
+                "error": "#ffb4ab",
+                "outline": "#99907c",
+                "on-tertiary-fixed": "#211b00",
+                "surface-container-lowest": "#0d0e12",
+                "surface-container-highest": "#1f1f24",
+                "on-primary-fixed-variant": "#574500",
+                "surface-container-high": "#1a1b20",
+                "surface-tint": "#e9c349",
+                "secondary": "#f7bd48",
+                "primary-fixed": "#ffe088",
+                "on-primary-container": "#554300",
+                "on-error": "#690005",
+                "surface-container-low": "#111216",
+                "on-tertiary-container": "#504500",
+                "on-secondary": "#412d00",
+                "on-tertiary": "#393000",
+                "on-primary": "#3c2f00",
+                "inverse-primary": "#735c00",
+                "on-secondary-container": "#392700",
+                "surface-container": "#15161a",
+                "tertiary-fixed-dim": "#e2c62d",
+                "primary": "#f2ca50",
+                "primary-fixed-dim": "#e9c349",
+                "tertiary-fixed": "#ffe24c",
+                "secondary-container": "#ba880f",
+                "on-background": "#e3e2e8",
+                "surface-variant": "#1f1f24",
+                "on-secondary-fixed": "#271900",
+                "surface": "#0B0C10",
+                "on-surface-variant": "#d0c5af",
+                "surface-bright": "#1a1b20",
+                "secondary-fixed": "#ffdea6",
+                "error-container": "#93000a",
+                "inverse-surface": "#e3e2e8"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0B0C10; color: #e3e2e8; }
+        .hexagon-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .star-field {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 160px 120px, #f2ca50, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.15;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #BF953F, #f2ca50, #AA771C, #f2ca50, #BF953F);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glass-card {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Starry Background Layer -->
+<div class="fixed inset-0 star-field pointer-events-none z-0"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0B0C10]/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] transition-colors duration-500">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-none">
+<a class="text-xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#f2ca50] to-[#AA771C]" href="#">
+                Sembada Batu Beling
+            </a>
+<!-- Desktop Links -->
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[12px] text-white/60 hover:text-[#f2ca50] hover:transition-all duration-300" href="#">Gallery</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[12px] text-[#f2ca50] border-b border-[#f2ca50]/40 pb-1 hover:transition-all duration-300" href="#">Projects</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[12px] text-white/60 hover:text-[#f2ca50] hover:transition-all duration-300" href="#">Architecture</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[12px] text-white/60 hover:text-[#f2ca50] hover:transition-all duration-300" href="#">Interior</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[12px] text-white/60 hover:text-[#f2ca50] hover:transition-all duration-300" href="#">Contact</a>
+<button class="ml-4 border border-[#f2ca50]/40 px-6 py-2 text-[#f2ca50] font-black uppercase tracking-[0.2em] text-[10px] scale-95 duration-200 ease-in-out hover:bg-[#f2ca50] hover:text-[#0B0C10]">
+                    Inquire
+                </button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+</div>
+</div>
+</nav>
+<main class="relative z-10 pt-32">
+<!-- Hero Section -->
+<section class="px-8 md:px-24 mb-24">
+<div class="max-w-5xl">
+<h1 class="text-5xl md:text-8xl font-black uppercase leading-tight tracking-tight gold-gradient-text mb-6">
+                    PORTOFOLIO &amp; PROYEK
+                </h1>
+<p class="text-lg md:text-2xl font-light tracking-wide text-on-surface-variant max-w-3xl leading-relaxed">
+                    Menampilkan mahakarya konstruksi dan interior dengan presisi tanpa kompromi. Setiap struktur adalah bukti dedikasi kami pada estetika dan fungsionalitas.
+                </p>
+</div>
+</section>
+<!-- Project Gallery Bento/Hex Grid -->
+<section class="px-8 md:px-12 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 items-start">
+<!-- Project 1 -->
+<div class="group relative flex flex-col items-center">
+<div class="hexagon-mask w-full aspect-square bg-surface-container-high overflow-hidden relative border-primary/20">
+<img alt="Modern Institutional Architecture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" data-alt="Modern architectural photography of an institutional building with sharp angles and metallic facade under clear dramatic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8s4fZ8vXTM1iaHVssMfQQfr-lYSiFVc1d-qfy2iUqDfTmwMtK2Ufp71k29u_Qn9qYKmjD9cIeTCdb9kuTvhquGQf6n5Mw3_MRLztcOGOV53cs-JNT9uSXQLWcPCV6w-mYh3_FAHmAmwILi5teDQQuJ2wU96Lj5ctV2JlxLOJS2b9_ZqQz3hsXIRMYu3e7nAFQ8UBQ0E4j7TqcziSat0y_EHGfBrBQrfaOz6vR-UaiZ95K-voEptK5D7BfDCklTGtdM-RMOLutU8bc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="glass-card absolute bottom-4 left-4 right-4 p-6 border border-primary/20 transition-all duration-500 group-hover:-translate-y-4">
+<p class="text-[10px] font-black tracking-[0.25em] text-primary uppercase mb-2">Pendidikan</p>
+<h3 class="text-xl font-bold tracking-tight mb-2">Politeknik Surabaya</h3>
+<p class="text-xs font-light text-white/60 line-clamp-2">Penerapan fasad kinetik dan desain interior modern untuk lingkungan belajar masa depan.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative flex flex-col items-center md:mt-24">
+<div class="hexagon-mask w-full aspect-square bg-surface-container-high overflow-hidden relative border-primary/20">
+<img alt="Interior of Luxury Train" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" data-alt="Luxurious interior design of a high-end train carriage featuring rich wood textures, warm lighting, and geometric patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNLwRkcMOY3T8RxHJKdgmRhz-kSX8KNNTjJcbe6JunzYyleGnByCFnTy5lHstpp_ocSIerR2F7W35jrPb0j5PluZKlD3sIeuSzuPjQQwXf_qWGijZH4XckBqtMPV7aQd8iAmhAfvQ58iGM6AYv5HWgkT9E6D8ghaMyYoA0sVtezXhPSSzLtW6z9j0d56PFOGtaBUq6i7WBlEkX5FyUwa30Y8xeKeFdRpE9VKQNQeKJJr2j1RWmuc6GK-gfJNh-e4ME_HDyUMVSE-A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="glass-card absolute bottom-4 left-4 right-4 p-6 border border-primary/20 transition-all duration-500 group-hover:-translate-y-4">
+<p class="text-[10px] font-black tracking-[0.25em] text-primary uppercase mb-2">Transportasi</p>
+<h3 class="text-xl font-bold tracking-tight mb-2">Mushola Kereta Makan KAI</h3>
+<p class="text-xs font-light text-white/60 line-clamp-2">Desain spiritual compact dengan material premium untuk kenyamanan maksimal dalam perjalanan.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative flex flex-col items-center">
+<div class="hexagon-mask w-full aspect-square bg-surface-container-high overflow-hidden relative border-primary/20">
+<img alt="Government Building Exterior" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" data-alt="Stately and modern government building with massive columns and sleek glass elements, shot from a low angle for grandeur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2cZoEQzdxxptOUUGZAh2S-ACNHFGkbfwxOLgDZbtPh5eax1nCeIw6ww_Kdhk8q-h12249CcwE5RMtA-VANE4VYoDT0xUet4ATwWQrHHEPbnsCS5ZaR3P5umnmY_IdlHvscecTN9hHRSVMPz7X9p42NiR2GRk32Al5i97wnHrcVlf6pQ-fvqIbrjQbBuvWn1LS4PvhW6Scyl5K4N2V6KQCS3IUX_wfAal7GTNSIT4JMOFBEeTT255P02SxrDfctOMXQFLCYbsVeC-J"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="glass-card absolute bottom-4 left-4 right-4 p-6 border border-primary/20 transition-all duration-500 group-hover:-translate-y-4">
+<p class="text-[10px] font-black tracking-[0.25em] text-primary uppercase mb-2">Pemerintahan</p>
+<h3 class="text-xl font-bold tracking-tight mb-2">Gedung DPRD Surabaya</h3>
+<p class="text-xs font-light text-white/60 line-clamp-2">Renovasi struktural dan estetika untuk simbol otoritas yang modern dan berwibawa.</p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group relative flex flex-col items-center md:mt-24">
+<div class="hexagon-mask w-full aspect-square bg-surface-container-high overflow-hidden relative border-primary/20">
+<img alt="Luxury Villa Interior" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" data-alt="Interior of a luxury villa with marble floors, minimalist furniture, and large glass windows overlooking a dark reflective pool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2gguHmKqh3t20TdwxrTCGsHpByUbpysURVZ4m01hPSrROoH4vXStyL_9y4pRlm3GKHeBH1PTZTFAMfSx5qMNVk-VDZwY3jK1v1S7n_m55A7Y8Xe4rHZCrLJ7fKczFEEHp7s8L41hGntBGr96NGbELa-EVmWZ1YSDBiMT9GFpNKjTtxkop_p4JXf2VX13_Wnvl6WTaO58xyHU5jwsehsCOVzmd0VhCk0DCggJfGm2oUaSzNVwHlTJ2j1fJPUnRDgevWSrVy1U7GYeP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="glass-card absolute bottom-4 left-4 right-4 p-6 border border-primary/20 transition-all duration-500 group-hover:-translate-y-4">
+<p class="text-[10px] font-black tracking-[0.25em] text-primary uppercase mb-2">Residensial</p>
+<h3 class="text-xl font-bold tracking-tight mb-2">Villa Obsidian</h3>
+<p class="text-xs font-light text-white/60 line-clamp-2">Hunian pribadi yang memadukan elemen batu alam dengan teknologi rumah pintar.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-surface-container-low border-t border-primary/10">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8">Siap Membangun Proyek Anda?</h2>
+<p class="text-on-surface-variant font-light tracking-widest text-sm uppercase mb-12">Konsultasikan visi arsitektural Anda dengan tim ahli kami.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-primary text-on-primary font-black uppercase tracking-[0.3em] px-12 py-5 border-none transition-all duration-300 hover:bg-primary-container hover:shadow-[0_0_20px_#f2ca50]">
+                        Mulai Proyek
+                    </button>
+<button class="border border-primary/40 text-primary font-black uppercase tracking-[0.3em] px-12 py-5 transition-all duration-300 hover:bg-primary/10">
+                        Lihat Katalog
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B0C10] w-full rounded-none border-t border-[#f2ca50]/20 relative z-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full">
+<div class="mb-8 md:mb-0">
+<h4 class="text-[#f2ca50] font-black tracking-[0.5em] mb-4 uppercase">Sembada Batu Beling</h4>
+<p class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-white/40">
+                    © 2024 Sembada Batu Beling. Engineered Excellence.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Architectural Index</a>
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Press Kit</a>
+</div>
+</div>
+</footer>
+<!-- Hex Icon FAB (Optional context) -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="hexagon-mask w-16 h-16 bg-primary flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(242,202,80,0.5)]">
+<span class="material-symbols-outlined text-[#0B0C10] text-3xl">chat_bubble</span>
+</div>
+</div>
+</body></html>

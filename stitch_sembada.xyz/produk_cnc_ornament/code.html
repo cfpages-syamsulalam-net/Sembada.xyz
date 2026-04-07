@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#d4af37",
+                    "on-tertiary-container": "#504500",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "inverse-surface": "#e3e2e8",
+                    "surface-dim": "#0B0C10",
+                    "surface-container-low": "#111216",
+                    "primary": "#f2ca50",
+                    "on-tertiary": "#393000",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-bright": "#1a1b20",
+                    "tertiary-container": "#cdb212",
+                    "surface": "#0B0C10",
+                    "primary-fixed": "#ffe088",
+                    "outline": "#99907c",
+                    "secondary": "#f7bd48",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-background": "#e3e2e8",
+                    "outline-variant": "#4d4635",
+                    "background": "#0B0C10",
+                    "primary-fixed-dim": "#e9c349",
+                    "surface-container": "#15161a",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#1f1f24",
+                    "surface-container-highest": "#1f1f24",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "secondary-fixed": "#ffdea6",
+                    "on-secondary-container": "#392700",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#211b00",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#2f3035",
+                    "on-primary": "#3c2f00",
+                    "secondary-container": "#ba880f",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#271900",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffe24c",
+                    "tertiary-fixed-dim": "#e2c62d",
+                    "on-error": "#690005",
+                    "on-surface": "#e3e2e8",
+                    "surface-container-high": "#1a1b20",
+                    "tertiary": "#eace35"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .star-bg {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 50px 160px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 80px 120px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 110px 10px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 150px 150px, #ffffff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+        .hex-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .metallic-text {
+            background: linear-gradient(to bottom, #BF953F 0%, #f2ca50 25%, #f2ca50 50%, #AA771C 75%, #BF953F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-premium {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#0B0C10]/70 backdrop-blur-xl border-b border-[#f2ca50]/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Beranda</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Tentang Kami</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Produk</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Portofolio</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Kontak</a>
+</div>
+<button class="px-6 py-2 border border-[#f2ca50]/40 font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] text-[#f2ca50] hover:bg-[#f2ca50]/10 transition-all duration-300">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="star-bg min-h-screen pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-0"></div>
+<div class="relative z-10 space-y-6">
+<span class="font-['Inter'] font-black uppercase tracking-[0.5em] text-[12px] text-primary/80 block">Inovasi Arsitektur Premium</span>
+<h1 class="text-6xl md:text-8xl lg:text-[100px] font-black leading-tight tracking-[-0.05em] metallic-text uppercase">
+                    CNC ORNAMENT
+                </h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant text-lg md:text-xl font-light tracking-wide leading-relaxed">
+                    Ornamen berbasis komputerisasi untuk estetika arsitektural yang presisi. Menghadirkan detail geometris yang tidak mungkin dicapai dengan metode manual.
+                </p>
+<div class="pt-8">
+<button class="px-12 py-5 border border-primary text-primary font-black uppercase tracking-[0.3em] text-xs hover:bg-primary hover:text-surface transition-all duration-500">
+                        Lihat Katalog
+                    </button>
+</div>
+</div>
+</section>
+<!-- Feature Grid (Hexagon) -->
+<section class="max-w-7xl mx-auto px-6 py-20 relative">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center space-y-6">
+<div class="w-32 h-32 hex-mask glass-premium border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="font-black uppercase tracking-widest text-sm text-primary mb-2">Presisi Tinggi</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Toleransi hingga 0.1mm untuk setiap detail pola rumit.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center space-y-6 mt-12 md:mt-0">
+<div class="w-32 h-32 hex-mask glass-premium border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h3 class="font-black uppercase tracking-widest text-sm text-primary mb-2">Kustom Desain</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Transformasikan visi desain unik Anda menjadi realitas struktural.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center space-y-6">
+<div class="w-32 h-32 hex-mask glass-premium border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="layers">layers</span>
+</div>
+<div>
+<h3 class="font-black uppercase tracking-widest text-sm text-primary mb-2">Multi Material</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Kompatibel dengan metal, komposit, kayu, dan material sintetis.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Showcase Section (Asymmetric Grid) -->
+<section class="bg-surface-container-low py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 space-y-4">
+<h2 class="text-4xl md:text-5xl font-black uppercase text-on-surface leading-none">Implementasi <br/><span class="text-primary">Portofolio</span></h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Fasad Politeknik -->
+<div class="md:col-span-8 group relative overflow-hidden h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Modern architectural facade with gold CNC cut geometric patterns on a grand institutional building at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC909r4x8Uz_DPk9X9UzsfPZSZByx71aiKzqcKbC_TVPLplIA3XsHcfvjJvSFoEbCpZ2KAl7mCL0On57pg81YdWiHJjhS_3gyB9ef3Su8-M1XqVGgxJKITI7UOGyK9ijiAwHT5Bxg_FTwsu1yjvYZchSmWm8KMdkHsM7xqKMS5krIev3eK5lKSIqXscxz99XG7j71ggmGpfmYejQiFr1m3FrRWBt02IHDwT5Jv0egdo9tTkst_IaR6Z2j6JKSLbRI-0K3sZPjotCS9L"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-black uppercase tracking-[0.4em] text-[10px] text-primary mb-2 block">Institusi Pendidikan</span>
+<h3 class="text-3xl font-black uppercase text-white">Fasad Politeknik</h3>
+</div>
+</div>
+<!-- Mushola KAI -->
+<div class="md:col-span-4 group relative overflow-hidden h-[500px] md:translate-y-12">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Intricate white CNC laser cut wall paneling inside a modern mosque with minimalist lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUpph0RgHzXZiYzBQlqGhlRM5P6EVQg9_FULJYQTg5JiLlejoLkzMpuD-zCT7GGcKvxQ7t7cv9FRJRtOJTAM0rCoErP6e2ygj-2s4Ad7Q83HdGrv-21yJN40R_mjVhTViBnRiwEDHao2SEXTGhfI-6_ytPsXKtWu8-6Qy4MQOE5MO4P0_wXBK-MWgKaMgB2l9fHRWiI5Ni7rL8cAslDWeYn4KmH0EQwUql0nLc7lYKVgq0JMo6gQvlhhgw2pmADqUv5B2AFzCOQlpA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-black uppercase tracking-[0.4em] text-[10px] text-primary mb-2 block">Ruang Publik</span>
+<h3 class="text-3xl font-black uppercase text-white">Mushola KAI</h3>
+</div>
+</div>
+<!-- Masjid Baitul Fadli -->
+<div class="md:col-span-12 group relative overflow-hidden h-[600px] mt-12 md:mt-24">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" data-alt="Vast mosque interior featuring massive golden CNC engraved dome patterns and wall arabesque motifs with luxury lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhI0_sXJX9wq2Jky1Fw_e0QRnzQT_Tsd_Fmby6h_Swjty8KLkTrF6HNKaVbjSV8qVZK-HXE6kMLzq14icZy6rUlK3_9uHkWhM-fqg85DQMvth3oomjgzAUdRddOBT7AnRKD-ChLePEwbBxtNoCZPrNjZJiCVSJsUCyx_gK9CWZ2rJd8cu0gOR1IRusn-UirjyKt5jR98PJmMLAP9jLn6vVo2828cPx17ZgBII81krhbRi6Y3u32GlrX2o8Cf4G41rM_f0QiYor61iT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-12 left-12 max-w-xl">
+<span class="font-black uppercase tracking-[0.4em] text-[10px] text-primary mb-2 block">Ikon Arsitektur</span>
+<h3 class="text-5xl font-black uppercase text-white mb-4">Masjid Baitul Fadli</h3>
+<p class="text-on-surface-variant font-light tracking-wide">Penggunaan ornamen CNC metal berlapis emas pada kubah dan partisi interior untuk menciptakan atmosfer transenden dan mewah.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6 flex flex-col items-center text-center">
+<div class="max-w-4xl glass-premium border border-primary/20 p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-primary/40 -mt-1 -mr-1"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-primary/40 -mb-1 -ml-1"></div>
+<h2 class="text-4xl font-black uppercase tracking-tight text-white mb-6">Konsultasikan Proyek Anda</h2>
+<p class="text-on-surface-variant mb-10 text-lg">Dapatkan solusi presisi untuk kebutuhan ornamen arsitektural berskala besar maupun kustom.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="px-8 py-4 bg-primary text-surface font-black uppercase tracking-widest text-xs">Minta Penawaran</button>
+<button class="px-8 py-4 border border-primary/40 text-primary font-black uppercase tracking-widest text-xs hover:bg-primary/10">Unduh PDF Spesifikasi</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B0C10] w-full rounded-none">
+<div class="bg-[#111216] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start space-y-4">
+<div class="text-lg font-black text-[#f2ca50]">Sembada Batu Beling</div>
+<div class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500">© 2024 Sembada Batu Beling. Hak Cipta Dilindungi.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Lokasi Proyek</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Karir</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-opacity" data-icon="share">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-opacity" data-icon="mail">mail</span>
+</div>
+</div>
+</footer>
+</body></html>

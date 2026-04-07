@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#d4af37",
+                    "on-tertiary-container": "#504500",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "inverse-surface": "#e3e2e8",
+                    "surface-dim": "#0B0C10",
+                    "surface-container-low": "#111216",
+                    "primary": "#f2ca50",
+                    "on-tertiary": "#393000",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-bright": "#1a1b20",
+                    "tertiary-container": "#cdb212",
+                    "surface": "#0B0C10",
+                    "primary-fixed": "#ffe088",
+                    "outline": "#99907c",
+                    "secondary": "#f7bd48",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-background": "#e3e2e8",
+                    "outline-variant": "#4d4635",
+                    "background": "#0B0C10",
+                    "primary-fixed-dim": "#e9c349",
+                    "surface-container": "#15161a",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#1f1f24",
+                    "surface-container-highest": "#1f1f24",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "secondary-fixed": "#ffdea6",
+                    "on-secondary-container": "#392700",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#211b00",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#2f3035",
+                    "on-primary": "#3c2f00",
+                    "secondary-container": "#ba880f",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#271900",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffe24c",
+                    "tertiary-fixed-dim": "#e2c62d",
+                    "on-error": "#690005",
+                    "on-surface": "#e3e2e8",
+                    "surface-container-high": "#1a1b20",
+                    "tertiary": "#eace35"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hexagon-mask {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .starry-background {
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(242, 202, 80, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .metallic-gold-text {
+            background: linear-gradient(to bottom, #BF953F, #f2ca50, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(17, 18, 22, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(242, 202, 80, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#0B0C10]/70 backdrop-blur-xl border-b border-[#f2ca50]/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Beranda</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Tentang Kami</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Produk</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Portofolio</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Kontak</a>
+</div>
+<button class="bg-[#f2ca50]/10 border border-[#f2ca50]/40 px-6 py-2 font-['Inter'] font-black uppercase tracking-[0.1em] text-[10px] text-[#f2ca50] hover:bg-[#f2ca50] hover:text-[#0B0C10] transition-all duration-300">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex flex-col items-center justify-center pt-24 starry-background overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/50 to-[#0B0C10] z-0"></div>
+<div class="relative z-10 text-center px-4 max-w-5xl">
+<span class="font-['Inter'] font-black uppercase tracking-[0.5em] text-[10px] md:text-[12px] text-primary mb-6 block opacity-80">Premium Laboratory Solutions</span>
+<h1 class="text-[3.75rem] md:text-[5.5rem] font-black leading-[0.85] -tracking-[0.05em] metallic-gold-text uppercase mb-8">
+                LABORATORIUM<br/>CABINET
+            </h1>
+<p class="text-on-surface-variant font-light text-lg md:text-xl tracking-wide max-w-2xl mx-auto border-l-2 border-primary/40 pl-6 text-left md:text-center italic">
+                Furnitur Phenolic Resin yang tahan air dan bahan kimia. Dirancang untuk integritas struktural dalam lingkungan penelitian yang paling menuntut.
+            </p>
+</div>
+<!-- Hero Asset -->
+<div class="relative z-10 mt-16 w-full max-w-6xl px-6">
+<div class="aspect-[21/9] w-full bg-surface-container-low border border-primary/20 overflow-hidden relative group">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Modern laboratory interior with sleek black cabinets, gold accents, chemical resistant surfaces and scientific equipment under cool lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK25QV5TsKMYaS_BLvYQuMljWeSxwO2l3D-ZUlqIE9ITKhaFih4sli5UpuvFNHM9epIC6R6iWHCWkYmuxwDYT7sIKil5zuroPuMjgUeV8kdPvFUhCnuRQeQUAM4gvaoyYBIcXEgeMCIsW4ywUI3Ar4Cdr3gz9PLFaCZdEMXM-RJsMZsM7Maz_qMTbbuQP-FMYBJdDxUETgGZvIr2aj3VcAagzOUPp60uPOmcv4yP92isiNB0n5DNzs7SaAFOmwSJgSEKeID_tF9e-N"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent"></div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="relative bg-background">
+<!-- Specifications Section -->
+<section class="py-24 px-8 border-y border-primary/10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl font-black uppercase tracking-tight text-white mb-8 border-b border-primary/20 pb-4 inline-block">Material Keunggulan</h2>
+<div class="space-y-12">
+<div class="flex gap-6 items-start">
+<div class="hexagon-mask w-16 h-16 bg-primary/20 flex items-center justify-center flex-shrink-0 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="chemistry">science</span>
+</div>
+<div>
+<h3 class="font-black text-xs tracking-widest uppercase text-primary mb-2">Resistansi Kimia</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Permukaan Phenolic Resin yang mampu menahan tumpahan bahan kimia keras tanpa korosi atau degradasi material.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="hexagon-mask w-16 h-16 bg-primary/20 flex items-center justify-center flex-shrink-0 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<h3 class="font-black text-xs tracking-widest uppercase text-primary mb-2">Tahan Air &amp; Lembab</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sifat non-porous memastikan tidak ada penyerapan air, mencegah pertumbuhan bakteri dan jamur di lingkungan lab.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="hexagon-mask w-16 h-16 bg-primary/20 flex items-center justify-center flex-shrink-0 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h3 class="font-black text-xs tracking-widest uppercase text-primary mb-2">Struktur Monolitik</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Konstruksi presisi dengan desain tanpa sudut tajam (beveled edge) untuk keamanan dan estetika arsitektural.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container-high relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500" data-alt="Macro detail of phenolic resin surface texture, dark charcoal gray with subtle matte finish under laboratory lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt_C-N_9Gehi8PQR0S-gEeibz1QZCOXGWNkEnYXp1hqTDjZSqpKa_LaHGWdym_IhU5qmARx3pdFIir5RcPGeQGepKOZ6rd8Zc1I06N_-dYGgA4fjYiHi2TcgwsnS6QZaCzfo4iW4o3cnpPfGml7oEvJrVIStCTGH5tTuR5HvR8CRoJItGzAN5QFqwcSuf1rklcz0sSVwMQZtJRJm5ePf-1BcakhB3NcRJJSAp-1BUQu23CltuUXIEbivKuDtJdFF7faDyH0QBik51-"/>
+</div>
+<div class="aspect-square bg-surface-container-high relative overflow-hidden group translate-y-12">
+<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close up of laboratory cabinet hinges and stainless steel hardware, high precision engineering detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsbEnY-AMvDPty9z2nIRcrwZCKMc2nkIlSPHFUBgzsMiYP7JxO0OIaXLFGJhsPPxYNtN-mdFBXGK10L_8JIvGu_ijPWPJZcIaz3s2uMk8demgNtSmR2Qj4SxVVAa0QvnfUcL9fQ6I1aT9zDCPRjgxcmLfxFkbPmfCfGn8IOVe7urZDUkRo3uC3KYC-fKR9TKJXwiV-dkVzrgJIf-J4qXe2VkEOLH6rZmUUTcLpY3SraKei9ytuhwLTzHnTkZAu1XVhHcQu1tfkhjfk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Variants Section: Bento Grid -->
+<section class="py-32 px-8 starry-background">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<h2 class="text-[3rem] font-black uppercase leading-none metallic-gold-text">Koleksi<br/>Varian</h2>
+<p class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] text-primary/60 border-t border-primary/20 pt-2">Varian Sistem Modul</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Variant 1 -->
+<div class="md:col-span-4 glass-card p-1 flex flex-col group relative">
+<div class="flex-grow overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000" data-alt="Central island laboratory cabinet with black resin top and integrated sink, futuristic architectural design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOld61WfAvKiRRi2R6XsJJTVUaJW5VtWWhFNue8YHynsVlaC4Kt3l0LoBcGLvp-JUChnTV3roaywV3Mb6ChUltKDgJQYQMWTuitE3vjqotAiqs5c9Upk7DHZlL13HcngSlWVCYDkZ2Dlrth5v9TiY3sZAWjSRrFFrp6rmMM3LEZxkIwBkFOY4wsBWbIySK8EcVZ1kFwbumMuna4Wizc4p6m2EWiVcPL1fOhijAZomXg_LPxLbBnHDw8E603QJS_r9Rqn_kkc5xRg2m"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="p-8 relative z-10">
+<h3 class="text-xl font-black uppercase tracking-tight mb-2">Cabinet Pulau (Island)</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mb-6">Pusat Kolaborasi Riset</p>
+<button class="w-full py-3 border border-primary/40 text-[10px] font-black uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-black transition-colors">Lihat Spesifikasi</button>
+</div>
+</div>
+<!-- Variant 2 -->
+<div class="md:col-span-5 glass-card p-1 flex flex-col group relative">
+<div class="flex-grow overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000" data-alt="Professional fume hood cabinet with glass sliding shield and high ventilation ports in dark laboratory setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdVnVplQQk4PQldMtENQfB1afCI3Yh1jwPt6Btzl9YyJr73p10v3VJMgcLPIM_pSf4x-ERJlf4Ed0cww3TEBzcTgIoiudbflxTjkykj81pnCN2lKZaFlsX-9mfb7Lb3U_bRwxecQ9HAH4eZ1DiM-9WEe8VaFcGIejNPKegsRFD579OclkJU0t5E9isyntEWKmcsPb_QNSxDrlwv2fJCEY50Pj8gDgdQbVemWI9h0Tz1hkotTBz1FMph-YP8iyimFy8Iv_5AY4ti6_f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="p-8 relative z-10">
+<h3 class="text-xl font-black uppercase tracking-tight mb-2">Cabinet Lemari Asam</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mb-6">Keamanan Zat Volatil</p>
+<button class="w-full py-3 border border-primary/40 text-[10px] font-black uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-black transition-colors">Lihat Spesifikasi</button>
+</div>
+</div>
+<!-- Variant 3 -->
+<div class="md:col-span-3 glass-card p-1 flex flex-col group relative">
+<div class="flex-grow overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000" data-alt="Wall mounted laboratory cabinets with sleek black finishes and minimalist hardware in a modern clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9sSOZjjM5_df-AmAY1a1y4Qm90ZAG_Jcyv2TSdEmd5quSKuYNVnHL3Z0o0duWpv7af_cbgooOA4Nvrof_6JbKbeVDrKrolMJca5T-EVlyHWbSyGigEmmKAejFhWWtXeOh8MahFVMT3n4kNfYM6hDVnmRR4XX2pLFqoCKfLnm9NwJLcoitVfwrdtuw8Vr_xigRRKUozRb8aRwarqc5e_y-qyH2HNZbamjg4nWhq6ys2yG4W36Llb1HYPbBdsw1lCDoKdQrfVFJuTAM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="p-8 relative z-10">
+<h3 class="text-xl font-black uppercase tracking-tight mb-2">Cabinet Dinding</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mb-6">Optimasi Ruang Vertikal</p>
+<button class="w-full py-3 border border-primary/40 text-[10px] font-black uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-black transition-colors">Lihat Spesifikasi</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface-container-low border-t border-primary/10">
+<div class="max-w-4xl mx-auto text-center px-6">
+<div class="mb-12 inline-flex gap-2">
+<div class="hexagon-mask w-3 h-3 bg-primary"></div>
+<div class="hexagon-mask w-3 h-3 bg-primary/40"></div>
+<div class="hexagon-mask w-3 h-3 bg-primary/20"></div>
+</div>
+<h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8 italic">Konsultasi Desain Lab Anda Sekarang.</h2>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-black px-12 py-5 font-black uppercase tracking-widest text-xs hover:shadow-[0_0_20px_rgba(242,202,80,0.5)] transition-all">Unduh Katalog PDF</button>
+<button class="border border-primary/40 text-primary px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-primary/10 transition-all">Hubungi Tim Ahli</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B0C10] w-full rounded-none">
+<div class="bg-[#111216] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-black text-[#f2ca50]">Sembada Batu Beling</div>
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500">© 2024 Sembada Batu Beling. Hak Cipta Dilindungi.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Lokasi Proyek</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors" href="#">Karir</a>
+</div>
+<div class="flex gap-4">
+<div class="hexagon-mask w-10 h-10 bg-primary/10 border border-primary/20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="language">language</span>
+</div>
+<div class="hexagon-mask w-10 h-10 bg-primary/10 border border-primary/20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

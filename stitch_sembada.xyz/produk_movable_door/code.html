@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#d4af37",
+                        "on-tertiary-container": "#504500",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed-variant": "#524600",
+                        "inverse-surface": "#e3e2e8",
+                        "surface-dim": "#0B0C10",
+                        "surface-container-low": "#111216",
+                        "primary": "#f2ca50",
+                        "on-tertiary": "#393000",
+                        "surface-container-lowest": "#0d0e12",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-bright": "#1a1b20",
+                        "tertiary-container": "#cdb212",
+                        "surface": "#0B0C10",
+                        "primary-fixed": "#ffe088",
+                        "outline": "#99907c",
+                        "secondary": "#f7bd48",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-background": "#e3e2e8",
+                        "outline-variant": "#4d4635",
+                        "background": "#0B0C10",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container": "#15161a",
+                        "on-primary-fixed": "#241a00",
+                        "inverse-primary": "#735c00",
+                        "surface-variant": "#1f1f24",
+                        "surface-container-highest": "#1f1f24",
+                        "secondary-fixed-dim": "#f7bd48",
+                        "secondary-fixed": "#ffdea6",
+                        "on-secondary-container": "#392700",
+                        "on-secondary": "#412d00",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-tertiary-fixed": "#211b00",
+                        "on-primary-container": "#554300",
+                        "inverse-on-surface": "#2f3035",
+                        "on-primary": "#3c2f00",
+                        "secondary-container": "#ba880f",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#271900",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#ffe24c",
+                        "tertiary-fixed-dim": "#e2c62d",
+                        "on-error": "#690005",
+                        "on-surface": "#e3e2e8",
+                        "surface-container-high": "#1a1b20",
+                        "tertiary": "#eace35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .hexagon-clip {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .star-bg {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 80px 120px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 110px 10px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 150px 50px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#0B0C10]/70 backdrop-blur-xl border-b border-[#f2ca50]/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Beranda</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Tentang Kami</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="#">Produk</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Portofolio</a>
+<a class="font-['Inter'] font-black uppercase tracking-[0.25em] text-[10px] md:text-[12px] text-white/80 hover:text-[#f2ca50] transition-colors" href="#">Kontak</a>
+</div>
+<button class="bg-primary px-6 py-2 text-on-primary font-black uppercase tracking-widest text-[10px] hover:bg-primary-fixed transition-all duration-300">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 overflow-hidden">
+<div class="absolute inset-0 star-bg opacity-30 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<div class="mb-4">
+<span class="font-['Inter'] font-black uppercase tracking-[0.5em] text-[10px] text-primary">Sembada Architectural Solutions</span>
+</div>
+<h1 class="text-6xl md:text-[8rem] font-black leading-[0.85] tracking-[-0.05em] uppercase bg-gradient-to-b from-[#BF953F] via-[#f2ca50] to-[#AA771C] bg-clip-text text-transparent mb-8">
+                MOVABLE DOOR
+            </h1>
+<p class="text-xl md:text-2xl font-light tracking-wide text-on-surface-variant max-w-2xl mx-auto italic">
+                Partisi ruangan geser dengan peredam suara maksimal.
+            </p>
+</div>
+<!-- Decorative Hexagon -->
+<div class="mt-16 relative w-full max-w-4xl px-6">
+<div class="aspect-video relative overflow-hidden bg-surface-container-low border border-primary/20">
+<img alt="Luxury interior with sliding partition" class="w-full h-full object-cover opacity-60" data-alt="Modern architectural interior with premium sliding wood and metal partitions in a high-end luxury office suite at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEC3YKF_EXdLDXDMFxSQut0auoZHbSBcte0JMhehn4oRN7eHqCvHdJE0l1i2huRPIkClTbmNXsenQbpyO6gHWQ1KXKm9OYAQhnWL2vaLrhMnXoPW5tdSbQENYnUXRTZVaS8XRVlqbauwjNg7KmWaEzqRGEzv9JpcmwZ7D66leaqcg-BrS1tGz3NCa0glelMtoN9V8NSuXJ1PHzAerHZn-Qz-h3kWTIZg4gvHQNiEd0WkVMEyh957K529Evp3pGMdAX1bMyPpqu-DH5"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-32 h-32 hexagon-clip bg-primary/20 backdrop-blur-md border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">door_sliding</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Variants Section: Glassmorphism Cards -->
+<section class="py-24 px-8 relative bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-black uppercase tracking-tight text-on-surface mb-2">Varian Produk</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Variant 1: Rubi -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-xl border border-primary/40 p-8 hover:bg-[#111216] transition-all duration-500 overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="text-8xl font-black text-white">01</span>
+</div>
+<span class="font-black uppercase tracking-[0.3em] text-[10px] text-primary mb-4 block">Eksklusif</span>
+<h3 class="text-3xl font-black uppercase mb-6 text-on-surface">Rubi</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-8">Sistem partisi geser semi-permanen dengan fokus pada fleksibilitas tinggi dan efisiensi ruang.</p>
+<div class="border-t border-primary/20 pt-4 flex justify-between items-center">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Detail Produk</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Variant 2: Kalimaya -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-xl border border-primary/40 p-8 hover:bg-[#111216] transition-all duration-500 overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] translate-y-8 md:translate-y-12">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="text-8xl font-black text-white">02</span>
+</div>
+<span class="font-black uppercase tracking-[0.3em] text-[10px] text-primary mb-4 block">Akustik</span>
+<h3 class="text-3xl font-black uppercase mb-6 text-on-surface">Kalimaya</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-8">Didesain khusus untuk isolasi suara tingkat menengah, ideal untuk ruang pertemuan modern.</p>
+<div class="border-t border-primary/20 pt-4 flex justify-between items-center">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Detail Produk</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Variant 3: Batu Beling -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-xl border border-primary/40 p-8 hover:bg-[#111216] transition-all duration-500 overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="text-8xl font-black text-white">03</span>
+</div>
+<span class="font-black uppercase tracking-[0.3em] text-[10px] text-primary mb-4 block">Signature</span>
+<h3 class="text-3xl font-black uppercase mb-6 text-on-surface">Batu Beling</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-8">Varian unggulan dengan peredam suara maksimal dan mekanisme geser yang sangat halus.</p>
+<div class="border-t border-primary/20 pt-4 flex justify-between items-center">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Detail Produk</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Variant 4: Emerald -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-xl border border-primary/40 p-8 hover:bg-[#111216] transition-all duration-500 overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] translate-y-8 md:translate-y-12">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="text-8xl font-black text-white">04</span>
+</div>
+<span class="font-black uppercase tracking-[0.3em] text-[10px] text-primary mb-4 block">Premium</span>
+<h3 class="text-3xl font-black uppercase mb-6 text-on-surface">Emerald</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-8">Kemewahan tanpa kompromi dengan finishing premium dan performa peredam suara industri.</p>
+<div class="border-t border-primary/20 pt-4 flex justify-between items-center">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Detail Produk</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section: Hexagon Layout -->
+<section class="py-32 px-8 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 blur-[120px]"></div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="w-full lg:w-1/2">
+<div class="mb-12">
+<span class="font-black uppercase tracking-[0.4em] text-[12px] text-primary mb-4 block">Spesifikasi Teknik</span>
+<h2 class="text-5xl md:text-6xl font-black uppercase leading-none text-on-surface">Keunggulan<br/><span class="text-primary/60 italic">Engineering</span></h2>
+</div>
+<div class="grid grid-cols-1 gap-12">
+<div class="flex items-start gap-6 group">
+<div class="w-16 h-16 shrink-0 hexagon-clip bg-primary/10 border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-2xl">volume_off</span>
+</div>
+<div>
+<h4 class="text-lg font-black uppercase tracking-wider mb-2 text-on-surface">Sound Proofing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Sistem peredaman suara berlapis yang mampu mengurangi kebisingan hingga 45-50 dB.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-16 h-16 shrink-0 hexagon-clip bg-primary/10 border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-2xl">settings_input_component</span>
+</div>
+<div>
+<h4 class="text-lg font-black uppercase tracking-wider mb-2 text-on-surface">Precision Track</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Rel atas berbahan aluminium ekstrusi dengan toleransi presisi milimeter untuk pergerakan mulus.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-16 h-16 shrink-0 hexagon-clip bg-primary/10 border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-2xl">security</span>
+</div>
+<div>
+<h4 class="text-lg font-black uppercase tracking-wider mb-2 text-on-surface">Mechanical Locking</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Sistem penguncian mekanis yang kokoh untuk memastikan stabilitas panel saat dalam posisi tertutup.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative">
+<!-- Hexagon Image Grid -->
+<div class="relative grid grid-cols-2 gap-4">
+<div class="aspect-square hexagon-clip bg-surface-container border border-primary/20 overflow-hidden">
+<img alt="Office conference room" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Corporate minimalist meeting room with sleek dark grey furniture and glass walls in a high-rise office building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKohwawWvNQBlxP9AJZIgX5hZfIZHeRw-y80eZVm7MKx197R0GTPVUJtvfmPgaQcyEy5Z6uo-OVeqMWBY_tPJRalhaDONUvWpQIxwL2FLwJqDL3Lzfgp2OBTGdRcWrLvJFO0VzQhnsP8bPfZhQORQZKmBsu-3Xvsigu56r3E1X3ZZYgPyWSp32kIIJN9MeAstsPaSZowzHkZQwA-EfZ4w9vC51wTBfdiT-MNzlb6gcLTXZbL5W_o0230QkuIWtNzezo7zSqDyDVUSE"/>
+</div>
+<div class="aspect-square hexagon-clip bg-surface-container border border-primary/20 overflow-hidden translate-y-12">
+<img alt="Luxury workspace" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Luxury boutique office with elegant partition walls and atmospheric architectural lighting showing texture of materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8YEZY7p7ZLkiAuu6ytnkcvNVwB4NP1lMwUsBn3bwoDFT29cw4vK_F0zwRLiGKWhEkmAxiZ3bLS2xPFZAQCI61Rp5ejtNZOQvJbKo4IkpUJejnbJ2QWV4ULdG0Cn5faXb2XmEm1RmNkV1ww14Yq2LhvRdOYt4g4Ov2pGUF_-mudCYAMpTcIeFuMZJ57BbhB4dUw33gYQV7Pc7Fq6R7awtOXvaJsDjp8fbZxddstiYQGzZ5JEtoD2PENRo7JglmI7sOt2qUuLE-VzFQ"/>
+</div>
+<div class="aspect-square hexagon-clip bg-surface-container border border-primary/20 overflow-hidden -mt-12">
+<img alt="Architectural structure" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Detail of modern steel and glass architectural structure with dramatic shadows and sharp lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIuymKss9MvQVRnF_H0y9fE65nNG_G-eA6ahpi9vQqonzvhCa8ICB2iRtXu6jIxVdkIp7wTkFeofdcMFPkq5N80im4uCTbs0y9f47Y1abVZm_ZefvoEuXws0UvgvKzEH08Rc3PtPorbzBybjRxKDRwHWiHJlwwsjXktPTONDx_ej2AaexjYEbsjvqJd34fiiouuJ_vYIOaavaeGHD79Kz0LgOF6_H1wtSjxaD_hgSaI_DSc2B0a2eF1Abkd6ZeC6HvzRIae6lS1cpx"/>
+</div>
+<div class="aspect-square hexagon-clip bg-surface-container border border-primary/20 overflow-hidden">
+<div class="w-full h-full flex flex-col items-center justify-center p-8 text-center bg-primary/10">
+<span class="text-4xl font-black text-primary mb-2">10+</span>
+<span class="text-[10px] font-black uppercase tracking-widest text-on-surface">Tahun Garansi Struktur</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full rounded-none bg-[#0B0C10]">
+<div class="bg-[#111216]">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-lg font-black text-[#f2ca50] mb-2 uppercase tracking-tighter">Sembada Batu Beling</div>
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500">© 2024 Sembada Batu Beling. Hak Cipta Dilindungi.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Kebijakan Privasi</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Lokasi Proyek</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-gray-500 hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Karir</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 border border-primary/40 flex items-center justify-center hover:bg-primary/10 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-primary text-lg">public</span>
+</div>
+<div class="w-10 h-10 border border-primary/40 flex items-center justify-center hover:bg-primary/10 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+```</body></html>

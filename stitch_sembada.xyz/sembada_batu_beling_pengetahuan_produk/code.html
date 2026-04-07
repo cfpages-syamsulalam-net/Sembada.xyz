@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pengetahuan Produk | Sembada Batu Beling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#3c2f00",
+                    "secondary-container": "#ba880f",
+                    "error": "#ffb4ab",
+                    "primary": "#f2ca50",
+                    "on-primary-container": "#554300",
+                    "inverse-surface": "#e3e2e8",
+                    "inverse-on-surface": "#2f3035",
+                    "surface-container-low": "#111216",
+                    "primary-container": "#d4af37",
+                    "outline-variant": "#4d4635",
+                    "surface-container": "#15161a",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#e2c62d",
+                    "background": "#0B0C10",
+                    "surface-tint": "#e9c349",
+                    "surface-container-highest": "#1f1f24",
+                    "surface-bright": "#1a1b20",
+                    "surface": "#0B0C10",
+                    "surface-dim": "#0B0C10",
+                    "on-tertiary": "#393000",
+                    "error-container": "#93000a",
+                    "tertiary": "#eace35",
+                    "primary-fixed": "#ffe088",
+                    "on-secondary-container": "#392700",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-secondary-fixed": "#271900",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-primary-fixed": "#241a00",
+                    "surface-variant": "#1f1f24",
+                    "surface-container-high": "#1a1b20",
+                    "inverse-primary": "#735c00",
+                    "on-background": "#e3e2e8",
+                    "on-surface": "#e3e2e8",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "tertiary-fixed": "#ffe24c",
+                    "on-tertiary-container": "#504500",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "on-tertiary-fixed": "#211b00",
+                    "tertiary-container": "#cdb212",
+                    "on-secondary": "#412d00",
+                    "outline": "#99907c",
+                    "secondary-fixed": "#ffdea6",
+                    "on-surface-variant": "#d0c5af",
+                    "secondary": "#f7bd48",
+                    "on-secondary-fixed-variant": "#5d4200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #BF953F, #f2ca50, #AA771C, #f2ca50, #BF953F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .star-field {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 40px 70px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 90px 40px, #f2ca50, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 160px 120px, #f2ca50, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+        .hex-clip {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body star-field selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full rounded-none bg-[#0B0C10]/70 backdrop-blur-xl z-50 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] border-none">
+<div class="flex justify-between items-center px-12 h-20 w-full">
+<div class="text-xl font-black tracking-tighter text-[#f2ca50] uppercase">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex gap-10">
+<a class="font-['Inter'] uppercase tracking-[0.3em] font-black text-[11px] text-gray-400 hover:text-[#f2ca50] transition-colors duration-300" href="#">Beranda</a>
+<a class="font-['Inter'] uppercase tracking-[0.3em] font-black text-[11px] text-gray-400 hover:text-[#f2ca50] transition-colors duration-300" href="#">Tentang Kami</a>
+<a class="font-['Inter'] uppercase tracking-[0.3em] font-black text-[11px] text-[#f2ca50] border-b border-[#f2ca50]/40 pb-1" href="#">Produk</a>
+<a class="font-['Inter'] uppercase tracking-[0.3em] font-black text-[11px] text-gray-400 hover:text-[#f2ca50] transition-colors duration-300" href="#">Portofolio</a>
+<a class="font-['Inter'] uppercase tracking-[0.3em] font-black text-[11px] text-gray-400 hover:text-[#f2ca50] transition-colors duration-300" href="#">Kontak</a>
+</div>
+<button class="bg-transparent border border-primary/40 px-6 py-2 font-['Inter'] uppercase tracking-[0.2em] font-black text-[11px] text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 scale-95 duration-200">
+                Inquiry
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<header class="text-center mb-24">
+<h1 class="text-[50px] md:text-[80px] font-black leading-tight tracking-[-0.05em] uppercase gold-gradient-text">
+                PENGETAHUAN PRODUK
+            </h1>
+<p class="mt-4 text-lg md:text-xl font-bold tracking-tight text-on-surface/80">
+                Solusi Arsitektur &amp; Interior Berstandar Internasional
+            </p>
+<div class="w-24 h-1 bg-primary/40 mx-auto mt-8"></div>
+</header>
+<!-- Product Hex Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-16">
+<!-- Portable Toilet -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)]">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="wash">wash</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">Portable Toilet</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Fasilitas sanitasi mobile dengan material kuat dan higienis untuk berbagai kebutuhan lapangan.</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">Low Price</span>
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">Standard/Deluxe</span>
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">Emergency</span>
+</div>
+</div>
+</div>
+<!-- Cubicle Toilet -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)] lg:translate-y-8">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="door_front">door_front</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">Cubicle Toilet</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Sistem partisi toilet modern yang efisien ruang dan estetik untuk area publik maupun privat.</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">Premium</span>
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">Standard</span>
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">PVC Board</span>
+<span class="text-[10px] tracking-widest font-black uppercase px-3 py-1 bg-primary/10 border border-primary/20 text-primary">Full Height</span>
+</div>
+</div>
+</div>
+<!-- Office Cubicle -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)]">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="work">work</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">Office Cubicle</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Sekat ruang kerja profesional menggunakan material Phenolic Resin berkualitas tinggi.</p>
+<div class="mt-4">
+<span class="text-[10px] tracking-[0.25em] font-black uppercase text-primary/80">Material: Phenolic Resin</span>
+</div>
+</div>
+</div>
+<!-- Movable Door -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)]">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="unfold_more">unfold_more</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">Movable Door</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Partisi geser inovatif dengan kemampuan peredam suara untuk fleksibilitas ruang pertemuan.</p>
+<div class="mt-4">
+<span class="text-[10px] tracking-[0.25em] font-black uppercase text-primary/80">Fitur: Sound Insulation</span>
+</div>
+</div>
+</div>
+<!-- CNC Ornament -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)] lg:translate-y-8">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="architecture">architecture</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">CNC Ornament</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Produk dekoratif dengan presisi tinggi hasil pemotongan komputerisasi pada berbagai media.</p>
+<div class="mt-4">
+<span class="text-[10px] tracking-[0.25em] font-black uppercase text-primary/80">Teknologi: Computerized Precision</span>
+</div>
+</div>
+</div>
+<!-- Cellustone Ornament -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)]">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="grid_view">grid_view</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">Cellustone</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Solusi fasad dan wall panel ramah lingkungan dengan estetika alami yang tahan lama.</p>
+<div class="mt-4">
+<span class="text-[10px] tracking-[0.25em] font-black uppercase text-primary/80">Eco-Friendly Wall Panel</span>
+</div>
+</div>
+</div>
+<!-- Lab Cabinet -->
+<div class="group relative bg-[#111216]/70 backdrop-blur-2xl border border-primary/20 p-8 flex flex-col items-center text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_20px_rgba(242,202,80,0.1)] lg:col-start-2">
+<div class="absolute -top-12 w-24 h-24 hex-clip bg-surface-container flex items-center justify-center border border-primary/40 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary" data-icon="biotech">biotech</span>
+</div>
+<div class="mt-12 w-full">
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4 text-primary">Lab Cabinet</h3>
+<p class="text-sm text-on-surface/60 font-light mb-6 leading-relaxed">Kabinet laboratorium khusus berbahan Phenolic yang tahan terhadap reaksi bahan kimia.</p>
+<div class="mt-4">
+<span class="text-[10px] tracking-[0.25em] font-black uppercase text-primary/80">Material: Chemical Resistant Phenolic</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Section -->
+<section class="mt-40 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<h2 class="text-4xl font-black uppercase mb-6 tracking-tight">Kualitas Material <span class="text-primary">Unggulan</span></h2>
+<p class="text-on-surface/70 leading-relaxed mb-8">Setiap produk Sembada Batu Beling dirancang dengan integritas struktural yang tinggi. Kami menggunakan material pilihan seperti Phenolic Resin yang dikenal tahan benturan, tahan air, dan tahan bakteri, memastikan investasi arsitektur Anda bertahan untuk jangka panjang.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 hex-clip bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-xl" data-icon="verified">verified</span>
+</div>
+<span class="font-black uppercase tracking-widest text-xs">Sertifikasi Standar Internasional</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 hex-clip bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<span class="font-black uppercase tracking-widest text-xs">Pengerjaan Presisi CNC &amp; Computerized</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="absolute inset-0 bg-primary/10 hex-clip translate-x-4 translate-y-4 -z-10"></div>
+<div class="aspect-square bg-surface-container overflow-hidden hex-clip border border-primary/40">
+<img alt="Arsitektur Modern" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="architectural close-up of premium metallic building facade with geometric patterns and dramatic golden lighting shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA836qjLWu_KBxG-SR4-JpEBGeUlgXpJ3CLryQ76tsqJSaggVrjRjpFEBYn6yMiUc8S_oogcFuUFczhYylQDwbVxztBfggIxWYAyh0WSuPPmiZsGXNh-c0D2clMzb_Yt4fLAHYLVwqOOoYbo6yb_tesYyizmxEB2s1rF38q_v7iv5E-o4LoAymhQVpj9My0QWGYqm-Jybc814FG-reZf7iKrCCoekG9Yp-rR-IsqUH6MJSxXAib3MT9_-nRasnyK1dexjweR3KH8GPq"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B0C10] border-t border-[#f2ca50]/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full">
+<div>
+<div class="text-lg font-black text-[#f2ca50] mb-6 uppercase">Sembada Batu Beling</div>
+<p class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500 leading-relaxed">Penyedia solusi kebutuhan bangunan terbaik dengan spesialisasi pada material phenolic dan jasa fabrikasi presisi tinggi.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-['Inter'] font-black tracking-widest text-[10px] uppercase text-[#f2ca50]">Tautan</h4>
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500 hover:text-[#f2ca50] transition-opacity opacity-80 hover:opacity-100" href="#">Kebijakan Privasi</a>
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500 hover:text-[#f2ca50] transition-opacity opacity-80 hover:opacity-100" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500 hover:text-[#f2ca50] transition-opacity opacity-80 hover:opacity-100" href="#">Lokasi Kantor</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-['Inter'] font-black tracking-widest text-[10px] uppercase text-[#f2ca50]">Kantor Pusat</h4>
+<p class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500">Jl. Raya Surabaya, Indonesia</p>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="mail">mail</span>
+<span class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500">info@batubeling.com</span>
+</div>
+</div>
+</div>
+<div class="px-12 py-6 border-t border-primary/10 text-center">
+<p class="font-['Inter'] font-light tracking-widest text-[10px] uppercase text-gray-500">
+                © 2024 Sembada Batu Beling. Hak Cipta Dilindungi.
+            </p>
+</div>
+</footer>
+</body></html>

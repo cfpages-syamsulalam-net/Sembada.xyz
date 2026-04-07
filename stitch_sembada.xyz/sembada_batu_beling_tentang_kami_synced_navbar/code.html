@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface": "#e3e2e8",
+                "surface-variant": "#1f1f24",
+                "on-background": "#e3e2e8",
+                "on-secondary-fixed-variant": "#5d4200",
+                "outline": "#99907c",
+                "tertiary-fixed-dim": "#e2c62d",
+                "surface-tint": "#e9c349",
+                "secondary": "#f7bd48",
+                "on-tertiary-fixed": "#211b00",
+                "inverse-primary": "#735c00",
+                "on-tertiary-container": "#504500",
+                "on-error-container": "#ffdad6",
+                "surface-container-highest": "#1f1f24",
+                "primary": "#f2ca50",
+                "background": "#0B0C10",
+                "secondary-fixed": "#ffdea6",
+                "tertiary-fixed": "#ffe24c",
+                "inverse-surface": "#e3e2e8",
+                "on-secondary": "#412d00",
+                "secondary-fixed-dim": "#f7bd48",
+                "surface-container-lowest": "#0d0e12",
+                "surface-dim": "#0B0C10",
+                "surface-container-low": "#111216",
+                "on-primary-container": "#554300",
+                "surface-container-high": "#1a1b20",
+                "tertiary-container": "#cdb212",
+                "on-tertiary-fixed-variant": "#524600",
+                "primary-container": "#d4af37",
+                "on-primary": "#3c2f00",
+                "on-error": "#690005",
+                "surface-container": "#15161a",
+                "inverse-on-surface": "#2f3035",
+                "on-secondary-fixed": "#271900",
+                "primary-fixed": "#ffe088",
+                "on-secondary-container": "#392700",
+                "on-primary-fixed-variant": "#574500",
+                "error-container": "#93000a",
+                "on-surface-variant": "#d0c5af",
+                "outline-variant": "#4d4635",
+                "primary-fixed-dim": "#e9c349",
+                "on-primary-fixed": "#241a00",
+                "surface-bright": "#1a1b20",
+                "tertiary": "#eace35",
+                "surface": "#0B0C10",
+                "error": "#ffb4ab",
+                "on-tertiary": "#393000",
+                "secondary-container": "#ba880f"
+            },
+            "fontFamily": {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0B0C10;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle at center, transparent 0%, #0B0C10 100%),
+                        repeating-radial-gradient(circle at 50% 50%, rgba(242, 202, 80, 0.05) 0%, transparent 1px, transparent 100%);
+            background-size: 100% 100%, 40px 40px;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #BF953F, #f2ca50, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-premium {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(242, 202, 80, 0.2);
+        }
+        .hex-clip {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+    </style>
+<style>
+        .gold-metallic-text {
+            background: linear-gradient(
+                to bottom, 
+                #BF953F 0%, 
+                #FCF6BA 25%, 
+                #B38728 50%, 
+                #FBF5B7 75%, 
+                #AA771C 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .glass-premium {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+    </style></head>
+<body class="text-on-surface">
+<div class="star-field"></div>
+<!-- Navigation Header -->
+<nav class="fixed top-0 w-full z-50 glass-premium px-10 py-5 transition-all duration-300">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="text-xl font-black gold-metallic-text tracking-tight uppercase">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex gap-10 items-center uppercase tracking-[0.25em] text-[10px] font-extrabold">
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Beranda</a>
+<a class="text-primary border-b-2 border-primary/50 pb-1" href="#">Tentang Kami</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Produk</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Portofolio</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Kontak</a>
+</div>
+<button class="border border-primary/50 text-primary px-6 py-2 uppercase text-[10px] font-black tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-300 glass-premium">
+                Konsultasi Sekarang
+            </button>
+</div>
+</nav>
+<main class="relative z-10 pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="flex flex-col items-center text-center">
+<span class="Inter font-black uppercase tracking-[0.5em] text-primary text-xs mb-4">Tentang Kami</span>
+<h1 class="text-6xl md:text-8xl font-black gold-gradient-text uppercase tracking-tighter leading-[0.85] mb-8">
+                    IDENTITAS KAMI
+                </h1>
+<p class="max-w-2xl text-slate-400 text-lg leading-relaxed font-light italic">
+                    "Membangun dengan presisi matematis dan integritas yang tak tergoyahkan untuk menciptakan mahakarya arsitektur yang abadi."
+                </p>
+</div>
+</section>
+<!-- Legacy Section -->
+<section class="max-w-7xl mx-auto px-8 mb-40 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative aspect-square glass-premium overflow-hidden">
+<img alt="Architectural Wireframe" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="abstract architectural 3D wireframe render of a modern geometric building with golden light lines on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW3qcLozSuGi03Go-nGMroNW6OLb1o0NS-iXavTSzB57HaZW2Xl08-3Id_K1pXxiEQJKf5z9MMkUX3hPSeQ87_r86ej7DtzK-beVDj63jZ4aLbgVjnN-FYhRngGN5AoC_NlHsZv6GzE6NVeUQQyQHndTO8vv2A8bAgPK-O8qUGCWrvOZY-JLTP9AU9ugyENT5b6IXGd16hm0bxTPl4XKos3B0dQ9POmdlar-9rnarLYH6WBy1oaC3D1WSOegtKcTaoA9L-LCv0hI2d"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+</div>
+<div>
+<h2 class="text-4xl font-black uppercase mb-6 tracking-tight text-on-surface">WARISAN &amp; <br/><span class="text-primary">KEUNGGULAN</span></h2>
+<div class="space-y-6 text-slate-400 leading-relaxed">
+<p>Sembada Batu Beling merupakan divisi premium dari <span class="text-on-surface font-bold">PT. Batu Beling</span>, sebuah entitas yang telah lama dikenal dalam industri konstruksi dan material bangunan berkualitas tinggi di Indonesia.</p>
+<p>Kami hadir sebagai respon terhadap kebutuhan akan spesialisasi desain arsitektur yang menggabungkan estetika mewah dengan ketahanan struktural yang superior. Setiap proyek kami adalah manifestasi dari pengalaman puluhan tahun dalam memahami material dan ruang.</p>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-4">
+<div class="glass-premium p-6 border-l-4 border-primary">
+<div class="text-3xl font-black text-on-surface">25+</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-500 mt-2 font-black">Tahun Pengalaman</div>
+</div>
+<div class="glass-premium p-6 border-l-4 border-primary">
+<div class="text-3xl font-black text-on-surface">500+</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-500 mt-2 font-black">Proyek Selesai</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visi & Misi Bento Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 glass-premium p-12 flex flex-col justify-end min-h-[400px]">
+<div class="w-16 h-16 hex-clip bg-primary/20 flex items-center justify-center mb-8 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="visibility">visibility</span>
+</div>
+<h3 class="text-3xl font-black uppercase tracking-tight mb-4">Visi Kami</h3>
+<p class="text-slate-400 text-lg max-w-xl">Menjadi tolak ukur global dalam desain arsitektur yang mengintegrasikan kemewahan visual dengan keberlanjutan fungsional melalui inovasi tanpa henti.</p>
+</div>
+<div class="glass-premium p-12 flex flex-col items-center text-center justify-center">
+<div class="w-16 h-16 hex-clip bg-primary/20 flex items-center justify-center mb-8 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4">Misi I</h3>
+<p class="text-slate-500 text-sm">Menyediakan solusi desain yang dipersonalisasi dengan standar kualitas material tertinggi.</p>
+</div>
+<div class="glass-premium p-12 flex flex-col items-center text-center justify-center">
+<div class="w-16 h-16 hex-clip bg-primary/20 flex items-center justify-center mb-8 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="groups">groups</span>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4">Misi II</h3>
+<p class="text-slate-500 text-sm">Membangun kemitraan strategis yang didasarkan pada transparansi dan kepercayaan mutlak.</p>
+</div>
+<div class="md:col-span-2 glass-premium p-12 flex flex-col justify-center">
+<div class="w-16 h-16 hex-clip bg-primary/20 flex items-center justify-center mb-8 border border-primary/40">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h3 class="text-2xl font-black uppercase tracking-tight mb-4">Misi III</h3>
+<p class="text-slate-500 text-sm">Menerapkan teknologi rekayasa terkini untuk memastikan setiap detail struktur memiliki presisi milimeter.</p>
+</div>
+</div>
+</section>
+<!-- Nilai Utama Section -->
+<section class="bg-surface-container-low py-32 mb-40 border-y border-primary/10">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<span class="Inter font-black uppercase tracking-[0.5em] text-primary text-[10px] mb-8 block">Pilar Utama Kami</span>
+<h2 class="text-4xl md:text-6xl font-black text-on-surface uppercase mb-8 leading-tight italic">
+                    "INTEGRITAS UNTUK <span class="gold-gradient-text">SUKSES</span> DAN <span class="gold-gradient-text">BAROKAH</span>"
+                </h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+<p class="text-slate-400 text-lg leading-relaxed">
+                    Kami percaya bahwa keberhasilan sebuah proyek tidak hanya diukur dari kemegahan fisiknya, tetapi dari kejujuran dalam proses dan manfaat jangka panjang yang diberikannya bagi pemilik dan lingkungan.
+                </p>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="glass-premium p-16 md:p-24 flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 bg-primary/5 blur-[120px] rounded-full"></div>
+<h2 class="text-4xl md:text-5xl font-black uppercase mb-10 tracking-tighter max-w-2xl">
+                    SIAP UNTUK MEWUJUDKAN VISI ARSITEKTUR ANDA?
+                </h2>
+<button class="bg-primary text-on-primary font-black uppercase tracking-[0.3em] px-12 py-5 text-sm hover:bg-yellow-400 hover:scale-105 transition-all duration-500 shadow-[0_0_20px_rgba(242,202,80,0.3)]">
+                    MULAI PROYEK ANDA
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 border-t border-yellow-500/20 px-12 py-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+<div>
+<div class="text-lg font-black text-[#BF953F] mb-6">Sembada Batu Beling</div>
+<p class="Inter leading-relaxed text-xs tracking-widest uppercase text-slate-500">
+                    Architectural Excellence Engineered. Kami mendefinisikan ulang kemewahan melalui kekuatan struktur dan estetika material.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-4">
+<a class="Inter leading-relaxed text-xs tracking-widest uppercase text-slate-500 hover:text-yellow-400 hover:tracking-[0.5em] transition-all" href="#">Privacy Policy</a>
+<a class="Inter leading-relaxed text-xs tracking-widest uppercase text-slate-500 hover:text-yellow-400 hover:tracking-[0.5em] transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="Inter leading-relaxed text-xs tracking-widest uppercase text-slate-500 hover:text-yellow-400 hover:tracking-[0.5em] transition-all" href="#">Press Kit</a>
+<a class="Inter leading-relaxed text-xs tracking-widest uppercase text-slate-500 hover:text-yellow-400 hover:tracking-[0.5em] transition-all" href="#">Global Offices</a>
+</div>
+</div>
+<div class="text-right flex flex-col justify-end">
+<div class="text-[10px] uppercase tracking-[0.2em] text-slate-600">
+                    © 2024 Sembada Batu Beling. Architectural Excellence Engineered.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sembada Batu Beling | Integritas untuk Sukses dan Barokah</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#d0c5af",
+                      "on-surface": "#e3e2e8",
+                      "on-primary-fixed-variant": "#574500",
+                      "primary-container": "#d4af37",
+                      "surface-container-lowest": "#0d0e12",
+                      "outline": "#99907c",
+                      "primary": "#f2ca50",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#ba880f",
+                      "background": "#0B0C10",
+                      "surface-tint": "#e9c349",
+                      "on-tertiary-container": "#504500",
+                      "surface-variant": "#1f1f24",
+                      "on-background": "#e3e2e8",
+                      "on-primary-fixed": "#241a00",
+                      "on-primary": "#3c2f00",
+                      "tertiary-fixed-dim": "#e2c62d",
+                      "secondary": "#f7bd48",
+                      "on-error": "#690005",
+                      "tertiary": "#eace35",
+                      "inverse-surface": "#e3e2e8",
+                      "surface-container": "#15161a",
+                      "surface": "#0B0C10",
+                      "secondary-fixed-dim": "#f7bd48",
+                      "inverse-primary": "#735c00",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#524600",
+                      "outline-variant": "#4d4635",
+                      "surface-container-highest": "#1f1f24",
+                      "inverse-on-surface": "#2f3035",
+                      "error": "#ffb4ab",
+                      "on-secondary": "#412d00",
+                      "tertiary-container": "#cdb212",
+                      "on-tertiary": "#393000",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-secondary-fixed-variant": "#5d4200",
+                      "tertiary-fixed": "#ffe24c",
+                      "on-tertiary-fixed": "#211b00",
+                      "on-secondary-container": "#392700",
+                      "on-primary-container": "#554300",
+                      "primary-fixed": "#ffe088",
+                      "secondary-fixed": "#ffdea6",
+                      "surface-container-low": "#111216",
+                      "surface-dim": "#0B0C10",
+                      "surface-bright": "#1a1b20",
+                      "on-secondary-fixed": "#271900",
+                      "surface-container-high": "#1a1b20"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Inter", "sans-serif"],
+                      "body": ["Inter", "sans-serif"],
+                      "label": ["Inter", "sans-serif"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .hexagon {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        
+        /* Starry Night Effect */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        .star-gold {
+            background: #f2ca50;
+            box-shadow: 0 0 4px #f2ca50;
+        }
+
+        .starry-bg {
+            background-color: #0B0C10;
+            position: relative;
+        }
+
+        .gold-metallic-text {
+            background: linear-gradient(
+                to bottom, 
+                #BF953F 0%, 
+                #FCF6BA 25%, 
+                #B38728 50%, 
+                #FBF5B7 75%, 
+                #AA771C 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .glass-premium {
+            background: rgba(11, 12, 16, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, .headline {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface-dim text-on-surface overflow-x-hidden selection:bg-primary selection:text-on-primary starry-bg">
+<!-- Starry Night Background Layer -->
+<div class="stars-container">
+<!-- Manually generated small CSS stars with varying durations and sizes -->
+<div class="star" style="top: 5%; left: 10%; width: 2px; height: 2px; --duration: 3s;"></div>
+<div class="star star-gold" style="top: 15%; left: 25%; width: 1px; height: 1px; --duration: 4s;"></div>
+<div class="star" style="top: 8%; left: 60%; width: 3px; height: 3px; --duration: 5s;"></div>
+<div class="star star-gold" style="top: 25%; left: 80%; width: 2px; height: 2px; --duration: 3.5s;"></div>
+<div class="star" style="top: 40%; left: 15%; width: 1px; height: 1px; --duration: 6s;"></div>
+<div class="star" style="top: 55%; left: 50%; width: 2px; height: 2px; --duration: 4.5s;"></div>
+<div class="star star-gold" style="top: 70%; left: 5%; width: 1.5px; height: 1.5px; --duration: 5.5s;"></div>
+<div class="star" style="top: 85%; left: 30%; width: 2px; height: 2px; --duration: 3.2s;"></div>
+<div class="star star-gold" style="top: 90%; left: 70%; width: 3px; height: 3px; --duration: 4.8s;"></div>
+<div class="star" style="top: 12%; left: 90%; width: 1px; height: 1px; --duration: 7s;"></div>
+<div class="star" style="top: 45%; left: 85%; width: 2px; height: 2px; --duration: 4.2s;"></div>
+<div class="star star-gold" style="top: 65%; left: 40%; width: 1px; height: 1px; --duration: 3.8s;"></div>
+<div class="star" style="top: 78%; left: 92%; width: 2px; height: 2px; --duration: 5.1s;"></div>
+<div class="star" style="top: 33%; left: 66%; width: 1.5px; height: 1.5px; --duration: 4.4s;"></div>
+</div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-premium px-10 py-5 transition-all duration-300">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="text-xl font-black gold-metallic-text tracking-tight uppercase">
+                Sembada Batu Beling
+            </div>
+<div class="hidden md:flex gap-10 items-center uppercase tracking-[0.25em] text-[10px] font-extrabold">
+<a class="text-primary border-b-2 border-primary/50 pb-1" href="#">Beranda</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Tentang Kami</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Produk</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Portofolio</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">Kontak</a>
+</div>
+<button class="border border-primary/50 text-primary px-6 py-2 uppercase text-[10px] font-black tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-300 glass-premium">
+                Konsultasi Sekarang
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[80vh] flex items-center justify-center pt-24 overflow-hidden z-10">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background"></div>
+<div class="relative z-10 text-center px-4 max-w-5xl">
+<h1 class="text-6xl md:text-8xl gold-metallic-text font-black tracking-tighter mb-4 leading-[0.85] uppercase">
+                Solusi Konstruksi<br/>Premium
+            </h1>
+<div class="glass-premium px-10 py-6 mb-10 mx-auto w-fit">
+<p class="text-2xl md:text-3xl text-on-surface font-black tracking-tight italic">
+                    "Integritas untuk Sukses dan Barokah"
+                </p>
+</div>
+<button class="group relative px-16 py-6 overflow-hidden border border-primary/40 glass-premium">
+<span class="relative z-10 text-primary font-black uppercase tracking-[0.35em] text-[12px] group-hover:text-on-primary transition-colors duration-300">
+                    Jelajahi Layanan Kami
+                </span>
+<div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</button>
+</div>
+</header>
+<!-- About Section -->
+<section class="py-24 relative px-10 z-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-24">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-10 -left-10 w-48 h-48 bg-primary/10 blur-[120px]"></div>
+<div class="relative aspect-square">
+<div class="absolute inset-0 hexagon glass-premium opacity-50"></div>
+<img alt="Fasad arsitektur modern" class="hexagon w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-1000 border-2 border-primary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5jiGOuk94rkYHm9Xxil26qF_TvgckPVVKR3miijSeIb2v9iqUrIIidIkAzubn2N_-bFY0KSs2FHM4u2630jDbe3vhdRe9Y5WuIuUVIGxoDNWua50Mh3XoXeiFROooyBlIJj_VJXH0vPxlaDzUev2SwEbP9JqZgWExzfduR2mThfr-_GG1BjgHmwB4rrcL7HdlHzwkDwUUizhHurYejJ9kf97YmgZxyLOv-Nw77mBlyh5j3c9oSxS2A_q9QL5sfPNVecoAf9whqfYZ"/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-secondary uppercase tracking-[0.5em] text-[11px] font-black mb-6 block">Warisan Keunggulan</span>
+<h2 class="text-5xl md:text-6xl gold-metallic-text font-black mb-10 leading-tight uppercase tracking-tight">Identitas Kami</h2>
+<div class="space-y-8 text-on-surface/80 text-lg leading-relaxed font-light">
+<p>
+                        Sembada Batu Beling adalah standar kemewahan dan integritas dalam konstruksi kelas atas dan aplikasi material premium. Sebagai divisi khusus dari <span class="text-primary font-bold">PT. Batu Beling</span>, kami mewarisi keahlian yang telah teruji selama bertahun-tahun.
+                    </p>
+<p>
+                        Fokus kami tetap pada aplikasi profesional berstandar nasional, menggabungkan presisi teknis dengan estetika arsitektural untuk menghadirkan ruang yang fungsional sekaligus mahakarya artistik.
+                    </p>
+</div>
+<div class="mt-14 flex gap-16">
+<div>
+<div class="text-5xl font-black text-primary tracking-tighter">15+</div>
+<div class="text-[10px] uppercase tracking-[0.3em] text-secondary mt-2 font-black">Tahun Pengalaman</div>
+</div>
+<div>
+<div class="text-5xl font-black text-primary tracking-tighter">500+</div>
+<div class="text-[10px] uppercase tracking-[0.3em] text-secondary mt-2 font-black">Proyek Selesai</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="py-24 bg-surface-container-low/30 relative overflow-hidden border-y border-white/5 z-10">
+<div class="max-w-7xl mx-auto px-10">
+<div class="text-center mb-24">
+<span class="text-secondary uppercase tracking-[0.6em] text-[11px] font-black mb-4 block">Ekosistem Produk</span>
+<h2 class="text-5xl md:text-6xl gold-metallic-text font-black uppercase tracking-tight">Solusi Eksklusif</h2>
+<div class="h-1 w-24 bg-gradient-to-r from-transparent via-primary/60 to-transparent mx-auto mt-8"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-y-24 gap-x-12">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="hexagon w-full aspect-square glass-premium relative overflow-hidden mb-8 group-hover:scale-[1.02] transition-all duration-500">
+<img alt="Toilet kubikel" class="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDix4xkCkqj3PFlLhVkAUxjsUZ8KXzAYNAvkYchIrt7lqO2usxiZJpEfHVfxhW_LD_I9_GnIuf3Y_2U-Yv--81LqCGo6VeG7krHgnx21Qywsrq6MMhbvCyy0ZAEsATw2mBue_FDhRrvvRLoAKUH3Mjge_Cuj8kPg55DojlZ0g0mtqT1UeGnOLdsHyRIESd1O8sUP3ZWX8AYNneGK-LBFv6tIt0PlzXvCO7DMZvlK1vf6okPQjY5KGYkcSuhCuwA8tkhQl4eUIfGzNP1"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">clean_hands</span>
+</div>
+</div>
+<h3 class="text-xl text-primary text-center font-black uppercase tracking-[0.4em]">Cubicle Toilet</h3>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer translate-y-12">
+<div class="hexagon w-full aspect-square glass-premium relative overflow-hidden mb-8 group-hover:scale-[1.02] transition-all duration-500">
+<img alt="Interior kantor" class="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSD4OwcFyd4cLEZBkG0V7UKblBefKka5uT_tuOYcnsOZfx8WtlL0CqX4WqyflFgx6Ku0e2Pe83zZ8jnM48vt-G76xDsEnZoWXPUV1yX4K8Lq_4tFayZGAFRAn7ceG7oqx1uBUElty0xCD1oTriMArDVbSuvRlKFBcGXUi-QJMRdgoCun1gnKc-4v5iBMJmk4JYqVZCDehcps_yDgVucB5oqnsSGBz7sHtaaDQhZ0__x0Wzzqt8uVQ0Z4CIXuZ272iXkHA8Jb9ifeNl"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">workspaces</span>
+</div>
+</div>
+<h3 class="text-xl text-primary text-center font-black uppercase tracking-[0.4em]">Office Cubicle</h3>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="hexagon w-full aspect-square glass-premium relative overflow-hidden mb-8 group-hover:scale-[1.02] transition-all duration-500">
+<img alt="Ornamen CNC" class="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCcSSRqZOzVLx8n9Tq05FGpvt8zcBjn0BnHGXpI76yofdLRrZ-q9MiWuw0epNTtvn5PNabIyFng_6jQo-VWBk1y40ZbXAL534IZRfD-_tZmlYt-ye6DcFN7h3NLXsxbrV710fnm76Q3SksGYLSRp9GCaTmKJ6CQINk2gl7nvhSUlxeU3e_uVNmV-BGExOKHyyGup27S-0rmognXB8AwRsieiDDEJq13hwd1uFXunBu5I5nngO56GwMKeWQHrPFh8z4b3zq02SGgxA_"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">pattern</span>
+</div>
+</div>
+<h3 class="text-xl text-primary text-center font-black uppercase tracking-[0.4em]">Ornamen CNC</h3>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="hexagon w-full aspect-square glass-premium relative overflow-hidden mb-8 group-hover:scale-[1.02] transition-all duration-500">
+<img alt="Toilet portable" class="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi1cnzTUFyFgBd1V-F7IU7GlWx66DLEsj1q1TR0WbGj16R7tYXEoBO1FD9Q5f_PYTDk1dAoAP7IfFmf1qpmvu8HXRyF4TAE16cylV3BCvhlyRj2Y6kDXfaQr335PQVA4NeOCkdrsIKiBWPUy8WujIxV7ZITmOE0yjI2_n4VHVp3IoxgjVpidJvQEaY-08oi7GtFEPI8PL-upopIFukqb1eR66Od28RMj1b0N_sQpgO2UAT0kXsC051hVzfQH_ZM5zK5cCPLMDRK8d4"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">wc</span>
+</div>
+</div>
+<h3 class="text-xl text-primary text-center font-black uppercase tracking-[0.4em]">Toilet Portable</h3>
+</div>
+<!-- Product 5 -->
+<div class="group cursor-pointer translate-y-12">
+<div class="hexagon w-full aspect-square glass-premium relative overflow-hidden mb-8 group-hover:scale-[1.02] transition-all duration-500">
+<img alt="Kabinet lab" class="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPcvAftbTDz1zkLB9ufDPex4k2qJi0asYehgAbJNKA_p1BAkv6xmL9_TVrOXIiqM2ocmOjvHTxk1--sxTqSg-haYc8Pt7-tUCaDkEVIXcAhg6Rb3A9TZxG8AzlSKMA3qsZ-bk_UFH2b3qw3h201uvDKGFxjh_gJqh10wOUg3uzV6KTmRMmu4sMM5lbogJmNJGl8_wEeFy8LL8i5w8yUzZXMW7OOpbtpAFFR_pjdETtqo6q8DKXF0koZEZTA7Kl-b_2yZSOoCN3dOF2"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">science</span>
+</div>
+</div>
+<h3 class="text-xl text-primary text-center font-black uppercase tracking-[0.4em]">Kabinet Lab</h3>
+</div>
+<!-- Product 6 -->
+<div class="group cursor-pointer">
+<div class="hexagon w-full aspect-square glass-premium relative overflow-hidden mb-8 group-hover:scale-[1.02] transition-all duration-500">
+<img alt="Material cellustone" class="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDT19ZlRv0k6YeXwi6rUaV72gBUzCYlWhpilrWJlUAlRCZ_bDw_Q8dHBEYtET5R9Q_UZX3039ogZHrmBaEr_tKJVRGZHhs8Bx-Y6NzIcntZIk0fwrJ008jlZiuu6JFJhfnMRIjwUg_2dEBt7I0su1vnEdFTZhWlhI_gzF_h6Rn3vYOZzZhHBPqEdKO1rEMyDBPK-shZo9XNni6kelO-wtcqU9qc9kh0H7GU2tYGHchBWyQAMT3t8KYoZaLkPJNuq9stp95jZ-Ekok7"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">layers</span>
+</div>
+</div>
+<h3 class="text-xl text-primary text-center font-black uppercase tracking-[0.4em]">Cellustone</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition -->
+<section class="py-24 px-10 z-10">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<span class="text-secondary uppercase tracking-[0.5em] text-[11px] font-black mb-6 block">Filosofi Kami</span>
+<h2 class="text-5xl md:text-6xl gold-metallic-text font-black mb-10 uppercase tracking-tight">Pilar Utama</h2>
+<p class="text-on-surface/70 text-lg leading-relaxed mb-12 font-light">
+                        Setiap detail kecil berkontribusi pada kemegahan sebuah visi. Melalui empat prinsip inti kami, kami memastikan proyek Anda dilaksanakan dengan standar arsitektural tertinggi.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+<div class="flex gap-5 group">
+<div class="hexagon w-16 h-16 flex-shrink-0 glass-premium flex items-center justify-center group-hover:border-primary/60 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">target</span>
+</div>
+<div>
+<h4 class="text-sm text-primary font-black uppercase tracking-widest mb-1">Presisi</h4>
+<p class="text-xs text-on-surface/60 leading-relaxed">Akurasi milimeter dalam setiap pemotongan dan pemasangan.</p>
+</div>
+</div>
+<div class="flex gap-5 group">
+<div class="hexagon w-16 h-16 flex-shrink-0 glass-premium flex items-center justify-center group-hover:border-primary/60 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+</div>
+<div>
+<h4 class="text-sm text-primary font-black uppercase tracking-widest mb-1">Efisiensi</h4>
+<p class="text-xs text-on-surface/60 leading-relaxed">Manajemen waktu profesional untuk penyelesaian optimal.</p>
+</div>
+</div>
+<div class="flex gap-5 group">
+<div class="hexagon w-16 h-16 flex-shrink-0 glass-premium flex items-center justify-center group-hover:border-primary/60 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">diamond</span>
+</div>
+<div>
+<h4 class="text-sm text-primary font-black uppercase tracking-widest mb-1">Elegan</h4>
+<p class="text-xs text-on-surface/60 leading-relaxed">Estetika visual premium yang meningkatkan nilai aset total.</p>
+</div>
+</div>
+<div class="flex gap-5 group">
+<div class="hexagon w-16 h-16 flex-shrink-0 glass-premium flex items-center justify-center group-hover:border-primary/60 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">eco</span>
+</div>
+<div>
+<h4 class="text-sm text-primary font-black uppercase tracking-widest mb-1">Berkelanjutan</h4>
+<p class="text-xs text-on-surface/60 leading-relaxed">Material masa depan yang berfokus pada ketahanan lingkungan.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-[140px]"></div>
+<div class="relative glass-premium p-12">
+<img alt="Cetak biru teknis" class="w-full h-auto grayscale opacity-20 mb-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQHuTM4DKoWg3U4eyUW4jt9BUK8rL-hduSiqSl-BRTlP1IvZMLFCWV2NZBnq-r7G6fZUtmkuM4wnB8qLgS-xE2_kzqf88miukyfmruCGhcHOQxEsw1-QiESDVqoOXX1rd56RWzIQowG5gvbqZwEWDQY5XF9OB1U5vaZCt2ChHSHivPIRGz3dFr9GgzokpdJ_Abxp9sBwHI_TTrnwcJ4mkx_7_-UU-DLJ3x85RyAvukhRi6v3VbDmIHEHrozyXcI6bR4zQBJvp-jeQ4"/>
+<blockquote class="text-2xl font-black italic text-on-surface/90 leading-relaxed headline">
+                            "Membangun dengan integritas adalah janji kami. Setiap struktur yang kami sentuh menjadi bukti dedikasi kami terhadap kualitas dan keindahan abadi."
+                        </blockquote>
+<div class="mt-10 flex items-center gap-5">
+<div class="w-16 h-[2px] bg-gradient-to-r from-primary/60 to-transparent"></div>
+<span class="text-[10px] uppercase tracking-[0.4em] text-primary font-black">Janji Sembada</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background w-full border-t border-white/5 pt-24 pb-12 z-10 relative">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 pb-24 max-w-7xl mx-auto text-sm">
+<div class="col-span-1">
+<div class="text-xl font-black gold-metallic-text mb-6 tracking-tight uppercase">Sembada Batu Beling</div>
+<p class="text-on-surface/50 max-w-xs leading-loose font-light">
+                    Integritas untuk Sukses dan Barokah. Pionir nasional dalam aplikasi material premium dan rekayasa presisi.
+                </p>
+</div>
+<div>
+<h4 class="text-primary font-black mb-8 uppercase tracking-[0.4em] text-[11px]">Hubungi Kami</h4>
+<ul class="space-y-5">
+<li class="text-on-surface/60 hover:text-primary transition-colors cursor-pointer font-light">Surabaya, Indonesia</li>
+<li class="text-on-surface/60 hover:text-primary transition-colors cursor-pointer font-light">+62-811-330-061</li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-black mb-8 uppercase tracking-[0.4em] text-[11px]">Tautan</h4>
+<ul class="space-y-5">
+<li><a class="text-on-surface/60 hover:text-primary transition-colors font-light" href="#">Google Maps</a></li>
+<li><a class="text-on-surface/60 hover:text-primary transition-colors font-light" href="#">Dokumentasi Legal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-black mb-8 uppercase tracking-[0.4em] text-[11px]">Buletin</h4>
+<div class="flex border-b border-primary/30 pb-2 group focus-within:border-primary transition-colors">
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full placeholder:text-on-surface/30 text-xs tracking-widest font-light" placeholder="ALAMAT EMAIL ANDA" type="email"/>
+<button class="text-primary"><span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="text-center pt-12 border-t border-white/5 mx-12">
+<p class="text-on-surface/40 text-[10px] uppercase tracking-[0.5em] font-black">© 2024 Sembada Batu Beling. Keunggulan Didefinisikan Oleh Integritas.</p>
+</div>
+</footer>
+</body></html>
