@@ -6,8 +6,9 @@ import { AboutSection } from '@/components/sections/AboutSection'
 import { ProductGrid } from '@/components/sections/ProductGrid'
 import { ValueProposition } from '@/components/sections/ValueProposition'
 import { AboutPage } from '@/pages/AboutPage'
-import { Heading } from '@/components/ui/Heading'
-import { Section } from '@/components/layout/Section'
+import { ProductKnowledgePage } from '@/pages/ProductKnowledgePage'
+import { PortfolioPage } from '@/pages/PortfolioPage'
+import { ContactPage } from '@/pages/ContactPage'
 
 function HomePage() {
   return (
@@ -57,36 +58,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang-kami" element={<AboutPage />} />
-          <Route path="/produk" element={
-            <div className="pt-24">
-              <Section padding="lg">
-                <div className="container mx-auto px-6 lg:px-8">
-                  <Heading level={1} variant="gold">Produk</Heading>
-                  <p className="text-text-secondary mt-4">Coming Soon</p>
-                </div>
-              </Section>
-            </div>
-          } />
-          <Route path="/portofolio" element={
-            <div className="pt-24">
-              <Section padding="lg">
-                <div className="container mx-auto px-6 lg:px-8">
-                  <Heading level={1} variant="gold">Portofolio</Heading>
-                  <p className="text-text-secondary mt-4">Coming Soon</p>
-                </div>
-              </Section>
-            </div>
-          } />
-          <Route path="/hubungi-kami" element={
-            <div className="pt-24">
-              <Section padding="lg">
-                <div className="container mx-auto px-6 lg:px-8">
-                  <Heading level={1} variant="gold">Hubungi Kami</Heading>
-                  <p className="text-text-secondary mt-4">Coming Soon</p>
-                </div>
-              </Section>
-            </div>
-          } />
+          <Route path="/produk" element={<ProductKnowledgePage />} />
+          <Route path="/portofolio" element={<PortfolioPage />} />
+          <Route path="/hubungi-kami" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />
