@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { portfolioData } from '@/data/portfolios'
+import { StarryBackground } from '@/components/ui/StarryBackground'
 
 const categories = [
   { id: 'all', label: 'Semua Proyek' },
@@ -64,8 +65,9 @@ export function PortfolioPage() {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="px-6 md:px-10 pb-16 md:pb-32 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative px-6 md:px-10 pb-16 md:pb-32 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {filteredItems.map((item, index) => (
               <div

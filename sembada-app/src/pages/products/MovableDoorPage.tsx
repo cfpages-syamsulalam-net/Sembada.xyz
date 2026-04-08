@@ -1,3 +1,4 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 
@@ -27,8 +28,9 @@ export function MovableDoorPage() {
       </section>
 
       {/* Variants */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#111216]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Varian Produk</h2>
             <div className="w-20 md:w-24 h-1 bg-[#f2ca50] mx-auto" />
@@ -53,8 +55,9 @@ export function MovableDoorPage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">Fitur Utama</h2>
@@ -91,8 +94,9 @@ export function MovableDoorPage() {
       />
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">Tertarik dengan Movable Door?</h2>
           <p className="text-base md:text-lg text-[#e3e2e8]/80 mb-8 max-w-2xl mx-auto leading-relaxed font-light">Solusi partisi fleksibel dengan peredam suara untuk ruang yang adaptif dan privat.</p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">

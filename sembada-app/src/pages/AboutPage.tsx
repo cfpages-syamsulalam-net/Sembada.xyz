@@ -1,3 +1,5 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
+
 export function AboutPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
@@ -15,8 +17,9 @@ export function AboutPage() {
       </section>
 
       {/* Legacy Section */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-24">
             {/* Left Side - Image */}
             <div className="relative">
@@ -94,8 +97,9 @@ export function AboutPage() {
       </section>
 
       {/* Visi & Misi Section */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24 overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Visi Card (spans 2 columns) */}
             <div
@@ -221,8 +225,9 @@ export function AboutPage() {
       </section>
 
       {/* Nilai Utama Section */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#111216] border-y border-[#f2ca50]/10 mb-16 md:mb-24">
-        <div className="container mx-auto text-center">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#111216] border-y border-[#f2ca50]/10 mb-16 md:mb-24 overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto text-center relative z-10">
           <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
             Pilar Utama Kami
           </span>
@@ -237,8 +242,9 @@ export function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24 overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div
             className="p-8 md:p-16 lg:p-24 text-center relative overflow-hidden"
             style={{

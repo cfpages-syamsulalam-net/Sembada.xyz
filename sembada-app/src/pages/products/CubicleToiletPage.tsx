@@ -1,3 +1,4 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 
@@ -27,8 +28,9 @@ export function CubicleToiletPage() {
       </section>
 
       {/* Variants */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#111216]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Pilihan Varian</h2>
             <div className="w-20 md:w-24 h-1 bg-[#f2ca50] mx-auto" />
@@ -50,8 +52,9 @@ export function CubicleToiletPage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
               {['https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=300&h=300&fit=crop'].map((img, i) => (
@@ -92,8 +95,9 @@ export function CubicleToiletPage() {
       />
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">Tertarik dengan Cubicle Toilet?</h2>
           <p className="text-base md:text-lg text-[#e3e2e8]/80 mb-8 max-w-2xl mx-auto leading-relaxed font-light">Konsultasikan kebutuhan partisi toilet Anda dengan tim kami.</p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">

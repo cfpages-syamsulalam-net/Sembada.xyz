@@ -435,6 +435,10 @@ Follow conventional commits:
 - 7 Product detail pages
 - ALL follow consistent design system
 
+**Deployment Documentation:**
+- `/CLOUDFLARE_DEPLOY.md` - Step-by-step deployment guide
+- `/CLOUDFLARE_FIXES.md` - Common deployment errors and fixes
+
 ---
 
 *Last updated: 7 April 2026*  

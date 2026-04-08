@@ -1,3 +1,5 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
+
 export function ContactPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
@@ -15,8 +17,9 @@ export function ContactPage() {
       </section>
 
       {/* Main Content Grid */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16">
             {/* Left (7 cols) - Contact Form */}
             <div className="lg:col-span-7">

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { StarryBackground } from '@/components/ui/StarryBackground'
 
 const products = [
   {
@@ -77,8 +78,9 @@ export function ProductKnowledgePage() {
       </section>
 
       {/* Product Hex Grid */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 gap-y-12 md:gap-y-16">
             {products.map((product, index) => (
               <Link
@@ -141,8 +143,9 @@ export function ProductKnowledgePage() {
       </section>
 
       {/* Featured Quality Section */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mt-16 md:mt-24">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mt-16 md:mt-24 overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left Side */}
             <div>
@@ -236,8 +239,9 @@ export function ProductKnowledgePage() {
       </section>
 
       {/* Custom Solutions CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24 overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div
             className="p-8 md:p-12 lg:p-16 text-center relative overflow-hidden"
             style={{

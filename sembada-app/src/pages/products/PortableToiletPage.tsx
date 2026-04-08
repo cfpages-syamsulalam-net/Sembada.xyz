@@ -1,3 +1,4 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 
@@ -95,8 +96,9 @@ export function PortableToiletPage() {
       </section>
 
       {/* Variants Section */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-gold-gradient mb-4">
               Varian Produk
@@ -174,8 +176,9 @@ export function PortableToiletPage() {
       </section>
 
       {/* Core Features */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#111216]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left - Images */}
             <div className="grid grid-cols-2 gap-4">
@@ -251,8 +254,9 @@ export function PortableToiletPage() {
       />
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">
             Tertarik dengan Portable Toilet?
           </h2>

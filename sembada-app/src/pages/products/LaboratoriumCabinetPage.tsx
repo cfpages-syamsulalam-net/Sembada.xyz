@@ -1,3 +1,4 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 
@@ -33,8 +34,9 @@ export function LaboratoriumCabinetPage() {
       </section>
 
       {/* Specifications */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] border-y border-[#f2ca50]/10">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] border-y border-[#f2ca50]/10 overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left - Features */}
             <div>
@@ -67,8 +69,9 @@ export function LaboratoriumCabinetPage() {
       </section>
 
       {/* Variants */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 block">Varian Sistem Modul</span>
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient">Koleksi Varian</h2>
@@ -101,8 +104,9 @@ export function LaboratoriumCabinetPage() {
       />
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="relative">
             {/* Decorative hex dots */}
             <div className="flex justify-center gap-3 mb-8">

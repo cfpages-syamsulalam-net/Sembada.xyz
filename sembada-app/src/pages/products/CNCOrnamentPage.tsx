@@ -1,3 +1,4 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 
@@ -23,8 +24,9 @@ export function CNCOrnamentPage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
               { icon: 'precision_manufacturing', t: 'Presisi Tinggi', d: 'Toleransi 0.1mm' },
@@ -44,8 +46,9 @@ export function CNCOrnamentPage() {
       </section>
 
       {/* Showcase */}
-      <section className="py-16 md:py-24 bg-[#111216]">
-        <div className="container mx-auto px-6 md:px-10">
+      <section className="relative py-16 md:py-24 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Implementasi Portofolio</h2>
             <div className="w-20 md:w-24 h-1 bg-[#f2ca50] mx-auto" />
@@ -73,8 +76,9 @@ export function CNCOrnamentPage() {
       />
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="p-8 md:p-12 relative overflow-hidden" style={{ background: 'rgba(11, 12, 16, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
             <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6 relative z-10">Wujudkan Desain Ornamen Anda</h2>
             <p className="text-base md:text-lg text-[#e3e2e8]/80 mb-8 max-w-2xl mx-auto leading-relaxed font-light relative z-10">Konsultasikan desain ornamen CNC custom Anda dengan tim ahli kami.</p>

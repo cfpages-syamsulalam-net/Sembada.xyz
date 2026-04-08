@@ -1,3 +1,4 @@
+import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 
@@ -32,8 +33,9 @@ export function CellustonePage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
             {/* Text */}
             <div className="md:col-span-5">
@@ -73,8 +75,9 @@ export function CellustonePage() {
       </section>
 
       {/* Applications */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#111216]">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <h3 className="text-lg md:text-xl font-black uppercase tracking-[0.3em] text-[#94A3B8] mb-2">Aplikasi Produk</h3>
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient">Variasi Sempurna</h2>
@@ -103,8 +106,9 @@ export function CellustonePage() {
       />
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
-        <div className="container mx-auto">
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">Tertarik dengan Cellustone?</h2>
           <p className="text-base md:text-lg text-[#e3e2e8]/80 mb-8 max-w-2xl mx-auto leading-relaxed font-light">Solusi wall panel eco-friendly untuk interior dan eksterior bangunan Anda.</p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
