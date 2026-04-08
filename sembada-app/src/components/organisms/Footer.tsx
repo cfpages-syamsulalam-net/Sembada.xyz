@@ -14,7 +14,7 @@ export function Footer() {
               Integritas untuk Sukses dan Barokah
             </p>
             <p className="text-sm text-muted">
-              PT. Batu Beling Subsidiary
+              Sembada BatuBeling Subsidiary
             </p>
           </div>
 

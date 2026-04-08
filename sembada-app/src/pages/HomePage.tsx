@@ -5,7 +5,7 @@ export function HomePage() {
     <>
       <SEO 
         title="Sembada Batu Beling - Integritas untuk Sukses dan Barokah"
-        description="Penyedia produk arsitektur dan interior premium: toilet portable, cubicle, ornamen CNC, dan solusi furnitur berkualitas dari PT. Batu Beling."
+        description="Penyedia produk arsitektur dan interior premium: toilet portable, cubicle, ornamen CNC, dan solusi furnitur berkualitas dari Sembada BatuBeling."
       />
       
       <section className="hero bg-starry-enhanced">

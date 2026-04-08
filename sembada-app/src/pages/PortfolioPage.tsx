@@ -74,14 +74,13 @@ export function PortfolioPage() {
                 key={`${item.category}-${index}`}
                 className="group relative transition-all duration-500 hover:-translate-y-2"
               >
-                {/* Hexagon Image Container */}
-                <div className="relative w-full aspect-square mb-8">
+                {/* Hexagon Image Container with Border */}
+                <div className="relative w-full aspect-square mb-8 hexagon-border-5">
                   <div
                     className="w-full h-full overflow-hidden transition-all duration-500"
                     style={{
                       clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                      border: '2px solid rgba(212, 175, 55, 0.4)',
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
+                      background: 'rgba(11, 12, 16, 0.9)',
                     }}
                   >
                     <img

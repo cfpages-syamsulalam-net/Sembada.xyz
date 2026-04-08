@@ -63,30 +63,32 @@ export function ProductGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-24 gap-x-12">
           {products.map((product, index) => (
             <div key={index} className={`group ${product.offset}`}>
-              {/* Hexagon Container */}
+              {/* Hexagon Container with 5px Border */}
               <div 
-                className="relative w-full aspect-square mb-8 overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
-                style={{
-                  clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                  background: 'rgba(11, 12, 16, 0.7)',
-                  backdropFilter: 'blur(24px)',
-                  WebkitBackdropFilter: 'blur(24px)',
-                  border: '2px solid rgba(212, 175, 55, 0.6)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8), 0 0 8px rgba(212, 175, 55, 0.3)',
-                }}
+                className="relative w-full aspect-square mb-8 overflow-hidden transition-all duration-500 group-hover:scale-[1.02] hexagon-border-8"
               >
-                {/* Image */}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-80"
-                />
+                <div
+                  className="w-full h-full"
+                  style={{
+                    clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+                    background: 'rgba(11, 12, 16, 0.7)',
+                    backdropFilter: 'blur(24px)',
+                    WebkitBackdropFilter: 'blur(24px)',
+                  }}
+                >
+                  {/* Image */}
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-80"
+                  />
 
-                {/* Icon Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#f2ca50] opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">
-                    {product.icon}
-                  </span>
+                  {/* Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-6xl text-[#f2ca50] opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">
+                      {product.icon}
+                    </span>
+                  </div>
                 </div>
               </div>
 

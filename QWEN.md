@@ -128,6 +128,26 @@ sembada.xyz/
 - Headlines: `font-black`, `uppercase`, `tracking-tight` to `tracking-tighter`
 - Labels: `text-[10px]` to `text-[11px]`, `font-black`, `uppercase`, `tracking-[0.25em]` to `tracking-[0.6em]`
 
+### Site Title Styling
+- **Format:** "Sembada Batu Beling"
+- **"Sembada Batu"** = Gold gradient (`text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#f2ca50] to-[#AA771C]`)
+- **"Beling"** = Silver (`text-[#C0C0C0]`)
+- Applied to: Navbar logo, Footer logo
+
+### Company Name
+- **NEVER use:** "PT. Batu Beling"
+- **ALWAYS use:** "Sembada BatuBeling" (note: no space between Batu and Beling, capital B)
+
+### Hexagonal Geometry - Border Rules
+- **CRITICAL:** `clip-path` cuts through CSS borders, so borders won't show on all sides
+- **NEVER use `border` property on clipped elements**
+- **ALWAYS use wrapper classes for hexagon borders:**
+  - `.hexagon-border` - 3px border (small icons)
+  - `.hexagon-border-5` - 5px border (standard, most common)
+  - `.hexagon-border-8` - 8px border (prominent hexagons)
+- **Border style:** Gold gradient (`rgba(212, 175, 55, 0.8)` to `rgba(212, 175, 55, 0.4)`)
+- **Minimum thickness:** 5px for all hexagonal elements
+
 ### Component Development
 - Study ALL HTML files in `/stitch` folder before building components
 - Read `/HOMEPAGE_SPEC.md` and `/ALL_PAGES_SPEC.md` for complete specifications

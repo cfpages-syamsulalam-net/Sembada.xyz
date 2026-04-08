@@ -34,14 +34,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 pb-12 md:pb-16">
           {/* Column 1 - Brand */}
           <div>
-            <h4 className="text-gold-gradient font-black text-lg md:text-xl uppercase tracking-tight mb-2">
-              Sembada Batu Beling
+            <h4 className="font-black text-lg md:text-xl uppercase tracking-tight mb-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#f2ca50] to-[#AA771C]">Sembada Batu </span>
+              <span className="text-[#C0C0C0]">Beling</span>
             </h4>
             <p className="font-cursive text-base text-white italic mb-4 leading-relaxed">
               Integritas untuk Sukses dan Barokah
             </p>
             <p className="text-xs text-[#64748B] mb-6">
-              PT. Batu Beling Subsidiary
+              Sembada BatuBeling Subsidiary
             </p>
             {/* Social Links */}
             <div className="flex gap-3">

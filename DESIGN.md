@@ -174,11 +174,29 @@ The hexagon is the **signature shape** representing precision engineering:
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 ```
 
+**IMPORTANT: Hexagon Borders**
+Because `clip-path` cuts through CSS borders, borders won't be visible on all sides. Use these wrapper classes instead:
+
+| Class | Border Width | Usage |
+|-------|--------------|-------|
+| `.hexagon-border` | 3px | Small icons |
+| `.hexagon-border-5` | 5px | Standard product images |
+| `.hexagon-border-8` | 8px | Prominent hexagons (homepage products) |
+
 **Usage:**
-- Image frames for products
-- Icon containers
-- Decorative background elements
-- Feature highlights
+```tsx
+{/* Wrapper with border class */}
+<div className="hexagon-border-5">
+  {/* Inner element with clip-path */}
+  <div style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+    <img src="..." />
+  </div>
+</div>
+```
+
+**Border gradient:** Linear gradient from `rgba(212, 175, 55, 0.8)` to `rgba(212, 175, 55, 0.4)` (gold gradient)
+
+**Minimum border thickness:** 5px for all hexagonal elements
 
 ### 4.2 Border Radius
 

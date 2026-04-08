@@ -26,7 +26,7 @@ export function AboutPage() {
               <div className="relative overflow-hidden grayscale mix-blend-luminosity">
                 <img
                   src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop"
-                  alt="PT. Batu Beling Legacy"
+                  alt="Sembada BatuBeling Legacy"
                   className="w-full aspect-[4/3] object-cover"
                 />
                 {/* Gradient Overlay */}
@@ -46,7 +46,7 @@ export function AboutPage() {
               </h2>
 
               <p className="text-base md:text-lg text-[#e3e2e8]/80 leading-relaxed font-light mb-4 md:mb-6">
-                Sembada Batu Beling merupakan divisi pemasaran resmi dari <span className="text-[#f2ca50] font-bold">PT. Batu Beling</span>, perusahaan yang telah berpengalaman lebih dari dua dekade dalam industri konstruksi dan fabrikasi di Indonesia.
+                Sembada Batu Beling merupakan divisi pemasaran resmi dari <span className="text-[#f2ca50] font-bold">Sembada BatuBeling</span>, perusahaan yang telah berpengalaman lebih dari dua dekade dalam industri konstruksi dan fabrikasi di Indonesia.
               </p>
 
               <p className="text-base md:text-lg text-[#e3e2e8]/80 leading-relaxed font-light mb-6 md:mb-8">

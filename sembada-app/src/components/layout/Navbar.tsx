@@ -57,8 +57,9 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 max-w-[250px]">
-            <span className="text-gold-gradient font-black text-sm md:text-base lg:text-lg xl:text-xl tracking-tight uppercase leading-tight">
-              Sembada Batu Beling
+            <span className="font-black text-sm md:text-base lg:text-lg xl:text-xl tracking-tight uppercase leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#f2ca50] to-[#AA771C]">Sembada Batu </span>
+              <span className="text-[#C0C0C0]">Beling</span>
             </span>
           </Link>
 

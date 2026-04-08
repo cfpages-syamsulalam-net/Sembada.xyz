@@ -45,7 +45,7 @@ export function AboutSection() {
 
             {/* Paragraphs */}
             <p className="text-[#e3e2e8]/80 text-base md:text-lg leading-relaxed font-light mb-4 md:mb-6">
-              <span className="text-[#f2ca50] font-bold">PT. Batu Beling</span> adalah perusahaan aplikator, kontraktor, dan pabrikasi papan phenolic profesional yang telah berpengalaman menangani berbagai proyek skala nasional di seluruh Indonesia.
+              <span className="text-[#f2ca50] font-bold">Sembada BatuBeling</span> adalah perusahaan aplikator, kontraktor, dan pabrikasi papan phenolic profesional yang telah berpengalaman menangani berbagai proyek skala nasional di seluruh Indonesia.
             </p>
 
             <p className="text-[#e3e2e8]/80 text-base md:text-lg leading-relaxed font-light mb-4 md:mb-6">
