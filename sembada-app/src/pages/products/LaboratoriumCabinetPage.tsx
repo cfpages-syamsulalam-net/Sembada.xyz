@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function LaboratoriumCabinetPage() {
+  const labPortfolios = portfolioData['laboratorium-cabinet']
   const features = [
     { icon: 'science', title: 'Resistensi Kimia', desc: 'Tahan berbagai bahan kimia laboratorium' },
     { icon: 'water_drop', title: 'Tahan Air & Lembab', desc: 'Cocok untuk area basah' },
@@ -88,6 +92,13 @@ export function LaboratoriumCabinetPage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={labPortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek Laboratorium Cabinet" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">

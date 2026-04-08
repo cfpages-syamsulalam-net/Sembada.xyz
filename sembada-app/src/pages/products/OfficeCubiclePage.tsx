@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function OfficeCubiclePage() {
+  const officePortfolios = portfolioData['office-cubicle']
   const variants = [
     { name: 'Advance Staff', size: '1200mm x 600mm', material: 'Phenolic 12mm', features: 'Cable Management', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop' },
     { name: 'Leader Staff', size: '1500mm x 750mm', material: 'Dual-tone Phenolic', features: 'Acoustic Panels', image: 'https://images.unsplash.com/photo-1497366754035-f200968e1414?w=400&h=300&fit=crop', offset: 'md:mt-12' },
@@ -74,6 +78,13 @@ export function OfficeCubiclePage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={officePortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek Office Cubicle" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">

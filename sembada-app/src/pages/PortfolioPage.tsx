@@ -1,39 +1,29 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { portfolioData } from '@/data/portfolios'
 
-const projects = [
-  {
-    title: 'Politeknik Surabaya',
-    category: 'Pendidikan',
-    location: 'Surabaya, Jawa Timur',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=600&fit=crop',
-    offset: '',
-  },
-  {
-    title: 'Mushola Kereta Makan KAI',
-    category: 'Transportasi',
-    location: 'Jakarta, Indonesia',
-    image: 'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=600&h=600&fit=crop',
-    offset: 'md:mt-24',
-  },
-  {
-    title: 'Gedung DPRD Surabaya',
-    category: 'Pemerintahan',
-    location: 'Surabaya, Jawa Timur',
-    image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=600&fit=crop',
-    offset: '',
-  },
-  {
-    title: 'Villa Obsidian',
-    category: 'Residensial',
-    location: 'Bali, Indonesia',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=600&fit=crop',
-    offset: 'md:mt-24',
-  },
+const categories = [
+  { id: 'all', label: 'Semua Proyek' },
+  { id: 'cnc-ornament', label: 'CNC Ornament' },
+  { id: 'portable-toilet', label: 'Portable Toilet' },
+  { id: 'cubicle-toilet', label: 'Cubicle Toilet' },
+  { id: 'laboratorium-cabinet', label: 'Laboratorium Cabinet' },
+  { id: 'movable-door', label: 'Movable Door' },
+  { id: 'office-cubicle', label: 'Office Cubicle' },
+  { id: 'cellustone', label: 'Cellustone' },
 ]
 
 export function PortfolioPage() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [activeFilter, setActiveFilter] = useState('all')
+
+  // Flatten all portfolio items or filter by category
+  const filteredItems = activeFilter === 'all'
+    ? Object.entries(portfolioData).flatMap(([category, items]) =>
+        items.map(item => ({ ...item, category }))
+      )
+    : portfolioData[activeFilter as keyof typeof portfolioData]?.map(item => ({
+        ...item,
+        category: activeFilter,
+      })) || []
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
@@ -52,66 +42,75 @@ export function PortfolioPage() {
         </div>
       </section>
 
-      {/* Project Gallery Hex Grid */}
-      <section className="px-6 md:px-12 pb-16 md:pb-32 bg-[#0B0C10]">
+      {/* Filter Tabs */}
+      <section className="py-6 md:py-8 bg-[#0B0C10] border-b border-[#f2ca50]/10 sticky top-16 md:top-20 z-40" style={{ backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}>
+        <div className="container mx-auto px-6 md:px-10">
+          <div className="flex overflow-x-auto gap-3 md:gap-4 pb-2 md:pb-0 scrollbar-hide">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveFilter(cat.id)}
+                className={`flex-shrink-0 px-4 md:px-6 py-2 md:py-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
+                  activeFilter === cat.id
+                    ? 'bg-[#f2ca50] text-[#0B0C10] border-[#f2ca50]'
+                    : 'bg-transparent text-[#94A3B8] border-[#f2ca50]/30 hover:border-[#f2ca50]/60 hover:text-[#f2ca50]'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Grid */}
+      <section className="px-6 md:px-10 pb-16 md:pb-32 bg-[#0B0C10]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-            {projects.map((project, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            {filteredItems.map((item, index) => (
               <div
-                key={index}
-                className={`group relative ${project.offset}`}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                key={`${item.category}-${index}`}
+                className="group relative transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Hexagon Image Container */}
-                <div
-                  className="relative aspect-square overflow-hidden transition-all duration-500 group-hover:-translate-y-4"
-                  style={{
-                    clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                  }}
-                >
-                  {/* Image */}
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={`w-full h-full object-cover grayscale transition-all duration-700 ${
-                      hoveredIndex === index ? 'grayscale-0 scale-100' : 'scale-110'
-                    }`}
-                  />
-
-                  {/* Gradient Overlay */}
+                <div className="relative w-full aspect-square mb-8">
                   <div
-                    className="absolute inset-0"
+                    className="w-full h-full overflow-hidden transition-all duration-500"
                     style={{
-                      background: 'linear-gradient(to top, rgba(11, 12, 16, 1) 0%, transparent 60%)',
-                      opacity: 0.6,
-                    }}
-                  />
-
-                  {/* Info Overlay at Bottom */}
-                  <div
-                    className="absolute bottom-4 left-4 right-4 p-4 md:p-6 transition-all duration-300"
-                    style={{
-                      background: 'rgba(11, 12, 16, 0.7)',
-                      backdropFilter: 'blur(24px)',
-                      WebkitBackdropFilter: 'blur(24px)',
-                      border: '1px solid rgba(212, 175, 55, 0.2)',
+                      clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+                      border: '2px solid rgba(212, 175, 55, 0.4)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
                     }}
                   >
-                    <span className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] md:tracking-[0.2em] font-black text-[#f2ca50] mb-1 md:mb-2 block">
-                      {project.category}
-                    </span>
-                    <h3 className="text-base md:text-lg font-bold text-[#e3e2e8] mb-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-[#94A3B8]">
-                      {project.location}
-                    </p>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                    />
                   </div>
+                  {/* Category Badge */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                    <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-black px-3 py-1 bg-[#f2ca50] text-[#0B0C10]">
+                      {categories.find(c => c.id === item.category)?.label || item.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content Below Hexagon */}
+                <div className="text-center px-4">
+                  <h3 className="text-lg font-bold text-[#e3e2e8] mb-1">{item.title}</h3>
+                  <p className="text-xs text-[#94A3B8] mb-2">{item.location}</p>
+                  <p className="text-sm text-[#e3e2e8]/70 leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          {filteredItems.length === 0 && (
+            <div className="text-center py-24">
+              <p className="text-lg text-[#94A3B8]">Belum ada proyek untuk kategori ini.</p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -125,18 +124,18 @@ export function PortfolioPage() {
             Mari diskusikan kebutuhan proyek Anda dengan tim ahli kami. Kami siap membantu mewujudkan visi arsitektur Anda.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <Link
-              to="/hubungi-kami"
+            <a
+              href="/hubungi-kami"
               className="inline-block px-8 md:px-12 py-4 md:py-5 bg-[#f2ca50] text-[#0B0C10] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(242,202,80,0.5)]"
             >
               Mulai Proyek
-            </Link>
-            <Link
-              to="/produk"
+            </a>
+            <a
+              href="/produk"
               className="inline-block px-8 md:px-12 py-4 md:py-5 border border-[#f2ca50]/50 text-[#f2ca50] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-[#f2ca50]/10"
             >
               Lihat Katalog
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function CubicleToiletPage() {
+  const cubiclePortfolios = portfolioData['cubicle-toilet']
   const variants = [
     { name: 'Premium', desc: 'Phenolic Resin untuk lalu lintas tinggi', image: 'https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=400&h=300&fit=crop' },
     { name: 'Standard', desc: 'Fasilitas kantor & publik', image: 'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=400&h=300&fit=crop', offset: 'md:translate-y-8' },
@@ -79,6 +83,13 @@ export function CubicleToiletPage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={cubiclePortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek Cubicle Toilet" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">

@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function CNCOrnamentPage() {
+  const cncPortfolios = portfolioData['cnc-ornament']
   const showcases = [
     { title: 'Fasad Politeknik', cat: 'Pendidikan', img: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&h=500&fit=crop', span: 'col-span-8', h: 'h-[400px] md:h-[500px]' },
     { title: 'Mushola KAI', cat: 'Transportasi', img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=500&fit=crop', span: 'col-span-4', h: 'h-[400px] md:h-[500px]', offset: 'md:translate-y-12' },
@@ -60,6 +64,13 @@ export function CNCOrnamentPage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={cncPortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek CNC" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">

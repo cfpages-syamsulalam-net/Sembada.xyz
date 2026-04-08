@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function MovableDoorPage() {
+  const movablePortfolios = portfolioData['movable-door']
   const variants = [
     { name: 'Rubi', tag: 'Eksklusif', desc: 'Partisi fleksibel semi-permanen', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop' },
     { name: 'Kalimaya', tag: 'Akustik', desc: 'Isolasi suara tingkat menengah', img: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=400&h=500&fit=crop', offset: 'translate-y-8 md:translate-y-12' },
@@ -78,6 +82,13 @@ export function MovableDoorPage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={movablePortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek Movable Door" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">

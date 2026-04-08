@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function CellustonePage() {
+  const cellustonePortfolios = portfolioData['cellustone']
   const features = [
     { icon: 'eco', title: 'Eco-Engineered', desc: 'Material komposit dari bahan alam dengan cellulosa fibre' },
     { icon: 'shield', title: 'Durabilitas Tinggi', desc: 'Minim muai-susut, tahan Indoor maupun Outdoor' },
@@ -90,6 +94,13 @@ export function CellustonePage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={cellustonePortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek Cellustone" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">

@@ -1,4 +1,8 @@
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { portfolioData } from '@/data/portfolios'
+
 export function PortableToiletPage() {
+  const portablePortfolios = portfolioData['portable-toilet']
   const variants = [
     {
       name: 'Low Price',
@@ -238,6 +242,13 @@ export function PortableToiletPage() {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection 
+        items={portablePortfolios} 
+        productHref="/portofolio" 
+        viewAllLabel="Lihat Semua Proyek Portable Toilet" 
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center">
