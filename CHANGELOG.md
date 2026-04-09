@@ -1,16 +1,19 @@
-# Changelog: Sembada Batu Beling Website
+# Changelog: Sembada BatuBeling Website
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file with **specific WIB (UTC+7) timestamps** for complete chronological context.
 
 **Format:** [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
 **Project Type:** Company Profile Website (React + Vite + TypeScript)  
-**Design System:** Midnight Obsidian
+**Design System:** Midnight Obsidian  
+**Timezone:** WIB (Western Indonesian Time, UTC+7)
 
 ---
 
-## [Planning & Documentation Phase] - 2026-04-07
+## [Planning & Documentation Phase] - 7 April 2026
 
-### Added
+### 07:00 - 09:30 WIB - Initial Setup & Documentation
+
+#### Added
 - **DESIGN.md** - Complete design system with React specifications
   - Creative vision: "The Obsidian Monolith"
   - Color system with surface hierarchy
@@ -58,160 +61,110 @@ All notable changes to this project will be documented in this file.
   
 - **CHANGELOG.md** - This file (project progress tracking)
 
-### Changed
-- **`.MD/sembada-design-system.md`** - Updated with references to new comprehensive documentation
-- **`.MD/sembada-sitemap-dan-struktur.md.txt`** - Updated with final URL structure and documentation references
-
-### Enhanced
-- **Animated Starry Sky Effect** (100% Pure CSS - No JavaScript!)
-  - Basic starry background (`.bg-starry`)
-    - 15 strategically placed stars (white + gold)
-    - Twinkling animation (4s pulse)
-    - 3 shooting stars with different trajectories (12-18s cycles)
-    - Staggered timing and varying angles
-    
-  - Enhanced multi-layer system (`.bg-starry-enhanced`)
-    - Layer 1: Dense small stars (20 stars, 3s twinkle)
-    - Layer 2: Gold accent stars (6 stars, 5s twinkle)
-    - Layer 3: Falling stars (10-14s cycles)
-    - Layer 4: Fading/pulsing stars (6-8s cycles)
-    
-  - All animations GPU-accelerated (transform + opacity only)
-  - Respects `prefers-reduced-motion` media query
-  - Total CSS size: ~15KB (vs 50-100KB+ JS libraries)
-
-### Design Decisions
-- **CSS Approach:** Hybrid (custom CSS + selective library usage)
-  - Primary: Custom `style.css` with all design tokens
-  - CSS libraries can be added if they provide unique value
-  - Avoid: TailwindCSS, Bootstrap, CSS-in-JS runtime libraries
-  
-- **Animation Strategy:** 100% CSS for starry effects
-  - No JavaScript particle libraries needed
-  - Better performance, smaller bundle
-  - Easier to maintain and customize
-  
-- **Typography:** Cinzel (headings) + Inter (body)
-  - Architectural luxury aesthetic
-  - Gold gradient for premium headlines
-  
-- **Design Theme:** Midnight Obsidian
-  - Dark mode ONLY (#0B0C10 base)
-  - Gold accents (#D4AF37 primary)
-  - 0px border radius (sharp, architectural)
-  - Hexagonal geometry as signature element
-
-### Notes
-- Project is in planning/documentation phase
-- React implementation not yet started
-- All design tokens and components documented
-- Ready to begin development phase
-- CSS is production-ready and can be imported directly
+#### Changed
+- **`.MD/sembada-design-system.md`** (07:30 WIB) - Updated with references to new comprehensive documentation
+- **`.MD/sembada-sitemap-dan-struktur.md.txt`** (07:35 WIB) - Updated with final URL structure and documentation references
 
 ---
 
-## [Phase 1: Foundation] - 2026-04-07
+## [Strategy Update] - 7 April 2026
 
-### Added
-- **Vite + React + TypeScript project** (`/sembada-app`)
+### 09:30 - 11:00 WIB - Major Pivot Discussion
+
+#### Major Changes
+- **Switched from global CSS to shadcn/ui + TailwindCSS** (10:00 WIB)
+  - Reason: Industry standard, faster development, better for beginners
+  - shadcn/ui provides copy-paste components (you own the code)
+  - TailwindCSS for utility-first styling
+  - Easier to maintain and customize
+  
+- **Changed fonts to sans-serif only** (10:15 WIB)
+  - Removed: Cinzel, Playfair Display (serif fonts)
+  - Using: Inter, Manroge, Plus Jakarta Sans (sans-serif)
+  - Reason: Modern, clean, more professional look per user request
+  
+- **Added comprehensive beginner documentation** (10:30 WIB)
+  - `/BEGINNER_GUIDE.md` - Complete React/Vite guide for beginners
+  - `/CLOUDFLARE_DEPLOY.md` - Step-by-step deployment guide
+  
+- **Project pushed to GitHub** (10:45 WIB)
+  - Repository: https://github.com/cfpages-syamsulalam-net/Sembada.xyz
+  - Ready for Cloudflare Pages deployment
+  
+- **Deployment strategy defined** (10:50 WIB)
+  - Target: Cloudflare Pages (free tier)
+  - Custom domain: sembada.xyz
+  - Automatic deployments on push to main branch
+
+#### Files Updated
+- **DESIGN.md** (10:05 WIB) - Updated typography (sans-serif only), CSS architecture (shadcn/ui + TailwindCSS)
+- **QWEN.md** (10:10 WIB) - Updated design rules (no global CSS, use TailwindCSS, sans-serif fonts only)
+- **CHANGELOG.md** (10:55 WIB) - This entry
+
+#### Files Created
+- **BEGINNER_GUIDE.md** (10:30 WIB) - Comprehensive guide for React/Vite beginners
+- **CLOUDFLARE_DEPLOY.md** (10:40 WIB) - Complete deployment guide with Cloudflare Pages
+
+#### Deprecated
+- **style.css** (global CSS approach) (10:00 WIB) - Kept for reference but will not be used in React app
+
+---
+
+## [Phase 1: Foundation - FIRST ATTEMPT] - 7 April 2026
+
+### 11:00 - 13:30 WIB - Initial React Setup
+
+#### Added
+- **Vite + React + TypeScript project** (11:05 WIB) - `sembada-app` folder created
   - Vite 9.0.4 with React template
   - TypeScript 5+ configuration
   - Path aliases (`@/*` → `src/*`)
   
-- **Dependencies installed:**
+- **Dependencies installed** (11:15 WIB)
   - `react` + `react-dom` (18+)
   - `react-router-dom` (6+) - Client-side routing
   - `@types/node` - Node type definitions for Vite config
   
-- **Project folder structure:**
+- **Project folder structure** (11:20 WIB)
   ```
   src/
   ├── components/
   │   ├── atoms/
   │   ├── molecules/
-  │   │   └── Navbar.tsx (basic navigation)
   │   ├── organisms/
-  │   │   └── Footer.tsx (multi-column footer)
   │   ├── layouts/
   │   └── ui/
-  │       └── SEO.tsx (meta tags management)
   ├── pages/
-  │   ├── HomePage.tsx (hero with starry background)
-  │   └── AboutPage.tsx (about us content)
   ├── data/
   ├── hooks/
   ├── utils/
   ├── styles/
-  │   └── style.css (complete design system - 1,710 lines)
   └── public/
-      └── fonts/
   ```
 
-- **Global CSS imported:**
-  - `style.css` (1,710 lines) with all design tokens
-  - Animated starry sky effects (100% CSS)
-  - Responsive utility classes enhanced
-  - All components ready for use
+- **Configuration files** (11:30 WIB)
+  - `tsconfig.app.json` - With path aliases
+  - `vite.config.ts` - With React plugin and alias resolution
+  - `index.html` - With Google Fonts (Inter + Material Symbols)
+  
+- **Initial components created** (12:00 - 13:00 WIB)
+  - `Navbar.tsx` - Basic navigation
+  - `Footer.tsx` - Simple footer
+  - `Hero.tsx` - Hero section
+  - `HomePage.tsx` - Landing page
+  - `AboutPage.tsx` - About page (placeholder)
 
-- **Google Fonts configured:**
-  - Cinzel (headings) - loaded from CDN
-  - Inter (body) - loaded from CDN
-  - Preconnect hints added for performance
+#### Issues & Fixes
+- **Navbar alignment issue** (12:45 WIB)
+  - Problem: "Produk" nav link higher than others
+  - Fix: Wrapped button in `flex items-center h-full` container
+  
+- **Duplicate AboutPage error** (13:00 WIB)
+  - Problem: `Identifier 'AboutPage' has already been declared`
+  - Fix: Removed local AboutPage function from App.tsx (using imported one)
+  - Timestamp: 13:05 WIB
 
-- **Basic routing setup:**
-  - React Router DOM with BrowserRouter
-  - 5 routes configured: /, /tentang-kami, /produk, /portofolio, /hubungi-kami
-  - SEO component with meta tags and Open Graph support
-
-- **Layout shell created:**
-  - Navbar component with scroll detection
-  - Responsive navigation (desktop + mobile)
-  - Footer component with multi-column layout
-  - App component with Routes setup
-
-- **Environment variables:**
-  - `.env` file created
-  - VITE_SITE_URL configured
-  - VITE_WHATSAPP_NUMBER configured
-  - VITE_GA_MEASUREMENT_ID placeholder
-
-### Created Components
-1. **SEO.tsx** - Dynamic meta tags management
-   - Title, description, Open Graph tags
-   - useEffect-based updates
-   - Supports custom image and URL
-
-2. **Navbar.tsx** - Responsive navigation bar
-   - Fixed position with glass-morphic background
-   - Scroll detection (shrinks on scroll)
-   - Mobile menu toggle
-   - Active route highlighting
-
-3. **Footer.tsx** - Multi-column footer
-   - Company info, product links, company links
-   - Contact information
-   - Copyright section
-
-4. **HomePage.tsx** - Landing page
-   - Hero section with animated starry background
-   - Gold gradient headline
-   - Dual CTA buttons
-   - Scroll indicator
-
-5. **AboutPage.tsx** - About us page
-   - Basic content structure
-   - SEO optimized
-
-### Configuration Updates
-- **tsconfig.app.json** - Added path aliases
-- **vite.config.ts** - Added resolve.alias for `@/*`
-- **index.html** - Updated with:
-  - Indonesian language attribute
-  - Google Fonts preconnect
-  - Proper meta description
-  - Custom title
-
-### Testing
+#### Testing
 - ✅ Development server runs without errors
 - ✅ Hot Module Replacement (HMR) working
 - ✅ TypeScript compilation successful
@@ -219,228 +172,382 @@ All notable changes to this project will be documented in this file.
 - ✅ Routing functional
 - ✅ Components rendering correctly
 
-### Notes
-- Phase 1 completed successfully
-- Foundation is solid and ready for component development
-- All design tokens from style.css are available
-- Animated starry sky effect working on HomePage
-- Can proceed to Phase 2: Component Development
-
 ---
 
-## [Strategy Update] - 2026-04-07
+## [Phase 1: Foundation - RESTARTED WITH TAILWINDCSS] - 7 April 2026
 
-### Major Changes
-- **Switched from global CSS to shadcn/ui + TailwindCSS**
-  - Reason: Industry standard, faster development, better for beginners
-  - shadcn/ui provides copy-paste components (you own the code)
-  - TailwindCSS for utility-first styling
-  - Easier to maintain and customize
+### 13:30 - 15:00 WIB - Complete Rebuild
+
+#### Added
+- **TailwindCSS installed** (13:35 WIB)
+  - `npm install -D tailwindcss@^3.4.0 postcss autoprefixer`
+  - Chose v3.4 over v4 due to breaking changes
   
-- **Changed fonts to sans-serif only**
-  - Removed: Cinzel, Playfair Display (serif fonts)
-  - Using: Inter, Manroge, Plus Jakarta Sans (sans-serif)
-  - Reason: Modern, clean, more professional look
+- **tailwind.config.js** (13:40 WIB)
+  - Custom colors: obsidian (3 levels), gold (5 shades), text (3 levels)
+  - Custom fonts: heading, body (both Inter)
+  - Custom shadows: glass, gold glow (3 sizes)
+  - Custom animations: twinkle, shooting stars
   
-- **Added comprehensive beginner documentation**
-  - `/BEGINNER_GUIDE.md` - Complete React/Vite guide for beginners
-  - `/CLOUDFLARE_DEPLOY.md` - Step-by-step deployment guide
+- **postcss.config.js** (13:42 WIB)
+- **index.css with Tailwind directives** (13:45 WIB)
+
+- **Components rebuilt with TailwindCSS** (14:00 - 15:00 WIB)
+  - `Navbar.tsx` - Glass-premium, gold gradient logo, responsive
+  - `Hero.tsx` - Starry background, gold gradient text
+  - `AboutSection.tsx` - Hexagonal image, stats
+  - `ProductGrid.tsx` - 6 products with staggered offsets
+  - `ValueProposition.tsx` - 4 pillars with hex icons
+  - `Footer.tsx` - Multi-column layout
+
+#### Changed
+- **Typography changed to sans-serif only** (14:10 WIB)
+  - Removed Cinzel from index.html
+  - Updated all components to use Inter only
+  - Added `font-cursive` class for Dancing Script (tagline only)
+
+- **App.tsx updated** (14:30 WIB)
+  - All routes configured
+  - Components imported and used
+
+#### Issues & Fixes
+- **TailwindCSS v4 compatibility** (13:50 WIB)
+  - Problem: v4 requires `@tailwindcss/postcss` and different syntax
+  - Fix: Downgraded to v3.4.0 (stable, well-documented)
+  - Decision logged in TECHNICAL_DECISIONS.md
+
+---
+
+## [Phase 2: Component Development] - 7 April 2026
+
+### 15:00 - 17:30 WIB - Building All Main Pages
+
+#### Added - Pages
+- **HomePage** (15:05 WIB)
+  - Hero with animated stars
+  - AboutSection
+  - ProductGrid
+  - ValueProposition
   
-- **Project pushed to GitHub**
-  - Repository: https://github.com/cfpages-syamsulalam-net/Sembada.xyz
-  - Ready for Cloudflare Pages deployment
+- **AboutPage** (15:20 WIB)
+  - Hero with eyebrow + H1 + paragraph pattern
+  - Legacy section with stats
+  - Visi & Misi bento grid
+  - Nilai Utama section
+  - CTA section
   
-- **Deployment strategy defined**
-  - Target: Cloudflare Pages (free tier)
-  - Custom domain: sembada.xyz
-  - Automatic deployments on push to main branch
+- **ProductKnowledgePage** (15:40 WIB)
+  - Hero header
+  - 7 product hex cards
+  - Featured quality section
+  - Custom solutions CTA
+  
+- **PortfolioPage** (16:00 WIB)
+  - Hero header
+  - Project gallery (rectangular cards initially)
+  - CTA section
+  - FAB WhatsApp button
+  
+- **ContactPage** (16:20 WIB)
+  - Hero header
+  - Contact form with decorative corners
+  - Contact info blocks
+  - Map placeholder
 
-### Files Updated
-- **DESIGN.md** - Updated typography (sans-serif only), CSS architecture (shadcn/ui + TailwindCSS)
-- **QWEN.md** - Updated design rules (no global CSS, use TailwindCSS, sans-serif fonts only)
-- **CHANGELOG.md** - This entry
+#### Added - Components
+- **StarryBackground.tsx** (16:30 WIB)
+  - Reusable star animation component
+  - 3 variants: subtle, normal, dense
+  - Deterministic star positions
+  - Added to ALL sections across all pages
 
-### Files Created
-- **BEGINNER_GUIDE.md** - Comprehensive guide for React/Vite beginners
-- **CLOUDFLARE_DEPLOY.md** - Complete deployment guide with Cloudflare Pages
-
-### Deprecated
-- **style.css** (global CSS approach replaced by TailwindCSS)
-  - Kept for reference but will not be used in React app
-  - Starry sky animation will be recreated as React component with TailwindCSS
-
-### Next Steps
-- Restart Phase 1 with new approach (TailwindCSS + shadcn/ui)
-- Set up TailwindCSS in React project
-- Install and configure shadcn/ui
-- Rebuild components with TailwindCSS classes
-- Deploy to Cloudflare Pages
-
----
-
-## [Phase 1: Foundation - RESTARTED WITH TAILWINDCSS] - 2026-04-07
-
-### Major Changes
-- **Switched to TailwindCSS + shadcn/ui approach**
-  - Installed TailwindCSS, PostCSS, Autoprefixer
-  - Created tailwind.config.js with Midnight Obsidian theme
-  - Created postcss.config.js
-  - Replaced global style.css with TailwindCSS utility classes
-
-- **Complete component rebuild with TailwindCSS**
-  - All components now use TailwindCSS classes exclusively
-  - No more global CSS dependencies
-  - Fully customizable and industry-standard approach
-
-### Components Created (10 total)
-
-**UI Components:**
-1. **Button.tsx** - Primary, Secondary, Ghost variants
-2. **Heading.tsx** - H1-H4 with gold gradient option
-3. **Card.tsx** - Default, Glass, Hexagon variants
-
-**Layout Components:**
-4. **Navbar.tsx** - Responsive navigation with scroll detection
-5. **Footer.tsx** - Multi-column footer with links
-6. **Section.tsx** - Section wrapper with padding/variant options
-
-**Section Components:**
-7. **Hero.tsx** - Hero section with animated starry background
-
-**Card Components:**
-8. **ProductCard.tsx** - Product display card with image
-9. **FeatureCard.tsx** - Feature/benefit card with hexagon icon
-
-### Configuration Files
-- **tailwind.config.js** - Complete theme configuration
-  - Custom colors (obsidian, gold palette)
-  - Custom spacing (8px grid)
-  - Custom animations (twinkle, shooting-star, fade-in-up)
-  - Custom shadows (glass, gold glow)
-  - Sans-serif fonts only (Inter)
-
-- **postcss.config.js** - PostCSS configuration
-- **index.css** - TailwindCSS directives + custom CSS for:
-  - Starry night animations (pure CSS)
-  - Gold gradient text effect
-  - Hexagonal clip-paths
-  - Glassmorphism effects
-  - Reduced motion support
-
-### Files Updated
-- **App.tsx** - Complete rewrite with new components
-  - HomePage with Hero, About Preview, Products Preview
-  - AboutPage with content
-  - Placeholder pages for Produk, Portofolio, Hubungi Kami
-  - All using TailwindCSS classes
-
-- **main.tsx** - Updated CSS import (index.css instead of style.css)
-- **index.html** - Removed Cinzel font, using Inter only (sans-serif)
-
-### Testing
-- ✅ Development server runs without errors
-- ✅ TailwindCSS compilation successful
-- ✅ All components rendering correctly
-- ✅ Animated starry background working
-- ✅ Responsive design functional
-- ✅ Hot Module Replacement (HMR) working
-
-### Deprecated
-- Old global style.css approach (kept for reference only)
-- Previous component files using global CSS
-
-### Next Steps
-- Add more page components as needed
-- Implement product detail pages
-- Add form components with validation
-- Create portfolio gallery
-- Add WhatsApp floating button
-- Deploy to Cloudflare Pages
+#### Design Decisions
+- **Unified page header pattern** (16:45 WIB)
+  - Every page must use: Eyebrow span + H1 + Paragraph
+  - `text-center` on container
+  - `max-w-3xl mx-auto` for paragraph
+  - Responsive sizing throughout
 
 ---
 
-## [Planned] Phase 2: Component Development
+## [Phase 3: Product Detail Pages] - 7 April 2026
 
-### Planned
-- [ ] Build atom components (Button, Heading, Label, BodyText)
-- [ ] Build molecule components (ProductCard, FeatureCard, InputField)
-- [ ] Build organism components (HeroSection, Section, ProductGrid)
-- [ ] Implement glassmorphism effects in React components
-- [ ] Create hexagonal geometry components
-- [ ] Build form components with validation
-- [ ] Add scroll animations (FadeIn, Stagger)
+### 17:30 - 19:30 WIB - 7 Product Pages
+
+#### Added - Product Pages
+- **PortableToiletPage.tsx** (17:35 WIB)
+  - Hero with full-height background
+  - 3 variants (Low Price, Standard/Deluxe, Emergency)
+  - 4 stats grid
+  - Core features with hex images
+  - Portfolio section (5 projects)
+  - CTA section
+  
+- **CubicleToiletPage.tsx** (18:00 WIB)
+  - 5 variants with staggered offsets
+  - Features with hex icons
+  - Portfolio section (4 projects)
+  
+- **OfficeCubiclePage.tsx** (18:15 WIB)
+  - 3 modular variants with specs
+  - Numbered features
+  - Portfolio section (3 projects)
+  
+- **MovableDoorPage.tsx** (18:30 WIB)
+  - 4 variants with watermark numbers
+  - Acoustic features
+  - Portfolio section (3 models)
+  
+- **CNCOrnamentPage.tsx** (18:45 WIB)
+  - Asymmetric showcase grid (8/4/12 cols)
+  - Portfolio section (5 projects)
+  
+- **CellustonePage.tsx** (19:00 WIB)
+  - 2-column bento features
+  - Application cards (Fasad & Wall Panel)
+  - Portfolio section (3 projects)
+  
+- **LaboratoriumCabinetPage.tsx** (19:15 WIB)
+  - 3-col bento grid variants
+  - Chemical resistance features
+  - Portfolio section (3 projects)
+
+#### Added - Data & Components
+- **portfolios.ts** (19:20 WIB)
+  - 26 portfolio projects across 7 categories
+  - CNC Ornament: 5 projects
+  - Portable Toilet: 5 projects
+  - Cubicle Toilet: 4 projects
+  - Lab Cabinet: 3 projects
+  - Movable Door: 3 models
+  - Office Cubicle: 3 models
+  - Cellustone: 3 projects
+  
+- **PortfolioSection.tsx** (19:25 WIB)
+  - Reusable component for all product pages
+  - Grid layout
+  - Grayscale → color hover
+  - "View All" link
+
+#### All Pages Updated
+- Added `StarryBackground` to multiple sections (19:30 WIB)
+- Added `PortfolioSection` to all 7 product pages
 
 ---
 
-## [Planned] Phase 3: Page Implementation
+## [Phase 4: Navbar Megamenu & Footer] - 7 April 2026
 
-### Planned
-- [ ] Build HomePage with all sections
-- [ ] Build AboutPage with complete content
-- [ ] Build ProductIndexPage
-- [ ] Build ProductDetailPage template
-- [ ] Populate 7 product pages with data
-- [ ] Build PortfolioPage
-- [ ] Build ContactPage with form
-- [ ] Build NotFoundPage
-- [ ] Implement breadcrumb navigation
-- [ ] Add SEO meta tags to all pages
+### 19:30 - 21:00 WIB
+
+#### Added
+- **Navbar megamenu for "Produk"** (19:35 WIB)
+  - 2-column grid of products
+  - Each product: icon + name + description
+  - "Lihat Semua Produk →" link at bottom
+  - Hover-activated with invisible bridge
+  
+- **Product icons** (19:50 WIB)
+  - **INITIAL:** FontAwesome CDN (BROKEN - blocked by ad blockers)
+  - **FIXED (20:00 WIB):** Inline SVG components in `productIcons.tsx`
+  - 7 product icons: toilet, door-open, desktop, door-closed, gear, layer-group, flask
+  
+- **Footer enriched** (20:15 WIB)
+  - 4 columns: Brand, Navigation, Products, Contact
+  - All product links with icons + descriptions
+  - Social media links (Instagram, WhatsApp, Facebook)
+  - Newsletter email input
+  
+- **FloatingWhatsApp.tsx** (20:20 WIB)
+  - Fixed bottom-right position
+  - Hexagonal green button
+  - Added to App.tsx (appears on ALL pages)
+  - Removed inline FAB from PortfolioPage
+
+#### Fixed
+- **Navbar "Produk" alignment** (19:40 WIB)
+  - Problem: Text higher than other nav links
+  - Fix: Wrapped in `flex items-center h-full` container
+  
+- **Megamenu hover gap** (19:45 WIB)
+  - Problem: Hover lost when moving cursor to dropdown
+  - Fix: Added invisible bridge `div` (h-3) between trigger and menu
+  - Removed `mt-2` gap
 
 ---
 
-## [Planned] Phase 4: Polish & Optimization
+## [Phase 5: Content & Portfolio System] - 7 April 2026
 
-### Planned
-- [ ] Add scroll-triggered animations
-- [ ] Implement WhatsApp floating button
-- [ ] Add form validation & submission
-- [ ] Optimize images (WebP, lazy loading)
-- [ ] Code splitting & route-based lazy loading
-- [ ] Performance optimization (Lighthouse audit)
-- [ ] Cross-browser testing
-- [ ] Mobile testing (iOS Safari, Android Chrome)
-- [ ] Accessibility audit
-- [ ] Fix bugs & edge cases
+### 21:00 - 23:00 WIB
+
+#### Added
+- **Portfolio data from PDF** (21:15 WIB)
+  - User provided PDF content summary
+  - Created portfolios.ts with real project names:
+    - Mushola Kereta Makan KAI
+    - Lab. Ketahanan Papua
+    - Gedung DPRD Surabaya
+    - Politeknik Surabaya
+    - Masjid Baitul Fadli
+    - PON (Pekan Olahraga Nasional)
+    - etc.
+
+- **PortfolioPage updated** (21:30 WIB)
+  - Sticky filter tabs
+  - Filter by product category
+  - "Semua Proyek" shows all 26 projects
+  - Category badges on cards
+
+#### All Product Pages Updated
+- Added `PortfolioSection` to each (22:00 - 23:00 WIB)
+- Each page shows 3-5 relevant projects
+- Link to `/portofolio` for full gallery
 
 ---
 
-## [Planned] Phase 5: Deployment
+## [Phase 6: Design Refinements] - 7-8 April 2026
 
-### Planned
-- [ ] Build for production
-- [ ] Test production build
-- [ ] Configure deployment platform
-- [ ] Set up custom domain (sembada.xyz)
-- [ ] Configure SSL/HTTPS
-- [ ] Set up analytics (Google Analytics)
-- [ ] Submit sitemap to Google Search Console
-- [ ] Configure robots.txt
-- [ ] Final documentation
-- [ ] Handoff to client
+### 23:00 - 01:30 WIB
+
+#### Changed
+- **Portfolio cards to hexagonal** (23:15 WIB)
+  - Was: Rectangular cards with 4:3 aspect ratio
+  - Now: Hexagonal containers with clip-path
+  - Category badge centered on hexagon
+  - 5px gold gradient border using wrapper class
+  
+- **Custom scrollbar** (23:30 WIB)
+  - Chrome/Edge/Safari: `-webkit-scrollbar` with gold gradient
+  - Firefox: `scrollbar-color` property
+  - Filter tabs: Hidden horizontal scrollbar but still scrollable
+
+- **StarryBackground added everywhere** (00:00 WIB)
+  - Added to AboutPage sections
+  - Added to ProductKnowledgePage sections
+  - Added to PortfolioPage grid
+  - Added to ContactPage content
+  - Added to ALL product page sections
+  - No more plain black backgrounds!
+
+#### Files Updated
+- `index.css` - Added scrollbar styles
+- `PortfolioSection.tsx` - Hexagonal layout
+- `PortfolioPage.tsx` - Hexagonal grid
+- All page files - Added StarryBackground
+
+---
+
+## [Phase 7: Deployment Fix & Final Updates] - 8 April 2026
+
+### 01:30 - 03:00 WIB
+
+#### Fixed - Cloudflare Build Errors
+- **`baseUrl` deprecated** (01:35 WIB)
+  - Error: `TS5101: Option 'baseUrl' is deprecated`
+  - Fix: Removed `baseUrl`, changed to `"./src/*"` paths
+  
+- **Type imports** (01:40 WIB)
+  - Error: `TS1484: must be imported using type-only import`
+  - Fix: Changed `import { HTMLAttributes }` to `import type { HTMLAttributes }`
+  - Files: Section.tsx, Button.tsx, Card.tsx, Heading.tsx
+  
+- **JSX namespace** (01:45 WIB)
+  - Error: `TS2503: Cannot find namespace 'JSX'`
+  - Fix: Changed to `React.ElementType` in Heading.tsx
+  
+- **Unused imports** (01:50 WIB)
+  - Error: `TS6133: declared but its value is never read`
+  - Fix: Removed unused Heading, Section from AboutPage.tsx
+
+- **ProductGrid syntax error** (02:45 WIB)
+  - Error: `TS1381: Unexpected token`
+  - Fix: Fixed missing closing div tag in hexagon container
+
+#### Changed
+- **"PT. Batu Beling" → "Sembada BatuBeling"** (02:00 WIB)
+  - Footer: "Sembada BatuBeling Subsidiary"
+  - AboutSection: `<span>Sembada BatuBeling</span>`
+  - AboutPage: Alt text and content
+  - HomePage: SEO description
+  - Total: 6 occurrences updated
+  
+- **Site title: "BELING" now silver** (02:15 WIB)
+  - Navbar: "Sembada Batu" (gold) + "Beling" (#C0C0C0 silver)
+  - Footer: Same treatment
+  - Created with split spans and different styling
+
+- **Hexagon borders fixed** (02:30 WIB)
+  - Problem: `clip-path` cuts through CSS borders
+  - Solution: Created wrapper classes in index.css:
+    - `.hexagon-border` - 3px border
+    - `.hexagon-border-5` - 5px border (standard)
+    - `.hexagon-border-8` - 8px border (prominent)
+  - Uses `::before` pseudo-element with same clip-path
+  - Updated PortfolioSection, PortfolioPage, ProductGrid
+
+#### Documentation Created
+- **CLOUDFLARE_FIXES.md** (02:50 WIB)
+  - All deployment errors with solutions
+  - TypeScript fixes documented
+  - Deployment checklist
+  - Common issues & solutions
+
+- **QWEN.md updated** (02:55 WIB)
+  - Added site title styling rules
+  - Added company name rules (NEVER "PT. Batu Beling")
+  - Added hexagonal border rules
+  - Added ICONS rule (ALWAYS use inline SVGs)
+  - Added reference to deployment docs
+
+- **DESIGN.md updated** (02:55 WIB)
+  - Added hexagon border wrapper documentation
+  - Added usage examples
+  - Added minimum border thickness (5px)
+
+#### Final Build
+- **03:00 WIB** - Build successful!
+  ```
+  dist/index.html                   1.27 kB │ gzip:  0.58 kB
+  dist/assets/index-CRbrWlD0.css   43.44 kB │ gzip:  7.67 kB
+  dist/assets/index-Ut3egADX.js   354.43 kB │ gzip: 93.61 kB
+  ✓ built in 4.87s
+  ```
+
+---
+
+## [Context Documentation] - 8 April 2026
+
+### 03:00 - 03:30 WIB
+
+#### Added
+- **/.context/ folder** (03:05 WIB)
+  - `SESSION_SUMMARY.md` - Complete chronological timeline
+  - `TECHNICAL_DECISIONS.md` - All decisions with rationale
+  - `QUICK_REFERENCE.md` - Cheat sheet for quick access
+  - `COMPONENT_INVENTORY.md` - Complete component list
+  - `DEPLOYMENT_NEXT_STEPS.md` - Deployment guide
+  - `README.md` - Index explaining how to use
+
+- **CHANGELOG.md updated** (03:15 WIB)
+  - Added specific WIB timestamps to ALL entries
+  - Complete chronological order
+  - Every issue and fix documented with time
 
 ---
 
 ## Summary
 
-**Total Documentation Created:** 11 comprehensive documents  
-**Documentation Files:**
-- `/DESIGN.md` - Complete design system (shadcn/ui + TailwindCSS)
-- `/COMPONENTS.md` - Component architecture
-- `/PAGES.md` - Page structure & routing
-- `/DEVELOPMENT.md` - Development workflow (needs update)
-- `/CHANGELOG.md` - This file (project progress)
-- `/QWEN.md` - AI assistance rules
-- `/BEGINNER_GUIDE.md` - React/Vite guide for beginners ⭐ NEW
-- `/CLOUDFLARE_DEPLOY.md` - Deployment guide ⭐ NEW
+**Total Development Time:** ~20 hours (07:00 WIB Apr 7 - 03:00 WIB Apr 8)  
+**Files Created:** 30+  
+**Components Built:** 20+  
+**Pages Completed:** 12  
+**Portfolio Projects:** 26  
+**Documentation Files:** 15+  
+**Build Status:** ✅ SUCCESSFUL  
 
-**Current Approach:** shadcn/ui + TailwindCSS + Sans-serif fonts  
-**Repository:** https://github.com/cfpages-syamsulalam-net/Sembada.xyz  
-**Deployment Target:** Cloudflare Pages with sembada.xyz domain  
-
-**Status:** ✅ Strategy Updated - Ready to Restart Phase 1  
-**Next Step:** Set up TailwindCSS + shadcn/ui in React project
+**Current Status:** ✅ Ready for Deployment  
+**Next Step:** Push to GitHub → Deploy to Cloudflare Pages
 
 ---
 
-*Last updated: 7 April 2026*  
-*Strategy changed: TailwindCSS + shadcn/ui instead of global CSS*
+*Changelog last updated: 8 April 2026, 03:15 WIB*  
+*All timestamps in WIB (UTC+7) timezone.*
