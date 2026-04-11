@@ -56,7 +56,7 @@ export function AboutSection() {
             <div className="flex gap-8 md:gap-16 mt-8 md:mt-14">
               {/* Stat 1 */}
               <div>
-                <div className="text-4xl md:text-5xl font-black text-[#f2ca50] tracking-tighter">
+                <div className="text-4xl md:text-5xl font-black tracking-tighter text-gold-gradient">
                   15+
                 </div>
                 <div className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-[#94A3B8] font-black mt-2">
@@ -66,7 +66,7 @@ export function AboutSection() {
 
               {/* Stat 2 */}
               <div>
-                <div className="text-4xl md:text-5xl font-black text-[#f2ca50] tracking-tighter">
+                <div className="text-4xl md:text-5xl font-black tracking-tighter text-gold-gradient">
                   500+
                 </div>
                 <div className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-[#94A3B8] font-black mt-2">

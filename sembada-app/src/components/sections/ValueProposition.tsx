@@ -62,8 +62,8 @@ export function ValueProposition() {
                     <pillar.icon className="w-8 h-8 text-[#f2ca50]" />
                   </div>
 
-                  {/* Label */}
-                  <h3 className="text-sm text-[#f2ca50] font-black uppercase tracking-widest mb-2">
+                  {/* Label - Gold Gradient */}
+                  <h3 className="text-sm text-gold-gradient font-black uppercase tracking-widest mb-2">
                     {pillar.label}
                   </h3>
 

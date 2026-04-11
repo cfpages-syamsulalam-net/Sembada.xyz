@@ -43,23 +43,60 @@ export function PortfolioPage() {
         </div>
       </section>
 
-      {/* Filter Tabs */}
+      {/* Filter Tabs with Scroll Arrows */}
       <section className="py-6 md:py-8 bg-[#0B0C10] border-b border-[#f2ca50]/10 sticky top-16 md:top-20 z-40" style={{ backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}>
         <div className="container mx-auto px-6 md:px-10">
-          <div className="flex overflow-x-auto gap-3 md:gap-4 pb-2 md:pb-0 scrollbar-hide">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveFilter(cat.id)}
-                className={`flex-shrink-0 px-4 md:px-6 py-2 md:py-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
-                  activeFilter === cat.id
-                    ? 'bg-[#f2ca50] text-[#0B0C10] border-[#f2ca50]'
-                    : 'bg-transparent text-[#94A3B8] border-[#f2ca50]/30 hover:border-[#f2ca50]/60 hover:text-[#f2ca50]'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
+          <div className="relative">
+            {/* Left Arrow */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('filter-scroll');
+                if (container) container.scrollBy({ left: -120, behavior: 'smooth' });
+              }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-[#0B0C10]/90 border border-[#f2ca50]/30 text-[#f2ca50] hover:bg-[#f2ca50]/10 transition-colors"
+              style={{ backdropFilter: 'blur(12px)' }}
+              aria-label="Scroll left"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+                <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('filter-scroll');
+                if (container) container.scrollBy({ left: 120, behavior: 'smooth' });
+              }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-[#0B0C10]/90 border border-[#f2ca50]/30 text-[#f2ca50] hover:bg-[#f2ca50]/10 transition-colors"
+              style={{ backdropFilter: 'blur(12px)' }}
+              aria-label="Scroll right"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+                <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+
+            {/* Scrollable Tabs */}
+            <div
+              id="filter-scroll"
+              className="flex overflow-x-auto gap-3 md:gap-4 px-10 md:px-12 pb-2 md:pb-0"
+              style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(212, 175, 55, 0.6) rgba(11, 12, 16, 0.8)' }}
+            >
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveFilter(cat.id)}
+                  className={`flex-shrink-0 px-4 md:px-6 py-2 md:py-3 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
+                    activeFilter === cat.id
+                      ? 'bg-[#f2ca50] text-[#0B0C10] border-[#f2ca50]'
+                      : 'bg-transparent text-[#94A3B8] border-[#f2ca50]/30 hover:border-[#f2ca50]/60 hover:text-[#f2ca50]'
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>

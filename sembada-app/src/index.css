@@ -239,7 +239,7 @@
   content: '';
   position: absolute;
   inset: -3px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.6), rgba(212, 175, 55, 0.3));
+  background: linear-gradient(135deg, #BF953F 0%, #f2ca50 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   z-index: -1;
 }
@@ -253,7 +253,7 @@
   content: '';
   position: absolute;
   inset: -5px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.4));
+  background: linear-gradient(135deg, #BF953F 0%, #f2ca50 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   z-index: -1;
 }
@@ -267,7 +267,7 @@
   content: '';
   position: absolute;
   inset: -8px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(212, 175, 55, 0.5));
+  background: linear-gradient(135deg, #BF953F 0%, #f2ca50 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   z-index: -1;
 }

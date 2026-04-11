@@ -15,36 +15,42 @@ const products = [
     name: 'Cubicle Toilet',
     Icon: productIcons.cubicleToilet,
     image: '/images/cubicle-toilet/cubicle%20toilet%201.jpg',
+    href: '/produk/cubicle-toilet',
     offset: '',
   },
   {
     name: 'Office Cubicle',
     Icon: productIcons.officeCubicle,
     image: '/images/office-cubicle/office%20cubicle%201.jpg',
+    href: '/produk/office-cubicle',
     offset: 'translate-y-12',
   },
   {
     name: 'Ornamen CNC',
     Icon: productIcons.cnc,
     image: '/images/cnc-ornament/cnc%20ornament%20fasad%20politeknik.webp',
+    href: '/produk/cnc-ornament',
     offset: '',
   },
   {
     name: 'Toilet Portable',
     Icon: productIcons.toiletPortable,
-    image: '/images/toilet-portable/toilet%20portable.jpg',
+    image: '/images/toilet-portable/toilet%20portable.webp',
+    href: '/produk/portable-toilet',
     offset: '',
   },
   {
     name: 'Kabinet Lab',
     Icon: productIcons.lab,
     image: '/images/laboratorium-cabinet/laboratorium%20cabinet%201.png',
+    href: '/produk/laboratorium-cabinet',
     offset: 'translate-y-12',
   },
   {
     name: 'Cellustone',
     Icon: productIcons.cellustone,
     image: '/images/cellustone/cellustone%201.jpg',
+    href: '/produk/cellustone-ornament',
     offset: '',
   },
 ]
@@ -72,7 +78,7 @@ export function ProductGrid() {
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-24 gap-x-12">
           {products.map((product, index) => (
-            <div key={index} className={`group ${product.offset}`}>
+            <Link key={index} to={product.href} className={`group ${product.offset}`}>
               {/* Hexagon Container with 5px Border */}
               <div
                 className="relative w-full aspect-square mb-8 transition-all duration-500 group-hover:scale-[1.02] hexagon-border-5"
@@ -100,11 +106,11 @@ export function ProductGrid() {
                 </div>
               </div>
 
-              {/* Product Name */}
-              <h3 className="text-xl text-[#f2ca50] text-center font-black uppercase tracking-[0.4em]">
+              {/* Product Name - Gold Gradient */}
+              <h3 className="text-xl text-center font-black uppercase tracking-[0.4em] text-gold-gradient">
                 {product.name}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
 

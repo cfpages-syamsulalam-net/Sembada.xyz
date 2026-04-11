@@ -102,8 +102,7 @@ export function Navbar() {
 
             {/* Produk Megamenu */}
             <li
-              className="relative group flex items-center"
-              style={{ marginTop: '0.4em' }}
+              className="relative group"
               onMouseEnter={() => setProdukOpen(true)}
               onMouseLeave={() => setProdukOpen(false)}
             >
