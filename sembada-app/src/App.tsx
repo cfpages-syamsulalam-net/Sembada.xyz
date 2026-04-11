@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp'
+import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import { Hero } from '@/components/sections/Hero'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ProductGrid } from '@/components/sections/ProductGrid'
@@ -35,7 +36,8 @@ function App() {
       {/* Gold Gradient Bars at Top & Bottom */}
       <div className="gold-gradient-top" />
       <div className="gold-gradient-bottom" />
-      
+
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1 relative z-10">
         <Routes>
