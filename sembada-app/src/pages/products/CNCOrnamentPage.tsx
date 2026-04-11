@@ -1,13 +1,14 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Settings, Building2, Layers } from 'lucide-react'
 
 export function CNCOrnamentPage() {
   const cncPortfolios = portfolioData['cnc-ornament']
   const showcases = [
-    { title: 'Fasad Politeknik', cat: 'Pendidikan', img: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&h=500&fit=crop', span: 'col-span-8', h: 'h-[400px] md:h-[500px]' },
-    { title: 'Mushola KAI', cat: 'Transportasi', img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=500&fit=crop', span: 'col-span-4', h: 'h-[400px] md:h-[500px]', offset: 'md:translate-y-12' },
-    { title: 'Masjid Baitul Fadli', cat: 'Ibadah', img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=600&fit=crop', span: 'col-span-12', h: 'h-[500px] md:h-[600px]', offset: 'mt-8 md:mt-24' },
+    { title: 'Fasad Politeknik', cat: 'Pendidikan', img: '/images/cnc-ornament/cnc%20ornament%20fasad%20politeknik.webp', span: 'col-span-8', h: 'h-[400px] md:h-[500px]' },
+    { title: 'Mushola KAI', cat: 'Transportasi', img: '/images/cnc-ornament/cnc%20ornament%20mushola%20kai.webp', span: 'col-span-4', h: 'h-[400px] md:h-[500px]', offset: 'md:translate-y-12' },
+    { title: 'Masjid Baitul Fadli', cat: 'Ibadah', img: '/images/cnc-ornament/cnc%20ornament%20masjid%20baitul%20fadli.webp', span: 'col-span-12', h: 'h-[500px] md:h-[600px]', offset: 'mt-8 md:mt-24' },
   ]
 
   return (
@@ -29,13 +30,13 @@ export function CNCOrnamentPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
-              { icon: 'precision_manufacturing', t: 'Presisi Tinggi', d: 'Toleransi 0.1mm' },
-              { icon: 'architecture', t: 'Kustom Desain', d: 'Desain sesuai kebutuhan', offset: 'mt-12 md:mt-0' },
-              { icon: 'layers', t: 'Multi Material', d: 'Kayu, acrylic, metal' },
+              { icon: Settings, t: 'Presisi Tinggi', d: 'Toleransi 0.1mm' },
+              { icon: Building2, t: 'Kustom Desain', d: 'Desain sesuai kebutuhan', offset: 'mt-12 md:mt-0' },
+              { icon: Layers, t: 'Multi Material', d: 'Kayu, acrylic, metal' },
             ].map((f, i) => (
               <div key={i} className={`text-center ${f.offset || ''}`}>
                 <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(11, 12, 16, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
-                  <span className="material-symbols-outlined text-5xl text-[#f2ca50]">{f.icon}</span>
+                  <f.icon className="w-12 h-12 text-[#f2ca50]" />
                 </div>
                 <h3 className="text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-2">{f.t}</h3>
                 <p className="text-sm text-[#e3e2e8]/60">{f.d}</p>

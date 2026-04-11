@@ -1,19 +1,20 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { FlaskConical, Droplet, Building2 } from 'lucide-react'
 
 export function LaboratoriumCabinetPage() {
   const labPortfolios = portfolioData['laboratorium-cabinet']
   const features = [
-    { icon: 'science', title: 'Resistensi Kimia', desc: 'Tahan berbagai bahan kimia laboratorium' },
-    { icon: 'water_drop', title: 'Tahan Air & Lembab', desc: 'Cocok untuk area basah' },
-    { icon: 'architecture', title: 'Struktur Monolitik', desc: 'Konstruksi solid dan kokoh' },
+    { icon: FlaskConical, title: 'Resistensi Kimia', desc: 'Tahan berbagai bahan kimia laboratorium' },
+    { icon: Droplet, title: 'Tahan Air & Lembab', desc: 'Cocok untuk area basah' },
+    { icon: Building2, title: 'Struktur Monolitik', desc: 'Konstruksi solid dan kokoh' },
   ]
 
   const variants = [
-    { name: 'Cabinet Pulau (Island)', tagline: 'Pusat Kolaborasi Riset', img: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&h=400&fit=crop', span: 'col-span-12 md:col-span-4' },
-    { name: 'Cabinet Lemari Asam', tagline: 'Keamanan Zat Volatil', img: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop', span: 'col-span-12 md:col-span-5' },
-    { name: 'Cabinet Dinding', tagline: 'Optimasi Ruang Vertikal', img: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&h=400&fit=crop', span: 'col-span-12 md:col-span-3' },
+    { name: 'Cabinet Pulau (Island)', tagline: 'Pusat Kolaborasi Riset', img: '/images/laboratorium-cabinet/laboratorium%20cabinet%20pulau%20(island).png', span: 'col-span-12 md:col-span-4' },
+    { name: 'Cabinet Lemari Asam', tagline: 'Keamanan Zat Volatil', img: '/images/laboratorium-cabinet/laboratorium%20cabinet%20lemari%20asam.png', span: 'col-span-12 md:col-span-5' },
+    { name: 'Cabinet Dinding', tagline: 'Optimasi Ruang Vertikal', img: '/images/laboratorium-cabinet/laboratorium%20cabinet%20dinding.png', span: 'col-span-12 md:col-span-3' },
   ]
 
   return (
@@ -21,7 +22,7 @@ export function LaboratoriumCabinetPage() {
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1600&h=600&fit=crop" alt="" className="w-full aspect-[21/9] object-cover grayscale opacity-30" />
+          <img src="/images/laboratorium-cabinet/laboratorium%20cabinet%201.png" alt="" className="w-full aspect-[21/9] object-cover grayscale opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/80 to-[#0B0C10]" />
         </div>
         <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center py-24">
@@ -45,7 +46,7 @@ export function LaboratoriumCabinetPage() {
                 {features.map((f, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
-                      <span className="material-symbols-outlined text-3xl text-[#f2ca50]">{f.icon}</span>
+                      <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#e3e2e8] mb-1">{f.title}</h3>
@@ -58,7 +59,7 @@ export function LaboratoriumCabinetPage() {
 
             {/* Right - Image Grid */}
             <div className="grid grid-cols-2 gap-4">
-              {['https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=300&h=300&fit=crop'].map((img, i) => (
+              {['/images/laboratorium-cabinet/laboratorium%20cabinet%202.png', '/images/laboratorium-cabinet/laboratorium%20cabinet%203.png', '/images/laboratorium-cabinet/laboratorium%20cabinet%204.png', '/images/laboratorium-cabinet/laboratorium%20cabinet%20toilet%20fasilitas%20umum.jpg'].map((img, i) => (
                 <div key={i} className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${i % 2 === 1 ? 'translate-y-12' : ''}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>

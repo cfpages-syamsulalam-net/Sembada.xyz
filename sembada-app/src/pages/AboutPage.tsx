@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { Eye, Building, Users, Settings } from 'lucide-react'
 
 export function AboutPage() {
   return (
@@ -25,7 +26,7 @@ export function AboutPage() {
             <div className="relative">
               <div className="relative overflow-hidden grayscale mix-blend-luminosity">
                 <img
-                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop"
+                  src="/images/office-cubicle/office%20cubicle%201.jpg"
                   alt="Sembada BatuBeling Legacy"
                   className="w-full aspect-[4/3] object-cover"
                 />
@@ -119,9 +120,7 @@ export function AboutPage() {
                   border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
-                <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                  visibility
-                </span>
+                <Eye className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
               <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
                 Visi Kami
@@ -149,9 +148,7 @@ export function AboutPage() {
                   border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
-                <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                  architecture
-                </span>
+                <Building className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
               <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
                 Misi I
@@ -179,9 +176,7 @@ export function AboutPage() {
                   border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
-                <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                  groups
-                </span>
+                <Users className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
               <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
                 Misi II
@@ -209,9 +204,7 @@ export function AboutPage() {
                   border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
-                <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                  precision_manufacturing
-                </span>
+                <Settings className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
               <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
                 Misi III

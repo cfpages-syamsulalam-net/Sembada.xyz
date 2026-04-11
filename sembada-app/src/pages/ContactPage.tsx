@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { MapPin, Phone, Mail } from 'lucide-react'
 
 export function ContactPage() {
   return (
@@ -134,9 +135,7 @@ export function ContactPage() {
                       border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
-                    <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                      location_on
-                    </span>
+                  <MapPin className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
                   </div>
                   <div>
                     <h3 className="text-sm md:text-base font-bold text-[#e3e2e8] mb-1">
@@ -158,9 +157,7 @@ export function ContactPage() {
                       border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
-                    <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                      call
-                    </span>
+                  <Phone className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
                   </div>
                   <div>
                     <h3 className="text-sm md:text-base font-bold text-[#e3e2e8] mb-1">
@@ -182,9 +179,7 @@ export function ContactPage() {
                       border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
-                    <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                      mail
-                    </span>
+                  <Mail className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
                   </div>
                   <div>
                     <h3 className="text-sm md:text-base font-bold text-[#e3e2e8] mb-1">
@@ -200,7 +195,7 @@ export function ContactPage() {
               {/* Map Placeholder */}
               <div className="relative w-full h-64 md:h-80 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&h=400&fit=crop"
+                  src="/images/office-cubicle/office%20cubicle%202.jpg"
                   alt="Map Location"
                   className="w-full h-full object-cover"
                 />

@@ -81,6 +81,28 @@ sembada.xyz/
 
 ### CRITICAL: Always Read Context Files First
 
+### Running the Dev Server
+**When the user asks to run/preview the site:**
+```bash
+cd C:\Users\THINKPAD\Sembada.xyz\sembada-app && npm run dev -- --port 5173
+```
+This starts the dev server at `http://localhost:5173`. Use `is_background: true` so it keeps running.
+The user can then simply refresh their browser to see changes.
+
+**To stop the dev server:**
+```bash
+taskkill /F /PID <pid>
+```
+
+**When installing packages (lucide-react etc), always kill existing dev server first:**
+```bash
+taskkill /F /PID <pid>  # kill dev server
+npm install <package>    # install package
+cd C:\Users\THINKPAD\Sembada.xyz\sembada-app && npm run dev -- --port 5173  # restart
+```
+
+### Version Awareness
+
 **BEFORE starting any work, ALWAYS read these files:**
 1. `/QWEN.md` - This file (rules and guidelines)
 2. `/CHANGELOG.md` - Current project status and progress

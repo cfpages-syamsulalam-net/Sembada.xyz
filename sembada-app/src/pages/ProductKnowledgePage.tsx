@@ -1,10 +1,23 @@
 import { Link } from 'react-router-dom'
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { Droplets, DoorOpen, Briefcase, Expand, Building2, LayoutGrid, FlaskConical, ShieldCheck, Settings } from 'lucide-react'
+
+const productIcons = {
+  wash: Droplets,
+  door_front: DoorOpen,
+  work: Briefcase,
+  unfold_more: Expand,
+  architecture: Building2,
+  grid_view: LayoutGrid,
+  biotech: FlaskConical,
+  verified: ShieldCheck,
+  precision_manufacturing: Settings,
+} as Record<string, React.ComponentType<{ className?: string }>>
 
 const products = [
   {
     name: 'Portable Toilet',
-    icon: 'wash',
+    Icon: productIcons.wash,
     description: 'Unit sanitasi movable yang fleksibel untuk berbagai kebutuhan',
     tags: ['Low Price', 'Standard/Deluxe', 'Emergency'],
     offset: '',
@@ -12,7 +25,7 @@ const products = [
   },
   {
     name: 'Cubicle Toilet',
-    icon: 'door_front',
+    Icon: productIcons.door_front,
     description: 'Partisi toilet modern berbahan tipis, ringan, namun sangat kuat',
     tags: ['Premium', 'Standard', 'PVC Board', 'Full Height'],
     offset: 'lg:translate-y-8',
@@ -20,7 +33,7 @@ const products = [
   },
   {
     name: 'Office Cubicle',
-    icon: 'work',
+    Icon: productIcons.work,
     description: 'Sekat antar ruang kerja berbahan Phenolic Resin Premium',
     tags: ['Material: Phenolic Resin'],
     offset: '',
@@ -28,7 +41,7 @@ const products = [
   },
   {
     name: 'Movable Door',
-    icon: 'unfold_more',
+    Icon: productIcons.unfold_more,
     description: 'Partisi ruangan yang dapat digeser untuk membagi ruang utama',
     tags: ['Fitur: Sound Insulation'],
     offset: 'lg:translate-y-8',
@@ -36,7 +49,7 @@ const products = [
   },
   {
     name: 'CNC Ornament',
-    icon: 'architecture',
+    Icon: productIcons.architecture,
     description: 'Pekerjaan ornamen berbasis komputerisasi yang menghasilkan presisi',
     tags: ['Teknologi: Computerized Precision'],
     offset: '',
@@ -44,7 +57,7 @@ const products = [
   },
   {
     name: 'Cellustone',
-    icon: 'grid_view',
+    Icon: productIcons.grid_view,
     description: 'Material komposit ramah lingkungan untuk area Indoor maupun Outdoor',
     tags: ['Eco-Friendly Wall Panel'],
     offset: 'lg:translate-y-8',
@@ -52,7 +65,7 @@ const products = [
   },
   {
     name: 'Laboratorium Cabinet',
-    icon: 'biotech',
+    Icon: productIcons.biotech,
     description: 'Furnitur berbahan Phenolic Resin yang tahan terhadap air dan bahan kimia',
     tags: ['Material: Chemical Resistant Phenolic'],
     offset: 'lg:col-start-2',
@@ -108,9 +121,7 @@ export function ProductKnowledgePage() {
                         border: '1px solid rgba(212, 175, 55, 0.4)',
                       }}
                     >
-                      <span className="material-symbols-outlined text-3xl md:text-4xl text-[#f2ca50] transition-colors duration-300 group-hover:text-[#0B0C10]">
-                        {product.icon}
-                      </span>
+                    <product.Icon className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50] transition-colors duration-300 group-hover:text-[#0B0C10]" />
                     </div>
                   </div>
 
@@ -168,9 +179,7 @@ export function ProductKnowledgePage() {
                       border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
-                    <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                      verified
-                    </span>
+                    <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
                   </div>
                   <div>
                     <h3 className="text-lg md:text-xl font-bold text-[#e3e2e8] mb-2">
@@ -192,9 +201,7 @@ export function ProductKnowledgePage() {
                       border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
-                    <span className="material-symbols-outlined text-2xl md:text-3xl text-[#f2ca50]">
-                      precision_manufacturing
-                    </span>
+                    <Settings className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
                   </div>
                   <div>
                     <h3 className="text-lg md:text-xl font-bold text-[#e3e2e8] mb-2">
@@ -227,7 +234,7 @@ export function ProductKnowledgePage() {
                   }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=600&fit=crop"
+                    src="/images/cnc-ornament/cnc%20ornament%20politeknik%20surabaya.webp"
                     alt="Kualitas Material"
                     className="w-full h-full object-cover"
                   />

@@ -1,21 +1,23 @@
+import { Target, Clock, Gem, Leaf } from 'lucide-react'
+
 const pillars = [
   {
-    icon: 'target',
+    icon: Target,
     label: 'Presisi',
     description: 'Presisi komputerisasi dalam setiap detail produk untuk hasil sempurna.',
   },
   {
-    icon: 'schedule',
+    icon: Clock,
     label: 'Efisiensi',
     description: 'Tepat waktu dan hemat biaya dengan proses produksi teroptimasi.',
   },
   {
-    icon: 'diamond',
+    icon: Gem,
     label: 'Elegan',
     description: 'Desain premium yang meningkatkan nilai estetika properti Anda.',
   },
   {
-    icon: 'eco',
+    icon: Leaf,
     label: 'Berkelanjutan',
     description: 'Ramah lingkungan dengan material berkualitas dan tahan lama.',
   },
@@ -59,9 +61,7 @@ export function ValueProposition() {
                       boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
                     }}
                   >
-                    <span className="material-symbols-outlined text-3xl text-[#f2ca50]">
-                      {pillar.icon}
-                    </span>
+                    <pillar.icon className="w-8 h-8 text-[#f2ca50]" />
                   </div>
 
                   {/* Label */}

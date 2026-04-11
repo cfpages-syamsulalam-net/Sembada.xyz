@@ -1,14 +1,15 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { VolumeX, Settings2, Shield } from 'lucide-react'
 
 export function MovableDoorPage() {
   const movablePortfolios = portfolioData['movable-door']
   const variants = [
-    { name: 'Rubi', tag: 'Eksklusif', desc: 'Partisi fleksibel semi-permanen', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop' },
-    { name: 'Kalimaya', tag: 'Akustik', desc: 'Isolasi suara tingkat menengah', img: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=400&h=500&fit=crop', offset: 'translate-y-8 md:translate-y-12' },
-    { name: 'Batu Beling', tag: 'Signature', desc: 'Peredam suara maksimal', img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=500&fit=crop' },
-    { name: 'Emerald', tag: 'Premium', desc: 'Performa akustik industri', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=500&fit=crop', offset: 'translate-y-8 md:translate-y-12' },
+    { name: 'Rubi', tag: 'Eksklusif', desc: 'Partisi fleksibel semi-permanen', img: '/images/partisi-ruangan/movable%20door%20rubi.jpg' },
+    { name: 'Kalimaya', tag: 'Akustik', desc: 'Isolasi suara tingkat menengah', img: '/images/partisi-ruangan/movable%20door%20kalimaya.png', offset: 'translate-y-8 md:translate-y-12' },
+    { name: 'Batu Beling', tag: 'Signature', desc: 'Peredam suara maksimal', img: '/images/partisi-ruangan/movable%20door%20batu%20beling.jpg' },
+    { name: 'Emerald', tag: 'Premium', desc: 'Performa akustik industri', img: '/images/partisi-ruangan/movable%20door%20emerald.jpg', offset: 'translate-y-8 md:translate-y-12' },
   ]
 
   return (
@@ -16,7 +17,7 @@ export function MovableDoorPage() {
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=900&fit=crop" alt="" className="w-full h-full object-cover grayscale opacity-30" />
+          <img src="/images/partisi-ruangan/movable%20door%201.jpg" alt="" className="w-full h-full object-cover grayscale opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/70 to-[#0B0C10]" />
         </div>
         <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
@@ -62,10 +63,10 @@ export function MovableDoorPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">Fitur Utama</h2>
               <div className="space-y-6">
-                {[{ icon: 'volume_off', t: 'Sound Proofing', d: 'Reduksi suara 45-50 dB' }, { icon: 'settings_input_component', t: 'Precision Track', d: 'Rel aluminium ekstrusi' }, { icon: 'security', t: 'Mechanical Locking', d: 'Sistem pengaman multi-point' }].map((f, i) => (
+                {[{ icon: VolumeX, t: 'Sound Proofing', d: 'Reduksi suara 45-50 dB' }, { icon: Settings2, t: 'Precision Track', d: 'Rel aluminium ekstrusi' }, { icon: Shield, t: 'Mechanical Locking', d: 'Sistem pengaman multi-point' }].map((f, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
-                      <span className="material-symbols-outlined text-2xl text-[#f2ca50]">{f.icon}</span>
+                      <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#e3e2e8] mb-1">{f.t}</h3>
@@ -76,7 +77,7 @@ export function MovableDoorPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {['https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=300&fit=crop'].map((img, i) => (
+              {['/images/partisi-ruangan/movable%20door%20rubi.jpg', '/images/partisi-ruangan/movable%20door%20kalimaya.png', '/images/partisi-ruangan/movable%20door%20batu%20beling.jpg', '/images/partisi-ruangan/movable%20door%20emerald.jpg'].map((img, i) => (
                 <div key={i} className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${i % 2 === 0 ? 'translate-y-12' : '-mt-12'}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>

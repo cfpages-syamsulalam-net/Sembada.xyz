@@ -1,15 +1,16 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Shield, Clock, Square } from 'lucide-react'
 
 export function CubicleToiletPage() {
   const cubiclePortfolios = portfolioData['cubicle-toilet']
   const variants = [
-    { name: 'Premium', desc: 'Phenolic Resin untuk lalu lintas tinggi', image: 'https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=400&h=300&fit=crop' },
-    { name: 'Standard', desc: 'Fasilitas kantor & publik', image: 'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=400&h=300&fit=crop', offset: 'md:translate-y-8' },
-    { name: 'Two Tone', desc: 'Warna kontras modern', image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=300&fit=crop' },
-    { name: 'PVC Board', desc: 'Tahan air ekonomis', image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?w=400&h=300&fit=crop', offset: 'md:translate-y-8' },
-    { name: 'Full Height', desc: 'Privasi lantai ke langit-langit', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop' },
+    { name: 'Premium', desc: 'Phenolic Resin untuk lalu lintas tinggi', image: '/images/cubicle-toilet/cubicle%20toilet%20Premium.png' },
+    { name: 'Standard', desc: 'Fasilitas kantor & publik', image: '/images/cubicle-toilet/cubicle%20toilet%20standard.jpg', offset: 'md:translate-y-8' },
+    { name: 'Two Tone', desc: 'Warna kontras modern', image: '/images/cubicle-toilet/cubicle%20toilet%20two%20tone.png' },
+    { name: 'PVC Board', desc: 'Tahan air ekonomis', image: '/images/cubicle-toilet/cubicle%20toilet%20pvc%20board.png', offset: 'md:translate-y-8' },
+    { name: 'Full Height', desc: 'Privasi lantai ke langit-langit', image: '/images/cubicle-toilet/cubicle%20toilet%20full%20height.png' },
   ]
 
   return (
@@ -57,7 +58,7 @@ export function CubicleToiletPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
-              {['https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=300&h=300&fit=crop'].map((img, i) => (
+              {['/images/cubicle-toilet/cubicle%20toilet%20kantor%20modern.jpg', '/images/cubicle-toilet/cubicle%20toilet%20hotel%20bintang%204.jpg'].map((img, i) => (
                 <div key={i} className="aspect-square grayscale hover:grayscale-0 transition-all duration-700" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>
@@ -67,13 +68,13 @@ export function CubicleToiletPage() {
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-6">Keunggulan</h2>
               <div className="space-y-4">
                 {[
-                  { icon: 'shield', title: 'Ketahanan Tinggi', desc: 'Material premium tahan benturan dan kelembaban' },
-                  { icon: 'speed', title: 'Instalasi Cepat', desc: 'Pemasangan cepat menghemat waktu dan biaya' },
-                  { icon: 'fit_screen', title: 'Efisiensi Ruang', desc: 'Desain tipis mengoptimalkan space' },
+                  { icon: Shield, title: 'Ketahanan Tinggi', desc: 'Material premium tahan benturan dan kelembaban' },
+                  { icon: Clock, title: 'Instalasi Cepat', desc: 'Pemasangan cepat menghemat waktu dan biaya' },
+                  { icon: Square, title: 'Efisiensi Ruang', desc: 'Desain tipis mengoptimalkan space' },
                 ].map((f, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
-                      <span className="material-symbols-outlined text-2xl text-[#f2ca50]">{f.icon}</span>
+                      <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#e3e2e8] mb-1">{f.title}</h3>

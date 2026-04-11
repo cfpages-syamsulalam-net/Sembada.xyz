@@ -2,10 +2,96 @@
 
 All notable changes to this project will be documented in this file with **specific WIB (UTC+7) timestamps** for complete chronological context.
 
-**Format:** [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
-**Project Type:** Company Profile Website (React + Vite + TypeScript)  
-**Design System:** Midnight Obsidian  
+**Format:** [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+**Project Type:** Company Profile & Product Catalog Website (React + Vite + TypeScript)
+**Design System:** Midnight Obsidian
 **Timezone:** WIB (Western Indonesian Time, UTC+7)
+
+---
+
+## [Image Integration Phase] - 11 April 2026
+
+### 10:00 - 12:00 WIB - Real Image Integration
+
+#### Added
+- **61 real product & portfolio images** across 7 product categories
+  - Cellustone: 8 images (fasad, interior, wall panel, villa obsidian, etc.)
+  - CNC Ornament: 7 images (fasad politeknik, mushola KAI, masjid baitul fadli, etc.)
+  - Cubicle Toilet: 11 images (premium, standard, two tone, PVC board, full height, etc.)
+  - Laboratorium Cabinet: 10 images (pulau island, lemari asam, dinding, etc.)
+  - Office Cubicle: 8 images (advance staff, leader staff, supervisor, etc.)
+  - Movable Door/Partisi Ruangan: 8 images (rubi, kalimaya, batu beling, emerald, etc.)
+  - Portable Toilet: 9 images (various use cases)
+
+- **Image folder structure** in `sembada-app/public/images/`:
+  - `/cellustone/`, `/cnc-ornament/`, `/cubicle-toilet/`, `/laboratorium-cabinet/`, `/office-cubicle/`, `/partisi-ruangan/`, `/toilet-portable/`
+
+- **imagePaths.ts** utility (`src/data/imagePaths.ts`) - Centralized image path constants with URL-encoded filenames
+
+#### Changed
+- **portfolios.ts** - Replaced ALL 26 Unsplash placeholder images with real project images
+- **PortableToiletPage** - 7 Unsplash → real images (hero, variants, features grid)
+- **CubicleToiletPage** - 7 Unsplash → real images (variants, features grid)
+- **OfficeCubiclePage** - 5 Unsplash → real images (hero background, variants, features)
+- **MovableDoorPage** - 9 Unsplash → real images (hero, variants, features grid)
+- **CNCOrnamentPage** - 3 Unsplash → real images (showcase grid)
+- **CellustonePage** - 6 Unsplash → real images (features grid, applications)
+- **LaboratoriumCabinetPage** - 6 Unsplash → real images (hero, features grid, variants)
+- **AboutPage** - 1 Unsplash → real image (legacy section)
+- **ProductKnowledgePage** - 1 Unsplash → real image (quality section)
+- **ContactPage** - 1 Unsplash → real image (map placeholder)
+
+#### Technical Decisions
+- **URL-encoded paths** - Filenames with spaces use `%20` encoding
+- **Local images** - Work on localhost AND sembada.xyz domain
+- **Grayscale treatment** - All images use `grayscale hover:grayscale-0` per design system
+
+#### Build Status
+- ✅ `npm run build` successful (14.14s)
+- ✅ All 61 images copied to `dist/images/`
+- ✅ Zero TypeScript/compilation errors
+
+---
+
+## [Icon Migration: Lucide React] - 11 April 2026
+
+### 12:00 - 13:00 WIB - Material Symbols → Lucide React
+
+#### Changed
+- **Replaced ALL Material Symbols (Google font) with Lucide React icons**
+  - Material Symbols CDN had rendering issues and required external font loading
+  - Lucide React icons are bundled with the app (faster, more reliable)
+  - Better visual consistency with clean SVG icons
+
+- **Files Updated (11 total):**
+  - `ValueProposition.tsx` - target→Target, schedule→Clock, diamond→Gem, eco→Leaf
+  - `ProductGrid.tsx` - door_front→DoorOpen, work→Briefcase, architecture→Building2, wash→ShowerHead, biotech→FlaskConical, grid_view→LayoutGrid
+  - `Footer.tsx` - arrow_forward→ArrowRight
+  - `AboutPage.tsx` - visibility→Eye, architecture→Building, groups→Users, precision_manufacturing→Settings
+  - `ContactPage.tsx` - location_on→MapPin, call→Phone, mail→Mail
+  - `ProductKnowledgePage.tsx` - All 7 product icons + verified→ShieldCheck, precision_manufacturing→Settings
+  - `PortableToiletPage.tsx` - wash→ShowerHead, star→Star, check_circle→CheckCircle2
+  - `CubicleToiletPage.tsx` - shield→Shield, speed→Clock, fit_screen→Square
+  - `CNCOrnamentPage.tsx` - precision_manufacturing→Settings, architecture→Building2, layers→Layers
+  - `MovableDoorPage.tsx` - volume_off→VolumeX, settings_input_component→Settings2, security→Shield
+  - `CellustonePage.tsx` - eco→Leaf, shield→Shield
+  - `LaboratoriumCabinetPage.tsx` - science→FlaskConical, water_drop→Droplet, architecture→Building2
+
+- **index.html** - Removed Material Symbols Outlined Google Fonts link (no longer needed)
+
+- **Dependency added:** `lucide-react` (latest)
+
+#### Benefits
+- ✅ Icons bundled with app (no external CDN dependency)
+- ✅ Faster load times (no font download required)
+- ✅ Consistent rendering across all browsers
+- ✅ Tree-shakeable (only used icons included in bundle)
+- ✅ Easy to swap icons in the future
+
+#### Build Status
+- ✅ `npm run build` successful (14.14s)
+- ✅ Zero TypeScript errors
+- ✅ Dev server running on `http://localhost:5173`
 
 ---
 

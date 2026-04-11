@@ -5,9 +5,9 @@ import { portfolioData } from '@/data/portfolios'
 export function OfficeCubiclePage() {
   const officePortfolios = portfolioData['office-cubicle']
   const variants = [
-    { name: 'Advance Staff', size: '1200mm x 600mm', material: 'Phenolic 12mm', features: 'Cable Management', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop' },
-    { name: 'Leader Staff', size: '1500mm x 750mm', material: 'Dual-tone Phenolic', features: 'Acoustic Panels', image: 'https://images.unsplash.com/photo-1497366754035-f200968e1414?w=400&h=300&fit=crop', offset: 'md:mt-12' },
-    { name: 'Supervisor', size: '1800mm x 900mm', material: 'Floor-to-Ceiling', features: 'Luxury Finishes', image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=300&fit=crop', offset: 'md:-mt-8' },
+    { name: 'Advance Staff', size: '1200mm x 600mm', material: 'Phenolic 12mm', features: 'Cable Management', image: '/images/office-cubicle/office%20cubicle%20advance%20staff.jpg' },
+    { name: 'Leader Staff', size: '1500mm x 750mm', material: 'Dual-tone Phenolic', features: 'Acoustic Panels', image: '/images/office-cubicle/office%20cubicle%20leader%20staff.jpg', offset: 'md:mt-12' },
+    { name: 'Supervisor', size: '1800mm x 900mm', material: 'Floor-to-Ceiling', features: 'Luxury Finishes', image: '/images/office-cubicle/office%20cubicle%20supervisor.jpg', offset: 'md:-mt-8' },
   ]
 
   return (
@@ -15,7 +15,7 @@ export function OfficeCubiclePage() {
       {/* Hero */}
       <section className="h-[600px] md:h-[819px] flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+          <img src="/images/office-cubicle/office%20cubicle%201.jpg" alt="" className="w-full h-full object-cover grayscale" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/60 to-[#0B0C10]" />
         </div>
         <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
@@ -61,7 +61,7 @@ export function OfficeCubiclePage() {
         <div className="container mx-auto px-6 md:px-10 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="grid grid-cols-2 gap-4 pt-20">
-              {['https://images.unsplash.com/photo-1497366754035-f200968e1414?w=300&h=300&fit=crop', 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=300&fit=crop'].map((img, i) => (
+              {['/images/office-cubicle/office%20cubicle%20advance%20staff%20workstations.webp', '/images/office-cubicle/office%20cubicle%20leader%20staff%20workstations.jpg'].map((img, i) => (
                 <div key={i} className="aspect-square grayscale hover:grayscale-0 transition-all duration-700" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>

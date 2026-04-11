@@ -1,6 +1,7 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { ShowerHead, Star, CheckCircle2 } from 'lucide-react'
 
 export function PortableToiletPage() {
   const portablePortfolios = portfolioData['portable-toilet']
@@ -9,20 +10,20 @@ export function PortableToiletPage() {
       name: 'Low Price',
       description: 'Varian ekonomis dengan harga terjangkau, cocok untuk proyek konstruksi dan event.',
       features: ['Material HDPE berkualitas', 'Ventilasi udara memadai', 'Tangki 150L', 'Instalasi cepat'],
-      image: 'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=600&h=400&fit=crop',
+      image: '/images/toilet-portable/toilet%20portable%202.jpg',
     },
     {
       name: 'Standard/Deluxe',
       description: 'Varian premium dengan fitur lengkap dan desain modern elegan.',
       features: ['Material phenolic resin', 'Interior modern', 'Lampu & kran air', 'Mudah dipindahkan'],
-      image: 'https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=600&h=400&fit=crop',
+      image: '/images/toilet-portable/toilet%20portable%203.webp',
       highlight: true,
     },
     {
       name: 'Emergency',
       description: 'Dirancang untuk mobilitas tinggi dan penempatan cepat di lokasi darurat.',
       features: ['Ringan & portable', 'Rapid deployment', 'Sanitasi kimia', 'Cocok untuk bencana'],
-      image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop',
+      image: '/images/toilet-portable/toilet%20portable%204.webp',
     },
   ]
 
@@ -33,7 +34,7 @@ export function PortableToiletPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=1600&h=900&fit=crop"
+            src="/images/toilet-portable/toilet%20portable.jpg"
             alt="Portable Toilet Hero"
             className="w-full h-full object-cover grayscale opacity-20"
           />
@@ -137,9 +138,7 @@ export function PortableToiletPage() {
                     border: '1px solid rgba(212, 175, 55, 0.4)',
                   }}
                 >
-                  <span className="material-symbols-outlined text-3xl text-[#f2ca50]">
-                    {variant.highlight ? 'star' : 'wash'}
-                  </span>
+                  {variant.highlight ? <Star className="w-8 h-8 text-[#f2ca50]" /> : <ShowerHead className="w-8 h-8 text-[#f2ca50]" />}
                 </div>
 
                 <h3 className="text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-3 text-center">
@@ -153,7 +152,7 @@ export function PortableToiletPage() {
                 <ul className="space-y-2 mb-6">
                   {variant.features.map((feature, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm text-[#e3e2e8]/60">
-                      <span className="material-symbols-outlined text-[#f2ca50] text-base">check_circle</span>
+                      <CheckCircle2 className="w-4 h-4 text-[#f2ca50]" />
                       {feature}
                     </li>
                   ))}
@@ -183,10 +182,10 @@ export function PortableToiletPage() {
             {/* Left - Images */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                'https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1577495508048-b635879837f1?w=400&h=400&fit=crop',
+                '/images/toilet-portable/toilet%20portable%20instansi%20pemerintahan.jpg',
+                '/images/toilet-portable/toilet%20portable%20sektor%20konstruksi%20&%20pergudangan.webp',
+                '/images/toilet-portable/toilet%20portable%20dinas%20kesehatan.webp',
+                '/images/toilet-portable/toilet%20portable%20tempat%20wisata%20&%20perkantoran.jpg',
               ].map((img, i) => (
                 <div
                   key={i}

@@ -1,17 +1,18 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Leaf, Shield } from 'lucide-react'
 
 export function CellustonePage() {
   const cellustonePortfolios = portfolioData['cellustone']
   const features = [
-    { icon: 'eco', title: 'Eco-Engineered', desc: 'Material komposit dari bahan alam dengan cellulosa fibre' },
-    { icon: 'shield', title: 'Durabilitas Tinggi', desc: 'Minim muai-susut, tahan Indoor maupun Outdoor' },
+    { icon: Leaf, title: 'Eco-Engineered', desc: 'Material komposit dari bahan alam dengan cellulosa fibre' },
+    { icon: Shield, title: 'Durabilitas Tinggi', desc: 'Minim muai-susut, tahan Indoor maupun Outdoor' },
   ]
 
   const applications = [
-    { name: 'Cellustone Fasad', desc: 'Tampak luar bangunan', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=800&fit=crop' },
-    { name: 'Cellustone Wall Panel', desc: 'Interior dinding', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop', offset: 'md:mt-24' },
+    { name: 'Cellustone Fasad', desc: 'Tampak luar bangunan', img: '/images/cellustone/cellustone%20fasad.jpg' },
+    { name: 'Cellustone Wall Panel', desc: 'Interior dinding', img: '/images/cellustone/cellustone%20wall%20panel.jpg', offset: 'md:mt-24' },
   ]
 
   return (
@@ -45,7 +46,7 @@ export function CellustonePage() {
                 {features.map((f, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
-                      <span className="material-symbols-outlined text-3xl text-[#f2ca50]" style={{ fontVariationSettings: "'FILL' 1" }}>{f.icon}</span>
+                      <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#e3e2e8] mb-1">{f.title}</h3>
@@ -59,10 +60,10 @@ export function CellustonePage() {
             {/* Image Grid */}
             <div className="md:col-span-7 grid grid-cols-2 gap-4">
               {[
-                'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=300&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=300&h=300&fit=crop',
+                '/images/cellustone/cellustone%201.jpg',
+                '/images/cellustone/cellustone%202.jpg',
+                '/images/cellustone/cellustone%203.jpg',
+                '/images/cellustone/cellustone%204.jpg',
               ].map((img, i) => (
                 <div key={i} className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${['translate-y-12', '-translate-y-6', 'translate-y-6', ''][i]}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 group-hover:opacity-100" />

@@ -1,40 +1,50 @@
 import { Link } from 'react-router-dom'
+import { DoorOpen, Briefcase, Building2, ShowerHead, FlaskConical, LayoutGrid } from 'lucide-react'
+
+const productIcons = {
+  cubicleToilet: DoorOpen,
+  officeCubicle: Briefcase,
+  cnc: Building2,
+  toiletPortable: ShowerHead,
+  lab: FlaskConical,
+  cellustone: LayoutGrid,
+}
 
 const products = [
   {
     name: 'Cubicle Toilet',
-    icon: 'door_front',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a4239f3b4?w=600&h=600&fit=crop',
+    Icon: productIcons.cubicleToilet,
+    image: '/images/cubicle-toilet/cubicle%20toilet%201.jpg',
     offset: '',
   },
   {
     name: 'Office Cubicle',
-    icon: 'work',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=600&fit=crop',
+    Icon: productIcons.officeCubicle,
+    image: '/images/office-cubicle/office%20cubicle%201.jpg',
     offset: 'translate-y-12',
   },
   {
     name: 'Ornamen CNC',
-    icon: 'architecture',
-    image: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600&h=600&fit=crop',
+    Icon: productIcons.cnc,
+    image: '/images/cnc-ornament/cnc%20ornament%20fasad%20politeknik.webp',
     offset: '',
   },
   {
     name: 'Toilet Portable',
-    icon: 'wash',
-    image: 'https://images.unsplash.com/photo-1564540586988-aa4e53ab3394?w=600&h=600&fit=crop',
+    Icon: productIcons.toiletPortable,
+    image: '/images/toilet-portable/toilet%20portable.jpg',
     offset: '',
   },
   {
     name: 'Kabinet Lab',
-    icon: 'biotech',
-    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&h=600&fit=crop',
+    Icon: productIcons.lab,
+    image: '/images/laboratorium-cabinet/laboratorium%20cabinet%201.png',
     offset: 'translate-y-12',
   },
   {
     name: 'Cellustone',
-    icon: 'grid_view',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop',
+    Icon: productIcons.cellustone,
+    image: '/images/cellustone/cellustone%201.jpg',
     offset: '',
   },
 ]
@@ -85,9 +95,7 @@ export function ProductGrid() {
 
                   {/* Icon Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-6xl text-[#f2ca50] opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">
-                      {product.icon}
-                    </span>
+                    <product.Icon className="w-16 h-16 text-[#f2ca50] opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100" />
                   </div>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { productData } from '@/data/products'
 import { ProductIcons } from '@/data/productIcons'
 
@@ -140,7 +141,7 @@ export function Footer() {
                 className="flex-1 bg-transparent text-sm text-[#e3e2e8] placeholder-[#64748B] outline-none"
               />
               <button className="text-[#f2ca50] hover:text-[#f2ca50]/80 transition-colors">
-                <span className="material-symbols-outlined text-xl">arrow_forward</span>
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
