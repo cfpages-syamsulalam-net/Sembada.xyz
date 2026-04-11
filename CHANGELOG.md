@@ -118,7 +118,34 @@ All notable changes to this project will be documented in this file with **speci
 - `Footer.tsx` — Icon mapping fix + Hubungi Kami icons
 
 #### Build Status
-- ✅ `npm run build` successful (31.20s)
+- ✅ `npm run build` successful (5.29s)
+- ✅ Zero TypeScript errors
+
+---
+
+## [Final Polish] - 11 April 2026
+
+### 15:00 - 16:00 WIB - Nav Alignment + Shimmer Logo
+
+#### Fixed
+1. **Navbar "Produk" alignment** — Added `style={{ marginTop: '0.4em' }}` to the `<li>` wrapper. The `<button>` element inside Produk had different default browser margin than `<Link>` elements used in other nav items, causing vertical misalignment.
+
+2. **Gem icon shimmer animation** — Created `.shimmer-gold-icon` CSS class that animates the SVG `color` property through gold shades (`#BF953F → #FCF6BA → #B38728 → #FBF5B7 → #BF953F`) with matching `drop-shadow` glow. Applied to Gem icon in both Navbar and Footer.
+
+3. **"Sembada Batu" shimmer gold** — Changed from static gradient to animated shimmer (`.shimmer-gold` class). Gradient position animates horizontally over 4s for a traveling light effect on polished metal.
+
+4. **"Beling" shimmer silver** — Changed from gold gradient to silver metallic shimmer (`.shimmer-silver` class). Uses silver gradient (`#949494 → #C0C0C0 → #E8E8E8 → #C0C0C0 → #949494`) with same shimmer animation.
+
+#### Changed
+- Removed old `animate-glisten` CSS animation (replaced by `shimmer-gold-icon` for icons, `shimmer-gold`/`shimmer-silver` for text)
+
+#### Files Modified
+- `Navbar.tsx` — `marginTop: 0.4em` on Produk li + `shimmer-gold-icon` on Gem
+- `Footer.tsx` — `shimmer-gold-icon` on Gem + `shimmer-silver` on "Beling"
+- `index.css` — Added `shimmer` keyframes, `.shimmer-gold`, `.shimmer-silver`, `shimmer-gold-color`, `.shimmer-gold-icon`. Removed `glisten`/`animate-glisten`.
+
+#### Build Status
+- ✅ `npm run build` successful (5.29s)
 - ✅ Zero TypeScript errors
 
 ---
