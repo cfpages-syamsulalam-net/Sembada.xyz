@@ -22,7 +22,7 @@ export function LaboratoriumCabinetPage() {
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">
-          <img src="/images/laboratorium-cabinet/laboratorium%20cabinet%201.png" alt="" className="w-full aspect-[21/9] object-cover grayscale opacity-30" />
+          <img src="/images/laboratorium-cabinet/laboratorium%20cabinet%201.png" alt="" className="w-full aspect-[21/9] object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/80 to-[#0B0C10]" />
         </div>
         <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center py-24">
@@ -45,7 +45,7 @@ export function LaboratoriumCabinetPage() {
               <div className="space-y-6">
                 {features.map((f, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
+                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)' }}>
                       <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
@@ -60,7 +60,7 @@ export function LaboratoriumCabinetPage() {
             {/* Right - Image Grid */}
             <div className="grid grid-cols-2 gap-4">
               {['/images/laboratorium-cabinet/laboratorium%20cabinet%202.png', '/images/laboratorium-cabinet/laboratorium%20cabinet%203.png', '/images/laboratorium-cabinet/laboratorium%20cabinet%204.png', '/images/laboratorium-cabinet/laboratorium%20cabinet%20toilet%20fasilitas%20umum.jpg'].map((img, i) => (
-                <div key={i} className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${i % 2 === 1 ? 'translate-y-12' : ''}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+                <div key={i} className={`aspect-square transition-all duration-700 ${i % 2 === 1 ? 'translate-y-12' : ''}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>
               ))}
@@ -82,7 +82,7 @@ export function LaboratoriumCabinetPage() {
               <div key={i} className={`group relative overflow-hidden ${v.span}`} style={{ background: 'rgba(17, 18, 22, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
                 <div className="p-1">
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <img src={v.img} alt={v.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+                    <img src={v.img} alt={v.name} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent opacity-80" />
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#e3e2e8] mb-1">{v.name}</h3>

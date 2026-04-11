@@ -118,7 +118,6 @@ export function ProductKnowledgePage() {
                       style={{
                         clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                         background: 'rgba(17, 18, 22, 1)',
-                        border: '1px solid rgba(212, 175, 55, 0.4)',
                       }}
                     >
                     <product.Icon className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50] transition-colors duration-300 group-hover:text-[#0B0C10]" />
@@ -176,7 +175,6 @@ export function ProductKnowledgePage() {
                     style={{
                       clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                       background: 'rgba(212, 175, 55, 0.2)',
-                      border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
                     <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
@@ -198,7 +196,6 @@ export function ProductKnowledgePage() {
                     style={{
                       clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                       background: 'rgba(212, 175, 55, 0.2)',
-                      border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
                     <Settings className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />

@@ -39,7 +39,7 @@ export function OfficeCubiclePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {variants.map((v, i) => (
               <div key={i} className={`p-8 md:p-10 transition-transform duration-500 hover:-translate-y-4 ${v.offset || ''}`} style={{ background: 'rgba(17, 18, 22, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-                <div className="h-64 mb-6 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                <div className="h-64 mb-6 overflow-hidden transition-all duration-700">
                   <img src={v.image} alt={v.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h3 className="text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-3">{v.name}</h3>
@@ -62,7 +62,7 @@ export function OfficeCubiclePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="grid grid-cols-2 gap-4 pt-20">
               {['/images/office-cubicle/office%20cubicle%20advance%20staff%20workstations.webp', '/images/office-cubicle/office%20cubicle%20leader%20staff%20workstations.jpg'].map((img, i) => (
-                <div key={i} className="aspect-square grayscale hover:grayscale-0 transition-all duration-700" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+                <div key={i} className="aspect-square transition-all duration-700" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>
               ))}

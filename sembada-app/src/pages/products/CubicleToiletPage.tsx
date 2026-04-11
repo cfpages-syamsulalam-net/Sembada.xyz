@@ -41,7 +41,7 @@ export function CubicleToiletPage() {
               <div key={i} className={`p-6 transition-all duration-300 hover:-translate-y-2 ${v.offset || ''}`}
                 style={{ background: 'rgba(17, 18, 22, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(212, 175, 55, 0.2)' }}
               >
-                <div className="h-48 mb-4 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                <div className="h-48 mb-4 overflow-hidden transition-all duration-700">
                   <img src={v.image} alt={v.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h3 className="text-base font-black uppercase tracking-tight text-[#f2ca50] mb-2">{v.name}</h3>
@@ -59,7 +59,7 @@ export function CubicleToiletPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
               {['/images/cubicle-toilet/cubicle%20toilet%20kantor%20modern.jpg', '/images/cubicle-toilet/cubicle%20toilet%20hotel%20bintang%204.jpg'].map((img, i) => (
-                <div key={i} className="aspect-square grayscale hover:grayscale-0 transition-all duration-700" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+                <div key={i} className="aspect-square transition-all duration-700" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>
               ))}
@@ -73,7 +73,7 @@ export function CubicleToiletPage() {
                   { icon: Square, title: 'Efisiensi Ruang', desc: 'Desain tipis mengoptimalkan space' },
                 ].map((f, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
+                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)' }}>
                       <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>

@@ -36,7 +36,7 @@ export function PortableToiletPage() {
           <img
             src="/images/toilet-portable/toilet%20portable.jpg"
             alt="Portable Toilet Hero"
-            className="w-full h-full object-cover grayscale opacity-20"
+            className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0C10]/80 to-[#0B0C10]" />
         </div>
@@ -135,7 +135,6 @@ export function PortableToiletPage() {
                   style={{
                     clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                     background: 'rgba(212, 175, 55, 0.2)',
-                    border: '1px solid rgba(212, 175, 55, 0.4)',
                   }}
                 >
                   {variant.highlight ? <Star className="w-8 h-8 text-[#f2ca50]" /> : <ShowerHead className="w-8 h-8 text-[#f2ca50]" />}
@@ -189,7 +188,7 @@ export function PortableToiletPage() {
               ].map((img, i) => (
                 <div
                   key={i}
-                  className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${
+                  className={`aspect-square transition-all duration-700 ${
                     i % 2 === 1 ? 'pt-12' : ''
                   }`}
                   style={{

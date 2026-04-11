@@ -74,11 +74,11 @@ export function ProductGrid() {
           {products.map((product, index) => (
             <div key={index} className={`group ${product.offset}`}>
               {/* Hexagon Container with 5px Border */}
-              <div 
-                className="relative w-full aspect-square mb-8 overflow-hidden transition-all duration-500 group-hover:scale-[1.02] hexagon-border-8"
+              <div
+                className="relative w-full aspect-square mb-8 transition-all duration-500 group-hover:scale-[1.02] hexagon-border-5"
               >
                 <div
-                  className="w-full h-full"
+                  className="w-full h-full overflow-hidden"
                   style={{
                     clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                     background: 'rgba(11, 12, 16, 0.7)',
@@ -90,7 +90,7 @@ export function ProductGrid() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-80"
+                    className="w-full h-full object-cover opacity-60 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-100"
                   />
 
                   {/* Icon Overlay */}
@@ -112,7 +112,17 @@ export function ProductGrid() {
         <div className="text-center mt-16">
           <Link
             to="/produk"
-            className="inline-block border border-[#f2ca50]/50 text-[#f2ca50] px-12 py-4 uppercase text-xs font-black tracking-widest transition-all duration-300 hover:bg-[#f2ca50] hover:text-[#0B0C10]"
+            className="inline-block border border-[#f2ca50]/50 text-[#f2ca50] px-12 py-4 uppercase text-xs font-black tracking-widest transition-all duration-300 hover:text-[#0B0C10] hover:border-transparent"
+            style={{
+              backgroundSize: '200% 100%',
+              backgroundImage: 'linear-gradient(135deg, transparent 0%, transparent 100%)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #BF953F 0%, #f2ca50 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, transparent 0%, transparent 100%)'
+            }}
           >
             Lihat Semua Produk
           </Link>

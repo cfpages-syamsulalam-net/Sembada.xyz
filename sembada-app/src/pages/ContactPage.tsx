@@ -132,7 +132,6 @@ export function ContactPage() {
                     style={{
                       clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                       background: 'rgba(212, 175, 55, 0.2)',
-                      border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
                   <MapPin className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
@@ -154,7 +153,6 @@ export function ContactPage() {
                     style={{
                       clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                       background: 'rgba(212, 175, 55, 0.2)',
-                      border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
                   <Phone className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
@@ -176,7 +174,6 @@ export function ContactPage() {
                     style={{
                       clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                       background: 'rgba(212, 175, 55, 0.2)',
-                      border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
                   <Mail className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />

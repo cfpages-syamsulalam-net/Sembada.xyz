@@ -57,8 +57,6 @@ export function ValueProposition() {
                       background: 'rgba(11, 12, 16, 0.7)',
                       backdropFilter: 'blur(24px)',
                       WebkitBackdropFilter: 'blur(24px)',
-                      border: '1px solid rgba(212, 175, 55, 0.4)',
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
                     }}
                   >
                     <pillar.icon className="w-8 h-8 text-[#f2ca50]" />
@@ -104,7 +102,7 @@ export function ValueProposition() {
               <img
                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop"
                 alt="Blueprint"
-                className="w-full grayscale opacity-20 mb-8 md:mb-10"
+                className="w-full opacity-20 mb-8 md:mb-10"
               />
 
               {/* Blockquote */}

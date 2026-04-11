@@ -35,7 +35,7 @@ export function CNCOrnamentPage() {
               { icon: Layers, t: 'Multi Material', d: 'Kayu, acrylic, metal' },
             ].map((f, i) => (
               <div key={i} className={`text-center ${f.offset || ''}`}>
-                <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(11, 12, 16, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
+                <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(11, 12, 16, 0.7)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}>
                   <f.icon className="w-12 h-12 text-[#f2ca50]" />
                 </div>
                 <h3 className="text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-2">{f.t}</h3>
@@ -57,7 +57,7 @@ export function CNCOrnamentPage() {
           <div className="grid grid-cols-12 gap-4 md:gap-8">
             {showcases.map((s, i) => (
               <div key={i} className={`group relative overflow-hidden ${s.span} ${s.h} ${s.offset || ''}`}>
-                <img src={s.img} alt={s.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" />
+                <img src={s.img} alt={s.title} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-6 left-6">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#f2ca50] font-black mb-1 block">{s.cat}</span>

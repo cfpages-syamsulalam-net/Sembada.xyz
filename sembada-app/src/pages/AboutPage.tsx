@@ -24,7 +24,7 @@ export function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-24">
             {/* Left Side - Image */}
             <div className="relative">
-              <div className="relative overflow-hidden grayscale mix-blend-luminosity">
+              <div className="relative overflow-hidden mix-blend-luminosity">
                 <img
                   src="/images/office-cubicle/office%20cubicle%201.jpg"
                   alt="Sembada BatuBeling Legacy"
@@ -117,7 +117,6 @@ export function AboutPage() {
                 style={{
                   clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                   background: 'rgba(212, 175, 55, 0.2)',
-                  border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
                 <Eye className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
@@ -145,7 +144,6 @@ export function AboutPage() {
                 style={{
                   clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                   background: 'rgba(212, 175, 55, 0.2)',
-                  border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
                 <Building className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
@@ -173,7 +171,6 @@ export function AboutPage() {
                 style={{
                   clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                   background: 'rgba(212, 175, 55, 0.2)',
-                  border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
                 <Users className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
@@ -201,7 +198,6 @@ export function AboutPage() {
                 style={{
                   clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
                   background: 'rgba(212, 175, 55, 0.2)',
-                  border: '1px solid rgba(212, 175, 55, 0.4)',
                 }}
               >
                 <Settings className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />

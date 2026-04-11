@@ -190,6 +190,46 @@
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
+/* Metallic Shimmer Animation - shifts gradient position */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gold Shimmer for text elements */
+.shimmer-gold {
+  background: linear-gradient(270deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+/* Silver Shimmer for text elements */
+.shimmer-silver {
+  background: linear-gradient(270deg, #949494 0%, #C0C0C0 25%, #E8E8E8 50%, #C0C0C0 75%, #949494 100%);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+/* Gold Shimmer for SVG icons - animates color through gold shades */
+@keyframes shimmer-gold-color {
+  0% { color: #BF953F; filter: drop-shadow(0 0 1px rgba(191, 149, 63, 0.3)); }
+  25% { color: #FCF6BA; filter: drop-shadow(0 0 3px rgba(252, 246, 186, 0.5)); }
+  50% { color: #B38728; filter: drop-shadow(0 0 2px rgba(179, 135, 40, 0.4)); }
+  75% { color: #FBF5B7; filter: drop-shadow(0 0 3px rgba(251, 245, 183, 0.5)); }
+  100% { color: #BF953F; filter: drop-shadow(0 0 1px rgba(191, 149, 63, 0.3)); }
+}
+
+.shimmer-gold-icon {
+  animation: shimmer-gold-color 4s ease-in-out infinite;
+}
+
 /* Hexagon with Border - Use wrapper approach */
 .hexagon-border {
   position: relative;

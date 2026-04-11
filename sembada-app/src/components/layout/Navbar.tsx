@@ -1,13 +1,32 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { productData } from '@/data/products'
-import { ProductIcons } from '@/data/productIcons'
+import {
+  Droplets,
+  DoorOpen,
+  Briefcase,
+  Move,
+  Building2,
+  Layers,
+  FlaskConical,
+  Gem,
+} from 'lucide-react'
+
+const ProductLucideIcons = {
+  'fa-toilet': Droplets,
+  'fa-door-open': DoorOpen,
+  'fa-desktop': Briefcase,
+  'fa-door-closed': Move,
+  'fa-gear': Building2,
+  'fa-layer-group': Layers,
+  'fa-flask': FlaskConical,
+} as const
 
 const productItems = productData.map(p => ({
   label: p.label,
   path: p.path,
   description: p.description,
-  icon: p.icon,
+  iconKey: p.icon,
 }))
 
 export function Navbar() {
@@ -57,9 +76,10 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 max-w-[250px]">
+            {/* Metallic Gem Icon */}
+            <Gem className="w-5 h-5 md:w-6 md:h-6 shimmer-gold-icon flex-shrink-0" strokeWidth={1.5} />
             <span className="font-black text-sm md:text-base lg:text-lg xl:text-xl tracking-tight uppercase leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#f2ca50] to-[#AA771C]">Sembada Batu </span>
-              <span className="text-[#C0C0C0]">Beling</span>
+              <span className="shimmer-gold">Sembada Batu</span><span className="shimmer-silver">Beling</span>
             </span>
           </Link>
 
@@ -82,24 +102,20 @@ export function Navbar() {
 
             {/* Produk Megamenu */}
             <li
-              className="relative group"
+              className="relative group flex items-center"
+              style={{ marginTop: '0.4em' }}
               onMouseEnter={() => setProdukOpen(true)}
               onMouseLeave={() => setProdukOpen(false)}
             >
-              {/* Trigger area with invisible bridge */}
-              <div className="relative flex items-center h-full">
-                <button
-                  className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap ${
-                    location.pathname.startsWith('/produk')
-                      ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50 pb-1'
-                      : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
-                  }`}
-                >
-                  Produk
-                </button>
-                {/* Invisible bridge to prevent hover gap */}
-                <div className="absolute top-full left-0 right-0 h-3" />
-              </div>
+              <button
+                className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap ${
+                  location.pathname.startsWith('/produk')
+                    ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50 pb-1'
+                    : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
+                }`}
+              >
+                Produk
+              </button>
 
               {/* Megamenu Dropdown */}
               {produkOpen && (
@@ -114,15 +130,17 @@ export function Navbar() {
                   }}
                 >
                   <div className="grid grid-cols-2 gap-4 md:gap-6">
-                    {productItems.map((product) => (
+                    {productItems.map((product) => {
+                      const LucideIcon = ProductLucideIcons[product.iconKey as keyof typeof ProductLucideIcons]
+                      return (
                       <Link
                         key={product.path}
                         to={product.path}
                         className="group/item flex items-start gap-3 p-3 md:p-4 transition-all duration-200 hover:bg-[#f2ca50]/10"
                       >
-                        {/* Inline SVG Icon */}
-                        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-[#f2ca50]/30 text-[#f2ca50] group-hover/item:border-[#f2ca50] transition-colors">
-                          {ProductIcons[product.icon as keyof typeof ProductIcons]}
+                        {/* Lucide Icon */}
+                        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#f2ca50] group-hover/item:text-[#f2ca50]/80 transition-colors">
+                          {LucideIcon && <LucideIcon className="w-5 h-5" />}
                         </div>
                         <div>
                           <h4 className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] mb-1 group-hover/item:text-white transition-colors">
@@ -133,7 +151,8 @@ export function Navbar() {
                           </p>
                         </div>
                       </Link>
-                    ))}
+                      )
+                    })}
                   </div>
                   {/* View All Link */}
                   <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-[#f2ca50]/20 text-center">
@@ -152,11 +171,23 @@ export function Navbar() {
           {/* CTA Button */}
           <Link
             to="/hubungi-kami"
-            className="hidden lg:block border border-[#f2ca50]/50 text-[#f2ca50] px-4 xl:px-6 py-1.5 xl:py-2 uppercase text-[9px] md:text-[10px] font-black tracking-[0.15em] xl:tracking-[0.2em] transition-all duration-300 hover:bg-[#f2ca50] hover:text-[#0B0C10] whitespace-nowrap"
+            className="hidden lg:block border border-[#f2ca50]/50 text-[#f2ca50] px-4 xl:px-6 py-1.5 xl:py-2 uppercase text-[9px] md:text-[10px] font-black tracking-[0.15em] xl:tracking-[0.2em] transition-all duration-300 hover:text-[#0B0C10] hover:border-transparent whitespace-nowrap"
             style={{
               background: 'rgba(11, 12, 16, 0.7)',
               backdropFilter: 'blur(24px)',
               WebkitBackdropFilter: 'blur(24px)',
+              backgroundSize: '200% 100%',
+              backgroundImage: 'linear-gradient(135deg, transparent 0%, transparent 100%)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'linear-gradient(135deg, #BF953F 0%, #f2ca50 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%)'
+              e.currentTarget.style.setProperty('-webkit-backdrop-filter', 'none')
+              e.currentTarget.style.backdropFilter = 'none'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(11, 12, 16, 0.7)'
+              e.currentTarget.style.setProperty('-webkit-backdrop-filter', 'blur(24px)')
+              e.currentTarget.style.backdropFilter = 'blur(24px)'
             }}
           >
             Konsultasi Sekarang
@@ -211,15 +242,17 @@ export function Navbar() {
                   Produk
                 </div>
                 <div className="pl-4 space-y-3">
-                  {productItems.map((product) => (
+                  {productItems.map((product) => {
+                    const LucideIcon = ProductLucideIcons[product.iconKey as keyof typeof ProductLucideIcons]
+                    return (
                     <Link
                       key={product.path}
                       to={product.path}
                       className="flex items-start gap-3 py-1"
                       onClick={() => setMenuOpen(false)}
                     >
-                      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-[#f2ca50]/30 text-[#f2ca50] mt-0.5">
-                        {ProductIcons[product.icon as keyof typeof ProductIcons]}
+                      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-[#f2ca50] mt-0.5">
+                        {LucideIcon && <LucideIcon className="w-4 h-4" />}
                       </div>
                       <div>
                         <span className="block text-xs text-[#e3e2e8] font-bold">
@@ -230,7 +263,8 @@ export function Navbar() {
                         </span>
                       </div>
                     </Link>
-                  ))}
+                    )
+                  })}
                 </div>
               </li>
             </ul>

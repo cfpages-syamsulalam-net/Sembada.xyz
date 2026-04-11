@@ -65,7 +65,7 @@ export function MovableDoorPage() {
               <div className="space-y-6">
                 {[{ icon: VolumeX, t: 'Sound Proofing', d: 'Reduksi suara 45-50 dB' }, { icon: Settings2, t: 'Precision Track', d: 'Rel aluminium ekstrusi' }, { icon: Shield, t: 'Mechanical Locking', d: 'Sistem pengaman multi-point' }].map((f, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
+                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)' }}>
                       <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
@@ -78,7 +78,7 @@ export function MovableDoorPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {['/images/partisi-ruangan/movable%20door%20rubi.jpg', '/images/partisi-ruangan/movable%20door%20kalimaya.png', '/images/partisi-ruangan/movable%20door%20batu%20beling.jpg', '/images/partisi-ruangan/movable%20door%20emerald.jpg'].map((img, i) => (
-                <div key={i} className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${i % 2 === 0 ? 'translate-y-12' : '-mt-12'}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+                <div key={i} className={`aspect-square transition-all duration-700 ${i % 2 === 0 ? 'translate-y-12' : '-mt-12'}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>
               ))}

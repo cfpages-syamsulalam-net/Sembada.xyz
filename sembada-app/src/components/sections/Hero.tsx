@@ -79,15 +79,20 @@ export function Hero() {
           {/* CTA Button */}
           <Link
             to="/produk"
-            className="group relative inline-block px-10 md:px-16 py-4 md:py-6 uppercase text-[10px] md:text-xs font-black tracking-widest overflow-hidden border border-[#f2ca50]/50 text-[#f2ca50] transition-all duration-300 hover:border-[#f2ca50]"
+            className="group relative inline-block px-10 md:px-16 py-4 md:py-6 uppercase text-[10px] md:text-xs font-black tracking-widest overflow-hidden border border-[#f2ca50]/50 text-[#f2ca50] transition-all duration-300 hover:border-transparent hover:text-[#0B0C10]"
             style={{
               background: 'rgba(11, 12, 16, 0.7)',
               backdropFilter: 'blur(24px)',
               WebkitBackdropFilter: 'blur(24px)',
             }}
           >
-            {/* Slide-up fill effect */}
-            <span className="absolute inset-0 bg-[#f2ca50] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            {/* Slide-up gold gradient fill effect */}
+            <span
+              className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              style={{
+                background: 'linear-gradient(135deg, #BF953F 0%, #f2ca50 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%)',
+              }}
+            />
             <span className="relative group-hover:text-[#0B0C10] z-10">
               Jelajahi Layanan Kami
             </span>

@@ -86,7 +86,7 @@ export function PortfolioPage() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
                   </div>
                   {/* Category Badge */}

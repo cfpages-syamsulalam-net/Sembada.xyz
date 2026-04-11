@@ -45,7 +45,7 @@ export function CellustonePage() {
               <div className="space-y-4">
                 {features.map((f, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
+                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)', background: 'rgba(212, 175, 55, 0.1)' }}>
                       <f.icon className="w-8 h-8 text-[#f2ca50]" />
                     </div>
                     <div>
@@ -65,7 +65,7 @@ export function CellustonePage() {
                 '/images/cellustone/cellustone%203.jpg',
                 '/images/cellustone/cellustone%204.jpg',
               ].map((img, i) => (
-                <div key={i} className={`aspect-square grayscale hover:grayscale-0 transition-all duration-700 ${['translate-y-12', '-translate-y-6', 'translate-y-6', ''][i]}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+                <div key={i} className={`aspect-square transition-all duration-700 ${['translate-y-12', '-translate-y-6', 'translate-y-6', ''][i]}`} style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
                   <img src={img} alt="" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 group-hover:opacity-100" />
                   <div className="absolute inset-0 bg-[#f2ca50]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -86,7 +86,7 @@ export function CellustonePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {applications.map((app, i) => (
               <div key={i} className={`group relative aspect-[4/5] overflow-hidden ${app.offset || ''}`}>
-                <img src={app.img} alt={app.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                <img src={app.img} alt={app.name} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#e3e2e8] mb-2">{app.name}</h3>

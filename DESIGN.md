@@ -723,7 +723,36 @@ The starry night background includes multiple animated layers:
 - CSS animations supported in all modern browsers
 - Shooting stars degrade gracefully (static stars still visible)
 
-### 13.5 When to Consider CSS Libraries
+### 13.5 Icon & Image Treatment Rules (Updated 11 April 2026)
+
+#### Icon Borders
+- **NO borders on icon containers** — hexagonal or otherwise
+- Icons use only `clip-path` + `background` for their hexagonal shape
+- Border wrappers (`hexagon-border`, `hexagon-border-5`, `hexagon-border-8`) are **ONLY for images**, never for icons
+- Icon hex containers use only: `clip-path` + `background: rgba(212, 175, 55, 0.1)` or `rgba(212, 175, 55, 0.2)`
+
+#### Image Borders
+- **Hexagonal borders on images** use wrapper classes:
+  - `.hexagon-border-5` — 5px gold gradient border (standard, most common)
+  - `.hexagon-border-8` — 8px gold gradient border (homepage products)
+- Border is **always visible** — no hover required
+- Border uses `::before` pseudo-element with same `clip-path` + gradient background
+
+#### Image Grayscale
+- **NO grayscale filter on any images** — all images display in full color by default
+- Remove `grayscale`, `grayscale-0`, `hover:grayscale-0` classes from all `<img>` tags
+- Images may use `opacity` for background/hero images (e.g., `opacity-20`, `opacity-30`)
+- Hover effects: `scale`, `opacity` changes only — no color transitions
+
+#### Icon Library
+- **Lucide React** for all UI icons (NOT Material Symbols, NOT inline SVGs for UI)
+- Social media brand icons (Instagram, WhatsApp, Facebook) use **inline SVGs** — not Lucide
+- All icon components use `className` for sizing: `<Icon className="w-5 h-5" />`
+- Icon containers in Navbar/Footer product menus have **no borders**
+
+---
+
+### 13.6 When to Consider CSS Libraries
 
 **Evaluate on case-by-case basis:**
 1. Does it provide something difficult to replicate in custom CSS?

@@ -95,6 +95,34 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Cosmetic Fixes Phase] - 11 April 2026
+
+### 14:00 - 15:00 WIB - Icon, Border, Button Fixes
+
+#### Fixed
+1. **Homepage hexagonal border** — Changed from `hexagon-border-8` to `hexagon-border-5` and removed `overflow-hidden` from outer wrapper. The `::before` pseudo-element border was being clipped, causing thick side borders and missing top/bottom borders. Now matches portfolio page appearance.
+
+2. **Navbar megamenu icons disappeared** — Fixed icon key mapping. `products.ts` uses `'fa-toilet'`, `'fa-door-open'`, etc. but `ProductLucideIcons` was mapped to `'portable-toilet'`, `'cubicle-toilet'`, etc. Updated mapping to match the actual `fa-*` keys.
+
+3. **Footer product link icons disappeared** — Same mapping fix applied to Footer component.
+
+4. **Footer "Hubungi Kami" section** — Added Lucide React icons: MapPin (address), Phone (phone/WhatsApp), Mail (email).
+
+5. **Homepage "Lihat Semua Produk" button** — Changed hover from solid yellow to gold gradient effect (5-stop metallic gradient).
+
+6. **Navbar "Konsultasi Sekarang" button** — Fixed hover readability issue. Text was turning black but background staying transparent = unreadable. Now applies full gold gradient background on hover with dark text.
+
+#### Files Modified
+- `ProductGrid.tsx` — Border fix + button gold hover
+- `Navbar.tsx` — Icon mapping fix + button gold hover
+- `Footer.tsx` — Icon mapping fix + Hubungi Kami icons
+
+#### Build Status
+- ✅ `npm run build` successful (31.20s)
+- ✅ Zero TypeScript errors
+
+---
+
 ## [Planning & Documentation Phase] - 7 April 2026
 
 ### 07:00 - 09:30 WIB - Initial Setup & Documentation
