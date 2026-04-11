@@ -150,6 +150,38 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Product Knowledge Content Phase] - 11 April 2026
+
+### 16:00 - 17:30 WIB - Comprehensive Product Detail Pages
+
+#### Updated
+All 7 product detail pages rewritten with comprehensive 5W1H product knowledge content:
+
+1. **CellustonePage** — Added "Apa itu Cellustone", "Kenapa Cellustone terbaik" sections, 4 benefit cards. Features + Applications updated.
+2. **CubicleToiletPage** — Added phenolic resin product knowledge content. Explicitly mentions phenolic material. 5 variant cards with descriptions.
+3. **CNCOrnamentPage** — Added "Apa itu CNC Ornament" mentioning PT KAI, DPRD, Politeknik. "Kenapa CNC Ornament" with 4 benefit cards. Showcase updated.
+4. **PortableToiletPage** — Added full content about movable sanitation. Stats with icons. 3 variant cards with descriptions and features.
+5. **OfficeCubiclePage** — Added phenolic resin workstation panel content. Variants show size/material/features. Features section added.
+6. **MovableDoorPage** — Added sliding partition system content. 4 variant cards (Rubi, Kalimaya, Batu Beling, Emerald).
+7. **LaboratoriumCabinetPage** — Added chemical-resistant furniture content. 3 variant cards with descriptions.
+
+#### Added
+- **ScrollToTop component** (`src/components/ui/ScrollToTop.tsx`) — Auto-scrolls to top on route change. Smooth scroll. Ignores same-page clicks. Added to `App.tsx`.
+
+#### Structure
+- Each page: Hero → "Apa itu [Produk]" → "Kenapa [Produk]" → Features → Variants/Showcase → Portfolio → CTA
+- Content follows 5W1H framework. Phenolic resin mentioned where applicable.
+
+#### Files Modified (8 total)
+- All 7 `src/pages/products/*.tsx` files
+- `src/App.tsx` + `src/components/ui/ScrollToTop.tsx` (new)
+
+#### Build Status
+- ✅ `npm run build` successful (6.31s)
+- ✅ Zero TypeScript errors
+
+---
+
 ## [Planning & Documentation Phase] - 7 April 2026
 
 ### 07:00 - 09:30 WIB - Initial Setup & Documentation
