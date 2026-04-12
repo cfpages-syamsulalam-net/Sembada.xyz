@@ -2,9 +2,15 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Shield, Droplet, CheckCircle2, Layers, Cable } from 'lucide-react'
 
 export function OfficeCubiclePage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk', href: '/produk' },
+    { name: 'Office Cubicle' }
+  ]
   const officePortfolios = portfolioData['office-cubicle']
   const variants = [
     { name: 'Advance Staff', size: '1200mm x 600mm', material: 'Phenolic 12mm', features: 'Cable Management', image: '/images/office-cubicle/office%20cubicle%20advance%20staff.jpg' },
@@ -69,6 +75,11 @@ export function OfficeCubiclePage() {
           <a href="/hubungi-kami" className="inline-block px-8 md:px-12 py-4 md:py-5 bg-[#f2ca50] text-[#0B0C10] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-white">Minta Penawaran</a>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* Apa itu Office Cubicle */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

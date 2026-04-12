@@ -2,9 +2,15 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Leaf, Shield, Droplets, Sun, CheckCircle2 } from 'lucide-react'
 
 export function CellustonePage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk', href: '/produk' },
+    { name: 'Cellustone' }
+  ]
   const cellustonePortfolios = portfolioData['cellustone']
   const features = [
     { icon: Leaf, title: 'Ramah Lingkungan', desc: 'Material komposit dari bahan alam dengan cellulosa fibre — pilihan bijak untuk bangunan hijau' },
@@ -71,6 +77,11 @@ export function CellustonePage() {
           <div className="w-px h-24 mx-auto bg-gradient-to-b from-[#f2ca50] to-transparent" />
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* Apa itu Cellustone */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

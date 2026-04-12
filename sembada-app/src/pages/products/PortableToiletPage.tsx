@@ -2,9 +2,15 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { ShowerHead, Star, CheckCircle2, MapPin, Calendar, AlertTriangle, Truck, Shield } from 'lucide-react'
 
 export function PortableToiletPage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk', href: '/produk' },
+    { name: 'Toilet Portable' }
+  ]
   const portablePortfolios = portfolioData['portable-toilet']
   const variants = [
     {
@@ -112,6 +118,11 @@ export function PortableToiletPage() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* Stats Section */}
       <section className="py-12 md:py-16 bg-[#111216]">

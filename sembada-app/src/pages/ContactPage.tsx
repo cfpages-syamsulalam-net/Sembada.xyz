@@ -1,8 +1,14 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { MapPin, Phone, Mail } from 'lucide-react'
 
 export function ContactPage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Hubungi Kami' }
+  ]
+
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       <SEO
@@ -59,6 +65,9 @@ export function ContactPage() {
           Siap membantu mewujudkan proyek impian Anda. Hubungi kami sekarang.
         </p>
       </section>
+
+      {/* Breadcrumb */}
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* Main Content Grid */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

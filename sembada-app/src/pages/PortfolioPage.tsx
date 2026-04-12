@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { portfolioData } from '@/data/portfolios'
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 
 const categories = [
   { id: 'all', label: 'Semua Proyek' },
@@ -16,6 +17,10 @@ const categories = [
 
 export function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('all')
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Portofolio' }
+  ]
 
   // Flatten all portfolio items or filter by category
   const filteredItems = activeFilter === 'all'
@@ -49,6 +54,9 @@ export function PortfolioPage() {
           </p>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* Filter Tabs with Scroll Arrows */}
       <section className="py-6 md:py-8 bg-[#0B0C10] border-b border-[#f2ca50]/10 sticky top-16 md:top-20 z-40" style={{ backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}>

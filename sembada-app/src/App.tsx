@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
@@ -7,17 +8,31 @@ import { Hero } from '@/components/sections/Hero'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ProductGrid } from '@/components/sections/ProductGrid'
 import { ValueProposition } from '@/components/sections/ValueProposition'
-import { AboutPage } from '@/pages/AboutPage'
-import { ProductKnowledgePage } from '@/pages/ProductKnowledgePage'
-import { PortfolioPage } from '@/pages/PortfolioPage'
-import { ContactPage } from '@/pages/ContactPage'
-import { PortableToiletPage } from '@/pages/products/PortableToiletPage'
-import { CubicleToiletPage } from '@/pages/products/CubicleToiletPage'
-import { OfficeCubiclePage } from '@/pages/products/OfficeCubiclePage'
-import { MovableDoorPage } from '@/pages/products/MovableDoorPage'
-import { CNCOrnamentPage } from '@/pages/products/CNCOrnamentPage'
-import { CellustonePage } from '@/pages/products/CellustonePage'
-import { LaboratoriumCabinetPage } from '@/pages/products/LaboratoriumCabinetPage'
+
+// Lazy load pages for code splitting
+const AboutPage = lazy(() => import('@/pages/AboutPage').then(module => ({ default: module.AboutPage })))
+const ProductKnowledgePage = lazy(() => import('@/pages/ProductKnowledgePage').then(module => ({ default: module.ProductKnowledgePage })))
+const PortfolioPage = lazy(() => import('@/pages/PortfolioPage').then(module => ({ default: module.PortfolioPage })))
+const ContactPage = lazy(() => import('@/pages/ContactPage').then(module => ({ default: module.ContactPage })))
+const PortableToiletPage = lazy(() => import('@/pages/products/PortableToiletPage').then(module => ({ default: module.PortableToiletPage })))
+const CubicleToiletPage = lazy(() => import('@/pages/products/CubicleToiletPage').then(module => ({ default: module.CubicleToiletPage })))
+const OfficeCubiclePage = lazy(() => import('@/pages/products/OfficeCubiclePage').then(module => ({ default: module.OfficeCubiclePage })))
+const MovableDoorPage = lazy(() => import('@/pages/products/MovableDoorPage').then(module => ({ default: module.MovableDoorPage })))
+const CNCOrnamentPage = lazy(() => import('@/pages/products/CNCOrnamentPage').then(module => ({ default: module.CNCOrnamentPage })))
+const CellustonePage = lazy(() => import('@/pages/products/CellustonePage').then(module => ({ default: module.CellustonePage })))
+const LaboratoriumCabinetPage = lazy(() => import('@/pages/products/LaboratoriumCabinetPage').then(module => ({ default: module.LaboratoriumCabinetPage })))
+
+// Loading fallback component
+function PageLoading() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-[#0B0C10]">
+      <div className="text-center">
+        <div className="w-16 h-16 border-4 border-[#f2ca50]/30 border-t-[#f2ca50] rounded-full animate-spin" />
+        <p className="mt-4 text-[#94A3B8] text-sm uppercase tracking-widest">Loading...</p>
+      </div>
+    </div>
+  )
+}
 
 function HomePage() {
   return (
@@ -104,20 +119,22 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <main className="flex-1 relative z-10">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/tentang-kami" element={<AboutPage />} />
-          <Route path="/produk" element={<ProductKnowledgePage />} />
-          <Route path="/produk/portable-toilet" element={<PortableToiletPage />} />
-          <Route path="/produk/cubicle-toilet" element={<CubicleToiletPage />} />
-          <Route path="/produk/office-cubicle" element={<OfficeCubiclePage />} />
-          <Route path="/produk/movable-door" element={<MovableDoorPage />} />
-          <Route path="/produk/cnc-ornament" element={<CNCOrnamentPage />} />
-          <Route path="/produk/cellustone-ornament" element={<CellustonePage />} />
-          <Route path="/produk/laboratorium-cabinet" element={<LaboratoriumCabinetPage />} />
-          <Route path="/portofolio" element={<PortfolioPage />} />
-          <Route path="/hubungi-kami" element={<ContactPage />} />
-        </Routes>
+        <Suspense fallback={<PageLoading />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tentang-kami" element={<AboutPage />} />
+            <Route path="/produk" element={<ProductKnowledgePage />} />
+            <Route path="/produk/portable-toilet" element={<PortableToiletPage />} />
+            <Route path="/produk/cubicle-toilet" element={<CubicleToiletPage />} />
+            <Route path="/produk/office-cubicle" element={<OfficeCubiclePage />} />
+            <Route path="/produk/movable-door" element={<MovableDoorPage />} />
+            <Route path="/produk/cnc-ornament" element={<CNCOrnamentPage />} />
+            <Route path="/produk/cellustone-ornament" element={<CellustonePage />} />
+            <Route path="/produk/laboratorium-cabinet" element={<LaboratoriumCabinetPage />} />
+            <Route path="/portofolio" element={<PortfolioPage />} />
+            <Route path="/hubungi-kami" element={<ContactPage />} />
+          </Routes>
+        </Suspense>
       </main>
       <FloatingWhatsApp />
       <Footer />

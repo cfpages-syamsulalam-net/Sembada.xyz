@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Droplets, DoorOpen, Briefcase, Expand, Building2, LayoutGrid, FlaskConical, ShieldCheck, Settings } from 'lucide-react'
 
 const productIcons = {
@@ -75,6 +76,11 @@ const products = [
 ]
 
 export function ProductKnowledgePage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk' }
+  ]
+
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       <SEO
@@ -96,6 +102,9 @@ export function ProductKnowledgePage() {
         </p>
         <div className="w-20 md:w-24 h-[2px] bg-[#f2ca50]/40 mx-auto mt-6 md:mt-8" />
       </section>
+
+      {/* Breadcrumb */}
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* Product Hex Grid */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

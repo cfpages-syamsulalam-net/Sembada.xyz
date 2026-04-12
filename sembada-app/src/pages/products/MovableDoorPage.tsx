@@ -2,9 +2,15 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { VolumeX, Settings2, Shield, CheckCircle2, DoorOpen, Maximize2 } from 'lucide-react'
 
 export function MovableDoorPage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk', href: '/produk' },
+    { name: 'Movable Door' }
+  ]
   const movablePortfolios = portfolioData['movable-door']
   const variants = [
     { name: 'Rubi', tag: 'Eksklusif', desc: 'Partisi fleksibel semi-permanen — desain premium dengan sistem geser halus', img: '/images/partisi-ruangan/movable%20door%20rubi.jpg' },
@@ -70,6 +76,11 @@ export function MovableDoorPage() {
           <a href="/hubungi-kami" className="inline-block px-8 md:px-12 py-4 md:py-5 bg-[#f2ca50] text-[#0B0C10] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-white">Minta Penawaran</a>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* Apa itu Movable Door */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

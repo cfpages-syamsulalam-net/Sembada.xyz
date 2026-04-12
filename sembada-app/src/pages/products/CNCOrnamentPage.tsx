@@ -2,9 +2,15 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Settings, Building2, Layers, CheckCircle2, Target, Clock } from 'lucide-react'
 
 export function CNCOrnamentPage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk', href: '/produk' },
+    { name: 'CNC Ornament' }
+  ]
   const cncPortfolios = portfolioData['cnc-ornament']
   const showcases = [
     { title: 'Fasad Politeknik', cat: 'Pendidikan', img: '/images/cnc-ornament/cnc%20ornament%20fasad%20politeknik.webp', span: 'col-span-8', h: 'h-[400px] md:h-[500px]' },
@@ -65,6 +71,11 @@ export function CNCOrnamentPage() {
           <a href="/portofolio" className="inline-block px-8 md:px-12 py-4 md:py-5 border border-[#f2ca50]/50 text-[#f2ca50] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-[#f2ca50]/10">Lihat Portofolio</a>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* Apa itu CNC Ornament */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

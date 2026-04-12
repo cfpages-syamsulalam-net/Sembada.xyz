@@ -1,8 +1,14 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Eye, Building, Users, Settings } from 'lucide-react'
 
 export function AboutPage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Tentang Kami' }
+  ]
+
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       <SEO
@@ -23,6 +29,9 @@ export function AboutPage() {
           "Merancang integritas, membangun kesuksesan."
         </p>
       </section>
+
+      {/* Breadcrumb */}
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* Legacy Section */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">

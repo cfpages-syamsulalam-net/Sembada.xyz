@@ -2,9 +2,15 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
+import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { FlaskConical, Droplet, Building2, CheckCircle2, Beaker, ShieldCheck } from 'lucide-react'
 
 export function LaboratoriumCabinetPage() {
+  const breadcrumbItems = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Produk', href: '/produk' },
+    { name: 'Laboratorium Cabinet' }
+  ]
   const labPortfolios = portfolioData['laboratorium-cabinet']
   const features = [
     { icon: FlaskConical, title: 'Resistensi Kimia', desc: 'Tahan berbagai bahan kimia laboratorium — asam, basa, hingga pelarut organik' },
@@ -77,6 +83,11 @@ export function LaboratoriumCabinetPage() {
           </p>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* Apa itu Laboratorium Cabinet */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
