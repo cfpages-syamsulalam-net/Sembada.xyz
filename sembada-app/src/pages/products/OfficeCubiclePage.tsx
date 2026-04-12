@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Shield, Droplet, CheckCircle2, Layers, Cable } from 'lucide-react'
@@ -13,6 +14,48 @@ export function OfficeCubiclePage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Office Cubicle - Sekat Ruang Kerja Phenolic - Sembada Batu Beling"
+        description="Office cubicle phenolic resin untuk sekat ruang kerja modern. Tahan benturan, tidak lapuk, tersedia Advance, Leader, Supervisor. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/office-cubicle"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Office Cubicle",
+            "description": "Sekat antar ruang kerja/meja berbahan Phenolic Resin Premium. Tahan benturan, tidak lapuk, aman untuk suhu dingin/lembab. Dilengkapi fitur wire hole, stop kontak, dan aksesoris aluminium.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Partisi Kantor",
+            "image": [
+              "https://sembada.xyz/images/office-cubicle/office%20cubicle%201.jpg",
+              "https://sembada.xyz/images/office-cubicle/office%20cubicle%20advance%20staff.jpg"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "offerCount": "3",
+              "offers": variants.map(v => ({
+                "@type": "Offer",
+                "name": `Office Cubicle ${v.name}`,
+                "description": `${v.size}, ${v.material}, ${v.features}`
+              }))
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="h-[600px] md:h-[819px] flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">

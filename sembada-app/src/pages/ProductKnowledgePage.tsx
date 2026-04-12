@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { Droplets, DoorOpen, Briefcase, Expand, Building2, LayoutGrid, FlaskConical, ShieldCheck, Settings } from 'lucide-react'
 
 const productIcons = {
@@ -76,6 +77,12 @@ const products = [
 export function ProductKnowledgePage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Pengetahuan Produk - Sembada Batu Beling"
+        description="Jelajahi katalog lengkap produk arsitektur dan interior: toilet portable, cubicle, ornamen CNC, cellustone, dan kabinet laboratorium. Material premium, presisi tinggi."
+        url="https://sembada.xyz/produk"
+        type="website"
+      />
       {/* Hero Header */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
         <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">

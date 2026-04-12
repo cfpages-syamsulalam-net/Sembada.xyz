@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { portfolioData } from '@/data/portfolios'
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 
 const categories = [
   { id: 'all', label: 'Semua Proyek' },
@@ -28,6 +29,12 @@ export function PortfolioPage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Portofolio Proyek - Sembada Batu Beling"
+        description="Lihat hasil proyek kami di seluruh Indonesia: pemasangan toilet, cubicle, ornamen CNC, dan solusi interior premium dari PT. Batu Beling."
+        url="https://sembada.xyz/portofolio"
+        type="website"
+      />
       {/* Hero Section */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 bg-[#0B0C10]">
         <div className="container mx-auto text-center">

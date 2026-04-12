@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Settings, Building2, Layers, CheckCircle2, Target, Clock } from 'lucide-react'
@@ -13,6 +14,42 @@ export function CNCOrnamentPage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Ornamen CNC - Presisi Tinggi Custom Desain - Sembada Batu Beling"
+        description="Ornamen CNC dengan presisi 0.1mm untuk fasad gedung, mushola, masjid. Portofolio: Politeknik Surabaya, KAI, DPRD. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/cnc-ornament"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "CNC Ornament",
+            "description": "Pekerjaan ornamen berbasis komputerisasi yang menghasilkan presisi dan proporsi pas. Memberikan estetika tak lekang oleh waktu. Portofolio: Politeknik Surabaya, Lab Ketahanan Papua, Mushola KAI, Masjid Baitul Fadli, Gedung DPRD Surabaya.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Ornamen Arsitektur",
+            "image": [
+              "https://sembada.xyz/images/cnc-ornament/cnc%20ornament%20fasad%20politeknik.webp",
+              "https://sembada.xyz/images/cnc-ornament/cnc%20ornament%20mushola%20kereta%20makan%20kai.webp"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="h-[600px] md:h-[819px] flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">

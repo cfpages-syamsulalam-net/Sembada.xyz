@@ -22,6 +22,25 @@ import { LaboratoriumCabinetPage } from '@/pages/products/LaboratoriumCabinetPag
 function HomePage() {
   return (
     <>
+      {/* WebSite JSON-LD (Home page only) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sembada Batu Beling",
+            "url": "https://sembada.xyz",
+            "description": "Penyedia produk arsitektur dan interior premium dari PT. Batu Beling",
+            "inLanguage": "id-ID",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://sembada.xyz/produk?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
       <Hero />
       <AboutSection />
       <ProductGrid />
@@ -30,9 +49,54 @@ function HomePage() {
   )
 }
 
+// Organization JSON-LD (site-wide)
+function OrganizationSchema() {
+  const organizationData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sembada Batu Beling",
+    "url": "https://sembada.xyz",
+    "logo": "https://sembada.xyz/og-image.jpg",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "PT. Batu Beling"
+    },
+    "description": "Penyedia produk arsitektur dan interior premium: toilet portable, cubicle, ornamen CNC, dan solusi furnitur dari PT. Batu Beling.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Bogorami No. 05",
+      "addressLocality": "Surabaya",
+      "addressRegion": "Jawa Timur",
+      "postalCode": "60123",
+      "addressCountry": "ID"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+62-852-5746-0869",
+      "contactType": "sales",
+      "areaServed": "ID",
+      "availableLanguage": "Indonesian"
+    },
+    "sameAs": [
+      "https://www.instagram.com/sembadabatubeling",
+      "https://www.facebook.com/sembadabatubeling"
+    ]
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+    />
+  )
+}
+
 function App() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0B0C10] text-[#e3e2e8]">
+      {/* Organization JSON-LD (site-wide) */}
+      <OrganizationSchema />
+      
       {/* Gold Gradient Bars at Top & Bottom */}
       <div className="gold-gradient-top" />
       <div className="gold-gradient-bottom" />

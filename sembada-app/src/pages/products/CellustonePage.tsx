@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Leaf, Shield, Droplets, Sun, CheckCircle2 } from 'lucide-react'
@@ -19,6 +20,42 @@ export function CellustonePage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Cellustone - Wall Panel Ramah Lingkungan - Sembada Batu Beling"
+        description="Cellustone wall panel untuk fasad dan interior. Material komposit alam, tahan air, minim muai-susut. Cocok untuk indoor & outdoor. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/cellustone-ornament"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Cellustone Ornament",
+            "description": "Material komposit dari bahan alam, diperkuat adhesive berkualitas, featured cement, dan cellulosa fibre. Ramah lingkungan, minim muai-susut, tahan untuk area Indoor maupun Outdoor.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Wall Panel",
+            "image": [
+              "https://sembada.xyz/images/cellustone/cellustone%20fasad%201.jpg",
+              "https://sembada.xyz/images/cellustone/cellustone%20wall%20panel%201.jpg"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="h-[600px] md:h-[819px] flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">

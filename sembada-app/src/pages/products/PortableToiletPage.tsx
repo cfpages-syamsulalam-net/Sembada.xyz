@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { ShowerHead, Star, CheckCircle2, MapPin, Calendar, AlertTriangle, Truck, Shield } from 'lucide-react'
@@ -29,6 +30,49 @@ export function PortableToiletPage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Toilet Portable - Solusi Sanitasi Movable - Sembada Batu Beling"
+        description="Toilet portable premium dengan material phenolic resin untuk proyek konstruksi, event, dan tanggap darurat. Mudah dipindah, tahan lama. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/portable-toilet"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Portable Toilet",
+            "description": "Unit sanitasi movable yang fleksibel untuk berbagai kebutuhan. Material premium tahan air, desain modern elegan, mudah dipindahkan. Cocok untuk proyek konstruksi, event, tempat wisata, dan tanggap darurat.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Sanitasi Portable",
+            "image": [
+              "https://sembada.xyz/images/toilet-portable/toilet%20portable.webp",
+              "https://sembada.xyz/images/toilet-portable/toilet%20portable%201.jpg",
+              "https://sembada.xyz/images/toilet-portable/toilet%20portable%202.jpg"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "offerCount": "3",
+              "offers": variants.map(v => ({
+                "@type": "Offer",
+                "name": `Portable Toilet ${v.name}`,
+                "description": v.description
+              }))
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         {/* Background Image */}

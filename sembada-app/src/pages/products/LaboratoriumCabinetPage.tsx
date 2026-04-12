@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { FlaskConical, Droplet, Building2, CheckCircle2, Beaker, ShieldCheck } from 'lucide-react'
@@ -20,6 +21,48 @@ export function LaboratoriumCabinetPage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Kabinet Laboratorium - Tahan Kimia - Sembada Batu Beling"
+        description="Kabinet laboratorium phenolic resin tahan air dan bahan kimia. Tersedia Island, Lemari Asam, Cabinet Dinding. Untuk lab kimia & area basah. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/laboratorium-cabinet"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Laboratorium Cabinet",
+            "description": "Furnitur berbahan dasar Phenolic Resin yang solid, halus, dan dilapisi motif/tekstur HPL. Tahan terhadap air dan berbagai bahan kimia (area basah).",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Furnitur Laboratorium",
+            "image": [
+              "https://sembada.xyz/images/laboratorium-cabinet/laboratorium%20cabinet%201.png",
+              "https://sembada.xyz/images/laboratorium-cabinet/laboratorium%20cabinet%20pulau.jpg"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "offerCount": "3",
+              "offers": variants.map(v => ({
+                "@type": "Offer",
+                "name": `Laboratorium Cabinet ${v.name}`,
+                "description": v.desc
+              }))
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">

@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { VolumeX, Settings2, Shield, CheckCircle2, DoorOpen, Maximize2 } from 'lucide-react'
@@ -14,6 +15,48 @@ export function MovableDoorPage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Movable Door - Partisi Ruangan Geser - Sembada Batu Beling"
+        description="Movable door/partisi ruangan geser dengan fitur sound insulation. Varian Rubi, Kalimaya, Batu Beling, Emerald. Custom desain. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/movable-door"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Movable Door",
+            "description": "Partisi ruangan yang dapat digeser/dipindahkan untuk membagi ruang utama menjadi beberapa fungsi. Memberikan privasi dengan spesifikasi full peredam suara. Bisa custom design.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Partisi Ruangan",
+            "image": [
+              "https://sembada.xyz/images/partisi-ruangan/movable%20door%201.jpg",
+              "https://sembada.xyz/images/partisi-ruangan/movable%20door%20rubi.jpg"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "offerCount": "4",
+              "offers": variants.map(v => ({
+                "@type": "Offer",
+                "name": `Movable Door ${v.name}`,
+                "description": v.desc
+              }))
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0C10]">
         <div className="absolute inset-0">

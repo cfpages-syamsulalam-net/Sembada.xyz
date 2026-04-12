@@ -1,4 +1,5 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Shield, Clock, Square, CheckCircle2, Droplets } from 'lucide-react'
@@ -15,6 +16,48 @@ export function CubicleToiletPage() {
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Cubicle Toilet - Partisi Toilet Premium - Sembada Batu Beling"
+        description="Cubicle toilet phenolic resin untuk mall, kantor, dan stasiun. Tahan air, mudah dipasang, berbagai varian Premium, Standard, PVC. Hubungi 0852 5746 0869."
+        url="https://sembada.xyz/produk/cubicle-toilet"
+        type="product"
+      />
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Cubicle Toilet",
+            "description": "Partisi toilet modern berbahan tipis, ringan, namun sangat kuat. Menghemat tempat, pemasangan cepat, tampilan elegan. Umum dipakai di mall, kantor, dan stasiun.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Sembada Batu Beling"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "PT. Batu Beling"
+            },
+            "category": "Partisi Toilet",
+            "image": [
+              "https://sembada.xyz/images/cubicle-toilet/cubicle%20toilet%20Premium.png",
+              "https://sembada.xyz/images/cubicle-toilet/cubicle%20toilet%20standard.jpg"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "offerCount": "5",
+              "offers": variants.map(v => ({
+                "@type": "Offer",
+                "name": `Cubicle Toilet ${v.name}`,
+                "description": v.desc
+              }))
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
         <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">

@@ -466,6 +466,8 @@ Follow conventional commits:
 5. `/ALL_PAGES_SPEC.md` - ⭐ NEW - All pages specification from /stitch
 6. `/BEGINNER_GUIDE.md` - React/Vite guide for beginners
 7. `/CLOUDFLARE_DEPLOY.md` - Deployment guide
+8. `/SEO_PLAN.md` - ⭐ NEW - Complete SEO strategy and implementation guide
+9. `/SEO_SCORECARD.md` - ⭐ NEW - Current SEO status and scoring tracker
 
 **/stitch folder:**
 - Contains 14 HTML files (complete design references)
@@ -483,5 +485,186 @@ Follow conventional commits:
 
 ---
 
-*Last updated: 7 April 2026*  
+## 🔍 SEO Implementation Requirements
+
+**CRITICAL: Every new page MUST include SEO implementation.**
+
+### SEO Implementation Checklist for NEW Pages
+
+**BEFORE deploying any new page, ensure ALL of the following are present:**
+
+#### 1. SEO Component (MANDATORY)
+
+Every page MUST include the `<SEO>` component with UNIQUE props:
+
+```tsx
+import { SEO } from '@/components/ui/SEO';
+
+function NewPage() {
+  return (
+    <>
+      <SEO
+        title="Unique Page Title - Sembada Batu Beling"
+        description="Unique meta description (150-160 characters)"
+        type="website"
+      />
+      {/* Rest of page content */}
+    </>
+  );
+}
+```
+
+**Title Format (50-60 characters):**
+- Home: `Sembada Batu Beling - Solusi Konstruksi Premium`
+- About: `Tentang Kami - Sembada Batu Beling`
+- Products: `[Product Name] - [Benefit] - Sembada Batu Beling`
+- Portfolio: `Portofolio Proyek - Sembada Batu Beling`
+- Contact: `Hubungi Kami - Sembada Batu Beling`
+
+**Description Format (150-160 characters):**
+- Must be unique per page
+- Include target keywords naturally
+- End with call-to-action or contact info
+- Example: `Toilet portable premium untuk proyek konstruksi, event, dan darurat. Material phenolic resin, mudah dipindah. Hubungi 0852 5746 0869.`
+
+#### 2. Heading Structure (MANDATORY)
+
+- **ONE `<h1>` per page** - Never multiple H1s
+- Use unified page header pattern (see "UNIFIED PAGE HEADER PATTERN" section above)
+- Proper hierarchy: H1 → H2 → H3 (no skipped levels)
+- Include target keywords in H1 naturally
+
+#### 3. Image Optimization (MANDATORY)
+
+**Every `<img>` tag MUST have:**
+
+```tsx
+<img
+  src="/images/product.jpg"
+  alt="Descriptive text with product name and details"
+  width="800"
+  height="600"
+  loading="lazy"  // Use "eager" for hero images only
+  decoding="async"
+/>
+```
+
+**Rules:**
+- ✅ `alt` attribute: Descriptive, keyword-rich but natural (NOT empty)
+- ✅ `width` and `height`: Exact dimensions to prevent CLS
+- ✅ `loading="lazy"`: For all below-fold images
+- ✅ `loading="eager"`: For hero/above-fold images ONLY
+- ✅ `decoding="async"`: For better rendering performance
+
+#### 4. Internal Linking (RECOMMENDED)
+
+- Link back to Home page
+- Link to related products (if product page)
+- Include in navigation menu if important page
+- Add breadcrumb navigation (if inner page)
+
+#### 5. Structured Data (JSON-LD) - For Specific Page Types
+
+**Product Pages - MUST include Product schema:**
+
+```tsx
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Product Name",
+  "description": "Product description",
+  "brand": {
+    "@type": "Brand",
+    "name": "Sembada Batu Beling"
+  },
+  "image": [
+    "https://sembada.xyz/images/product-1.jpg"
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock"
+  }
+})}
+</script>
+```
+
+**Contact Page - MUST include LocalBusiness schema:**
+
+```tsx
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sembada Batu Beling",
+  "telephone": "+62-852-5746-0869",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Bogorami No. 05",
+    "addressLocality": "Surabaya",
+    "addressRegion": "Jawa Timur",
+    "postalCode": "60123",
+    "addressCountry": "ID"
+  }
+})}
+</script>
+```
+
+### SEO Files That Must Exist (Site-Wide)
+
+**BEFORE deployment, verify these files exist in `public/` folder:**
+
+1. ✅ `public/robots.txt` - Controls crawler access
+2. ✅ `public/sitemap.xml` - Lists all URLs for search engines
+3. ✅ `public/_redirects` - SPA routing for Cloudflare Pages
+4. ✅ `public/og-image.jpg` - Social media preview (1200x630px)
+
+### SEO Verification Steps
+
+**After creating a new page:**
+
+1. Run `npm run build` - Ensure no errors
+2. Check page source (browser) - Verify meta tags present
+3. Check `<head>` section - Verify title, description, OG tags
+4. View page source - Verify JSON-LD script present (if applicable)
+5. Test with Lighthouse - Run SEO audit
+6. Update `/SEO_SCORECARD.md` - Mark item as complete
+
+### SEO Documentation References
+
+**ALWAYS read these files before implementing SEO:**
+1. `/SEO_PLAN.md` - Complete SEO strategy and implementation guide
+2. `/SEO_SCORECARD.md` - Current SEO status and tracking
+3. `/PAGES.md` - Page structure with SEO specifications
+
+### Common SEO Mistakes to Avoid
+
+- ❌ Multiple H1 tags on same page
+- ❌ Duplicate meta descriptions across pages
+- ❌ Missing alt text on images
+- ❌ Images without width/height (causes CLS)
+- ❌ Lazy-loading hero images
+- ❌ Keyword stuffing in meta tags
+- ❌ Empty or generic meta descriptions
+- ❌ Missing canonical URLs
+- ❌ Broken internal links
+- ❌ No JSON-LD on product pages
+
+### SEO Best Practices
+
+- ✅ Unique, descriptive titles (50-60 chars)
+- ✅ Unique meta descriptions (150-160 chars)
+- ✅ Proper heading hierarchy (H1→H2→H3)
+- ✅ Descriptive alt text on all images
+- ✅ Explicit width/height on images
+- ✅ Lazy loading for below-fold images
+- ✅ JSON-LD structured data where applicable
+- ✅ Internal linking to related pages
+- ✅ Canonical URLs to prevent duplicates
+- ✅ Mobile-friendly responsive design
+
+---
+
+*Last updated: 12 April 2026*  
 *This file should be updated if project direction changes or new rules are established.*

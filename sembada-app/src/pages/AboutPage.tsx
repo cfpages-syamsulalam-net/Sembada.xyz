@@ -1,9 +1,16 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { Eye, Building, Users, Settings } from 'lucide-react'
 
 export function AboutPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Tentang Kami - Sembada Batu Beling"
+        description="Mengenal Sembada BatuBeling, anak perusahaan PT. Batu Beling yang berpengalaman menangani proyek arsitektur skala nasional. Integritas untuk Sukses dan Barokah."
+        url="https://sembada.xyz/tentang-kami"
+        type="website"
+      />
       {/* Hero Section */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
         <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">

@@ -1,9 +1,52 @@
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { SEO } from '@/components/ui/SEO'
 import { MapPin, Phone, Mail } from 'lucide-react'
 
 export function ContactPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
+      <SEO
+        title="Hubungi Kami - Sembada Batu Beling"
+        description="Hubungi Sembada BatuBeling untuk penawaran produk arsitektur premium. Alamat: Jl. Bogorami No. 05, Surabaya. WhatsApp: 0852 5746 0869."
+        url="https://sembada.xyz/hubungi-kami"
+        type="website"
+      />
+      {/* LocalBusiness JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Sembada Batu Beling",
+            "image": "https://sembada.xyz/og-image.jpg",
+            "telephone": "+62-852-5746-0869",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Bogorami No. 05",
+              "addressLocality": "Surabaya",
+              "addressRegion": "Jawa Timur",
+              "postalCode": "60123",
+              "addressCountry": "ID"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "14:00"
+              }
+            ],
+            "priceRange": "$$"
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 text-center bg-[#0B0C10]">
         <span className="text-[#f2ca50] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
