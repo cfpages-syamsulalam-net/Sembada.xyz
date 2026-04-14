@@ -133,6 +133,17 @@ export function AboutPage() {
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] mb-16 md:mb-24 overflow-hidden">
         <StarryBackground variant="subtle" />
         <div className="container mx-auto relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
+              Arah & Tujuan
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-4 md:mb-6 text-gold-gradient leading-tight">
+              Visi & Misi Kami
+            </h2>
+            <div className="w-20 md:w-24 h-[2px] bg-[#f2ca50]/40 mx-auto" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Visi Card (spans 2 columns) */}
             <div
@@ -153,7 +164,7 @@ export function AboutPage() {
               >
                 <Eye className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
+              <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-gold-gradient mb-4">
                 Visi Kami
               </h3>
               <p className="text-base md:text-lg text-[#e3e2e8]/80 leading-relaxed font-light">
@@ -180,7 +191,7 @@ export function AboutPage() {
               >
                 <Building className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-gold-gradient mb-4">
                 Misi I
               </h3>
               <p className="text-sm md:text-base text-[#e3e2e8]/80 leading-relaxed">
@@ -207,7 +218,7 @@ export function AboutPage() {
               >
                 <Users className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-gold-gradient mb-4">
                 Misi II
               </h3>
               <p className="text-sm md:text-base text-[#e3e2e8]/80 leading-relaxed">
@@ -234,7 +245,7 @@ export function AboutPage() {
               >
                 <Settings className="w-8 h-8 md:w-10 md:h-10 text-[#f2ca50]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#f2ca50] mb-4">
+              <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-gold-gradient mb-4">
                 Misi III
               </h3>
               <p className="text-base md:text-lg text-[#e3e2e8]/80 leading-relaxed font-light">
