@@ -33,6 +33,22 @@ export function AboutPage() {
       {/* Breadcrumb */}
       <Breadcrumb items={breadcrumbItems} />
 
+      {/* Mission Statement Section - Prominent, Full Width */}
+      <section className="relative py-12 md:py-16 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-[#f2ca50] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">
+              Misi Kami
+            </span>
+            <p className="text-lg md:text-xl lg:text-2xl text-[#e3e2e8]/90 leading-relaxed md:leading-relaxed font-light italic">
+              Membangun usaha dengan prinsip moral integritas, profesionalisme, dan kemandirian. Menjalankan usaha secara jujur, adil, amanah, bertanggungjawab, dan mengutamakan etika bisnis, serta mengedepankan syariat Islam sebagai landasan berpikir sehingga menciptakan kestabilan, kecukupan, sebagai fondasi penting dalam meraih kesuksesan yang langgeng dan penuh berkah.
+            </p>
+            <div className="w-20 md:w-24 h-[2px] bg-[#f2ca50]/40 mx-auto mt-6 md:mt-8" />
+          </div>
+        </div>
+      </section>
+
       {/* Legacy Section */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
         <StarryBackground variant="subtle" />
