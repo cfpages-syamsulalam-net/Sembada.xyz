@@ -1,6 +1,6 @@
 # Quick Reference for Future Sessions
 
-**Last Updated:** 8 April 2026, 03:00 WIB
+**Last Updated:** 12 April 2026, 17:00 WIB
 
 ---
 
@@ -15,15 +15,40 @@
 | **GitHub** | https://github.com/cfpages-syamsulalam-net/Sembada.xyz |
 | **Deployment** | Cloudflare Pages (auto-deploy on push to main) |
 | **Domain** | sembada.xyz |
+| **SEO Score** | 61/100 🟠 Fair |
 
 ---
 
 ## 📁 Key Files to Read FIRST
 
-1. `/QWEN.md` - AI rules, must-read before any work
+1. `/QWEN.md` - AI rules, MUST-read before any work (includes SEO requirements)
 2. `/CHANGELOG.md` - What's been done
-3. `/DESIGN.md` - Design specifications
-4. `/.context/SESSION_SUMMARY.md` - Complete session history
+3. `/SEO_SCORECARD.md` - Current SEO status and pending items
+4. `/SEO_PLAN.md` - Complete SEO strategy (8 phases)
+5. `/DESIGN.md` - Design specifications
+
+---
+
+## 🔍 SEO Quick Reference
+
+### Every Page MUST Have
+- `<SEO>` component with unique title (50-60 chars) and description (150-160 chars)
+- Breadcrumb component (except Home page)
+- JSON-LD schema (Product schema for product pages)
+- Proper heading hierarchy (ONE H1 per page)
+
+### SEO Files That Must Exist
+- `public/robots.txt` ✅
+- `public/sitemap.xml` ✅
+- `public/_redirects` ✅
+
+### SEO Components
+- `src/components/ui/SEO.tsx` - Enhanced with canonical, Twitter Cards, robots, theme-color
+- `src/components/navigation/Breadcrumb.tsx` - With BreadcrumbList JSON-LD
+
+### Code Splitting
+- All routes use `React.lazy` + `Suspense` (App.tsx)
+- Custom `PageLoading` fallback component
 
 ---
 
@@ -126,6 +151,16 @@ import { StarryBackground } from '@/components/ui/StarryBackground'
 - `Card` → `/src/components/ui/Card.tsx`
 - `FloatingWhatsApp` → `/src/components/ui/FloatingWhatsApp.tsx`
 - `StarryBackground` → `/src/components/ui/StarryBackground.tsx`
+- `SEO` → `/src/components/ui/SEO.tsx`
+
+### Navigation
+- `Breadcrumb` → `/src/components/navigation/Breadcrumb.tsx`
+
+### SEO / Structured Data
+- `OrganizationSchema` → `/src/App.tsx` (site-wide)
+- `Product` schema → Each product page
+- `LocalBusiness` schema → `/src/pages/ContactPage.tsx`
+- `WebSite` schema → HomePage in `/src/App.tsx`
 
 ---
 
@@ -167,16 +202,26 @@ Cloudflare Pages Settings:
 
 ## 💡 Tips for Next Session
 
-1. **ALWAYS read QWEN.md first** - Contains all rules
-2. **Check CHANGELOG.md** - See what's been done
-3. **Read .context/SESSION_SUMMARY.md** - Full history
-4. **Run `npm run build`** before committing
-5. **Use existing patterns** - Don't reinvent components
-6. **Follow unified header pattern** for new pages
-7. **Add StarryBackground** to new sections
-8. **Use inline SVGs** for icons
+1. **ALWAYS read QWEN.md first** - Contains all rules including SEO requirements
+2. **Check SEO_SCORECARD.md** - See pending SEO items
+3. **Check CHANGELOG.md** - See what's been done
+4. **Read .context/2026-04-12-SEO_PHASE_1.md** - SEO implementation details
+5. **Run `npm run build`** before committing
+6. **Use existing patterns** - Don't reinvent components
+7. **Follow unified header pattern** for new pages
+8. **Add StarryBackground** to new sections
+9. **Use inline SVGs** for icons
+10. **Add SEO + Breadcrumb** to any new page created
+
+### Pending SEO Items (Priority Order)
+1. Image optimization - alt text, width/height, lazy loading (61+ images)
+2. Custom 404 page
+3. FAQ sections with FAQPage schema
+4. Google Search Console (after deployment)
+5. Google Analytics 4 (after deployment)
 
 ---
 
-*Quick reference created: 8 April 2026, 03:00 WIB*  
+*Quick reference created: 8 April 2026, 03:00 WIB*
+*Last updated: 12 April 2026, 17:00 WIB*
 *Update this file as project evolves.*
