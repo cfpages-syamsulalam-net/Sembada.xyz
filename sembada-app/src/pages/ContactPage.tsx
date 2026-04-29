@@ -213,9 +213,14 @@ export function ContactPage() {
                     <h3 className="text-sm md:text-base font-bold text-[#e3e2e8] mb-1">
                       Telepon / WhatsApp
                     </h3>
-                    <a href="tel:+6285257460869" className="text-sm text-[#f2ca50] hover:text-[#f2ca50]/80 transition-colors">
-                      0852 5746 0869
-                    </a>
+                    <div className="flex flex-col gap-1 text-sm text-[#f2ca50]">
+                      <a href="tel:+6282325886660" className="hover:text-[#f2ca50]/80 transition-colors">
+                        0823 2588 6660
+                      </a>
+                      <a href="tel:+6285257460869" className="hover:text-[#f2ca50]/80 transition-colors">
+                        0852 5746 0869
+                      </a>
+                    </div>
                   </div>
                 </div>
 
