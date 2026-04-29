@@ -175,6 +175,29 @@ export function CNCOrnamentPage() {
         </div>
       </section>
 
+      {/* Gallery Extra Images */}
+      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">Portofolio Lengkap</span>
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Galeri <span className="text-[#f2ca50]">Proyek Kami</span></h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              '/images/cnc-ornament/cnc-ornament-1.jpg',
+              '/images/cnc-ornament/cnc-ornament-2.jpg',
+              '/images/cnc-ornament/cnc-ornament-3.jpg',
+              '/images/cnc-ornament/cnc-ornament-4.jpg',
+            ].map((img, i) => (
+              <div key={i} className="aspect-square overflow-hidden" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+                <img src={img} alt={`CNC Ornament Project ${i + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio Section */}
       <PortfolioSection
         items={cncPortfolios}
