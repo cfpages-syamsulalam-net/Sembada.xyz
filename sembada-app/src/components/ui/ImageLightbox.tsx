@@ -64,6 +64,7 @@ interface LightboxViewerProps {
 }
 
 function LightboxViewer({ items, index, onIndexChange, onClose }: LightboxViewerProps) {
+  const dialogRef = useRef<HTMLDivElement>(null)
   const viewportRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
@@ -152,6 +153,25 @@ function LightboxViewer({ items, index, onIndexChange, onClose }: LightboxViewer
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose()
+        return
+      }
+      if (event.key === 'Tab') {
+        const root = dialogRef.current
+        if (!root) return
+        const focusables = Array.from(root.querySelectorAll<HTMLElement>('button, [tabindex]:not([tabindex="-1"])'))
+        const first = focusables[0]
+        const last = focusables[focusables.length - 1]
+        if (!first || !last) return
+        const active = document.activeElement
+        if (event.shiftKey) {
+          if (active === first || !root.contains(active)) {
+            event.preventDefault()
+            last.focus()
+          }
+        } else if (active === last || !root.contains(active)) {
+          event.preventDefault()
+          first.focus()
+        }
         return
       }
       if (event.key === 'ArrowLeft' && index > 0) {
@@ -300,7 +320,7 @@ function LightboxViewer({ items, index, onIndexChange, onClose }: LightboxViewer
     'hidden h-11 items-center justify-center border border-[#f2ca50]/30 px-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#f2ca50] transition-colors hover:bg-[#f2ca50]/15 sm:inline-flex'
 
   return (
-    <div role="dialog" aria-modal="true" aria-label={item.alt} className="fixed inset-0 z-[100] flex flex-col bg-[#0B0C10]/95 backdrop-blur-sm">
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={item.alt} className="fixed inset-0 z-[100] flex flex-col bg-[#0B0C10]/95 backdrop-blur-sm">
       <div className="flex items-center justify-between gap-3 border-b border-[#f2ca50]/20 px-3 py-2 md:px-5">
         <div className="min-w-0">
           <p className="truncate text-[10px] font-black uppercase tracking-[0.2em] text-[#f2ca50]">{item.alt}</p>

@@ -117,8 +117,16 @@ export function ProductKnowledgePage() {
               src="/images/sembada-katalog-semua-produk.jpg"
               alt="Katalog Semua Produk Sembada"
               loading="lazy"
+              role="button"
+              tabIndex={0}
               onClick={() => lightbox.open([{ src: '/images/sembada-katalog-semua-produk.jpg', alt: 'Katalog Semua Produk Sembada' }])}
-              className="w-full h-auto object-cover cursor-zoom-in"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  lightbox.open([{ src: '/images/sembada-katalog-semua-produk.jpg', alt: 'Katalog Semua Produk Sembada' }])
+                }
+              }}
+              className="w-full h-auto object-cover cursor-zoom-in focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f2ca50] focus-visible:outline-none"
             />
           </div>
           <div className="mt-4 text-center">

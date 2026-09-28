@@ -19,6 +19,10 @@ export async function generateBrochurePdf(
     const res = await fetch(pages[i].src)
     if (!res.ok) throw new Error(`Halaman ${i + 1} gagal dimuat.`)
     const bytes = await res.arrayBuffer()
+    const header = new Uint8Array(bytes.slice(0, 3))
+    if (header[0] !== 0xff || header[1] !== 0xd8 || header[2] !== 0xff) {
+      throw new Error(`Halaman ${i + 1} bukan berkas JPEG yang valid.`)
+    }
     const image = await document.embedJpg(bytes)
     const scale = Math.min(A4_WIDTH / image.width, A4_HEIGHT / image.height)
     const width = image.width * scale

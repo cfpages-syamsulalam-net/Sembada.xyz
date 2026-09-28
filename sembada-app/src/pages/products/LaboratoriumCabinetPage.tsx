@@ -241,8 +241,16 @@ export function LaboratoriumCabinetPage() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
+                  role="button"
+                  tabIndex={0}
                   onClick={() => lightbox.open(specGallery, i)}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-zoom-in"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      lightbox.open(specGallery, i)
+                    }
+                  }}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-zoom-in focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f2ca50] focus-visible:outline-none"
                 />
               </div>
             ))}

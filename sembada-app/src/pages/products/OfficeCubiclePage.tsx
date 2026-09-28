@@ -228,7 +228,20 @@ export function OfficeCubiclePage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {gallery.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
-                <img src={img.src} alt={img.alt} onClick={() => lightbox.open(gallery, i)} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-zoom-in" />
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => lightbox.open(gallery, i)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      lightbox.open(gallery, i)
+                    }
+                  }}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-zoom-in focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f2ca50] focus-visible:outline-none"
+                />
               </div>
             ))}
           </div>

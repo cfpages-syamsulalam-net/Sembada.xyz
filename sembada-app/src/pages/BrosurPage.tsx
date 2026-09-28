@@ -14,6 +14,12 @@ type DownloadState =
   | { status: 'done' }
   | { status: 'error'; message: string }
 
+function downloadButtonLabel(state: DownloadState, total: number) {
+  if (state.status === 'running') return `Menyiapkan PDF ${state.done}/${total}`
+  if (state.status === 'done') return 'Unduh Ulang PDF'
+  return 'Unduh PDF Brosur'
+}
+
 export function BrosurPage() {
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
@@ -23,7 +29,7 @@ export function BrosurPage() {
   const [index, setIndex] = useState(0)
   const [download, setDownload] = useState<DownloadState>({ status: 'idle' })
   const touchRef = useRef<{ x: number; y: number } | null>(null)
-  const swipedRef = useRef(false)
+  const swipeEndRef = useRef(0)
 
   const total = BROCHURE.length
   const page = BROCHURE[index]
@@ -43,10 +49,7 @@ export function BrosurPage() {
   }, [go, index, lightbox.isOpen])
 
   const handleOpenLightbox = () => {
-    if (swipedRef.current) {
-      swipedRef.current = false
-      return
-    }
+    if (Date.now() - swipeEndRef.current < 400) return
     lightbox.open(BROCHURE, index)
   }
 
@@ -82,7 +85,7 @@ export function BrosurPage() {
     const dx = touch.clientX - start.x
     const dy = touch.clientY - start.y
     if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-      swipedRef.current = true
+      swipeEndRef.current = Date.now()
       go(dx < 0 ? index + 1 : index - 1)
     }
   }
@@ -97,8 +100,8 @@ export function BrosurPage() {
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
       <SEO
-        title="Brosur & Katalog Produk (23 Halaman) - Sembada Batu Beling"
-        description="Jelajahi 23 halaman brosur produk Sembada Batu Beling: laboratorium cabinet, cubicle toilet, portable toilet, office cubicle, movable door. Zoom tiap halaman atau unduh PDF lengkap."
+        title={`Brosur & Katalog Produk (${total} Halaman) - Sembada Batu Beling`}
+        description={`Jelajahi ${total} halaman brosur produk Sembada Batu Beling: laboratorium cabinet, cubicle toilet, portable toilet, office cubicle, movable door. Zoom tiap halaman atau unduh PDF lengkap.`}
         url="https://sembada.xyz/brosur"
         type="website"
       />
@@ -127,11 +130,11 @@ export function BrosurPage() {
             Brosur Produk
           </h1>
           <p className="text-lg md:text-xl text-[#e3e2e8]/80 max-w-3xl mx-auto leading-relaxed font-light">
-            23 halaman katalog lengkap Sembada Batu Beling dalam satu tampilan brosur. Klik halaman untuk
-            melihat ukuran penuh (zoom &amp; geser), atau unduh semuanya sebagai satu file PDF.
+            {total} halaman katalog lengkap Sembada Batu Beling dalam satu tampilan brosur. Klik halaman
+            untuk melihat ukuran penuh (zoom &amp; geser), atau unduh semuanya sebagai satu file PDF.
           </p>
           <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-[#64748B] font-black">
-            23 Halaman · 6 Kategori · PDF Siap Unduh
+            {total} Halaman · {BROCHURE_GROUPS.length} Kategori · PDF Siap Unduh
           </p>
         </div>
       </section>
@@ -228,8 +231,8 @@ export function BrosurPage() {
             Unduh Brosur Lengkap
           </h2>
           <p className="text-sm md:text-base text-[#e3e2e8]/70 leading-relaxed font-light mb-8">
-            Satu file PDF berisi 23 halaman brosur. Dibuat langsung di peramban Anda — gambar tidak diunggah
-            ke server.
+            Satu file PDF berisi {total} halaman brosur. Dibuat langsung di peramban Anda — gambar tidak
+            diunggah ke server.
           </p>
           <button
             type="button"
@@ -239,11 +242,7 @@ export function BrosurPage() {
             style={{ boxShadow: '0 4px 20px rgba(242, 202, 80, 0.35)' }}
           >
             {download.status === 'running' ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}
-            {download.status === 'running'
-              ? `Menyiapkan PDF ${download.done}/${total}`
-              : download.status === 'done'
-                ? 'Unduh Ulang PDF'
-                : 'Unduh PDF Brosur'}
+            {downloadButtonLabel(download, total)}
           </button>
           {download.status === 'running' && (
             <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[#94A3B8]">
@@ -251,7 +250,7 @@ export function BrosurPage() {
             </p>
           )}
           {download.status === 'done' && (
-            <p className="mt-4 text-sm text-[#f2ca50]">PDF 23 halaman berhasil dibuat — cek folder unduhan Anda.</p>
+            <p className="mt-4 text-sm text-[#f2ca50]">PDF {total} halaman berhasil dibuat — cek folder unduhan Anda.</p>
           )}
           {download.status === 'error' && (
             <p className="mt-4 text-sm text-red-400">{download.message} Silakan coba lagi.</p>
