@@ -20,9 +20,20 @@ export function LaboratoriumCabinetPage() {
   ]
 
   const variants = [
-    { name: 'Cabinet Pulau (Island)', tagline: 'Pusat Kolaborasi Riset', desc: 'Kabinet tengah untuk kolaborasi tim — akses dari semua sisi, ideal untuk lab riset bersama', img: '/images/laboratorium-cabinet/laboratorium%20cabinet%20pulau%20(island).png', span: 'col-span-12 md:col-span-4' },
-    { name: 'Cabinet Lemari Asam', tagline: 'Keamanan Zat Volatil', desc: 'Sistem exhaust terintegrasi — aman untuk penanganan bahan kimia berbahaya dan volatil', img: '/images/laboratorium-cabinet/laboratorium%20cabinet%20lemari%20asam.png', span: 'col-span-12 md:col-span-5' },
-    { name: 'Cabinet Dinding', tagline: 'Optimasi Ruang Vertikal', desc: 'Kabinet dinding untuk penyimpanan vertikal — hemat space, kapasitas maksimal', img: '/images/laboratorium-cabinet/laboratorium%20cabinet%20dinding.png', span: 'col-span-12 md:col-span-3' },
+    { name: 'Cabinet Pulau (Island)', tagline: 'Pusat Kolaborasi Riset', desc: 'Kabinet tengah untuk kolaborasi tim — akses dari semua sisi, ideal untuk lab riset bersama', img: '/images/laboratorium-cabinet/sembada-kabinet-pulau-spesifikasi.jpg', span: 'col-span-12 md:col-span-4' },
+    { name: 'Cabinet Lemari Asam', tagline: 'Keamanan Zat Volatil', desc: 'Sistem exhaust terintegrasi — aman untuk penanganan bahan kimia berbahaya dan volatil', img: '/images/laboratorium-cabinet/sembada-lemari-asam-spesifikasi.jpg', span: 'col-span-12 md:col-span-5' },
+    { name: 'Cabinet Dinding', tagline: 'Optimasi Ruang Vertikal', desc: 'Kabinet dinding untuk penyimpanan vertikal — hemat space, kapasitas maksimal', img: '/images/laboratorium-cabinet/sembada-kabinet-lab-dinding-pulau.jpg', span: 'col-span-12 md:col-span-3' },
+  ]
+
+  const specGallery = [
+    { src: '/images/laboratorium-cabinet/sembada-lemari-lab-kabinet-brosur.jpg', alt: 'Brosur Lemari Lab Sembada' },
+    { src: '/images/laboratorium-cabinet/sembada-lemari-lab-pvc-spesifikasi.jpg', alt: 'Spesifikasi Lemari Lab PVC Solid Premium' },
+    { src: '/images/laboratorium-cabinet/sembada-kabinet-lab-island-koleksi.jpg', alt: 'Koleksi Kabinet Lab Island' },
+    { src: '/images/laboratorium-cabinet/sembada-meja-praktikum-table-part.jpg', alt: 'Spesifikasi Meja Praktikum Table Part' },
+    { src: '/images/laboratorium-cabinet/sembada-wastafel-keran-spesifikasi.jpg', alt: 'Spesifikasi Wastafel dan Keran Lab' },
+    { src: '/images/laboratorium-cabinet/sembada-meja-praktikum-full-set.jpg', alt: 'Meja Praktikum Lab Full Set' },
+    { src: '/images/laboratorium-cabinet/sembada-meja-praktikum-lab-terpasang.jpg', alt: 'Meja Praktikum Lab Terpasang' },
+    { src: '/images/laboratorium-cabinet/sembada-wastafel-lab-spesifikasi.jpg', alt: 'Spesifikasi Wastafel Lab' },
   ]
 
   return (
@@ -212,6 +223,24 @@ export function LaboratoriumCabinetPage() {
         productHref="/portofolio"
         viewAllLabel="Lihat Semua Proyek Laboratorium Cabinet"
       />
+
+      {/* Brosur & Spesifikasi Gallery */}
+      <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#111216] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="text-[#94A3B8] uppercase tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-[11px] font-black mb-4 md:mb-6 block">Brosur & Spesifikasi</span>
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Galeri <span className="text-[#f2ca50]">Brosur Lab</span></h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {specGallery.map((img, i) => (
+              <div key={i} className="aspect-[3/4] overflow-hidden border border-[#f2ca50]/20">
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] text-center overflow-hidden">

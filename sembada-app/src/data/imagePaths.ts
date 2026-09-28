@@ -41,6 +41,14 @@ export const images = {
     'stasiun-kereta-api': img('cubicle-toilet/cubicle%20toilet%20stasiun%20kereta%20api.jpg'),
     'two-tone': img('cubicle-toilet/cubicle%20toilet%20two%20tone.png'),
     'full-height': img('cubicle-toilet/cubicle%20toilet%20full%20height.png'),
+    'phenolic-spesialis': img('cubicle-toilet/sembada-cubicle-toilet-phenolic-spesialis.jpg'),
+    'premium-cover': img('cubicle-toilet/sembada-cubicle-toilet-premium-cover.jpg'),
+    'varian-premium': img('cubicle-toilet/sembada-cubicle-toilet-varian-premium.jpg'),
+    'full-height-varian': img('cubicle-toilet/sembada-cubicle-toilet-full-height-varian.jpg'),
+    'sistem-konstruksi': img('cubicle-toilet/sembada-cubicle-toilet-sistem-konstruksi.jpg'),
+    'urinal-divider': img('cubicle-toilet/sembada-urinal-divider-model-spesifikasi.jpg'),
+    'chart-woodgrain': img('cubicle-toilet/sembada-colour-chart-woodgrain-pattern.jpg'),
+    'chart-pvc-phenolic': img('cubicle-toilet/sembada-colour-chart-pvc-phenolic-solid.jpg'),
   },
 
   // Laboratorium Cabinet
@@ -55,6 +63,17 @@ export const images = {
     'lemari-asam': img('laboratorium-cabinet/laboratorium%20cabinet%20lemari%20asam.png'),
     'pulau-island': img('laboratorium-cabinet/laboratorium%20cabinet%20pulau%20(island).png'),
     'toilet-fasilitas-umum': img('laboratorium-cabinet/laboratorium%20cabinet%20toilet%20fasilitas%20umum.jpg'),
+    'lemari-lab-brosur': img('laboratorium-cabinet/sembada-lemari-lab-kabinet-brosur.jpg'),
+    'lemari-lab-pvc': img('laboratorium-cabinet/sembada-lemari-lab-pvc-spesifikasi.jpg'),
+    'meja-table-part': img('laboratorium-cabinet/sembada-meja-praktikum-table-part.jpg'),
+    'wastafel-keran': img('laboratorium-cabinet/sembada-wastafel-keran-spesifikasi.jpg'),
+    'meja-full-set': img('laboratorium-cabinet/sembada-meja-praktikum-full-set.jpg'),
+    'lemari-asam-baru': img('laboratorium-cabinet/sembada-lemari-asam-spesifikasi.jpg'),
+    'island-koleksi': img('laboratorium-cabinet/sembada-kabinet-lab-island-koleksi.jpg'),
+    'meja-terpasang': img('laboratorium-cabinet/sembada-meja-praktikum-lab-terpasang.jpg'),
+    'dinding-pulau': img('laboratorium-cabinet/sembada-kabinet-lab-dinding-pulau.jpg'),
+    'pulau-spesifikasi': img('laboratorium-cabinet/sembada-kabinet-pulau-spesifikasi.jpg'),
+    'wastafel-lab': img('laboratorium-cabinet/sembada-wastafel-lab-spesifikasi.jpg'),
   },
 
   // Office Cubicle
@@ -67,6 +86,7 @@ export const images = {
     'leader-staff-workstations': img('office-cubicle/office%20cubicle%20leader%20staff%20workstations.jpg'),
     supervisor: img('office-cubicle/office%20cubicle%20supervisor.jpg'),
     'supervisor-workstations': img('office-cubicle/office%20cubicle%20supervisor%20workstations.jpg'),
+    'workstation-varian': img('office-cubicle/sembada-office-cubicle-workstation-varian.jpg'),
   },
 
   // Movable Door (Partisi Ruangan)
@@ -79,6 +99,7 @@ export const images = {
     emerald: img('partisi-ruangan/movable%20door%20emerald.jpg'),
     kalimaya: img('partisi-ruangan/movable%20door%20kalimaya.png'),
     rubi: img('partisi-ruangan/movable%20door%20rubi.jpg'),
+    'varian-koleksi': img('partisi-ruangan/sembada-movable-door-varian-koleksi.jpg'),
   },
 
   // Portable Toilet
@@ -92,5 +113,11 @@ export const images = {
     pon: img('toilet-portable/toilet%20portable%20pon%20(pekan%20olahraga%20nasional).png'),
     'sektor-konstruksi': img('toilet-portable/toilet%20portable%20sektor%20konstruksi%20&%20pergudangan.webp'),
     'tempat-wisata': img('toilet-portable/toilet%20portable%20tempat%20wisata%20&%20perkantoran.jpg'),
+    'varian-deluxe': img('toilet-portable/sembada-portable-toilet-varian-deluxe.jpg'),
+  },
+
+  // Katalog
+  katalog: {
+    'semua-produk': img('sembada-katalog-semua-produk.jpg'),
   },
 };

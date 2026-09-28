@@ -202,6 +202,7 @@ export function MovableDoorPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {[
+              '/images/partisi-ruangan/sembada-movable-door-varian-koleksi.jpg',
               '/images/partisi-ruangan/movable-door-5.jpg',
               '/images/partisi-ruangan/movable-door-6.jpg',
               '/images/partisi-ruangan/movable-door-7.jpg',

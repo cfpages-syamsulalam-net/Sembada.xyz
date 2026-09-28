@@ -106,6 +106,16 @@ export function ProductKnowledgePage() {
       {/* Breadcrumb */}
       <Breadcrumb items={breadcrumbItems} />
 
+      {/* Katalog Semua Produk */}
+      <section className="relative py-8 md:py-12 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
+        <StarryBackground variant="subtle" />
+        <div className="container mx-auto relative z-10 max-w-4xl">
+          <div className="border border-[#f2ca50]/20 overflow-hidden">
+            <img src="/images/sembada-katalog-semua-produk.jpg" alt="Katalog Semua Produk Sembada" loading="lazy" className="w-full h-auto object-cover" />
+          </div>
+        </div>
+      </section>
+
       {/* Product Hex Grid */}
       <section className="relative py-16 md:py-24 px-6 md:px-10 bg-[#0B0C10] overflow-hidden">
         <StarryBackground variant="subtle" />

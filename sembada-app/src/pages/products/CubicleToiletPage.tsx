@@ -205,6 +205,14 @@ export function CubicleToiletPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {[
+              '/images/cubicle-toilet/sembada-cubicle-toilet-phenolic-spesialis.jpg',
+              '/images/cubicle-toilet/sembada-cubicle-toilet-premium-cover.jpg',
+              '/images/cubicle-toilet/sembada-cubicle-toilet-varian-premium.jpg',
+              '/images/cubicle-toilet/sembada-cubicle-toilet-full-height-varian.jpg',
+              '/images/cubicle-toilet/sembada-cubicle-toilet-sistem-konstruksi.jpg',
+              '/images/cubicle-toilet/sembada-urinal-divider-model-spesifikasi.jpg',
+              '/images/cubicle-toilet/sembada-colour-chart-woodgrain-pattern.jpg',
+              '/images/cubicle-toilet/sembada-colour-chart-pvc-phenolic-solid.jpg',
               '/images/cubicle-toilet/cubicle-toilet-harga-murah-1.jpg',
               '/images/cubicle-toilet/cubicle-toilet-harga-murah-2.jpg',
               '/images/cubicle-toilet/cubicle-toilet-harga-murah-3.jpg',

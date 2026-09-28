@@ -210,6 +210,7 @@ export function OfficeCubiclePage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {[
+              '/images/office-cubicle/sembada-office-cubicle-workstation-varian.jpg',
               '/images/office-cubicle/office-cubicle-harga-murah-1.jpg',
               '/images/office-cubicle/office-cubicle-harga-murah-2.jpg',
               '/images/office-cubicle/office-cubicle-harga-murah-3.jpg',

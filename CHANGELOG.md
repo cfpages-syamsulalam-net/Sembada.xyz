@@ -9,6 +9,29 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [New Brochure Images] - 28 September 2026
+
+### 16:30 - 17:30 WIB - 23 Gambar Baru + Wiring Halaman Produk
+
+#### Added - 23 Gambar Brosur (prefix `sembada-`)
+- **`images/laboratorium-cabinet/` (11)** - lemari-lab-kabinet-brosur, lemari-lab-pvc-spesifikasi, meja-praktikum-table-part, wastafel-keran-spesifikasi, meja-praktikum-full-set, lemari-asam-spesifikasi, kabinet-lab-island-koleksi, meja-praktikum-lab-terpasang, kabinet-lab-dinding-pulau, kabinet-pulau-spesifikasi, wastafel-lab-spesifikasi
+- **`images/cubicle-toilet/` (8)** - cubicle-toilet-phenolic-spesialis, cubicle-toilet-premium-cover, cubicle-toilet-varian-premium, cubicle-toilet-full-height-varian, cubicle-toilet-sistem-konstruksi, urinal-divider-model-spesifikasi, colour-chart-woodgrain-pattern, colour-chart-pvc-phenolic-solid
+- **`images/toilet-portable/` (1)** - portable-toilet-varian-deluxe
+- **`images/office-cubicle/` (1)** - office-cubicle-workstation-varian
+- **`images/partisi-ruangan/` (1)** - movable-door-varian-koleksi
+- **`images/` (1)** - katalog-semua-produk
+- Semua gambar di-mirror ke `sembada-app/public/images/` (jalur serve situs)
+
+#### Changed - Wiring Halaman Produk (tanpa rute baru)
+- **LaboratoriumCabinetPage** - varian memakai 3 brosur baru + seksi galeri "Brosur & Spesifikasi" (8 gambar)
+- **CubicleToiletPage** - galeri + 8 brosur/warna/urinal di depan
+- **PortableToiletPage, OfficeCubiclePage, MovableDoorPage** - brosur baru di depan galeri
+- **ProductKnowledgePage** - poster katalog semua produk
+- **`src/data/imagePaths.ts`** - entri katalog untuk semua 23 gambar
+- **`public/sitemap.xml`** - lastmod 2026-09-28 untuk 6 halaman yang berubah
+
+---
+
 ## [SEO Implementation Phase 1] - 12 April 2026
 
 ### 14:00 - 17:00 WIB - Comprehensive Technical SEO Implementation

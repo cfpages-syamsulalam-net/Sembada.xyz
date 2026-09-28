@@ -362,6 +362,7 @@ export function PortableToiletPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {[
+              '/images/toilet-portable/sembada-portable-toilet-varian-deluxe.jpg',
               '/images/toilet-portable/toilet-portable-harga-murah-1.jpg',
               '/images/toilet-portable/toilet-portable-harga-murah-2.jpg',
               '/images/toilet-portable/toilet-portable-harga-murah-3.jpg',
