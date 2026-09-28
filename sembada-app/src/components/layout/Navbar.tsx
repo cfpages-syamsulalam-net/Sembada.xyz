@@ -56,7 +56,6 @@ export function Navbar() {
     { label: 'Beranda', path: '/' },
     { label: 'Tentang Kami', path: '/tentang-kami' },
     { label: 'Portofolio', path: '/portofolio' },
-    { label: 'Brosur', path: '/brosur' },
     { label: 'Kontak', path: '/hubungi-kami' },
   ]
 
@@ -109,7 +108,7 @@ export function Navbar() {
             >
               <button
                 className={`uppercase tracking-[0.2em] xl:tracking-[0.25em] text-[9px] md:text-[10px] font-extrabold transition-colors duration-200 whitespace-nowrap ${
-                  location.pathname.startsWith('/produk')
+                  location.pathname.startsWith('/produk') || location.pathname === '/brosur'
                     ? 'text-[#f2ca50] border-b-2 border-[#f2ca50]/50 pb-1'
                     : 'text-[#e3e2e8]/60 hover:text-[#f2ca50]'
                 }`}
@@ -154,13 +153,19 @@ export function Navbar() {
                       )
                     })}
                   </div>
-                  {/* View All Link */}
-                  <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-[#f2ca50]/20 text-center">
+                  {/* View All + Brosur Links */}
+                  <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-[#f2ca50]/20 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-10 text-center">
                     <Link
                       to="/produk"
                       className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] hover:text-white transition-colors"
                     >
                       Lihat Semua Produk →
+                    </Link>
+                    <Link
+                      to="/brosur"
+                      className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] hover:text-white transition-colors"
+                    >
+                      Brosur &amp; Katalog →
                     </Link>
                   </div>
                 </div>
@@ -265,6 +270,13 @@ export function Navbar() {
                     </Link>
                     )
                   })}
+                  <Link
+                    to="/brosur"
+                    className="block border-t border-[#f2ca50]/20 pt-3 text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] hover:text-white transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Brosur &amp; Katalog →
+                  </Link>
                 </div>
               </li>
             </ul>

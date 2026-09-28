@@ -489,16 +489,17 @@ const routes = [
 ### 4.1 Primary Navigation (Navbar)
 
 ```
-Logo          Tentang    Produk ▼    Portofolio    Brosur    Hubungi Kami
-[Sembada]              ┌─────────────┐
-                       │ Portable    │
-                       │ Cubicle     │
-                       │ Office      │
-                       │ Movable     │
-                       │ CNC         │
-                       │ Cellustone  │
-                       │ Lab Cabinet │
-                       └─────────────┘
+Logo          Tentang    Produk ▼    Portofolio    Hubungi Kami
+[Sembada]              ┌──────────────────┐
+                       │ Portable         │
+                       │ Cubicle          │
+                       │ Office           │
+                       │ Movable          │
+                       │ CNC              │
+                       │ Cellustone       │
+                       │ Lab Cabinet      │
+                       │ Brosur & Katalog │
+                       └──────────────────┘
 ```
 
 **Menu Items:**
@@ -512,9 +513,9 @@ Logo          Tentang    Produk ▼    Portofolio    Brosur    Hubungi Kami
    - CNC Ornament
    - Cellustone Ornament
    - Laboratorium Cabinet
+   - Brosur & Katalog - `/brosur` (shown as a child link of the Produk menu; URL stays top-level)
 4. **Portofolio** - `/portofolio`
-5. **Brosur** - `/brosur`
-6. **Hubungi Kami** - `/hubungi-kami`
+5. **Hubungi Kami** - `/hubungi-kami`
 
 ### 4.2 Footer Navigation
 

@@ -9,6 +9,19 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Nav: Brosur under Produk] - 29 September 2026
+
+### 06:30 WIB - Navbar width fix; URL unchanged
+
+#### Changed
+- **`layout/Navbar.tsx`** - "Brosur" removed from the top-level nav row (navbar was getting wide); it now appears as a child link inside the Produk megamenu ("Brosur & Katalog →" beside "Lihat Semua Produk") and at the end of the mobile Produk submenu. The Produk button highlights while on `/brosur`. URL stays `/brosur`; Footer + `/produk` "Lihat Brosur Lengkap" links unchanged.
+- **`PAGES.md`** - navigation diagram + menu item list updated to match.
+
+#### Verified
+- `npm run build` green; eslint 0 new errors (2 pre-existing)
+
+---
+
 ## [Brosur Viewer + Client-side PDF] - 28–29 September 2026
 
 ### 18:45 - 00:35 WIB - Pan/zoom lightbox, `/brosur` reader, 23-page PDF download
