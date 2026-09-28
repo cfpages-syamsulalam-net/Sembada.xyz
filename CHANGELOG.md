@@ -9,6 +9,26 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Docs: CODEBASE/PRD/INFRA + README/QWEN refresh] - 28 September 2026
+
+### 18:00 - 18:30 WIB - New inventory docs, no new pages
+
+#### Added
+- **`CODEBASE.md`** - full code/logic/intent/reason inventory (routes, components, data, styling, SEO, 2026-09-28 image op, dead-code list)
+- **`PRD.md`** - requirements, scope (12 routes), user journeys, NFRs, 5 known gaps (form has no backend, og-image missing, dead code, imagePaths unused, SEO 61/100)
+- **`INFRASTRUCTURE.md`** - only confirmed evidence: git/remote parity `8dde89c`, Cloudflare Pages settings from docs, npm toolchain (node 24/npm 12), dual image trees, `.env` gitignored
+
+#### Changed
+- **`README.md`** - was 1 line; now project summary + app commands + doc index; notes npm (not pnpm)
+- **`QWEN.md`** - both "read first" lists now point to CODEBASE/PRD/INFRASTRUCTURE; fixed duplicate numbering
+
+#### Notes
+- **No new pages created**: all 23 posters fit the 7 existing product lines; verified per-poster mapping, no orphan image.
+- **pnpm question**: repo uses **npm** — only `package-lock.json` exists, no pnpm lockfile; all docs/scripts use npm commands. pnpm shim exists on machine but repo is npm.
+- Temp script `copy-sembada.ps1` deleted from scratchpad; scratchpad empty; tree clean.
+
+---
+
 ## [New Brochure Images] - 28 September 2026
 
 ### 16:30 - 17:30 WIB - 23 Gambar Baru + Wiring Halaman Produk

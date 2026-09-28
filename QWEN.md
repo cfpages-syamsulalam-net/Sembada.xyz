@@ -105,12 +105,10 @@ cd C:\Users\THINKPAD\Sembada.xyz\sembada-app && npm run dev -- --port 5173  # re
 
 **BEFORE starting any work, ALWAYS read these files:**
 1. `/QWEN.md` - This file (rules and guidelines)
-2. `/CHANGELOG.md` - Current project status and progress
-3. `/DESIGN.md` - Design system specifications
-4. `/HOMEPAGE_SPEC.md` - Homepage detailed specifications
-5. `/ALL_PAGES_SPEC.md` - All other pages specifications
-6. `/BEGINNER_GUIDE.md` - React/Vite context (if needed)
-7. `/CLOUDFLARE_DEPLOY.md` - Deployment guide (if needed)
+2. `/CODEBASE.md` - Code/logic/intent inventory
+3. `/PRD.md` - Requirements, scope, known gaps
+4. `/INFRASTRUCTURE.md` - Confirmed hosting/build/git evidence
+5. `/CHANGELOG.md` - Current project status and progress
 
 **Why this is critical:**
 - Provides complete context of what's been done
@@ -460,14 +458,16 @@ Follow conventional commits:
 
 **ALWAYS read these files before starting work:**
 1. `/QWEN.md` - This file (AI rules and guidelines) ⭐ READ FIRST
-2. `/CHANGELOG.md` - Project progress tracking
-3. `/DESIGN.md` - Design system (shadcn/ui + TailwindCSS v3)
-4. `/HOMEPAGE_SPEC.md` - ⭐ NEW - Detailed homepage specification from /stitch
-5. `/ALL_PAGES_SPEC.md` - ⭐ NEW - All pages specification from /stitch
-6. `/BEGINNER_GUIDE.md` - React/Vite guide for beginners
-7. `/CLOUDFLARE_DEPLOY.md` - Deployment guide
-8. `/SEO_PLAN.md` - ⭐ NEW - Complete SEO strategy and implementation guide
-9. `/SEO_SCORECARD.md` - ⭐ NEW - Current SEO status and scoring tracker
+2. `/CODEBASE.md` - Code/logic/intent inventory ⭐ READ SECOND
+3. `/PRD.md` - Requirements, scope, known gaps
+4. `/INFRASTRUCTURE.md` - Confirmed hosting/build/git evidence
+5. `/CHANGELOG.md` - Project progress tracking
+6. `/HOMEPAGE_SPEC.md` - Detailed homepage specification from /stitch
+7. `/ALL_PAGES_SPEC.md` - All pages specification from /stitch
+8. `/BEGINNER_GUIDE.md` - React/Vite guide for beginners
+9. `/CLOUDFLARE_DEPLOY.md` - Deployment guide
+10. `/SEO_PLAN.md` - Complete SEO strategy and implementation guide
+11. `/SEO_SCORECARD.md` - Current SEO status and scoring tracker
 
 **/stitch folder:**
 - Contains 14 HTML files (complete design references)
