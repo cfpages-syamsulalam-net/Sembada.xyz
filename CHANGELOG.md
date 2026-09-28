@@ -9,6 +9,33 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Brosur Viewer + Client-side PDF] - 28–29 September 2026
+
+### 18:45 - 00:35 WIB - Pan/zoom lightbox, `/brosur` reader, 23-page PDF download
+
+#### Added
+- **`/brosur` route (13th)** - brochure reader: fit-to-frame page with overlay prev/next + group/page badges, Sebelumnya/Berikutnya controls, `Halaman n / 23` + label, group chips (Katalog 1 · Lab 11 · Cubicle 8 · Portable 1 · Office 1 · Movable 1), 23-thumbnail strip, click → lightbox, ImageGallery JSON-LD
+- **`ui/ImageLightbox.tsx` + `ui/lightboxContext.ts`** - dependency-free full-screen viewer: opens at 100% natural size, drag-pan, wheel + pinch zoom anchored at the pointer, zoom in/out + Fit + 100% buttons, double-click Fit ⇄ 100%, Esc/X close, ←/→ within the opened set, `n / m` + zoom% readout, neighbour preload, scroll lock + focus restore
+- **`data/brochure.ts`** - ordered 23-page source (src/alt/label/group; consumes `imagePaths.ts`)
+- **`lib/brochurePdf.ts`** - client-side 23-page PDF assembly (dynamic `import('pdf-lib')`, JPEG passthrough, pages scaled into A4, no upload)
+- **`pdf-lib@1.17.1`** dependency - own lazy chunk, loads only on first download
+
+#### Changed
+- All gallery images now clickable → lightbox (lab `specGallery`; cubicle/portable/office/movable grids converted from string arrays to `{src, alt}`; produk catalog poster)
+- Navbar + Footer + `/produk` "Lihat Brosur Lengkap" link + `sitemap.xml` (13 URLs)
+- Docs: PRD (FR10–FR12, routes 13, gap-4 exception, §8 acceptance), CODEBASE (§§1–9), INFRASTRUCTURE (npm `omit=dev` gotcha, pdf-lib, 13 URLs), PAGES (sitemap/nav/breadcrumbs)
+
+#### Verified
+- `npm run build` green (BrosurPage chunk 20.8 kB / gzip 6.1; pdf-lib lazy chunk 420 kB / gzip 176 — initial bundle size unchanged)
+- Preview smoke: 23/23 brochure image URLs HTTP 200; `/brosur` HTTP 200; PDF probe over 3 images (A4-ratio + squares) → valid PDF, `pages=3`, ~671 kB output for 653 kB source; A4-fit page sizing confirmed (595.3×841.5 / 595.3×595.3)
+- eslint: 0 new errors (2 pre-existing in untouched `Navbar.tsx`/`Card.tsx`)
+
+#### Notes
+- PDF fully client-side; expected full-brochure size ≈ 6 MB; filename `sembada-brosur-katalog.pdf`
+- Op note: `pdf-lib` had to be reinstalled with `--include=dev` after the machine's `omit=dev` npm config pruned devDependencies
+
+---
+
 ## [Contact form → admin@alampintar.org] - 28 September 2026
 
 ### 18:30 - 19:00 WIB - Pages Function + Resend, staged pending secret

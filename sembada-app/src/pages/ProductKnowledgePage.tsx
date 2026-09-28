@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { StarryBackground } from '@/components/ui/StarryBackground'
+import { useLightbox } from '@/components/ui/lightboxContext'
 import { SEO } from '@/components/ui/SEO'
 import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Droplets, DoorOpen, Briefcase, Expand, Building2, LayoutGrid, FlaskConical, ShieldCheck, Settings } from 'lucide-react'
@@ -76,6 +77,7 @@ const products = [
 ]
 
 export function ProductKnowledgePage() {
+  const lightbox = useLightbox()
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Produk' }
@@ -111,7 +113,21 @@ export function ProductKnowledgePage() {
         <StarryBackground variant="subtle" />
         <div className="container mx-auto relative z-10 max-w-4xl">
           <div className="border border-[#f2ca50]/20 overflow-hidden">
-            <img src="/images/sembada-katalog-semua-produk.jpg" alt="Katalog Semua Produk Sembada" loading="lazy" className="w-full h-auto object-cover" />
+            <img
+              src="/images/sembada-katalog-semua-produk.jpg"
+              alt="Katalog Semua Produk Sembada"
+              loading="lazy"
+              onClick={() => lightbox.open([{ src: '/images/sembada-katalog-semua-produk.jpg', alt: 'Katalog Semua Produk Sembada' }])}
+              className="w-full h-auto object-cover cursor-zoom-in"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <Link
+              to="/brosur"
+              className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#f2ca50] hover:text-white transition-colors"
+            >
+              Lihat Brosur Lengkap — 23 Halaman →
+            </Link>
           </div>
         </div>
       </section>

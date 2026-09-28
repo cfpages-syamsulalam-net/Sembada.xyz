@@ -20,6 +20,7 @@ This document defines the complete page structure, routing hierarchy, and conten
 │   ├── /produk/cnc-ornament
 │   ├── /produk/cellustone-ornament
 │   └── /produk/laboratorium-cabinet
+├── /brosur (Brosur & Katalog Reader — 23-page viewer + PDF download)
 ├── /portofolio (Portfolio)
 │   └── /portofolio/[project-slug] (Project Detail - optional)
 └── /hubungi-kami (Contact)
@@ -488,7 +489,7 @@ const routes = [
 ### 4.1 Primary Navigation (Navbar)
 
 ```
-Logo          Tentang    Produk ▼    Portofolio    Hubungi Kami
+Logo          Tentang    Produk ▼    Portofolio    Brosur    Hubungi Kami
 [Sembada]              ┌─────────────┐
                        │ Portable    │
                        │ Cubicle     │
@@ -512,7 +513,8 @@ Logo          Tentang    Produk ▼    Portofolio    Hubungi Kami
    - Cellustone Ornament
    - Laboratorium Cabinet
 4. **Portofolio** - `/portofolio`
-5. **Hubungi Kami** - `/hubungi-kami`
+5. **Brosur** - `/brosur`
+6. **Hubungi Kami** - `/hubungi-kami`
 
 ### 4.2 Footer Navigation
 
@@ -549,6 +551,7 @@ Home > Produk
 Home > Produk > Portable Toilet
 Home > Portofolio
 Home > Portofolio > [Project Name]
+Home > Brosur
 Home > Hubungi Kami
 ```
 

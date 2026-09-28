@@ -68,6 +68,14 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Brosur Page -->
+  <url>
+    <loc>https://sembada.xyz/brosur</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Portfolio Page -->
   <url>
     <loc>https://sembada.xyz/portofolio</loc>

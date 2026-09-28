@@ -56,6 +56,7 @@ export function Navbar() {
     { label: 'Beranda', path: '/' },
     { label: 'Tentang Kami', path: '/tentang-kami' },
     { label: 'Portofolio', path: '/portofolio' },
+    { label: 'Brosur', path: '/brosur' },
     { label: 'Kontak', path: '/hubungi-kami' },
   ]
 

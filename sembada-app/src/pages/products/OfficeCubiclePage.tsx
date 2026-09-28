@@ -3,9 +3,11 @@ import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Breadcrumb } from '@/components/navigation/Breadcrumb'
+import { useLightbox } from '@/components/ui/lightboxContext'
 import { Shield, Droplet, CheckCircle2, Layers, Cable } from 'lucide-react'
 
 export function OfficeCubiclePage() {
+  const lightbox = useLightbox()
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Produk', href: '/produk' },
@@ -16,6 +18,21 @@ export function OfficeCubiclePage() {
     { name: 'Advance Staff', size: '1200mm x 600mm', material: 'Phenolic 12mm', features: 'Cable Management', image: '/images/office-cubicle/office%20cubicle%20advance%20staff.jpg' },
     { name: 'Leader Staff', size: '1500mm x 750mm', material: 'Dual-tone Phenolic', features: 'Acoustic Panels', image: '/images/office-cubicle/office%20cubicle%20leader%20staff.jpg', offset: 'md:mt-12' },
     { name: 'Supervisor', size: '1800mm x 900mm', material: 'Floor-to-Ceiling', features: 'Luxury Finishes', image: '/images/office-cubicle/office%20cubicle%20supervisor.jpg', offset: 'md:-mt-8' },
+  ]
+  const gallery = [
+    { src: '/images/office-cubicle/sembada-office-cubicle-workstation-varian.jpg', alt: 'Varian workstation office cubicle' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-1.jpg', alt: 'Dokumentasi proyek office cubicle 1' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-2.jpg', alt: 'Dokumentasi proyek office cubicle 2' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-3.jpg', alt: 'Dokumentasi proyek office cubicle 3' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-4.jpg', alt: 'Dokumentasi proyek office cubicle 4' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-5.jpg', alt: 'Dokumentasi proyek office cubicle 5' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-6.jpg', alt: 'Dokumentasi proyek office cubicle 6' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-7.jpg', alt: 'Dokumentasi proyek office cubicle 7' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-8.jpg', alt: 'Dokumentasi proyek office cubicle 8' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-9.jpg', alt: 'Dokumentasi proyek office cubicle 9' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-10.jpg', alt: 'Dokumentasi proyek office cubicle 10' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-11.jpg', alt: 'Dokumentasi proyek office cubicle 11' },
+    { src: '/images/office-cubicle/office-cubicle-harga-murah-12.jpg', alt: 'Dokumentasi proyek office cubicle 12' },
   ]
 
   return (
@@ -209,23 +226,9 @@ export function OfficeCubiclePage() {
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Galeri <span className="text-[#f2ca50]">Proyek Kami</span></h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              '/images/office-cubicle/sembada-office-cubicle-workstation-varian.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-1.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-2.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-3.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-4.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-5.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-6.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-7.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-8.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-9.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-10.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-11.jpg',
-              '/images/office-cubicle/office-cubicle-harga-murah-12.jpg',
-            ].map((img, i) => (
+            {gallery.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
-                <img src={img} alt={`Office Cubicle Project ${i + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={img.src} alt={img.alt} onClick={() => lightbox.open(gallery, i)} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-zoom-in" />
               </div>
             ))}
           </div>

@@ -54,9 +54,9 @@ Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada B
 1. **Contact form needs its secret + live test (BLOCKED on Syamsul, no expiry)** — code done (`POST /api/contact` → Resend → `admin@alampintar.org`), but delivery is unproven until Syamsul provides the Resend API key when he has time, then: key → dashboard `RESEND_API_KEY` + redeploy, FROM-domain verification, live test mail + Function log check. Frame as staged, not delivered, until then. Never store the key in repo/memory — dashboard secret only.
 2. **`og-image.jpg` missing** — all social shares fall back to a 404 image.
 3. Dead code present but unreferenced: `pages/HomePage.tsx`, `molecules/Navbar`, `organisms/Footer`, `App.css`, `styles/style.css`.
-4. `imagePaths.ts` catalog exists but pages hardcode image URLs (single-source not enforced).
+4. `imagePaths.ts` catalog exists but pages hardcode image URLs (single-source not enforced) — exception: `data/brochure.ts` consumes it for the 23-page brochure set.
 5. SEO scorecard at 61/100 (April) — phases 2+ not executed.
 
-## 8. Acceptance (2026-09-28 state)
+## 8. Acceptance (2026-09-28 state, after brosur viewer)
 
-`npm run build` (tsc + vite) green; 12/12 routes render; sitemap lists 12 URLs; commit `8dde89c` on `main`, pushed, remote in sync. Next verification when gaps close: Lighthouse run, form-backend wiring, og-image creation.
+`npm run build` (tsc + vite) green; 13/13 routes render; sitemap lists 13 URLs; commits `8dde89c`…`923752a` plus this operation on `main`, pushed, remote in sync. Verified this operation: preview server — all 23 brochure image URLs HTTP 200, `/brosur` HTTP 200; PDF probe (A4-ratio + square pages) → valid PDF, 3 pages, JPEG passthrough (~671 KB output for 653 KB source, so the full 23-page brochure lands ≈ 6 MB); eslint 0 new errors (2 pre-existing in untouched code). Next verification when gaps close: Lighthouse run, form-backend wiring, og-image creation.

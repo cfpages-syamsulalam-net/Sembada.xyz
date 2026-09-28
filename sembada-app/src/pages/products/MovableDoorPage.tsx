@@ -3,9 +3,11 @@ import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Breadcrumb } from '@/components/navigation/Breadcrumb'
+import { useLightbox } from '@/components/ui/lightboxContext'
 import { VolumeX, Settings2, Shield, CheckCircle2, DoorOpen, Maximize2 } from 'lucide-react'
 
 export function MovableDoorPage() {
+  const lightbox = useLightbox()
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Produk', href: '/produk' },
@@ -17,6 +19,21 @@ export function MovableDoorPage() {
     { name: 'Kalimaya', tag: 'Akustik', desc: 'Isolasi suara tingkat menengah — ideal untuk ruang pertemuan dan aula', img: '/images/partisi-ruangan/movable%20door%20kalimaya.png', offset: 'translate-y-8 md:translate-y-12' },
     { name: 'Batu Beling', tag: 'Signature', desc: 'Peredam suara maksimal — privasi total antar ruang dengan full soundproof', img: '/images/partisi-ruangan/movable%20door%20batu%20beling.jpg' },
     { name: 'Emerald', tag: 'Premium', desc: 'Performa akustik industri — cocok untuk ruang konferensi dan ballroom hotel', img: '/images/partisi-ruangan/movable%20door%20emerald.jpg', offset: 'translate-y-8 md:translate-y-12' },
+  ]
+  const gallery = [
+    { src: '/images/partisi-ruangan/sembada-movable-door-varian-koleksi.jpg', alt: 'Koleksi varian movable door' },
+    { src: '/images/partisi-ruangan/movable-door-5.jpg', alt: 'Dokumentasi proyek movable door 5' },
+    { src: '/images/partisi-ruangan/movable-door-6.jpg', alt: 'Dokumentasi proyek movable door 6' },
+    { src: '/images/partisi-ruangan/movable-door-7.jpg', alt: 'Dokumentasi proyek movable door 7' },
+    { src: '/images/partisi-ruangan/movable-door-8.jpg', alt: 'Dokumentasi proyek movable door 8' },
+    { src: '/images/partisi-ruangan/movable-door-9.jpg', alt: 'Dokumentasi proyek movable door 9' },
+    { src: '/images/partisi-ruangan/movable-door-10.jpg', alt: 'Dokumentasi proyek movable door 10' },
+    { src: '/images/partisi-ruangan/movable-door-11.jpg', alt: 'Dokumentasi proyek movable door 11' },
+    { src: '/images/partisi-ruangan/movable-door-12.jpg', alt: 'Dokumentasi proyek movable door 12' },
+    { src: '/images/partisi-ruangan/movable-door-13.jpg', alt: 'Dokumentasi proyek movable door 13' },
+    { src: '/images/partisi-ruangan/movable-door-14.jpg', alt: 'Dokumentasi proyek movable door 14' },
+    { src: '/images/partisi-ruangan/movable-door-15.jpg', alt: 'Dokumentasi proyek movable door 15' },
+    { src: '/images/partisi-ruangan/movable-door-16.jpg', alt: 'Dokumentasi proyek movable door 16' },
   ]
 
   return (
@@ -201,23 +218,9 @@ export function MovableDoorPage() {
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Galeri <span className="text-[#f2ca50]">Proyek Kami</span></h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              '/images/partisi-ruangan/sembada-movable-door-varian-koleksi.jpg',
-              '/images/partisi-ruangan/movable-door-5.jpg',
-              '/images/partisi-ruangan/movable-door-6.jpg',
-              '/images/partisi-ruangan/movable-door-7.jpg',
-              '/images/partisi-ruangan/movable-door-8.jpg',
-              '/images/partisi-ruangan/movable-door-9.jpg',
-              '/images/partisi-ruangan/movable-door-10.jpg',
-              '/images/partisi-ruangan/movable-door-11.jpg',
-              '/images/partisi-ruangan/movable-door-12.jpg',
-              '/images/partisi-ruangan/movable-door-13.jpg',
-              '/images/partisi-ruangan/movable-door-14.jpg',
-              '/images/partisi-ruangan/movable-door-15.jpg',
-              '/images/partisi-ruangan/movable-door-16.jpg',
-            ].map((img, i) => (
+            {gallery.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
-                <img src={img} alt={`Movable Door Project ${i + 5}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={img.src} alt={img.alt} onClick={() => lightbox.open(gallery, i)} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-zoom-in" />
               </div>
             ))}
           </div>

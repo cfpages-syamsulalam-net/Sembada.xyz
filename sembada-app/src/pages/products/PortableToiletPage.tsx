@@ -3,9 +3,11 @@ import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Breadcrumb } from '@/components/navigation/Breadcrumb'
+import { useLightbox } from '@/components/ui/lightboxContext'
 import { ShowerHead, Star, CheckCircle2, MapPin, Calendar, AlertTriangle, Truck, Shield } from 'lucide-react'
 
 export function PortableToiletPage() {
+  const lightbox = useLightbox()
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Produk', href: '/produk' },
@@ -32,6 +34,18 @@ export function PortableToiletPage() {
       features: ['Ringan & portable', 'Rapid deployment', 'Sanitasi kimia', 'Cocok untuk bencana'],
       image: '/images/toilet-portable/toilet%20portable%204.webp',
     },
+  ]
+  const gallery = [
+    { src: '/images/toilet-portable/sembada-portable-toilet-varian-deluxe.jpg', alt: 'Varian deluxe toilet portable' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-1.jpg', alt: 'Dokumentasi proyek toilet portable 1' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-2.jpg', alt: 'Dokumentasi proyek toilet portable 2' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-3.jpg', alt: 'Dokumentasi proyek toilet portable 3' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-4.jpg', alt: 'Dokumentasi proyek toilet portable 4' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-5.jpg', alt: 'Dokumentasi proyek toilet portable 5' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-6.jpg', alt: 'Dokumentasi proyek toilet portable 6' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-7.jpg', alt: 'Dokumentasi proyek toilet portable 7' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-8.jpg', alt: 'Dokumentasi proyek toilet portable 8' },
+    { src: '/images/toilet-portable/toilet-portable-harga-murah-9.jpg', alt: 'Dokumentasi proyek toilet portable 9' },
   ]
 
   return (
@@ -361,20 +375,9 @@ export function PortableToiletPage() {
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Galeri <span className="text-[#f2ca50]">Proyek Kami</span></h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              '/images/toilet-portable/sembada-portable-toilet-varian-deluxe.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-1.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-2.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-3.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-4.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-5.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-6.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-7.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-8.jpg',
-              '/images/toilet-portable/toilet-portable-harga-murah-9.jpg',
-            ].map((img, i) => (
+            {gallery.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
-                <img src={img} alt={`Portable Toilet Project ${i + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={img.src} alt={img.alt} onClick={() => lightbox.open(gallery, i)} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-zoom-in" />
               </div>
             ))}
           </div>

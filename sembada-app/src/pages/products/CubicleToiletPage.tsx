@@ -3,9 +3,11 @@ import { SEO } from '@/components/ui/SEO'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { portfolioData } from '@/data/portfolios'
 import { Breadcrumb } from '@/components/navigation/Breadcrumb'
+import { useLightbox } from '@/components/ui/lightboxContext'
 import { Shield, Clock, Square, CheckCircle2, Droplets } from 'lucide-react'
 
 export function CubicleToiletPage() {
+  const lightbox = useLightbox()
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Produk', href: '/produk' },
@@ -18,6 +20,28 @@ export function CubicleToiletPage() {
     { name: 'Two Tone', desc: 'Warna kontras modern — kombinasi dua warna phenolic untuk kesan elegan', image: '/images/cubicle-toilet/cubicle%20toilet%20two%20tone.png' },
     { name: 'PVC Board', desc: 'Tahan air ekonomis — pilihan hemat dengan ketahanan terhadap kelembapan', image: '/images/cubicle-toilet/cubicle%20toilet%20pvc%20board.png', offset: 'md:translate-y-8' },
     { name: 'Full Height', desc: 'Privasi lantai ke langit-langit — partisi full tinggi untuk keamanan maksimal', image: '/images/cubicle-toilet/cubicle%20toilet%20full%20height.png' },
+  ]
+  const gallery = [
+    { src: '/images/cubicle-toilet/sembada-cubicle-toilet-phenolic-spesialis.jpg', alt: 'Spesialis cubicle toilet phenolic' },
+    { src: '/images/cubicle-toilet/sembada-cubicle-toilet-premium-cover.jpg', alt: 'Cubicle toilet premium' },
+    { src: '/images/cubicle-toilet/sembada-cubicle-toilet-varian-premium.jpg', alt: 'Varian premium cubicle toilet' },
+    { src: '/images/cubicle-toilet/sembada-cubicle-toilet-full-height-varian.jpg', alt: 'Varian full height cubicle toilet' },
+    { src: '/images/cubicle-toilet/sembada-cubicle-toilet-sistem-konstruksi.jpg', alt: 'Sistem konstruksi cubicle toilet' },
+    { src: '/images/cubicle-toilet/sembada-urinal-divider-model-spesifikasi.jpg', alt: 'Urinal divider — model dan spesifikasi' },
+    { src: '/images/cubicle-toilet/sembada-colour-chart-woodgrain-pattern.jpg', alt: 'Colour chart woodgrain dan pattern' },
+    { src: '/images/cubicle-toilet/sembada-colour-chart-pvc-phenolic-solid.jpg', alt: 'Colour chart PVC dan phenolic solid' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-1.jpg', alt: 'Dokumentasi proyek cubicle toilet 1' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-2.jpg', alt: 'Dokumentasi proyek cubicle toilet 2' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-3.jpg', alt: 'Dokumentasi proyek cubicle toilet 3' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-4.jpg', alt: 'Dokumentasi proyek cubicle toilet 4' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-5.jpg', alt: 'Dokumentasi proyek cubicle toilet 5' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-6.jpg', alt: 'Dokumentasi proyek cubicle toilet 6' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-7.jpg', alt: 'Dokumentasi proyek cubicle toilet 7' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-8.jpg', alt: 'Dokumentasi proyek cubicle toilet 8' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-9.jpg', alt: 'Dokumentasi proyek cubicle toilet 9' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-10.jpg', alt: 'Dokumentasi proyek cubicle toilet 10' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-11.jpg', alt: 'Dokumentasi proyek cubicle toilet 11' },
+    { src: '/images/cubicle-toilet/cubicle-toilet-harga-murah-12.jpg', alt: 'Dokumentasi proyek cubicle toilet 12' },
   ]
 
   return (
@@ -204,30 +228,9 @@ export function CubicleToiletPage() {
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-gold-gradient mb-4">Galeri <span className="text-[#f2ca50]">Proyek Kami</span></h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              '/images/cubicle-toilet/sembada-cubicle-toilet-phenolic-spesialis.jpg',
-              '/images/cubicle-toilet/sembada-cubicle-toilet-premium-cover.jpg',
-              '/images/cubicle-toilet/sembada-cubicle-toilet-varian-premium.jpg',
-              '/images/cubicle-toilet/sembada-cubicle-toilet-full-height-varian.jpg',
-              '/images/cubicle-toilet/sembada-cubicle-toilet-sistem-konstruksi.jpg',
-              '/images/cubicle-toilet/sembada-urinal-divider-model-spesifikasi.jpg',
-              '/images/cubicle-toilet/sembada-colour-chart-woodgrain-pattern.jpg',
-              '/images/cubicle-toilet/sembada-colour-chart-pvc-phenolic-solid.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-1.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-2.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-3.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-4.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-5.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-6.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-7.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-8.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-9.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-10.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-11.jpg',
-              '/images/cubicle-toilet/cubicle-toilet-harga-murah-12.jpg',
-            ].map((img, i) => (
+            {gallery.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden" style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
-                <img src={img} alt={`Cubicle Toilet Project ${i + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={img.src} alt={img.alt} onClick={() => lightbox.open(gallery, i)} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-zoom-in" />
               </div>
             ))}
           </div>

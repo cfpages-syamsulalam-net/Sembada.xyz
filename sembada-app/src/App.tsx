@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp'
+import { LightboxProvider } from '@/components/ui/ImageLightbox'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import { Hero } from '@/components/sections/Hero'
 import { AboutSection } from '@/components/sections/AboutSection'
@@ -21,6 +22,7 @@ const MovableDoorPage = lazy(() => import('@/pages/products/MovableDoorPage').th
 const CNCOrnamentPage = lazy(() => import('@/pages/products/CNCOrnamentPage').then(module => ({ default: module.CNCOrnamentPage })))
 const CellustonePage = lazy(() => import('@/pages/products/CellustonePage').then(module => ({ default: module.CellustonePage })))
 const LaboratoriumCabinetPage = lazy(() => import('@/pages/products/LaboratoriumCabinetPage').then(module => ({ default: module.LaboratoriumCabinetPage })))
+const BrosurPage = lazy(() => import('@/pages/BrosurPage').then(module => ({ default: module.BrosurPage })))
 
 // Loading fallback component
 function PageLoading() {
@@ -108,37 +110,40 @@ function OrganizationSchema() {
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0B0C10] text-[#e3e2e8]">
-      {/* Organization JSON-LD (site-wide) */}
-      <OrganizationSchema />
-      
-      {/* Gold Gradient Bars at Top & Bottom */}
-      <div className="gold-gradient-top" />
-      <div className="gold-gradient-bottom" />
+    <LightboxProvider>
+      <div className="flex flex-col min-h-screen bg-[#0B0C10] text-[#e3e2e8]">
+        {/* Organization JSON-LD (site-wide) */}
+        <OrganizationSchema />
 
-      <ScrollToTop />
-      <Navbar />
-      <main className="flex-1 relative z-10">
-        <Suspense fallback={<PageLoading />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/tentang-kami" element={<AboutPage />} />
-            <Route path="/produk" element={<ProductKnowledgePage />} />
-            <Route path="/produk/portable-toilet" element={<PortableToiletPage />} />
-            <Route path="/produk/cubicle-toilet" element={<CubicleToiletPage />} />
-            <Route path="/produk/office-cubicle" element={<OfficeCubiclePage />} />
-            <Route path="/produk/movable-door" element={<MovableDoorPage />} />
-            <Route path="/produk/cnc-ornament" element={<CNCOrnamentPage />} />
-            <Route path="/produk/cellustone-ornament" element={<CellustonePage />} />
-            <Route path="/produk/laboratorium-cabinet" element={<LaboratoriumCabinetPage />} />
-            <Route path="/portofolio" element={<PortfolioPage />} />
-            <Route path="/hubungi-kami" element={<ContactPage />} />
-          </Routes>
-        </Suspense>
-      </main>
-      <FloatingWhatsApp />
-      <Footer />
-    </div>
+        {/* Gold Gradient Bars at Top & Bottom */}
+        <div className="gold-gradient-top" />
+        <div className="gold-gradient-bottom" />
+
+        <ScrollToTop />
+        <Navbar />
+        <main className="flex-1 relative z-10">
+          <Suspense fallback={<PageLoading />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/tentang-kami" element={<AboutPage />} />
+              <Route path="/produk" element={<ProductKnowledgePage />} />
+              <Route path="/produk/portable-toilet" element={<PortableToiletPage />} />
+              <Route path="/produk/cubicle-toilet" element={<CubicleToiletPage />} />
+              <Route path="/produk/office-cubicle" element={<OfficeCubiclePage />} />
+              <Route path="/produk/movable-door" element={<MovableDoorPage />} />
+              <Route path="/produk/cnc-ornament" element={<CNCOrnamentPage />} />
+              <Route path="/produk/cellustone-ornament" element={<CellustonePage />} />
+              <Route path="/produk/laboratorium-cabinet" element={<LaboratoriumCabinetPage />} />
+              <Route path="/brosur" element={<BrosurPage />} />
+              <Route path="/portofolio" element={<PortfolioPage />} />
+              <Route path="/hubungi-kami" element={<ContactPage />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <FloatingWhatsApp />
+        <Footer />
+      </div>
+    </LightboxProvider>
   )
 }
 
