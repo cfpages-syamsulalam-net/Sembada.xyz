@@ -47,7 +47,7 @@ Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada B
 
 ## 7. Known gaps (accepted, not in scope until requested)
 
-1. **Contact form needs its secret + live test** — code done (`POST /api/contact` → Resend → `admin@alampintar.org`), but delivery is unproven until `RESEND_API_KEY` is set in dashboard, FROM domain verified, and a real test mail lands. Frame this as staged, not delivered, until then.
+1. **Contact form needs its secret + live test (BLOCKED on Syamsul, no expiry)** — code done (`POST /api/contact` → Resend → `admin@alampintar.org`), but delivery is unproven until Syamsul provides the Resend API key when he has time, then: key → dashboard `RESEND_API_KEY` + redeploy, FROM-domain verification, live test mail + Function log check. Frame as staged, not delivered, until then. Never store the key in repo/memory — dashboard secret only.
 2. **`og-image.jpg` missing** — all social shares fall back to a 404 image.
 3. Dead code present but unreferenced: `pages/HomePage.tsx`, `molecules/Navbar`, `organisms/Footer`, `App.css`, `styles/style.css`.
 4. `imagePaths.ts` catalog exists but pages hardcode image URLs (single-source not enforced).
