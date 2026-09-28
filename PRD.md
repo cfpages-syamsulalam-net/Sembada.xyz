@@ -16,9 +16,9 @@ Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada B
 6. WCAG AA accessibility.
 7. Mobile-first responsive.
 
-## 3. Scope — routes (12, all built)
+## 3. Scope — routes (13, all built)
 
-`/`, `/tentang-kami`, `/produk`, `/produk/{portable-toilet, cubicle-toilet, office-cubicle, movable-door, cnc-ornament, cellustone-ornament, laboratorium-cabinet}`, `/portofolio`, `/hubungi-kami`. No auth, no CMS, no backend, no checkout — static catalog + contact.
+`/`, `/tentang-kami`, `/produk`, `/produk/{portable-toilet, cubicle-toilet, office-cubicle, movable-door, cnc-ornament, cellustone-ornament, laboratorium-cabinet}`, `/brosur`, `/portofolio`, `/hubungi-kami`. No auth, no CMS, no checkout — static catalog + contact; the only server-side piece is the Pages Function behind the contact form.
 
 ## 4. Users & journeys
 
@@ -38,12 +38,16 @@ Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada B
 - FR7: Images served from `/images/`, lazy below fold, descriptive alt.
 - FR8: SPA fallback so deep links never 404.
 - FR9 (2026-09-28): 23 `sembada-*` brochures visible on their product pages + catalog poster on `/produk`.
+- FR10 (2026-09-28): Every gallery image is clickable → opens a full-screen viewer at **100% natural size** (as requested) inside a pan/zoom container: drag to pan (mouse/touch), wheel or pinch to zoom at the pointer, zoom-in/out buttons, **Fit** (zoom out to fill the browser) and **100%** buttons, double-click toggles Fit ⇄ 100%, Esc/X closes, ←/→ moves within the same gallery set (counter `n / m`). Zoom bounded [fit … 8×]; dependency-free (pointer events + CSS transforms).
+- FR11 (2026-09-28): New route `/brosur` — reader for all 23 `sembada-*` pages as one ordered brochure (Katalog cover → Lab 11 → Cubicle 8 → Portable → Office → Movable): one page fit-to-frame, **Sebelumnya/Berikutnya** buttons, `Halaman n / 23` + current label, thumbnail strip (jump-to-page), group chips with counts, ←/→ keys + swipe, click page → FR10 viewer over the same 23-page set. Linked from Navbar, Footer, `/produk`, and the sitemap.
+- FR12 (2026-09-28): `/brosur` download button assembles **one PDF client-side** — 23 pages, one image per page, each page sized to its image scaled to fit A4 (≤ 595×842 pt), JPEG passthrough via dynamically-imported `pdf-lib`; progress `n / 23`, states idle/running/done/error, saves `sembada-brosur-katalog.pdf`; no server, no upload.
 
 ## 6. Non-functional requirements
 
 - Performance: Lighthouse 90+, LCP < 2.5s, page weight < 2MB (PAGES.md targets).
 - Responsive 320px → 1366px+; touch targets ≥ 44px; keyboard + screen-reader friendly.
 - Inter-only typography; no rounded-corner drift; hexagon geometry per design system.
+- Viewer & PDF constraints (2026-09-28): the lightbox adds no runtime dependency (pointer events + transforms only, GPU-composited); `pdf-lib` is dynamically imported on first download so the main bundle is unchanged; all image fetches are same-origin (no CORS/CSP changes).
 
 ## 7. Known gaps (accepted, not in scope until requested)
 
