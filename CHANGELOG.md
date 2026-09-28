@@ -30,6 +30,14 @@ All notable changes to this project will be documented in this file with **speci
 - Preview smoke: 23/23 brochure image URLs HTTP 200; `/brosur` HTTP 200; PDF probe over 3 images (A4-ratio + squares) → valid PDF, `pages=3`, ~671 kB output for 653 kB source; A4-fit page sizing confirmed (595.3×841.5 / 595.3×595.3)
 - eslint: 0 new errors (2 pre-existing in untouched `Navbar.tsx`/`Card.tsx`)
 
+#### Fixed (self code review via OCR delegate workflow, commit `5d5f343`)
+- Touch: swipe suppression on `/brosur` is now time-bounded (400 ms) — a missed synthetic click can no longer swallow the next tap
+- PDF: JPEG magic-byte check before `embedJpg`, so a missing/non-JPEG asset reports `Halaman N bukan berkas JPEG yang valid` instead of an opaque pdf-lib error (the site `_redirects` returns `index.html` 200 for missing assets, defeating the `res.ok` guard alone)
+- A11y: lightbox traps Tab focus inside the dialog; product-page gallery images are keyboard-operable (`role="button"` + `tabIndex` + Enter/Space + focus ring)
+- Style: nested ternary in the download button replaced by `downloadButtonLabel()`
+- Copy: all "23 halaman / 6 kategori" strings now derive from `total` / `BROCHURE_GROUPS.length` (title, description, header, stats line, download panel, done message)
+- Re-verified after fixes: `npm run build` green; eslint 0 new errors
+
 #### Notes
 - PDF fully client-side; expected full-brochure size ≈ 6 MB; filename `sembada-brosur-katalog.pdf`
 - Op note: `pdf-lib` had to be reinstalled with `--include=dev` after the machine's `omit=dev` npm config pruned devDependencies
