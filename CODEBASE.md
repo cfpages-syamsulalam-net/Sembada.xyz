@@ -31,6 +31,9 @@ Sembada.xyz/
     ├── tailwind.config.js (obsidian/gold/text theme), postcss.config.js
     ├── index.html (id lang, fonts, title), .env (VITE_*; gitignored)
     ├── scripts/glob.mjs (local `npm run glob` file-search helper)
+    ├── functions/api/contact.js (Pages Function `POST /api/contact`: validates
+    │   JSON, honeypot + per-IP throttle, sends via Resend `fetch` using
+    │   `RESEND_API_KEY` secret; `CONTACT_TO` default `admin@alampintar.org`)
     ├── public/ (served as-is: images/ mirror, robots.txt, sitemap.xml,
     │   _redirects SPA fallback, favicon.svg, icons.svg, OG-IMAGE-NEEDED.md)
     └── src/
@@ -81,7 +84,7 @@ Page template (product pages): SEO + Product JSON-LD → hero → breadcrumb →
 - **FloatingWhatsApp**: two pill buttons (Admin 1 `0823 2588 6660`, Admin 2 `0852 5746 0869`) → `wa.me/62…`; pill style (NOT hexagonal despite inventory note).
 - **Breadcrumb**: nav + BreadcrumbList JSON-LD.
 - **ScrollToTop**: resets scroll on route change. **Button/Card/Heading/Section/FeatureCard/ProductCard/productIcons**: atom primitives + inline SVG icon set (inline SVG chosen because FontAwesome CDN gets ad-blocked).
-- **ContactPage form**: front-end only — NO backend/submit handler exists; form posts nowhere. Do not claim submissions work.
+- **ContactPage form**: posts JSON to `/api/contact` (loading/success/error states, honeypot `website` field). Backend is the Pages Function above — requires `RESEND_API_KEY` secret in dashboard + redeploy; without it the Function returns 500. Manual step outstanding: Resend key + FROM-domain verification + live test mail.
 
 ## 5. Data layer
 

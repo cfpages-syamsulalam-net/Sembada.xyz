@@ -34,9 +34,10 @@ Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada B
 - FR3: Portfolio filters across 7 categories; empty state message when none.
 - FR4: Navbar megamenu + mobile accordion list all 7 products; footer mirrors them.
 - FR5: Floating WhatsApp always visible (2 admins).
-- FR6: Images served from `/images/`, lazy below fold, descriptive alt.
-- FR7: SPA fallback so deep links never 404.
-- FR8 (2026-09-28): 23 `sembada-*` brochures visible on their product pages + catalog poster on `/produk`.
+- FR6: Contact form POSTs to `/api/contact` Function → Resend → `CONTACT_TO` (default `admin@alampintar.org`); server validates, honeypot + throttles, returns JSON.
+- FR7: Images served from `/images/`, lazy below fold, descriptive alt.
+- FR8: SPA fallback so deep links never 404.
+- FR9 (2026-09-28): 23 `sembada-*` brochures visible on their product pages + catalog poster on `/produk`.
 
 ## 6. Non-functional requirements
 
@@ -46,7 +47,7 @@ Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada B
 
 ## 7. Known gaps (accepted, not in scope until requested)
 
-1. **Contact form has no backend** — front-end only, submissions go nowhere. (Highest functional gap.)
+1. **Contact form needs its secret + live test** — code done (`POST /api/contact` → Resend → `admin@alampintar.org`), but delivery is unproven until `RESEND_API_KEY` is set in dashboard, FROM domain verified, and a real test mail lands. Frame this as staged, not delivered, until then.
 2. **`og-image.jpg` missing** — all social shares fall back to a 404 image.
 3. Dead code present but unreferenced: `pages/HomePage.tsx`, `molecules/Navbar`, `organisms/Footer`, `App.css`, `styles/style.css`.
 4. `imagePaths.ts` catalog exists but pages hardcode image URLs (single-source not enforced).

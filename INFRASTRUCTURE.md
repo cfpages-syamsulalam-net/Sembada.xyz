@@ -26,7 +26,7 @@ Only infrastructure confirmed by direct evidence during the 2026-09-28 operation
 
 - Domain `sembada.xyz`; `public/robots.txt` allows all + points to `/sitemap.xml`; `public/sitemap.xml` lists 12 URLs.
 - Env: `sembada-app/.env` exists locally (VITE_SITE_URL / WHATSAPP / GA per docs) but is gitignored — contents never read (permission rule). Cloudflare env vars per deploy doc.
-- Contact surface: WhatsApp pills `wa.me/6282325886660` + `wa.me/6285257460869`; footer `tel:` + `info@sembadabatubeling.com`. Contact form has no backend endpoint anywhere in repo.
+- Contact surface: WhatsApp pills `wa.me/6282325886660` + `wa.me/6285257460869`; footer `tel:` + `info@sembadabatubeling.com`. Form posts to Pages Function `/api/contact` → Resend API → `admin@alampintar.org`; secret `RESEND_API_KEY` (+ optional `CONTACT_TO`/`CONTACT_FROM`) lives in Pages dashboard Variables and Secrets, never in repo. Learning: `KNOWLEDGE-CLOUDFLARE-PAGES-CONTACT-FORM.md` in the OneDrive MD hub.
 - No database, no server functions, no analytics keys in repo, no secrets committed (never print/store any).
 
 ## 5. Asset pipeline (confirmed by operation)

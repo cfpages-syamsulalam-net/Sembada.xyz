@@ -9,6 +9,23 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Contact form → admin@alampintar.org] - 28 September 2026
+
+### 18:30 - 19:00 WIB - Pages Function + Resend, staged pending secret
+
+#### Added
+- **`sembada-app/functions/api/contact.js`** - `POST /api/contact`: JSON validation (name/email/message + lengths), honeypot silent-success, per-IP throttle (10/min), Resend `fetch` via `RESEND_API_KEY`, `to` = `CONTACT_TO` or `admin@alampintar.org`, JSON `{ok}` responses
+- **ContactPage submit wiring** - `fetch('/api/contact')` with loading/success/error states, named fields, honeypot `website` input
+
+#### Changed
+- **`CODEBASE.md` / `PRD.md` / `INFRASTRUCTURE.md`** - form gap closed in code; PRD gap #1 rewritten as staged-until-tested
+- **Learning** - `MD/KNOWLEDGE/KNOWLEDGE-CLOUDFLARE-PAGES-CONTACT-FORM.md` (why Function+Resend; why not Email Routing / send_email / hosted backends; secrets + `_redirects` traps)
+
+#### Notes (manual steps outstanding — delivery NOT claimed)
+- Resend API key + FROM-domain verification, Pages dashboard `RESEND_API_KEY` (+ optional `CONTACT_TO`/`CONTACT_FROM`), redeploy, then live test mail to `admin@alampintar.org` + Function log check. Build green (`tsc -b && vite build`).
+
+---
+
 ## [Docs: CODEBASE/PRD/INFRA + README/QWEN refresh] - 28 September 2026
 
 ### 18:00 - 18:30 WIB - New inventory docs, no new pages

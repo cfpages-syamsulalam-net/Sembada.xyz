@@ -1,13 +1,49 @@
+import { useState } from 'react'
 import { StarryBackground } from '@/components/ui/StarryBackground'
 import { SEO } from '@/components/ui/SEO'
 import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { MapPin, Phone, Mail } from 'lucide-react'
+
+type FormStatus = 'idle' | 'sending' | 'sent' | 'error'
 
 export function ContactPage() {
   const breadcrumbItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Hubungi Kami' }
   ]
+  const [status, setStatus] = useState<FormStatus>('idle')
+  const [error, setError] = useState('')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    if (status === 'sending') return
+    setStatus('sending')
+    setError('')
+    const form = e.currentTarget
+    const data = new FormData(form)
+    const payload = {
+      name: String(data.get('name') || '').trim(),
+      email: String(data.get('email') || '').trim(),
+      phone: String(data.get('phone') || '').trim(),
+      company: String(data.get('company') || '').trim(),
+      message: String(data.get('message') || '').trim(),
+      website: String(data.get('website') || ''),
+    }
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const out = await res.json().catch(() => null)
+      if (!res.ok || !out || out.ok !== true) throw new Error((out && out.error) || 'Pengiriman gagal.')
+      form.reset()
+      setStatus('sent')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Pengiriman gagal.')
+      setStatus('error')
+    }
+  }
 
   return (
     <div className="pt-20 md:pt-24 bg-[#0B0C10]">
@@ -90,7 +126,8 @@ export function ContactPage() {
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#f2ca50]" />
 
                 {/* Form */}
-                <form className="space-y-6 md:space-y-8">
+                <form className="space-y-6 md:space-y-8" onSubmit={handleSubmit}>
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Nama Lengkap */}
                     <div>
@@ -99,9 +136,11 @@ export function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         className="w-full bg-transparent border-b border-[#f2ca50]/20 py-2 text-[#e3e2e8] outline-none focus:border-[#f2ca50] transition-colors"
                         placeholder="John Doe"
                         required
+                        maxLength={100}
                       />
                     </div>
 
@@ -112,9 +151,11 @@ export function ContactPage() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         className="w-full bg-transparent border-b border-[#f2ca50]/20 py-2 text-[#e3e2e8] outline-none focus:border-[#f2ca50] transition-colors"
                         placeholder="john@example.com"
                         required
+                        maxLength={254}
                       />
                     </div>
                   </div>
@@ -127,8 +168,10 @@ export function ContactPage() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         className="w-full bg-transparent border-b border-[#f2ca50]/20 py-2 text-[#e3e2e8] outline-none focus:border-[#f2ca50] transition-colors"
                         placeholder="+62 812 3456 7890"
+                        maxLength={30}
                       />
                     </div>
 
@@ -139,8 +182,10 @@ export function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="company"
                         className="w-full bg-transparent border-b border-[#f2ca50]/20 py-2 text-[#e3e2e8] outline-none focus:border-[#f2ca50] transition-colors"
                         placeholder="PT. Example"
+                        maxLength={120}
                       />
                     </div>
                   </div>
@@ -151,22 +196,32 @@ export function ContactPage() {
                       Pesan *
                     </label>
                     <textarea
+                      name="message"
                       className="w-full bg-transparent border-b border-[#f2ca50]/20 py-2 text-[#e3e2e8] outline-none focus:border-[#f2ca50] transition-colors resize-none min-h-[120px]"
                       placeholder="Ceritakan kebutuhan proyek Anda..."
                       required
+                      maxLength={5000}
                     />
                   </div>
+
+                  {status === 'sent' && (
+                    <p className="text-sm text-[#f2ca50] text-center">Pesan terkirim. Tim kami akan menghubungi Anda segera.</p>
+                  )}
+                  {status === 'error' && (
+                    <p className="text-sm text-red-400 text-center">{error || 'Pengiriman gagal. Coba lagi atau hubungi via WhatsApp.'}</p>
+                  )}
 
                   {/* Submit Button */}
                   <div className="flex justify-center pt-4">
                     <button
                       type="submit"
-                      className="px-10 md:px-12 py-4 bg-[#f2ca50] text-[#0B0C10] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-white hover:-translate-y-1"
+                      disabled={status === 'sending'}
+                      className="px-10 md:px-12 py-4 bg-[#f2ca50] text-[#0B0C10] font-black uppercase tracking-widest text-xs md:text-sm transition-all duration-300 hover:bg-white hover:-translate-y-1 disabled:opacity-60 disabled:hover:translate-y-0"
                       style={{
                         boxShadow: '0 4px 20px rgba(242, 202, 80, 0.4)',
                       }}
                     >
-                      Kirim Permintaan
+                      {status === 'sending' ? 'Mengirim...' : 'Kirim Permintaan'}
                     </button>
                   </div>
                 </form>
