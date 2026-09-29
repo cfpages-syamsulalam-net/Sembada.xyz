@@ -9,13 +9,26 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Rules file renamed: QWEN.md → AGENTS.md] - 29 September 2026
+
+### 07:40 WIB - Multi-harness convention
+
+#### Changed
+- **`QWEN.md` → `AGENTS.md`** via `git mv` (history preserved). The rules file now follows the cross-harness AGENTS.md convention so every AI assistant auto-loads it; the title reads "AGENTS.md - Project Rules & Guidelines" with a note that it applies to all harnesses.
+- **References updated repo-wide**: `README.md`, `CODEBASE.md`, `PRD.md`, `INFRASTRUCTURE.md`, `.context/` docs (`QUICK_REFERENCE`, `SESSION_SUMMARY`, dated April notes), and prior entries in this file.
+
+#### Verified
+- Docs-only change — no code/config referenced the file; the only remaining `QWEN.md` strings are where the rename itself is documented (in `AGENTS.md` and this entry).
+
+---
+
 ## [Copy policy: customer-facing pages get customer-facing copy] - 29 September 2026
 
 ### 07:30 WIB - Internal implementation copy removed from /brosur
 
 #### Changed
 - **`pages/BrosurPage.tsx`** - download panel no longer exposes implementation details ("Dibuat langsung di peramban Anda — gambar tidak diunggah ke server"); replaced with customer-facing value copy. Done message now reads "berhasil diunduh"; PDF failures show a friendly generic message with the technical detail logged to console only (error state no longer carries a message field).
-- **`QWEN.md`** - new "Things to Avoid" rule: internal/implementation copy must never appear on customer-facing pages.
+- **`AGENTS.md`** - new "Things to Avoid" rule: internal/implementation copy must never appear on customer-facing pages.
 
 #### Verified
 - `npm run build` green; eslint 0 new errors (2 pre-existing)
@@ -87,7 +100,7 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
-## [Docs: CODEBASE/PRD/INFRA + README/QWEN refresh] - 28 September 2026
+## [Docs: CODEBASE/PRD/INFRA + README/AGENTS refresh] - 28 September 2026
 
 ### 18:00 - 18:30 WIB - New inventory docs, no new pages
 
@@ -98,7 +111,7 @@ All notable changes to this project will be documented in this file with **speci
 
 #### Changed
 - **`README.md`** - was 1 line; now project summary + app commands + doc index; notes npm (not pnpm)
-- **`QWEN.md`** - both "read first" lists now point to CODEBASE/PRD/INFRASTRUCTURE; fixed duplicate numbering
+- **`AGENTS.md`** - both "read first" lists now point to CODEBASE/PRD/INFRASTRUCTURE; fixed duplicate numbering
 
 #### Notes
 - **No new pages created**: all 23 posters fit the 7 existing product lines; verified per-poster mapping, no orphan image.
@@ -137,7 +150,7 @@ All notable changes to this project will be documented in this file with **speci
 #### Added - SEO Documentation
 - **`/SEO_PLAN.md`** - Complete SEO strategy and implementation guide with 8 phases
 - **`/SEO_SCORECARD.md`** - Scoring system tracking all SEO items across 6 phases (Current: 61/100)
-- Updated **`/QWEN.md`** - Added mandatory SEO implementation checklist for all new pages
+- Updated **`/AGENTS.md`** - Added mandatory SEO implementation checklist for all new pages
 - Updated **`/CHANGELOG.md`** - This file
 
 #### Added - Technical Foundation Files
@@ -430,7 +443,7 @@ All 7 product detail pages rewritten with comprehensive 5W1H product knowledge c
   - 5-phase development timeline (28 days)
   - Deployment options (Vercel, Netlify, GitHub Pages)
   
-- **QWEN.md** - AI assistance rules and project guidelines
+- **AGENTS.md** - AI assistance rules and project guidelines
   - File editing protocol (no total replacements)
   - Context preservation requirements
   - CHANGELOG.md protocol
@@ -488,7 +501,7 @@ All 7 product detail pages rewritten with comprehensive 5W1H product knowledge c
 
 #### Files Updated
 - **DESIGN.md** (10:05 WIB) - Updated typography (sans-serif only), CSS architecture (shadcn/ui + TailwindCSS)
-- **QWEN.md** (10:10 WIB) - Updated design rules (no global CSS, use TailwindCSS, sans-serif fonts only)
+- **AGENTS.md** (10:10 WIB) - Updated design rules (no global CSS, use TailwindCSS, sans-serif fonts only)
 - **CHANGELOG.md** (10:55 WIB) - This entry
 
 #### Files Created
@@ -881,7 +894,7 @@ All 7 product detail pages rewritten with comprehensive 5W1H product knowledge c
   - Deployment checklist
   - Common issues & solutions
 
-- **QWEN.md updated** (02:55 WIB)
+- **AGENTS.md updated** (02:55 WIB)
   - Added site title styling rules
   - Added company name rules (NEVER "PT. Batu Beling")
   - Added hexagonal border rules

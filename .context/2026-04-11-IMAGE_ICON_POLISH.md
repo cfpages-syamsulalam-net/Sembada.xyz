@@ -224,7 +224,7 @@ products.ts icon key → Lucide React icon
 
 ### Documentation
 - `CHANGELOG.md`
-- `QWEN.md` (added dev server run instructions)
+- `AGENTS.md` (added dev server run instructions)
 - `DESIGN.md` (added Section 13.5: Icon & Image Treatment Rules)
 
 ---

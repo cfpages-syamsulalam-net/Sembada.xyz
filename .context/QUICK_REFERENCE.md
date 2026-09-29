@@ -21,7 +21,7 @@
 
 ## 📁 Key Files to Read FIRST
 
-1. `/QWEN.md` - AI rules, MUST-read before any work (includes SEO requirements)
+1. `/AGENTS.md` - AI rules, MUST-read before any work (includes SEO requirements)
 2. `/CHANGELOG.md` - What's been done
 3. `/SEO_SCORECARD.md` - Current SEO status and pending items
 4. `/SEO_PLAN.md` - Complete SEO strategy (8 phases)
@@ -202,7 +202,7 @@ Cloudflare Pages Settings:
 
 ## 💡 Tips for Next Session
 
-1. **ALWAYS read QWEN.md first** - Contains all rules including SEO requirements
+1. **ALWAYS read AGENTS.md first** - Contains all rules including SEO requirements
 2. **Check SEO_SCORECARD.md** - See pending SEO items
 3. **Check CHANGELOG.md** - See what's been done
 4. **Read .context/2026-04-12-SEO_PHASE_1.md** - SEO implementation details

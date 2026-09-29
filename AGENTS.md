@@ -1,4 +1,6 @@
-# Qwen Code - Project Rules & Guidelines
+# AGENTS.md - Project Rules & Guidelines
+
+> Applies to every AI assistant/harness working in this repository (this file was renamed from `QWEN.md` on 29 September 2026).
 
 ## Project: Sembada Batu Beling Website
 **Type:** Company Profile & Product Catalog  
@@ -67,7 +69,7 @@ sembada.xyz/
 ├── PAGES.md                   # Page structure & routing
 ├── DEVELOPMENT.md             # Development workflow guide
 ├── CHANGELOG.md              # Project progress tracking
-├── QWEN.md                   # This file (AI rules)
+├── AGENTS.md                 # This file (AI rules)
 ├── style.css                 # Global CSS with design tokens
 ├── .MD/                      # Legacy documentation
 │   ├── sembada-design-system.md
@@ -104,7 +106,7 @@ cd C:\Users\THINKPAD\Sembada.xyz\sembada-app && npm run dev -- --port 5173  # re
 ### Version Awareness
 
 **BEFORE starting any work, ALWAYS read these files:**
-1. `/QWEN.md` - This file (rules and guidelines)
+1. `/AGENTS.md` - This file (rules and guidelines)
 2. `/CODEBASE.md` - Code/logic/intent inventory
 3. `/PRD.md` - Requirements, scope, known gaps
 4. `/INFRASTRUCTURE.md` - Confirmed hosting/build/git evidence
@@ -458,7 +460,7 @@ Follow conventional commits:
 ## 📚 Reference Documents
 
 **ALWAYS read these files before starting work:**
-1. `/QWEN.md` - This file (AI rules and guidelines) ⭐ READ FIRST
+1. `/AGENTS.md` - This file (AI rules and guidelines) ⭐ READ FIRST
 2. `/CODEBASE.md` - Code/logic/intent inventory ⭐ READ SECOND
 3. `/PRD.md` - Requirements, scope, known gaps
 4. `/INFRASTRUCTURE.md` - Confirmed hosting/build/git evidence
@@ -667,5 +669,5 @@ function NewPage() {
 
 ---
 
-*Last updated: 12 April 2026*  
+*Last updated: 29 September 2026*  
 *This file should be updated if project direction changes or new rules are established.*

@@ -18,7 +18,7 @@ images/               # source-of-truth image library (7 categories)
 - `CODEBASE.md` — full code/logic/intent inventory
 - `PRD.md` — requirements, scope, known gaps
 - `INFRASTRUCTURE.md` — confirmed hosting/build/git evidence
-- `QWEN.md` — assistant rules (read first) · `PAGES.md` — routes
+- `AGENTS.md` — AI/harness rules (read first) · `PAGES.md` — routes
 - `DESIGN.md` / `COMPONENTS.md` / `DEVELOPMENT.md` — design & workflow
 - `SEO_PLAN.md` / `SEO_SCORECARD.md` — SEO · `CLOUDFLARE_DEPLOY.md` — hosting
 - `CHANGELOG.md` — history (log every significant change)

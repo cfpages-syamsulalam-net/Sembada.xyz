@@ -45,7 +45,7 @@
 #### SEO Documentation Created
 - `SEO_PLAN.md` - 8-phase SEO strategy
 - `SEO_SCORECARD.md` - Scoring tracker (61/100)
-- Updated `QWEN.md` with SEO requirements
+- Updated `AGENTS.md` with SEO requirements
 - Created `.context/2026-04-12-SEO_PHASE_1.md`
 
 #### Technical SEO
@@ -96,7 +96,7 @@
   - `PAGES.md` - Page structure & routing
   - `DEVELOPMENT.md` - Development workflow guide
   - `CHANGELOG.md` - Project progress tracking
-  - `QWEN.md` - AI assistance rules and guidelines
+  - `AGENTS.md` - AI assistance rules and guidelines
   - `style.css` - Global CSS (1,678 lines)
 - **Decision:** Start with React + Vite + TypeScript
 
@@ -231,7 +231,7 @@
 - **Request:** Fix hexagon borders (only showing top/bottom)
 - **Fix:** Created wrapper classes (`.hexagon-border-5`, `.hexagon-border-8`)
 - Created `CLOUDFLARE_FIXES.md` with all deployment issues and solutions
-- Updated DESIGN.md and QWEN.md with all new rules
+- Updated DESIGN.md and AGENTS.md with all new rules
 
 ---
 
@@ -306,7 +306,7 @@ Sembada.xyz/
 ├── CLOUDFLARE_FIXES.md
 ├── HOMEPAGE_SPEC.md
 ├── ALL_PAGES_SPEC.md
-├── QWEN.md
+├── AGENTS.md
 ├── CHANGELOG.md
 └── README.md
 ```

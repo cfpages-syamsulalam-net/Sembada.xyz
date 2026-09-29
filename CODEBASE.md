@@ -1,6 +1,6 @@
 # CODEBASE.md — Sembada.xyz
 
-Inventory of all code, logic, intent, and reasons. Generated 2026-09-28 (Asia/Jakarta) from current `main` (`8dde89c`). Read this before changing anything; see also `QWEN.md` (rules), `PAGES.md` (routes), `TECHNICAL_DECISIONS.md` (`.context/`, April 2026 rationale).
+Inventory of all code, logic, intent, and reasons. Generated 2026-09-28 (Asia/Jakarta) from current `main` (`8dde89c`). Read this before changing anything; see also `AGENTS.md` (rules), `PAGES.md` (routes), `TECHNICAL_DECISIONS.md` (`.context/`, April 2026 rationale).
 
 ## 1. What this repo is
 
@@ -15,7 +15,7 @@ Sembada.xyz/
 ├── DESIGN.md / COMPONENTS.md / DEVELOPMENT.md (design, components, workflow)
 ├── SEO_PLAN.md / SEO_SCORECARD.md (SEO strategy + score tracking)
 ├── CLOUDFLARE_DEPLOY.md / CLOUDFLARE_FIXES.md (hosting)
-├── QWEN.md / BEGINNER_GUIDE.md / README.md (assistant rules, onboarding)
+├── AGENTS.md / BEGINNER_GUIDE.md / README.md (assistant rules, onboarding)
 ├── style.css (legacy global reference, NOT imported by app)
 ├── images/ (source-of-truth image library, 7 category dirs + katalog file)
 │   └── {cellustone, cnc-ornament, cubicle-toilet, laboratorium-cabinet,
@@ -77,7 +77,7 @@ Router: `BrowserRouter` in main.tsx; lazy-loaded routes in App.tsx. `_redirects`
 | `/portofolio` | PortfolioPage | Sticky filter tabs ×7 categories, hex project grid |
 | `/hubungi-kami` | ContactPage | Info + form + map + LocalBusiness JSON-LD |
 
-Page template (product pages): SEO + Product JSON-LD → hero → breadcrumb → "Apa itu" → "Mengapa" → variants/showcase → features → gallery → PortfolioSection → CTA. QWEN.md mandates: SEO component, one H1, alt text, lazy below-fold images, JSON-LD on product/contact pages.
+Page template (product pages): SEO + Product JSON-LD → hero → breadcrumb → "Apa itu" → "Mengapa" → variants/showcase → features → gallery → PortfolioSection → CTA. AGENTS.md mandates: SEO component, one H1, alt text, lazy below-fold images, JSON-LD on product/contact pages.
 
 ## 4. Components (logic & why)
 
@@ -92,7 +92,7 @@ Page template (product pages): SEO + Product JSON-LD → hero → breadcrumb →
 - **ScrollToTop**: resets scroll on route change. **Button/Card/Heading/Section/FeatureCard/ProductCard/productIcons**: atom primitives + inline SVG icon set (inline SVG chosen because FontAwesome CDN gets ad-blocked).
 - **ContactPage form**: posts JSON to `/api/contact` (loading/success/error states, honeypot `website` field). Backend is the Pages Function above — requires `RESEND_API_KEY` secret in dashboard + redeploy; without it the Function returns 500. Manual step outstanding: Resend key + FROM-domain verification + live test mail.
 - **ImageLightbox** (`ui/ImageLightbox` + `ui/lightboxContext`): full-screen viewer opens at 100% natural size; drag/pan (pointer capture), wheel + pinch zoom anchored at cursor/pinch point, zoom ± / Fit / 100% buttons, double-click Fit ⇄ 100%, Esc/X close, ←/→ within the opened set, `n / m` + zoom% readout, neighbour preload, body scroll lock + focus restore. Dependency-free (transforms only; wheel listener attached non-passive so the page doesn't scroll). Zoom range [fit … 8×]; pan clamped so content can't leave the viewport.
-- **BrosurPage**: header (QWEN unified pattern) → reader frame (overlay prev/next, group + page badges, click → lightbox over all 23) → controls + current label → group chips → thumbnail strip (lazy) → client-side PDF panel → CTA. Keyboard ←/→ guarded while the lightbox is open; touch swipe navigates (click suppressed after a swipe); emits ImageGallery JSON-LD.
+- **BrosurPage**: header (AGENTS.md unified pattern) → reader frame (overlay prev/next, group + page badges, click → lightbox over all 23) → controls + current label → group chips → thumbnail strip (lazy) → client-side PDF panel → CTA. Keyboard ←/→ guarded while the lightbox is open; touch swipe navigates (click suppressed after a swipe); emits ImageGallery JSON-LD.
 
 ## 5. Data layer
 

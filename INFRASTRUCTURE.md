@@ -17,7 +17,7 @@ Only infrastructure confirmed by direct evidence during the 2026-09-28 operation
 
 ## 3. Build toolchain (confirmed by execution)
 
-- `node v24.18.0`, `npm 12.0.2` on this machine; `pnpm` shim present but **repo uses npm**: only lockfile is `sembada-app/package-lock.json` (no pnpm-lock/yaml). QWEN.md + CLOUDFLARE_DEPLOY.md use `npm` commands throughout.
+- `node v24.18.0`, `npm 12.0.2` on this machine; `pnpm` shim present but **repo uses npm**: only lockfile is `sembada-app/package-lock.json` (no pnpm-lock/yaml). AGENTS.md + CLOUDFLARE_DEPLOY.md use `npm` commands throughout.
 - ⚠️ Machine npm config has `omit=dev`: a plain `npm install <pkg>` PRUNES devDependencies (vite/tsc/tailwind disappear; `npm run build` fails with `'tsc' is not recognized`). Always install with `npm install <pkg> --include=dev`; `npm install --include=dev` restores the dev tree.
 - `npm run build` = `tsc -b && vite build`; ran green 2026-09-28 (~29s, 1755 modules, per-route code-split chunks). `npm run lint` (eslint), `preview` (vite preview), `glob` (scripts/glob.mjs helper) also defined.
 - Stack: React 19.2, Vite 8, TypeScript ~6.0 (strict + noUnusedLocals/Parameters + erasableSyntaxOnly), React Router 7, TailwindCSS 3.4 + PostCSS/autoprefixer, lucide-react, pdf-lib 1.17.1 (client-side PDF only — dynamically imported so it never loads until the first brochure download), Google Fonts (Inter + Dancing Script via index.html CDN link).

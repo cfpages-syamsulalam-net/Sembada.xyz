@@ -4,9 +4,9 @@ Product Requirements Document. Status: live site, in production (Cloudflare Page
 
 ## 1. Product & owner
 
-Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada Batu" gold + "Beling" silver; never "PT. Batu Beling" per QWEN.md). Owner: Syamsul Alam. Tagline: "Integritas untuk Sukses dan Barokah". Language: Bahasa Indonesia. Dark-only "Midnight Obsidian" luxury theme.
+Company-profile + product-catalog website for **Sembada BatuBeling** ("Sembada Batu" gold + "Beling" silver; never "PT. Batu Beling" per AGENTS.md). Owner: Syamsul Alam. Tagline: "Integritas untuk Sukses dan Barokah". Language: Bahasa Indonesia. Dark-only "Midnight Obsidian" luxury theme.
 
-## 2. Goals (from QWEN.md)
+## 2. Goals (from AGENTS.md)
 
 1. Luxury company profile for Sembada Batu Beling.
 2. Showcase 7 product categories with detail pages.
