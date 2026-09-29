@@ -9,6 +9,19 @@ All notable changes to this project will be documented in this file with **speci
 
 ---
 
+## [Copy policy: customer-facing pages get customer-facing copy] - 29 September 2026
+
+### 07:30 WIB - Internal implementation copy removed from /brosur
+
+#### Changed
+- **`pages/BrosurPage.tsx`** - download panel no longer exposes implementation details ("Dibuat langsung di peramban Anda — gambar tidak diunggah ke server"); replaced with customer-facing value copy. Done message now reads "berhasil diunduh"; PDF failures show a friendly generic message with the technical detail logged to console only (error state no longer carries a message field).
+- **`QWEN.md`** - new "Things to Avoid" rule: internal/implementation copy must never appear on customer-facing pages.
+
+#### Verified
+- `npm run build` green; eslint 0 new errors (2 pre-existing)
+
+---
+
 ## [Nav: Brosur under Produk] - 29 September 2026
 
 ### 06:30 WIB - Navbar width fix; URL unchanged

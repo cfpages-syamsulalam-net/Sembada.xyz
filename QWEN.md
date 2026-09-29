@@ -412,6 +412,7 @@ Follow conventional commits:
 - ❌ Don't use standard web colors (blue links, green buttons)
 - ❌ Don't overcrowd layouts (embrace whitespace)
 - ❌ Don't add features without documenting them
+- ❌ Don't put internal/implementation copy on customer-facing pages (e.g. "dibuat langsung di peramban", "tidak diunggah ke server", framework/library/stack notes, debug hints) — such details belong in docs/code; customer-facing pages get customer-facing copy only
 - ❌ Don't replace entire files without checking with user
 - ❌ Don't lose existing implementations
 

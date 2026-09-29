@@ -12,7 +12,7 @@ type DownloadState =
   | { status: 'idle' }
   | { status: 'running'; done: number }
   | { status: 'done' }
-  | { status: 'error'; message: string }
+  | { status: 'error' }
 
 function downloadButtonLabel(state: DownloadState, total: number) {
   if (state.status === 'running') return `Menyiapkan PDF ${state.done}/${total}`
@@ -68,7 +68,8 @@ export function BrosurPage() {
       window.setTimeout(() => URL.revokeObjectURL(url), 10000)
       setDownload({ status: 'done' })
     } catch (error) {
-      setDownload({ status: 'error', message: error instanceof Error ? error.message : 'Gagal membuat PDF.' })
+      console.error('Brochure PDF generation failed:', error)
+      setDownload({ status: 'error' })
     }
   }
 
@@ -231,8 +232,8 @@ export function BrosurPage() {
             Unduh Brosur Lengkap
           </h2>
           <p className="text-sm md:text-base text-[#e3e2e8]/70 leading-relaxed font-light mb-8">
-            Satu file PDF berisi {total} halaman brosur. Dibuat langsung di peramban Anda — gambar tidak
-            diunggah ke server.
+            Satu file PDF berisi {total} halaman brosur lengkap Sembada Batu Beling — siap disimpan dan
+            dibagikan.
           </p>
           <button
             type="button"
@@ -250,10 +251,10 @@ export function BrosurPage() {
             </p>
           )}
           {download.status === 'done' && (
-            <p className="mt-4 text-sm text-[#f2ca50]">PDF {total} halaman berhasil dibuat — cek folder unduhan Anda.</p>
+            <p className="mt-4 text-sm text-[#f2ca50]">PDF {total} halaman berhasil diunduh — cek folder unduhan Anda.</p>
           )}
           {download.status === 'error' && (
-            <p className="mt-4 text-sm text-red-400">{download.message} Silakan coba lagi.</p>
+            <p className="mt-4 text-sm text-red-400">Maaf, brosur gagal dibuat. Silakan coba lagi.</p>
           )}
         </div>
       </section>
